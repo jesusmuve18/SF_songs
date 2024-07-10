@@ -1,0 +1,91 @@
+ // AMERICAN NOTATION
+        // d["C"] = "C";
+        // d["CM"] = "C M";
+        // d["Cm"] = "C m";
+        // d["C7"] = "C 7";
+
+        // d["C#"] = "C#";
+        // d["C#M"] = "C# M";
+        // d["C#m"] = "C# m";
+        // d["C#7"] = "C# 7";
+
+        // d["D"] = "D";
+        // d["DM"] = "D M";
+        // d["Dm"] = "D m";
+        // d["D7"] = "D 7";
+
+        // d["D#"] = "D#";
+        // d["D#M"] = "D# M";
+        // d["D#m"] = "D# m";
+        // d["D#7"] = "D# 7";
+
+        // d["E"] = "E";
+        // d["EM"] = "E M";
+        // d["Em"] = "E m";
+        // d["E7"] = "E 7";
+
+        // d["F"] = "F";
+        // d["FM"] = "F M";
+        // d["Fm"] = "F m";
+        // d["F7"] = "F 7";
+
+        // d["F#"] = "F#";
+        // d["F#M"] = "F# M";
+        // d["F#m"] = "F# m";
+        // d["F#7"] = "F# 7";
+
+        // d["G"] = "G";
+        // d["GM"] = "G M";
+        // d["Gm"] = "G m";
+        // d["G7"] = "G 7";
+
+        // d["G#"] = "G#";
+        // d["G#M"] = "G# M";
+        // d["G#m"] = "G# m";
+        // d["G#7"] = "G# 7";
+
+        // d["A"] = "A";
+        // d["AM"] = "A M";
+        // d["Am"] = "A m";
+        // d["A7"] = "A 7";
+
+        // d["D"] = "D";
+        // d["DM"] = "D M";
+        // d["Dm"] = "D m";
+        // d["D7"] = "D 7";
+
+
+        string song2 = "<b>la m</b>                      <b>Sol</b>\n\
+Buenas tardes, esto es una canción\n\
+<b>la m</b>                      <b>Sol</b>\n\
+Buenas tardes, esto es una canción\n\
+<b>la m</b>                      <b>Sol</b>\n\
+Buenas tardes, esto es una canción\n\
+<b>la m</b>                      <b>Sol</b>\n\
+Buenas tardes, esto es una canción\n\
+<b>la m</b>                      <b>Sol</b>\n\
+Buenas tardes, esto es una canción\n\
+<b>la m</b>                      <b>Sol</b>\n\
+Buenas tardes, esto es una canción\n\
+<b>la m</b>                      <b>Sol</b>\n\
+Buenas tardes, esto es una canción\n\
+<b>la m</b>                      <b>Sol</b>\n\
+Buenas tardes, esto es una canción\n\
+<b>la m</b>                      <b>Sol</b>\n\
+Buenas tardes, esto es una canción\n\
+<b>la m</b>                      <b>Sol</b>\n\
+Buenas tardes, esto es una canción\n\
+<b>la m</b>                      <b>Sol</b>\n\
+Buenas tardes, esto es una canción\n\
+<b>la m</b>                      <b>Sol</b>\n\
+Buenas tardes, esto es una canción\n\
+<b>la m</b>                      <b>Sol</b>\n\
+Buenas tardes, esto es una canción\n\
+<b>la m</b>                      <b>Sol</b>\n\
+Buenas tardes, esto es una canción\n\
+<b>la m</b>                      <b>Sol</b>\n\
+Buenas tardes, esto es una canción\n\
+<b>la m</b>                      <b>Sol</b>\n\
+Buenas tardes, esto es una canción\n\
+<b>la m</b>                      <b>Sol</b>\n\
+Buenas tardes, esto es una canción";

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi roca</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../songs/Adorando.html">Opción 1</a></li>
+                    <li><a href="../songs/Amando hasta el extremo.html">Opción 2</a></li>
+                    <li><a href="#">Opción 3</a></li>
+                    <li><a href="../about.html">Acerca de</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Mi roca</div>
+                    <div id="artist">Ixcís</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Do </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>Do</b>                <b>Fa</b>              <b>Do</b>
+Aunque camine por cañadas oscuras,
+     <b>Fa</b>    <b>la m</b>
+nada temo. Tú eres mi roca,
+     <b>Sol</b>        <b>Fa</b>
+mi defensa, mi sosiego.
+</div>
+                </div>
+            </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

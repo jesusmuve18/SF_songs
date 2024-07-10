@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <header>
+        <img id="logo" src="images/Logo Tau sin fondo.png" alt="Logo Sf">
+        <div id="grupo-sf">Grupo San Francisco Granada</div>
+        <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="./songs/zombie.html">Opción 1</a></li>
+            <li><a href="./songs/Amando hasta el extremo.html">Opción 2</a></li>
+            <li><a href="#">Opción 3</a></li>
+            <li><a href="about.html">Acerca de</a></li>
+        </ul>
+    </nav>
+
+    <div id="song">
+        <div id="notation">europe sharp</div>
+        <div id="info">
+            <div id="title">
+                Sobre la página
+            </div>
+            <div id="artist">
+                Jesús Muve
+            </div>
+        </div>
+        <div>
+<p>Las canciones han sido sacadas del cantoral de la iglesia de San Francisco Granada. De momento se ha hecho de forma manual pero se está trabajando en poder hacerlo automáticamente con un <strong>script</strong> que transforme las canciones que ya hay escritas en el formato de texto plano.</p>
+
+<p>El cuadro de búsqueda aún no está implementado ya que no tiene demasiado sentido aún (no hay demasiadas canciones). La idea en un futuro será organizarlas en el orden que tienen en el cantoral (por orden alfabético y ordenadas según se consideren de liturgia, oración, navidad o discos). Puede que se añada la posibilidad de ordenarlos también por autor o por temas (buscar palabras dentro de las canciones).</p>
+
+<p>Se está trabajando además en los diagramas de acordes que están siendo generados gracias a la librería de latex que hice en navidades de 2023. Necesitaría alguna forma de exportarlos en SVG para mejorar su resolución, además de que me gustaría poner en un sitio todos los acordes juntos a modo de manual (por si alguien quiere aprender a tocar la quitarra o simplemente quiere aprender acordes nuevos).</p>
+
+<p>De momento la página tiene un estilo bastante plano y minimalista. Es posible que en un futuro consulte con gente más artística para mejorar fuentes, colores y estilos pero de momento no es la prioridad. Tengo que pensar además qué más secciones puedo hacer para este prototipo de página, o si se podría usar para más cosas aparte de música (información, actualizaciones, preparación de misas), aunque esto lo trabajaré bastante más adelante.</p>
+
+<h2>Herramientas</h2>
+
+<p>Actualmente la página cuenta con 2 herramientas principales: El cambio de tono y la posibilidad de añadir una cejilla. La principal diferencia entre estas 2 es la posibilidad de cambiar el tono de la canción o mantener el tono pero cambiar los acordes (poniendo cejilla). Puede que esto se entienda mejor con un ejemplo:</p>
+
+<p>Hay canciones que al tocarse en el tono original y sin cejilla dan lugar a acordes un poco complejos (no tanto para tocarlos como para poder hacer algún punteo mientras se mantiene un acorde, ya que para acordes con cejilla se está limitado). Ejemplo de esto puede ser "Si no muero por ti". Esta canción se toca en <b>fa# m</b> y sin cejilla. Al no tener cejilla, el tono de la canción es <b>fa# m</b>. Sin embargo, manteniendo este tono pero poniendo una cejilla en el segundo traste tenemos un cómodo <b>mi m</b> como tono de la canción, que al llevar una cejilla en segundo traste se convierte en <b>fa# m</b>. Esta es la principal función de mover la cejilla: Mantener el tono de la canción original (positivo para cantar o para tocar con más gente) pero cambiar las posiciones de los acordes al desplazar la cejilla (de forma que sean acordes más fáciles para punteos).</p>
+
+<p>Pero como habrás podido pensar esto no es útil si estás cantando y una canción te pilla mal de tono, ya que con la herramienta de la cejilla no se cambia el tono. Es para esto para lo que está el cambio de tono. Mantengamos el ejemplo anterior: "Si no muero por ti" en <b>fa# m</b>. Supongamos que me viene muy alto de tono para cantar, por lo que le quiero bajar un tono a la canción, que se convertiría en un <b>E m</b>. Bajo la canción 2 semitonos con la herramienta y ya la tengo transportada. Podrás pensar que no hay gran diferencia con la herramienta anterior, y es cierto de primeras, ya que jugando a "poner cejillas" puedes engañar a la canción y cambiar el tono (Hemos visto cómo realizar la misma transformación de acordes de 2 formas distintas, una con cada herramienta). Sin embargo, la verdadera utilidad viene cuando la canción no te viene bien ni de tono ni de posiciones de acordes. Es aquí cuando entra en juego el verdadero potencial de las 2 herramientas:</p>
+
+<p>En primer lugar, con el cambio de tono tendrás que buscar el tono que mejor te venga para cantar o para lo que quieras hacer. Una vez encontrado este tono, es posible que hayan aparecido acordes bastante raros (muchos sostenidos o muchas posiciones con cejilla). Es ahora cuando, manteniendo el tono de la canción, puedes mover la cejilla para buscar la posición que más cómoda te venga para tocar o que más te guste de sonido. Además, para facilitar la búsqueda o la posibilidad de acordarse para la próxima vez del tono en que tocaste la canción hay una etiqueta bajo el título de la canción que indica el tono real en el que se está tocando (digamos el acorde "sin cejilla").</p>
+
+<p></p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; JesusMuve
+    </footer>
+</body>
+
+</html>
