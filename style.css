@@ -23,7 +23,7 @@ html, body {
 body {
     background: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), url(images/Negro\ sin\ fondo.PNG) no-repeat center center;
     background-size: 100% auto;
-    background-attachment:local;
+    background-attachment:fixed;
 }
 
 #pagina {
@@ -239,7 +239,6 @@ b:hover .hover-image {
     #song {
         padding-left: 50px;
         padding-top: 50px;
-        height: 30px;
     }
 
     aside {
