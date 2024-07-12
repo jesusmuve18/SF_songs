@@ -208,7 +208,9 @@ window.onload = function() {
 };
 
 function incCapo(value=1){
-    capo += +value;
+
+    if(capo + value >=0  && capo + value <= 24)
+        capo += +value;
     let capo_pointer = document.getElementById("capo");
     capo_pointer.innerHTML = capo;
     console.log(`capo = ${capo}`);
