@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Noto+Sans+Mono:wght@100..900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.fragment-mono-regular {
+    font-family: "Fragment Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.fragment-mono-regular-italic {
+    font-family: "Fragment Mono", monospace;
+    font-weight: 400;
+    font-style: italic;
+}
+
+
 html, body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -18,7 +33,6 @@ body {
 
 #contenido {
     padding-bottom: 80px;
-    /* este valor debe ser igual o mayor al alto del pie */
 }
 
 /*HEADER*/
@@ -32,7 +46,6 @@ header {
     padding: 20px;
     align-content: center;
     align-items: center;
-    padding-left: 50px;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -68,7 +81,7 @@ nav {
     font-family:Arial, Helvetica, sans-serif;
 }
 
-ul {
+nav ul {
     margin: 0;
     padding: 0;
     border-top: 2px solid #ddedff;
@@ -77,10 +90,9 @@ ul {
     background-color: #a8d1ff;
 }
 
-li {
-    padding: 0 20px 0 20px;
+nav li {
     margin-left: 0;
-    height: 30px;
+    
     text-align: center;
     align-content: center;
     width: 75px;
@@ -99,8 +111,6 @@ li:hover {
 /*SONG*/
 
 #song {
-    padding-top: 50px;
-    padding-left: 50px;
     display:block;
 }
 
@@ -122,15 +132,10 @@ li:hover {
 
 #song-body {
     line-height: 1.5em;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Fragment Mono";
     unicode-bidi: isolate;
     white-space: pre;
     word-wrap: break-word;
-
-    
-
-    
-    /*border: 1px solid black;*/
     break-inside: avoid;
     
     overflow: visible;  /*Permite que se vean las imágenes aunque se salgan del contenedor*/
@@ -220,14 +225,23 @@ b:hover .hover-image {
     padding-left: 20px;;
 }
 
+/*ORDENADOR*/
 @media (orientation: landscape){
-
-    /* #song-body {
-        column-count: 2;
-        column-span: initial;
-        column-gap: 50px;
-    } */
     
+    header {
+        padding-left: 50px;
+    }
+
+    nav li {
+        padding: 10px 20px 10px 20px;
+    }
+
+    #song {
+        padding-left: 50px;
+        padding-top: 50px;
+        height: 30px;
+    }
+
     aside {
         top: 160px;
         right: 50px;
@@ -244,10 +258,39 @@ b:hover .hover-image {
     }
 }
 
+/*MÓVIL*/
 @media (orientation: portrait) {
+
+    header {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 30px;
+    }
+
+    #grupo-sf {
+        margin-left: 30px;
+    }
+
+    nav ul {
+        justify-content: space-around;
+    }
+
+    nav li {
+        /* padding: 10px 15px 10px 15px; */
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 20vw;
+    }
+
+    #song {
+        padding-left: 25px;
+        padding-top: 25px;
+        font-size: 0.95em;
+    }
+
     aside {
-        top: 230px;
-        right: 50px;
+        top: 190px;
+        right: 20px;
     }
 
     #search-bar {
