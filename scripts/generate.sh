@@ -5,6 +5,7 @@
 # - Nombre de la canción: Con el formato: Titulo_de_canción-Artista   (sin extensión)
 #
 # Previamente deberá existir el archivo Titulo_de_canción-Artista.dat en el directorio pasado como primer argumento
+# Se recomienda no superar el límite de 39 caracteres por línea (para evitar problemas en la visualización)
 
 song_dir="./songs";
 
