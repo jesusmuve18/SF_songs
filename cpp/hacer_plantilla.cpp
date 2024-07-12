@@ -225,6 +225,9 @@ int main(int argc, char** argv){
                 <div id=\"song-body\" class=\"texto-principal\">" + song +"</div>\n\
                 </div>\n\
             </div>\n\
+        <div id=\"controls\">\n\
+            <button id=\"pauseButton\">►</button>\n\
+        </div>\n\
         <div id=\"pie\">\n\
             <div id=\"pie-content\">\n\
                  &copy; JesusMuve\n\

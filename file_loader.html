@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Cancion</title>
+    <title>Cargador</title>
     <link rel="stylesheet" href="../style.css">
     <script src="../scripts.js"></script>
     <link rel="icon" href="../images/Logo Tau sin fondo.png">
@@ -37,28 +37,31 @@
             <div id="song">
                 <div id="notation">europe sharp</div>
                 <div id="info">
-                    <div id="title">Tu Cancion</div>
-                    <div id="artist">Yo</div>
+                    <div id="title">Yo no estoy loco</div>
+                    <div id="artist">Estopa</div>
                      <div id="tone">
-                        Tono: <span id="original-tone">la m</span><br>
+                        Tono: <span id="original-tone">C </span><br>
                         Cejilla: traste <span id="capo">0</span><br>
                         Transpuesta: <span id="traspose">0</span> semitonos
                     </div>
                 </div>
-                <div id="song-body" class="texto-principal"><b>la m</b> <b>Sol</b>    <b>Do</b> (<b>Re</b>)
-Le ponemos letra
-<strong>
-<b>la m</b> <b>Sol</b>    <b>Do</b>
-Le ponemos la letra
-</strong>
-</div>
+                <div id="song-body" class="texto-principal"></div>
+                <script>loadFileContent("./cpp/out/Amando_hasta_el_extremo-Maite_López.out")</script>
                 </div>
             </div>
+        <div id="controls">
+            <button id="pauseButton">►</button>
+            <script></script>
+        </div>
+
         <div id="pie">
             <div id="pie-content">
                  &copy; JesusMuve
             </div>
         </div>
     </div>
+
+    
+
 </body>
 </html>

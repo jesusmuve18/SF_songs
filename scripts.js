@@ -242,4 +242,60 @@ function ajustarColumnas() {
 // Ejecutar al redimensionar la ventana
 window.onresize = ajustarColumnas;
 
+async function loadFileContent(filename) {
+    try {
+        const response = await fetch(filename);
+        if (!response.ok) {
+            throw new Error('Error al cargar el archivo');
+        }
+        const text = await response.text();
+        document.getElementById('song-body').innerHTML = text;
 
+        // Guardo el valor del tono actual
+        let tone = document.getElementById("original-tone").innerHTML;
+        let note = document.getElementById("original-tone").getAttribute("acorde");
+
+        console.log(`Se ha obtenido ${note}`)
+
+        // Cargo los acordes del documento recién abierto
+        Load();
+        Reload();
+
+        // Reestablezco el valor del tono 
+        document.getElementById("original-tone").innerHTML = tone;
+        document.getElementById("original-tone").setAttribute("acorde",note);
+
+    } catch (error) {
+        document.getElementById('song-body').innerHtml = 'Error al cargar el archivo: ' + error.message;
+    }
+}
+
+// SCROLLING
+
+document.addEventListener('DOMContentLoaded', function() {
+    let scrollInterval;
+    let isScrolling = false;
+
+    function startScrolling() {
+        scrollInterval = setInterval(() => {
+            window.scrollBy(0, 1); // Desplaza hacia abajo 1 píxel
+        }, 200); // Ajusta el intervalo de tiempo según sea necesario
+    }
+
+    function stopScrolling() {
+        clearInterval(scrollInterval);
+    }
+
+    document.getElementById("pauseButton").addEventListener('click', function() {
+        if (isScrolling) {
+            stopScrolling();
+            this.textContent = '►';
+            console.log("pausando scroll");
+        } else {
+            startScrolling();
+            this.textContent = '⏸';//'⏸︎'; ⏸
+            console.log("reanudando scroll");
+        }
+        isScrolling = !isScrolling;
+    });
+});
