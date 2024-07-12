@@ -294,8 +294,9 @@ b:hover .hover-image {
     }
 
     aside {
-        top: 190px;
+        top: 240px;
         right: 20px;
+        height: 70px;
     }
 
     #search-bar {
