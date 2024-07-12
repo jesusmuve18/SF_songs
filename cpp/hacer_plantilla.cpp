@@ -197,8 +197,8 @@ int main(int argc, char** argv){
             <nav>\n\
                 <ul>\n\
                     <li><a href=\"" + main_dir + "index.html\">Inicio</a></li>\n\
-                    <li><a href=\"" + main_dir + "songs/Adorando.html\">Opción 1</a></li>\n\
-                    <li><a href=\"" + main_dir + "songs/Amando hasta el extremo.html\">Opción 2</a></li>\n\
+                    <li><a href=\"#\">Opción 1</a></li>\n\
+                    <li><a href=\"#\">Opción 2</a></li>\n\
                     <li><a href=\"#\">Opción 3</a></li>\n\
                     <li><a href=\"" + main_dir + "about.html\">Acerca de</a></li>\n\
                 </ul>\n\

@@ -98,7 +98,7 @@ nav li {
     width: 75px;
 }
 
-a {
+nav li a {
     text-decoration: none;
     color: black;
 }

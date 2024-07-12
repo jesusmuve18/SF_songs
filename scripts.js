@@ -1,3 +1,6 @@
+/**************************************************************************************************************/
+// AJUSTAR ACORDES
+
 const NOTES_AMERICAN_SHARP = [ "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
 const NOTES_AMERICAN_FLAT = [ "C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab", "A", "Bb", "B"];
 const NOTES_EUROPE_SHARP = [ "Do", "Do#", "Re", "Re#", "Mi", "Fa", "Fa#", "Sol", "Sol#", "La", "La#", "Si"];
@@ -67,6 +70,7 @@ function Chord (note) {
         }
     }
 }
+
 
 function AdjustOriginalTone(first_time=false) {
     
@@ -207,6 +211,9 @@ window.onload = function() {
     ajustarColumnas();
 };
 
+/**************************************************************************************************************/
+// AJUSTAR TONO
+
 function incCapo(value=1){
 
     if(capo + value >=0  && capo + value <= 24)
@@ -227,6 +234,9 @@ function incTone(value=1){
     Reload();
 }
 
+/**************************************************************************************************************/
+// AJUSTAR COLUMNAS
+
 function ajustarColumnas() {
     const textoPrincipal = document.getElementById('song-body');
     textoPrincipal.classList.remove('dos-columnas');
@@ -241,6 +251,9 @@ function ajustarColumnas() {
 
 // Ejecutar al redimensionar la ventana
 window.onresize = ajustarColumnas;
+
+/**************************************************************************************************************/
+// CARGAR DE ARCHIVO
 
 async function loadFileContent(filename) {
     try {
@@ -270,6 +283,21 @@ async function loadFileContent(filename) {
     }
 }
 
+async function loadIndex(filename) {
+    try {
+        const response = await fetch(filename);
+        if (!response.ok) {
+            throw new Error('Error al cargar el archivo');
+        }
+        const text = await response.text();
+        document.getElementById('index').innerHTML = text;
+
+    } catch (error) {
+        document.getElementById('song-body').innerHtml = 'Error al cargar el archivo: ' + error.message;
+    }
+}
+
+/**************************************************************************************************************/
 // SCROLLING
 
 document.addEventListener('DOMContentLoaded', function() {

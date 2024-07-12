@@ -33,7 +33,7 @@ public:
         sort(notes.begin(), notes.end(), compareStringSize); // ordeno las notas por longitud
 
         variations = { "M", "m", "7", "6", "5", "4", "9", "11", "13", 
-                       "aug", "dim", "sus", "add", " "};
+                       "aug", "dim", "sus", "add", " ", "/"};
 
         sort(variations.begin(), variations.end(), compareStringSize); // ordeno las variaciones por longitud
     }
@@ -79,7 +79,7 @@ public:
 
 
     // Dada una línea procesa todos los acordes para su correcta visualización en html
-    string ProcessLine(string line) {
+    string ProcessLine(string line, string before = "<b>", string after = "</b>") {
         string result="";
         
 
@@ -96,8 +96,8 @@ public:
             bool eq1, eq2;
             int len;
 
-            string before = "<b>";
-            string after = "</b>";
+            // string before = "<b>";
+            // string after = "</b>";
 
             bool chord_line = true;
             bool parenthesis;
@@ -141,6 +141,39 @@ public:
                                 }
 
                                 if(eq2){ // Se ha encontrado coincidencia con la variación
+
+                                    // Miro a ver si en la variación tiene el bajo cambiado
+                                    // en ese caso tendré que hacer que se reconozca como una nota:
+
+                                    bool found = false;
+
+                                    for(int i = len; i<word.length() && !found; i++){
+                                        if(word.at(i)=='/'){
+                                            found = true;
+
+                                            string bass;
+
+                                            // Copio todo lo que hay detrás del caracter '/'
+                                            for(int j=i+1; j<word.length(); j++){
+                                                bass += word.at(j);
+                                            }
+                                            
+                                            // Compruebo que efectivamente es una nota
+                                            bass = ProcessLine(bass, "</b><b>", "");
+
+                                            // Devuelvo el cambio
+                                            int j;
+                                            for(j=i+1; j<word.length(); j++){
+                                                word.at(j) = bass.at(j-i-1);
+                                            }
+
+                                            for(int k=j-i-1; k<bass.length(); k++){
+                                                word.push_back(bass.at(k));
+                                            }
+                                        }
+                                    }
+                                    
+                                    
                                     word_aux = word;
                                     word_aux.insert(len, " ");
                                     word_aux = before + word_aux + after;
