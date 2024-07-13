@@ -185,18 +185,19 @@ aside {
 /*CHORD IMAGES*/
 
 .hover-image {
-    display: none; /* Oculta la imagen por defecto */
-    position: absolute;
-    top: 100%; /* Muestra la imagen justo debajo del texto "Lam" */
-    left: 300%;
+    display: none; /*Oculta la imagen por defecto */
+    position: fixed;
+    top: 35%; /* Muestra la imagen justo debajo del texto "Lam" */
+    left: 50%; 
     transform: translateX(-50%);
     border: 1px solid #ccc;
     background-color: #fff;
-    height: 300px;
+    height: 250px;
     image-rendering: pixelated; /*Para que no se pixelen los laterales*/
     padding: 5px;
     z-index: 1; /* Asegura que la imagen esté encima de otros elementos */
     white-space: nowrap; /* Evita que la imagen se corte */
+    overflow: hidden;
 }
 
 #original-tone:hover .hover-image {
@@ -204,25 +205,25 @@ aside {
 }
 
 b:hover .hover-image {
-    display: block; /* Muestra la imagen cuando se pasa el ratón por encima del span */
+    display: flex; /* Muestra la imagen cuando se pasa el ratón por encima del span */
 }
 
 /*SCROLL PLAY/PAUSE*/
 #controls {
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    bottom: 5px;
+    right: 0px;
     z-index: 1;
 }
 
 #pauseButton {
-    opacity: 1;
+    opacity: 0.75;
     font-size: 1.2em;
     color: grey;
     padding: 10px;
     background: none;
-    height: 50px;
-    width: 50px;
+    height: 15px;
+    width: 30px;
     text-align: right;
     border: none;
 }

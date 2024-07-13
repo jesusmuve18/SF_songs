@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage[%
+    paperwidth=5cm,
+    paperheight=5cm,
+    left=0cm,
+    right=0cm,
+    top=0cm,
+    bottom=0cm]{geometry} % Establece todos los márgenes en 2cm
+
+\usepackage{adjustbox}
+
+\def\inputfile{/home/jesusmuve/Documentos/VSCode/Web/sanfran/latex/}
+
+\input{\inputfile/song_commands.tex}
+\renewcommand{\notation}{europe}
+
+\def\separation{-0.8cm}
+
+\begin{document} 
+   
+\thispagestyle{empty}
+
+\vddiagram[%
+nombre=La\#,
+variacion=m7,
+trasteinicial=1,
+iniciocejilla=5,
+cejilla=1,
+fprimera=1,
+fsegunda=2,
+ftercera=1,
+fcuarta=3,
+fquinta=1,
+fsexta=,]%
+{1}{2}{1}{3}{1}{x}
+
+\end{document}

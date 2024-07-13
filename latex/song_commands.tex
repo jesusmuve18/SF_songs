@@ -1,0 +1,1105 @@
+% Paquete para realizar la función módulo
+\usepackage{pgfmath}
+
+% Paquete para figuras
+\usepackage{tikz}
+
+% Paquete para comparar cadenas con caracteres especiales
+\usepackage{xstring}
+
+% Paquete para eliminar sangrías en el primer párrafo
+\usepackage{indentfirst}
+
+% Paquete para poder escribir encima de las palabras
+\usepackage{amsmath}
+
+% Paquete para cambiar el color del texto
+\usepackage{xcolor}
+
+% Paquete para operaciones aritméticas con variables
+\usepackage{calc}
+
+% Paquete para disponer el texto en dos columnas
+\usepackage{multicol}
+
+% Paquete para ajustar el interlineado
+\usepackage{setspace} 
+
+% Paquete para referencias
+\usepackage{hyperref}
+
+% Paquete para parámetros adicionales
+\usepackage{pgfkeys}
+
+% Paquete para la imagen de la portada
+\usepackage{graphicx}
+
+% Paquete para el correcto posicionamiento de los diagramas
+\usepackage{float}
+
+% Paquete para quitar las etiquetas de los diagramas
+\usepackage{caption}
+
+% Tipografía
+\usepackage[defaultfam,tabular,lining]{montserrat} %% Option 'defaultfam'
+%% only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+\renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
+
+% Establecer longitud de la sangría a cero
+\setlength{\parindent}{0pt}
+
+% Notación por defecto
+\newcommand{\notation}{europe}
+
+% Directorio de imágenes
+\graphicspath{/home/jesusmuve/Documentos/VSCode/LaTeX/documentos/songs/}
+\def\dirimages{/home/jesusmuve/Documentos/VSCode/LaTeX/documentos/songs/images/}
+
+% Comparar cadenas con caracteres compuestos
+% Sintáxis: \ifstrequal{string1}{string2}{code if are equals}{code if not}
+\newcommand{\ifstrequal}[4]{%
+    \IfSubStr{#1}{\#}{%
+        \IfSubStr{#2}{\#}{%
+            \StrGobbleRight{#1}{1}[\strippedA]%
+            \StrGobbleRight{#2}{1}[\strippedB]%
+            \IfStrEq{\strippedA}{\strippedB}{%
+                #3%
+            }{%
+                #4%
+            }%
+        }{%
+            #4%
+        }%
+    }{%
+        \IfSubStr{#2}{\#}{%
+            #4%
+        }{%
+            \IfStrEq{#1}{#2}{%
+                #3%
+            }{%
+                #4%
+            }%
+        }%
+    }%
+}
+
+% Compara si dos valores numéricos son iguales
+% Sintáxis: \ifnumequal{num1}{num2}{code if are equals}{code if not}
+\newcommand{\ifnumequal}[4]{%
+    \ifnum#1=#2%
+        #3%
+    \else   
+        #4%
+    \fi
+}
+
+% Contador para la conversión de nota a valor
+\newcounter{notaavalor}
+
+% Comando que ajusta el valor del contador notaavalor según una nota introducida
+\newcommand{\notaavalor}[1]{%
+    \ifstrequal{#1}{C}{\setcounter{notaavalor}{0}}{%
+        \ifstrequal{#1}{C\#}{\setcounter{notaavalor}{1}}{%
+            \ifstrequal{#1}{D}{\setcounter{notaavalor}{2}}{%
+                \ifstrequal{#1}{D\#}{\setcounter{notaavalor}{3}}{%
+                    \ifstrequal{#1}{E}{\setcounter{notaavalor}{4}}{%
+                        \ifstrequal{#1}{F}{\setcounter{notaavalor}{5}}{%
+                            \ifstrequal{#1}{F\#}{\setcounter{notaavalor}{6}}{%
+                                \ifstrequal{#1}{G}{\setcounter{notaavalor}{7}}{%
+                                    \ifstrequal{#1}{G\#}{\setcounter{notaavalor}{8}}{%
+                                        \ifstrequal{#1}{A}{\setcounter{notaavalor}{9}}{%
+                                            \ifstrequal{#1}{A\#}{\setcounter{notaavalor}{10}}{%
+                                                \ifstrequal{#1}{B}{\setcounter{notaavalor}{11}}{%
+                                                    \ifstrequal{#1}{Do}{\setcounter{notaavalor}{0}}{%
+                                                        \ifstrequal{#1}{Do\#}{\setcounter{notaavalor}{1}}{%
+                                                            \ifstrequal{#1}{Re}{\setcounter{notaavalor}{2}}{%
+                                                                \ifstrequal{#1}{Re\#}{\setcounter{notaavalor}{3}}{%
+                                                                    \ifstrequal{#1}{Mi}{\setcounter{notaavalor}{4}}{%
+                                                                        \ifstrequal{#1}{Fa}{\setcounter{notaavalor}{5}}{%
+                                                                            \ifstrequal{#1}{Fa\#}{\setcounter{notaavalor}{6}}{%
+                                                                                \ifstrequal{#1}{Sol}{\setcounter{notaavalor}{7}}{%
+                                                                                    \ifstrequal{#1}{Sol\#}{\setcounter{notaavalor}{8}}{%
+                                                                                        \ifstrequal{#1}{La}{\setcounter{notaavalor}{9}}{%
+                                                                                            \ifstrequal{#1}{La\#}{\setcounter{notaavalor}{10}}{%
+                                                                                                \ifstrequal{#1}{Si}{\setcounter{notaavalor}{11}}{}%
+                                                                                            }%
+                                                                                        }%
+                                                                                    }%
+                                                                                }%
+                                                                            }%
+                                                                        }%
+                                                                    }%
+                                                                }%
+                                                            }%
+                                                        }%
+                                                    }%
+                                                }%
+                                            }%
+                                        }%
+                                    }%
+                                }%
+                            }%
+                        }%
+                    }%
+                }%
+            }%
+        }%
+    }%
+}
+
+% Comando que transforma un valor numérico en su nota correspondiente
+\newcommand{\valoranota}[1]{%
+    \ifstrequal{\notation}{europe}{%
+        \ifnumequal{#1}{0}{Do}{%
+            \ifnumequal{#1}{1}{Do\#}{%
+                \ifnumequal{#1}{2}{Re}{%
+                    \ifnumequal{#1}{3}{Re\#}{%
+                        \ifnumequal{#1}{4}{Mi}{%
+                            \ifnumequal{#1}{5}{Fa}{%
+                                \ifnumequal{#1}{6}{Fa\#}{%
+                                    \ifnumequal{#1}{7}{Sol}{%
+                                        \ifnumequal{#1}{8}{Sol\#}{%
+                                            \ifnumequal{#1}{9}{La}{%
+                                                \ifnumequal{#1}{10}{La\#}{%
+                                                    \ifnumequal{#1}{11}{Si}{-}%
+                                                }%
+                                            }%
+                                        }%
+                                    }%
+                                }%
+                            }%
+                        }%
+                    }%
+                }%
+            }%
+        }%
+    }{%
+        \ifnumequal{#1}{0}{C}{%
+            \ifnumequal{#1}{1}{C\#}{%
+                \ifnumequal{#1}{2}{D}{%
+                    \ifnumequal{#1}{3}{D\#}{%
+                        \ifnumequal{#1}{4}{E}{%
+                            \ifnumequal{#1}{5}{F}{%
+                                \ifnumequal{#1}{6}{F\#}{%
+                                    \ifnumequal{#1}{7}{G}{%
+                                        \ifnumequal{#1}{8}{G\#}{%
+                                            \ifnumequal{#1}{9}{A}{%
+                                                \ifnumequal{#1}{10}{A\#}{%
+                                                    \ifnumequal{#1}{11}{B}{-}%
+                                                }%
+                                            }%
+                                        }%
+                                    }%
+                                }%
+                            }%
+                        }%
+                    }%
+                }%
+            }%
+        }%
+    }%
+}%
+
+
+% Contadores necesarios para la función acorde
+\newcounter{acumulador}
+\newcounter{traspose}
+\newcounter{cejilla}
+
+% Función que ajusta el tono
+\newcommand{\traspose}[1]{%
+    \setcounter{traspose}{#1}%
+}
+
+% Función que ajusta la cejilla
+\newcommand{\capo}[1]{%
+    \setcounter{cejilla}{#1}%
+}
+
+% Función que dado un acorde lo ajusta según el tono
+\newcommand{\acorde}[1]{%
+    \notaavalor{#1}%
+    \setcounter{acumulador}{\value{notaavalor}+\value{traspose}-\value{cejilla}}%
+    %\pgfmathsetmacro{\modulo}{int(mod(\the\value{acumulador}, 12))}%
+    \pgfmathsetmacro{\modulo}{ifthenelse(\value{acumulador}<0, int(mod(\the\value{acumulador}+12, 12)), int(mod(\the\value{acumulador}, 12)))}%
+    \valoranota{\modulo}%
+}
+
+% Formato para los acordes
+\newcommand{\chordstyle}[1]{%
+    \textcolor{chordcolor}{\selectfont\bfseries #1}%
+}
+
+% Color para los acordes
+\definecolor{chordcolor}{RGB}{255,87,51}
+
+% Funcion que permite escribir el acorde encima de una palabra (de la letra de la canción)
+% Sintáxis: \chord[m|M|7|...]{Nota}{Palabra sobre la que va la nota o acorde}
+\newcommand{\chord}[3]{%
+    %$\overset{\textstyle\text{\chordstyle{\acorde{#1}#2}}}{\vphantom{\text{g}} \textstyle\text{#3}}$%
+    $\overset{\raisebox{4pt}{\text{\chordstyle{\acorde{#1}#2}}}}{\textstyle\text{#3\vphantom{é}}}$% Ajusta la distancia con raisebox
+}
+
+%Título
+% 1. Título
+% 2. Artista
+% 3. Tono
+% 4. Cejilla
+% 5. Trasponer
+\newcommand{\Song}[5]{%
+    \newcommand{\originalkey}{#3}%
+    \capo{#4}%
+    \traspose{#5}
+    %--------------------
+    \begin{spacing}{1.5}
+        \textbf{\Huge#1}\\ % Título
+        \textbf{\chordstyle{#2}}\\ %Subtítulo
+    \end{spacing}
+    \vspace*{0.5cm}
+    \begin{spacing}{1}
+        {\setstretch{1}\textbf{Tono original:} \chordstyle{%
+            \notaavalor{#3}%
+            \valoranota{\value{notaavalor}}%
+        }}\\ % Tono original
+        \setcounter{acumulador}{\value{cejilla}}%
+        \ifnumequal{\value{acumulador}}{0}{}{%
+            {\textbf{Tono actual:} \chordstyle{\acorde{#3}}}\\%
+            \setcounter{acumulador}{\value{traspose}}%
+            {\textbf{Traspuesta:}  \ifnumequal{\the\value{acumulador}}{0}{no}{\the\value{acumulador}}}\\%
+            }%
+        %{\textbf{Tono de la canción:} \textcolor{chordcolor}{\acorde{#3}}}\\ %Tono de la canción
+        {\textbf{Cejilla:} \ifnumequal{#4}{0}{no}{Traste #4}}\\ %Cejilla
+    \end{spacing}
+}
+
+% Poner el estribillo en negrita
+\newenvironment{chorus}{\bfseries \jump}{\jump}
+
+\renewcommand{\chordstyle}[1]{%
+    \textcolor{chordcolor}{\fontsize{10}{14}\bfseries\selectfont #1}%
+}
+
+
+% Acordes para huecos en blanco
+\newcommand{\gapchord}[2]{%
+    \chord{#1}{#2}{\phantom{t}}%
+}
+
+% Bis
+\newcommand{\bis}{\textbf{(bis)}}
+
+% Entorno canción
+\newenvironment{song}[5]{%
+    % Cambio de interlineado
+    \setstretch{2.3}%
+    
+    \phantomsection % Crea un marcador de posición para el enlace
+    \addcontentsline{toc}{subsection}{#1 (#2)} \label{sec:#1}
+
+    \begin{flushleft}%
+
+    \Song{#1}{#2}{#3}{#4}{#5} % Título - Artista - Tono Original - Cejilla - Trasponer
+    \begin{multicols*}{2}
+}{%
+    \end{multicols*}
+    \end{flushleft}
+}
+
+\newcommand{\jump}{\vspace*{1cm}}
+
+% Parámetros por defecto para diagrama
+\pgfkeys{
+    /diagrama/.is family, /diagrama,
+    trasteinicial/.initial=1,
+    nombre/.initial=Name,
+    variacion/.initial=,
+    numerotrastes/.initial=3,
+    cejilla/.initial=0,
+    iniciocejilla/.initial=6,
+    finalcejilla/.initial=1,
+    height/.initial=3,
+}
+
+% Diagrama de acordes en horizontal
+\newcommand{\hdiagram}[7][]{
+
+    % Procesar las claves
+    \pgfkeys{/diagrama, #1}%
+    
+    \begin{figure}[H]%
+
+        % Hiperlinks
+        \captionsetup{labelformat=empty} % Elimina la etiqueta de la leyenda
+        \caption{}%
+        \def\nombre{\pgfkeysvalueof{/diagrama/nombre}\pgfkeysvalueof{/diagrama/variacion}}%
+        \label{fig:\nombre}%
+
+        \centering
+
+        % Ajuste tamaño figura
+        \resizebox{!}{\pgfkeysvalueof{/diagrama/height}cm}{%  
+            \def\ancho{3.75+\numerotrastes*1.75} % 9.75 - 8.25
+            \def\nombre{\pgfkeysvalueof{/diagrama/nombre}}%
+            \def\variacion{\pgfkeysvalueof{/diagrama/variacion}}%
+            \def\primera{#2}%
+            \def\segunda{#3}%
+            \def\tercera{#4}%
+            \def\cuarta{#5}%
+            \def\quinta{#6}%
+            \def\sexta{#7}%
+            \def\cejilla{\pgfkeysvalueof{/diagrama/cejilla}}%
+            \def\iniciocejilla{\pgfkeysvalueof{/diagrama/iniciocejilla}}%
+            \def\finalcejilla{\pgfkeysvalueof{/diagrama/finalcejilla}}%
+            \def\numerotrastes{\pgfkeysvalueof{/diagrama/numerotrastes}}%
+            \def\trasteinicial{\pgfkeysvalueof{/diagrama/trasteinicial}}%
+
+            %Grosor de líneas
+            \def\lineas{0.6pt}%
+
+            \begin{tikzpicture}%
+                % %Título
+                \pgfmathsetmacro{\pos}{\ancho+3.75}%
+                \node at (\ancho*0.5,14.5) {\Huge \bfseries \textcolor{chordcolor}{%(6.375,14.5)
+                    \notaavalor{\nombre}%
+                    \valoranota{\value{notaavalor}}%
+                    \variacion%
+                    }%
+                };%
+
+                % Rectángulo externo
+                \draw[line width=\lineas] (3.75,13.5) rectangle (\ancho,9.75);%
+
+                % Líneas horizontales
+                \draw[line width=\lineas] (3.75,12.75) -- (\ancho,12.75);%
+                \draw[line width=\lineas] (3.75,12) -- (\ancho,12);%
+                \draw[line width=\lineas] (3.75,11.25) -- (\ancho,11.25);%
+                \draw[line width=\lineas] (3.75,10.5) -- (\ancho,10.5);%
+
+                % Líneas verticales
+                \foreach \d in {1,2,...,\numerotrastes}{%
+                    \draw[line width=\lineas] (3.75+\d*1.75,13.5) -- (3.75+\d*1.75,9.75);%
+                    \pgfmathsetmacro{\suma}{int(\trasteinicial + \d - 1)}%
+                    \node at (2.75+1.75*\d,9.25) {\Large \suma};%
+                }%
+
+                % Círculos
+
+                % Primera cuerda
+                \ifstrequal{\primera}{0}{%
+                    \draw[line width=\lineas] (3.3,13.5) circle (4pt);%
+                }{%
+                    \ifstrequal{\primera}{x}{%
+                        \node at (3.3,13.5) {\Huge {\texttimes}};%
+                    }{%
+                    \pgfmathsetmacro{\pos}{int(\primera-\trasteinicial+1)}%
+                        \filldraw[line width=\lineas] (2.75+1.75*\pos,13.5) circle (6pt);%
+                    }%
+                }%
+
+                % Segunda cuerda
+                \ifstrequal{\segunda}{0}{%
+                    \draw[line width=\lineas] (3.3,12.75) circle (4pt);%
+                }{%
+                    \ifstrequal{\segunda}{x}{%
+                        \node at (3.3,12.75) {\Huge {\texttimes}};%
+                    }{%
+                    \pgfmathsetmacro{\pos}{int(\segunda-\trasteinicial+1)}%
+                        \filldraw[line width=\lineas] (2.75+1.75*\pos,12.75) circle (6pt);%
+                    }%
+                }%
+
+                % Tercera cuerda
+                \ifstrequal{\tercera}{0}{%
+                    \draw[line width=\lineas] (3.3,12) circle (4pt);%
+                }{%
+                    \ifstrequal{\tercera}{x}{
+                        \node at (3.3,12) {\Huge {\texttimes}};%
+                    }{%
+                        \pgfmathsetmacro{\pos}{int(\tercera-\trasteinicial+1)}%
+                        \filldraw[line width=\lineas] (2.75+1.75*\pos,12) circle (6pt);%
+                    }%
+                }%
+
+                % Cuarta cuerda
+                \ifstrequal{\cuarta}{0}{%
+                    \draw[line width=\lineas] (3.3,11.25) circle (4pt);%
+                }{%
+                    \ifstrequal{\cuarta}{x}{%
+                        \node at (3.3,11.25) {\Huge {\texttimes}};%
+                    }{%
+                        \pgfmathsetmacro{\pos}{int(\cuarta-\trasteinicial+1)}%
+                        \filldraw[line width=\lineas] (2.75+1.75*\pos,11.25) circle (6pt);%
+                    }%
+                }%
+
+                % Quinta cuerda
+                \ifstrequal{\quinta}{0}{%
+                    \draw[line width=\lineas] (3.3,10.5) circle (4pt);%
+                }{%
+                    \ifstrequal{\quinta}{x}{%
+                        \node at (3.3,10.5) {\Huge {\texttimes}};%
+                    }{%
+                        \pgfmathsetmacro{\pos}{int(\quinta-\trasteinicial+1)}%
+                        \filldraw[line width=\lineas] (2.75+1.75*\pos,10.5) circle (6pt);%
+                    }%
+                }%
+
+                % Sexta cuerda
+                \ifstrequal{\sexta}{0}{%
+                    \draw[line width=\lineas] (3.3,9.75) circle (4pt);%
+                }{%
+                    \ifstrequal{\sexta}{x}{%
+                        \node at (3.3,9.75) {\Huge {\texttimes}};%
+                    }{%
+                    \pgfmathsetmacro{\pos}{int(\sexta-\trasteinicial+1)}%
+                        \filldraw[line width=\lineas] (2.75+1.75*\pos,9.75) circle (6pt);%
+                    }%
+                }%
+                
+                % Cejilla
+                \ifstrequal{\cejilla}{0}{}{%
+                    \pgfmathsetmacro{\pos}{int(\cejilla-\trasteinicial+1)}%
+                    \filldraw[fill=black, rounded corners=6] (2.75+1.75*\pos+0.22,-0.75*\finalcejilla+14.45) rectangle (2.75+1.75*\pos-0.22,-0.75*\iniciocejilla+14.05);
+                }%
+                
+
+                % Cejuela
+                \ifstrequal{\trasteinicial}{1}{%
+                    \filldraw[fill=white, rounded corners=3] (3.875,13.55) rectangle (3.625,9.7);%
+                }{}%
+                
+            \end{tikzpicture}%
+        }
+        
+    \end{figure}
+}
+
+% Diagrama de acordes en vertical
+\newcommand{\vdiagram}[7][]{
+
+    % Procesar las claves
+    \pgfkeys{/diagrama, #1}%
+    \def\anchoaux{\pgfkeysvalueof{/diagrama/height}}
+    \pgfmathsetmacro{\ancho}{\anchoaux*1.16}%
+
+    \begin{figure}[H]
+        % Hiperlinks
+        \captionsetup{labelformat=empty} % Elimina la etiqueta de la leyenda
+        \caption{}
+        \def\nombre{\pgfkeysvalueof{/diagrama/nombre}\pgfkeysvalueof{/diagrama/variacion}}
+        \label{fig:\nombre}
+
+        \centering
+
+        % Ajuste tamaño figura
+        \resizebox{!}{\ancho cm}{%
+            \def\ancho{3.75+\numerotrastes*1.75} % 9.75 - 8.25
+            \def\nombre{\pgfkeysvalueof{/diagrama/nombre}}
+            \def\variacion{\pgfkeysvalueof{/diagrama/variacion}}
+            \def\trasteinicial{\pgfkeysvalueof{/diagrama/trasteinicial}}
+            \def\primera{#2}
+            \def\segunda{#3}
+            \def\tercera{#4}
+            \def\cuarta{#5}
+            \def\quinta{#6}
+            \def\sexta{#7}
+            \def\cejilla{\pgfkeysvalueof{/diagrama/cejilla}}
+            \def\iniciocejilla{\pgfkeysvalueof{/diagrama/iniciocejilla}}
+            \def\finalcejilla{\pgfkeysvalueof{/diagrama/finalcejilla}}
+            \def\numerotrastes{\pgfkeysvalueof{/diagrama/numerotrastes}}
+
+            %Grosor de líneas
+            \def\lineas{0.6pt}
+
+            \begin{tikzpicture}
+                % %Título
+                \node at (11.5,-2.4) {\Huge \bfseries \textcolor{chordcolor}{%
+                    \notaavalor{\nombre}%
+                    \valoranota{\value{notaavalor}}%
+                    \variacion%
+                    }
+                };%
+
+                \begin{scope}[rotate=-90]
+                    % Rectángulo externo
+                    \draw[line width=\lineas] (3.75,13.5) rectangle (\ancho,9.75);
+
+                    % Líneas horizontales
+                    \draw[line width=\lineas] (3.75,12.75) -- (\ancho,12.75);
+                    \draw[line width=\lineas] (3.75,12) -- (\ancho,12);
+                    \draw[line width=\lineas] (3.75,11.25) -- (\ancho,11.25);
+                    \draw[line width=\lineas] (3.75,10.5) -- (\ancho,10.5);
+
+                    % Líneas verticales
+                    \foreach \d in {1,2,...,\numerotrastes}{%
+                        \draw[line width=\lineas] (3.75+\d*1.75,13.5) -- (3.75+\d*1.75,9.75);%
+                        \pgfmathsetmacro{\suma}{int(\trasteinicial + \d - 1)}%
+                        \node at (2.75+1.75*\d,9.25) {\Large \suma};%
+                    }
+
+                    % Círculos
+
+                    % Primera cuerda
+                    \ifstrequal{\primera}{0}{
+                        \draw[line width=\lineas] (3.3,13.5) circle (4pt);%
+                    }{%
+                        \ifstrequal{\primera}{x}{
+                            \node at (3.3,13.5) {\Huge {\texttimes}};%
+                        }{%
+                        \pgfmathsetmacro{\pos}{int(\primera-\trasteinicial+1)}%
+                            \filldraw[line width=\lineas] (2.75+1.75*\pos,13.5) circle (6pt);%
+                        }
+                    }
+
+                    % Segunda cuerda
+                    \ifstrequal{\segunda}{0}{%
+                        \draw[line width=\lineas] (3.3,12.75) circle (4pt);%
+                    }{%
+                        \ifstrequal{\segunda}{x}{%
+                            \node at (3.3,12.75) {\Huge {\texttimes}};%
+                        }{%
+                        \pgfmathsetmacro{\pos}{int(\segunda-\trasteinicial+1)}%
+                            \filldraw[line width=\lineas] (2.75+1.75*\pos,12.75) circle (6pt);%
+                        }%
+                    }
+
+                    % Tercera cuerda
+                    \ifstrequal{\tercera}{0}{%
+                        \draw[line width=\lineas] (3.3,12) circle (4pt);%
+                    }{%
+                        \ifstrequal{\tercera}{x}{
+                            \node at (3.3,12) {\Huge {\texttimes}};%
+                        }{%
+                            \pgfmathsetmacro{\pos}{int(\tercera-\trasteinicial+1)}%
+                            \filldraw[line width=\lineas] (2.75+1.75*\pos,12) circle (6pt);%
+                        }%
+                    }
+
+                    % Cuarta cuerda
+                    \ifstrequal{\cuarta}{0}{%
+                        \draw[line width=\lineas] (3.3,11.25) circle (4pt);%
+                    }{%
+                        \ifstrequal{\cuarta}{x}{%
+                            \node at (3.3,11.25) {\Huge {\texttimes}};%
+                        }{%
+                            \pgfmathsetmacro{\pos}{int(\cuarta-\trasteinicial+1)}%
+                            \filldraw[line width=\lineas] (2.75+1.75*\pos,11.25) circle (6pt);%
+                        }%
+                    }
+
+                    % Quinta cuerda
+                    \ifstrequal{\quinta}{0}{%
+                        \draw[line width=\lineas] (3.3,10.5) circle (4pt);%
+                    }{%
+                        \ifstrequal{\quinta}{x}{%
+                            \node at (3.3,10.5) {\Huge {\texttimes}};%
+                        }{%
+                            \pgfmathsetmacro{\pos}{int(\quinta-\trasteinicial+1)}%
+                            \filldraw[line width=\lineas] (2.75+1.75*\pos,10.5) circle (6pt);%
+                        }%
+                    }
+
+                    % Sexta cuerda
+                    \ifstrequal{\sexta}{0}{%
+                        \draw[line width=\lineas] (3.3,9.75) circle (4pt);%
+                    }{%
+                        \ifstrequal{\sexta}{x}{%
+                            \node at (3.3,9.75) {\Huge {\texttimes}};%
+                        }{%
+                        \pgfmathsetmacro{\pos}{int(\sexta-\trasteinicial+1)}%
+                            \filldraw[line width=\lineas] (2.75+1.75*\pos,9.75) circle (6pt);%
+                        }%
+                    }
+                    
+                    % Cejilla
+                    \ifstrequal{\cejilla}{0}{}{%
+                        \pgfmathsetmacro{\pos}{int(\cejilla-\trasteinicial+1)}%
+                        \filldraw[fill=black, rounded corners=6] (2.75+1.75*\pos+0.22,-0.75*\finalcejilla+14.45) rectangle (2.75+1.75*\pos-0.22,-0.75*\iniciocejilla+14.05);
+                    }
+
+                    % Cejuela
+                    \ifstrequal{\trasteinicial}{1}{%
+                        \filldraw[fill=white, rounded corners=3] (3.875,13.55) rectangle (3.625,9.7);
+                    }{}
+                \end{scope}
+            \end{tikzpicture}%
+        }
+    \end{figure}
+}
+
+% Parámetros por defecto para diagrama con dedos
+\pgfkeys{
+    /ddiagrama/.is family, /ddiagrama,
+    trasteinicial/.initial=1,
+    nombre/.initial=Name,
+    variacion/.initial=,
+    numerotrastes/.initial=3,
+    cejilla/.initial=0,
+    iniciocejilla/.initial=6,
+    finalcejilla/.initial=1,
+    height/.initial=3,
+    fprimera/.initial=0,
+    fsegunda/.initial=0,
+    ftercera/.initial=0,
+    fcuarta/.initial=0,
+    fquinta/.initial=0,
+    fsexta/.initial=0,
+}
+
+% Diagrama de acordes en horizontal con dedos
+\newcommand{\hddiagram}[7][]{%
+
+    % Procesar las claves
+    \pgfkeys{/ddiagrama, #1}%
+    
+    \begin{figure}[H]%
+
+        % Hiperlinks
+        \captionsetup{labelformat=empty} % Elimina la etiqueta de la leyenda
+        \caption{}%
+        \def\nombre{\pgfkeysvalueof{/ddiagrama/nombre}\pgfkeysvalueof{/ddiagrama/variacion}}%
+        \label{fig:\nombre}%
+
+        \centering%
+
+        % Ajuste tamaño figura
+        \resizebox{!}{\pgfkeysvalueof{/ddiagrama/height}cm}{%  
+            \def\ancho{3.75+\numerotrastes*1.75} % 9.75 - 8.25
+            \def\nombre{\pgfkeysvalueof{/ddiagrama/nombre}}%
+            \def\variacion{\pgfkeysvalueof{/ddiagrama/variacion}}%
+            \def\primera{#2}%
+            \def\segunda{#3}%
+            \def\tercera{#4}%
+            \def\cuarta{#5}%
+            \def\quinta{#6}%
+            \def\sexta{#7}%
+            \def\cejilla{\pgfkeysvalueof{/ddiagrama/cejilla}}%
+            \def\iniciocejilla{\pgfkeysvalueof{/ddiagrama/iniciocejilla}}%
+            \def\finalcejilla{\pgfkeysvalueof{/ddiagrama/finalcejilla}}%
+            \def\numerotrastes{\pgfkeysvalueof{/ddiagrama/numerotrastes}}%
+            \def\trasteinicial{\pgfkeysvalueof{/ddiagrama/trasteinicial}}%
+            %
+            \def\fprimera{\pgfkeysvalueof{/ddiagrama/fprimera}}%
+            \def\fsegunda{\pgfkeysvalueof{/ddiagrama/fsegunda}}%
+            \def\ftercera{\pgfkeysvalueof{/ddiagrama/ftercera}}%
+            \def\fcuarta{\pgfkeysvalueof{/ddiagrama/fcuarta}}%
+            \def\fquinta{\pgfkeysvalueof{/ddiagrama/fquinta}}%
+            \def\fsexta{\pgfkeysvalueof{/ddiagrama/fsexta}}%
+            
+            % Tamaño puntos
+            \def\radio{7.5pt}%
+            
+            % Tamaño números
+            \def\tamnum{14pt}%
+            
+            % Grosor de líneas
+            \def\lineas{0.6pt}%
+
+            % Grosor de cejilla
+            \def\anchocejilla{0.27}
+            
+            \begin{tikzpicture}%
+                % %Título
+                \pgfmathsetmacro{\pos}{\ancho+3.75}%
+                \node at (\ancho*0.5,14.5) {\Huge\bfseries\textcolor{chordcolor}{%(6.375,14.5)
+                    \notaavalor{\nombre}%
+                    \valoranota{\value{notaavalor}}%
+                    \variacion%
+                    }%
+                };%
+
+                % Rectángulo externo
+                \draw[line width=\lineas] (3.75,13.5) rectangle (\ancho,9.75);%
+
+                % Líneas horizontales
+                \draw[line width=\lineas] (3.75,12.75) -- (\ancho,12.75);%
+                \draw[line width=\lineas] (3.75,12) -- (\ancho,12);%
+                \draw[line width=\lineas] (3.75,11.25) -- (\ancho,11.25);%
+                \draw[line width=\lineas] (3.75,10.5) -- (\ancho,10.5);%
+
+                % Líneas verticales
+                \foreach \d in {1,2,...,\numerotrastes}{%
+                    \draw[line width=\lineas] (3.75+\d*1.75,13.5) -- (3.75+\d*1.75,9.75);%
+                    \pgfmathsetmacro{\suma}{int(\trasteinicial + \d - 1)}%
+                    \node at (2.875+1.75*\d,9.25) {\Large \suma};%
+                }
+
+                % Cejilla
+                \ifstrequal{\cejilla}{0}{}{%
+                    \pgfmathsetmacro{\pos}{int(\cejilla-\trasteinicial+1)}%
+                    \filldraw[fill=black, rounded corners=\radio] (2.875+1.75*\pos+\anchocejilla,-0.75*\finalcejilla+14.45) rectangle (2.875+1.75*\pos-\anchocejilla,-0.75*\iniciocejilla+14.05);%
+                }%
+                
+                % Círculos
+
+                % Primera cuerda
+                \ifstrequal{\primera}{0}{%
+                    \draw[line width=\lineas] (3.3,13.5) circle (4pt);%
+                }{%
+                    \ifstrequal{\primera}{x}{%
+                        \node at (3.3,13.5) {\Huge {\texttimes}};%
+                    }{%
+                    \pgfmathsetmacro{\pos}{int(\primera-\trasteinicial+1)}%
+                        \filldraw[line width=\lineas] (2.875+1.75*\pos,13.5) circle (\radio);%
+                        \ifstrequal{\fprimera}{0}{}{%
+                            \node at (2.875+1.75*\pos,13.5) {\fontsize{\tamnum}{\radio}\selectfont\textcolor{white}{\fprimera}};%
+                        }%
+                    }%
+                }%
+
+                % Segunda cuerda
+                \ifstrequal{\segunda}{0}{%
+                    \draw[line width=\lineas] (3.3,12.75) circle (4pt);%
+                }{%
+                    \ifstrequal{\segunda}{x}{%
+                        \node at (3.3,12.75) {\Huge {\texttimes}};%
+                    }{%
+                    \pgfmathsetmacro{\pos}{int(\segunda-\trasteinicial+1)}%
+                        \filldraw[line width=\lineas] (2.875+1.75*\pos,12.75) circle (\radio);%
+                        \ifstrequal{\fsegunda}{0}{}{%
+                            \node at (2.875+1.75*\pos,12.75) {\fontsize{\tamnum}{\radio}\selectfont\textcolor{white}{\fsegunda}};%
+                        }%
+                    }%
+                }%
+
+                % Tercera cuerda
+                \ifstrequal{\tercera}{0}{%
+                    \draw[line width=\lineas] (3.3,12) circle (4pt);%
+                }{%
+                    \ifstrequal{\tercera}{x}{
+                        \node at (3.3,12) {\Huge {\texttimes}};%
+                    }{%
+                        \pgfmathsetmacro{\pos}{int(\tercera-\trasteinicial+1)}%
+                        \filldraw[line width=\lineas] (2.875+1.75*\pos,12) circle (\radio);%
+                        \ifstrequal{\ftercera}{0}{}{%
+                            \node at (2.875+1.75*\pos,12) {\fontsize{\tamnum}{\radio}\selectfont\textcolor{white}{\ftercera}};%
+                        }%
+                    }%
+                }%
+
+                % Cuarta cuerda
+                \ifstrequal{\cuarta}{0}{%
+                    \draw[line width=\lineas] (3.3,11.25) circle (4pt);%
+                }{%
+                    \ifstrequal{\cuarta}{x}{%
+                        \node at (3.3,11.25) {\Huge {\texttimes}};%
+                    }{%
+                        \pgfmathsetmacro{\pos}{int(\cuarta-\trasteinicial+1)}%
+                        \filldraw[line width=\lineas] (2.875+1.75*\pos,11.25) circle (\radio);%
+                        \ifstrequal{\fcuarta}{0}{}{%
+                            \node at (2.875+1.75*\pos,11.25) {\fontsize{\tamnum}{\radio}\selectfont\textcolor{white}{\fcuarta}};
+                        }%
+                    }%
+                }%
+
+                % Quinta cuerda
+                \ifstrequal{\quinta}{0}{%
+                    \draw[line width=\lineas] (3.3,10.5) circle (4pt);%
+                }{%
+                    \ifstrequal{\quinta}{x}{%
+                        \node at (3.3,10.5) {\Huge {\texttimes}};%
+                    }{%
+                        \pgfmathsetmacro{\pos}{int(\quinta-\trasteinicial+1)}%
+                        \filldraw[line width=\lineas] (2.875+1.75*\pos,10.5) circle (\radio);%
+                        \ifstrequal{\fquinta}{0}{}{%
+                            \node at (2.875+1.75*\pos,10.5) {\fontsize{\tamnum}{\radio}\selectfont\textcolor{white}{\fquinta}};%
+                        }%
+                    }%
+                }%
+
+                % Sexta cuerda
+                \ifstrequal{\sexta}{0}{%
+                    \draw[line width=\lineas] (3.3,9.75) circle (4pt);%
+                }{%
+                    \ifstrequal{\sexta}{x}{%
+                        \node at (3.3,9.75) {\Huge {\texttimes}};%
+                    }{%
+                    \pgfmathsetmacro{\pos}{int(\sexta-\trasteinicial+1)}%
+                        \filldraw[line width=\lineas] (2.875+1.75*\pos,9.75) circle (\radio);%
+                        \ifstrequal{\fsexta}{0}{}{%
+                            \node at (2.875+1.75*\pos,9.75) {\fontsize{\tamnum}{\radio}\selectfont\textcolor{white}{\fsexta}};%
+                        }%
+                    }%
+                }%
+                
+                
+                
+
+                % Cejuela
+                \ifstrequal{\trasteinicial}{1}{%
+                    \filldraw[fill=white, rounded corners=3] (3.875,13.55) rectangle (3.625,9.7);%
+                }{}%
+                
+            \end{tikzpicture}%
+        }%
+        
+    \end{figure}
+}
+
+% Diagrama de acordes en vertical con dedos
+\newcommand{\vddiagram}[7][]{
+
+    % Procesar las claves
+    \pgfkeys{/ddiagrama, #1}%
+    \def\anchoaux{\pgfkeysvalueof{/ddiagrama/height}}
+    \pgfmathsetmacro{\ancho}{\anchoaux*1.16}%
+
+    \begin{figure}[H]
+        % Hiperlinks
+        \captionsetup{labelformat=empty} % Elimina la etiqueta de la leyenda
+        \caption{}
+        \def\nombre{\pgfkeysvalueof{/ddiagrama/nombre}\pgfkeysvalueof{/ddiagrama/variacion}}
+        \label{fig:\nombre}
+
+        \centering
+
+        % Ajuste tamaño figura
+        \resizebox{!}{\ancho cm}{%
+        \def\ancho{3.75+\numerotrastes*1.75} % 9.75 - 8.25
+        \def\nombre{\pgfkeysvalueof{/ddiagrama/nombre}}
+        \def\variacion{\pgfkeysvalueof{/ddiagrama/variacion}}
+        \def\primera{#2}
+        \def\segunda{#3}
+        \def\tercera{#4}
+        \def\cuarta{#5}
+        \def\quinta{#6}
+        \def\sexta{#7}
+        \def\cejilla{\pgfkeysvalueof{/ddiagrama/cejilla}}
+        \def\iniciocejilla{\pgfkeysvalueof{/ddiagrama/iniciocejilla}}
+        \def\finalcejilla{\pgfkeysvalueof{/ddiagrama/finalcejilla}}
+        \def\numerotrastes{\pgfkeysvalueof{/ddiagrama/numerotrastes}}
+        \def\trasteinicial{\pgfkeysvalueof{/ddiagrama/trasteinicial}}
+
+        \def\fprimera{\pgfkeysvalueof{/ddiagrama/fprimera}}
+        \def\fsegunda{\pgfkeysvalueof{/ddiagrama/fsegunda}}
+        \def\ftercera{\pgfkeysvalueof{/ddiagrama/ftercera}}
+        \def\fcuarta{\pgfkeysvalueof{/ddiagrama/fcuarta}}
+        \def\fquinta{\pgfkeysvalueof{/ddiagrama/fquinta}}
+        \def\fsexta{\pgfkeysvalueof{/ddiagrama/fsexta}}
+
+        % Tamaño puntos
+        \def\radio{6pt}
+
+        % Tamaño números
+        \def\tamnum{10pt}
+
+        % Grosor de líneas
+        \def\lineas{0.6pt}
+
+            \begin{tikzpicture}
+                % %Título
+                \node at (11.5,-2.4) {\Huge \bfseries \textcolor{chordcolor}{%
+                    \notaavalor{\nombre}%
+                    \valoranota{\value{notaavalor}}%
+                    \variacion%
+                    }
+                };%
+
+                \begin{scope}[rotate=-90]
+                    % Rectángulo externo
+                    \draw[line width=\lineas] (3.75,13.5) rectangle (\ancho,9.75);
+
+                    % Líneas horizontales
+                    \draw[line width=\lineas] (3.75,12.75) -- (\ancho,12.75);
+                    \draw[line width=\lineas] (3.75,12) -- (\ancho,12);
+                    \draw[line width=\lineas] (3.75,11.25) -- (\ancho,11.25);
+                    \draw[line width=\lineas] (3.75,10.5) -- (\ancho,10.5);
+
+                    % Líneas verticales
+                    \foreach \d in {1,2,...,\numerotrastes}{%
+                        \draw[line width=\lineas] (3.75+\d*1.75,13.5) -- (3.75+\d*1.75,9.75);%
+                        \pgfmathsetmacro{\suma}{int(\trasteinicial + \d - 1)}%
+                        \node at (2.75+1.75*\d,9.25) {\Large \suma};%
+                    }
+
+                    % Cejilla
+                    \ifstrequal{\cejilla}{0}{}{%
+                        \pgfmathsetmacro{\pos}{int(\cejilla-\trasteinicial+1)}%
+                        \filldraw[fill=black, rounded corners=6] (2.875+1.75*\pos+0.22,-0.75*\finalcejilla+14.45) rectangle (2.85+1.75*\pos-0.22,-0.75*\iniciocejilla+14.05);
+                    }
+
+                    % Círculos
+
+                    % Primera cuerda
+                    \ifstrequal{\primera}{0}{
+                        \draw[line width=\lineas] (3.3,13.5) circle (4pt);%
+                    }{%
+                        \ifstrequal{\primera}{x}{
+                            \node at (3.3,13.5) {\Huge {\texttimes}};%
+                        }{%
+                        \pgfmathsetmacro{\pos}{int(\primera-\trasteinicial+1)}%
+                            \filldraw[line width=\lineas] (2.875+1.75*\pos,13.5) circle (\radio);%
+                            \ifstrequal{\fprimera}{0}{}{%
+                                \node at (2.85+1.75*\pos,13.5) {\fontsize{\tamnum}{\radio}\selectfont\textcolor{white}{\fprimera}};
+                            }
+                        }
+                    }
+
+                    % Segunda cuerda
+                    \ifstrequal{\segunda}{0}{%
+                        \draw[line width=\lineas] (3.3,12.75) circle (4pt);%
+                    }{%
+                        \ifstrequal{\segunda}{x}{%
+                            \node at (3.3,12.75) {\Huge {\texttimes}};%
+                        }{%
+                        \pgfmathsetmacro{\pos}{int(\segunda-\trasteinicial+1)}%
+                            \filldraw[line width=\lineas] (2.875+1.75*\pos,12.75) circle (\radio);%
+                            \ifstrequal{\fsegunda}{0}{}{%
+                                \node at (2.85+1.75*\pos,12.75) {\fontsize{\tamnum}{\radio}\selectfont\textcolor{white}{\fsegunda}};
+                            }
+                        }%
+                    }
+
+                    % Tercera cuerda
+                    \ifstrequal{\tercera}{0}{%
+                        \draw[line width=\lineas] (3.3,12) circle (4pt);%
+                    }{%
+                        \ifstrequal{\tercera}{x}{
+                            \node at (3.3,12) {\Huge {\texttimes}};%
+                        }{%
+                            \pgfmathsetmacro{\pos}{int(\tercera-\trasteinicial+1)}%
+                            \filldraw[line width=\lineas] (2.875+1.75*\pos,12) circle (\radio);%
+                            \ifstrequal{\ftercera}{0}{}{%
+                                \node at (2.85+1.75*\pos,12) {\fontsize{\tamnum}{\radio}\selectfont\textcolor{white}{\ftercera}};
+                            }
+                        }%
+                    }
+
+                    % Cuarta cuerda
+                    \ifstrequal{\cuarta}{0}{%
+                        \draw[line width=\lineas] (3.3,11.25) circle (4pt);%
+                    }{%
+                        \ifstrequal{\cuarta}{x}{%
+                            \node at (3.3,11.25) {\Huge {\texttimes}};%
+                        }{%
+                            \pgfmathsetmacro{\pos}{int(\cuarta-\trasteinicial+1)}%
+                            \filldraw[line width=\lineas] (2.875+1.75*\pos,11.25) circle (\radio);%
+                            \ifstrequal{\fcuarta}{0}{}{%
+                                \node at (2.85+1.75*\pos,11.25) {\fontsize{\tamnum}{\radio}\selectfont\textcolor{white}{\fcuarta}};
+                            }
+                        }%
+                    }
+
+                    % Quinta cuerda
+                    \ifstrequal{\quinta}{0}{%
+                        \draw[line width=\lineas] (3.3,10.5) circle (4pt);%
+                    }{%
+                        \ifstrequal{\quinta}{x}{%
+                            \node at (3.3,10.5) {\Huge {\texttimes}};%
+                        }{%
+                            \pgfmathsetmacro{\pos}{int(\quinta-\trasteinicial+1)}%
+                            \filldraw[line width=\lineas] (2.875+1.75*\pos,10.5) circle (\radio);%
+                            \ifstrequal{\fquinta}{0}{}{%
+                                \node at (2.85+1.75*\pos,10.5) {\fontsize{\tamnum}{\radio}\selectfont\textcolor{white}{\fquinta}};
+                            }
+                        }%
+                    }
+
+                    % Sexta cuerda
+                    \ifstrequal{\sexta}{0}{%
+                        \draw[line width=\lineas] (3.3,9.75) circle (4pt);%
+                    }{%
+                        \ifstrequal{\sexta}{x}{%
+                            \node at (3.3,9.75) {\Huge {\texttimes}};%
+                        }{%
+                        \pgfmathsetmacro{\pos}{int(\sexta-\trasteinicial+1)}%
+                            \filldraw[line width=\lineas] (2.875+1.75*\pos,9.75) circle (\radio);%
+                            \ifstrequal{\fsexta}{0}{}{%
+                                \node at (2.85+1.75*\pos,9.75) {\fontsize{\tamnum}{\radio}\selectfont\textcolor{white}{\fsexta}};
+                            }
+                        }%
+                    }
+                    
+                    
+
+                    % Cejuela
+                    \ifstrequal{\trasteinicial}{1}{%
+                        \filldraw[fill=white, rounded corners=3] (3.875,13.55) rectangle (3.625,9.7);
+                    }{}
+                \end{scope}
+            \end{tikzpicture}%
+        }
+    \end{figure}
+}
+
+% Parámetros por defecto para portada
+\pgfkeys{
+    /portada/.is family, /portada,
+    titulo/.initial=,
+    autor/.initial=,
+    textcolor/.initial=white,
+    subtitulo/.initial=,
+    image/.initial=imagen_portada.jpeg,
+    boxcolor/.initial=,
+}
+
+% Portada
+\newcommand{\portada}[1][]{ % Argumento opcional
+\pgfkeys{/portada, #1}
+    \thispagestyle{empty}
+    \def\titulo{\pgfkeysvalueof{/portada/titulo}}
+    \def\subtitulo{\pgfkeysvalueof{/portada/subtitulo}}
+    \def\autor{\pgfkeysvalueof{/portada/autor}}
+    \def\fontcolor{\pgfkeysvalueof{/portada/textcolor}}
+    \def\imagen{\dirimages\pgfkeysvalueof{/portada/image}}
+
+    \pgfkeys{/portada, boxcolor/.get=\parametrovalor}%
+    \ifx\parametrovalor\empty%
+        \colorlet{caja}{chordcolor}
+    \else%
+        \definecolor{caja}{HTML}{\parametrovalor}
+    \fi%
+
+    % Figuras
+    \begin{tikzpicture}[remember picture, overlay]
+
+        % Fondo
+        \node[inner sep=0pt, anchor=south west] at (current page.south west) {\includegraphics[width=\paperwidth, height=\paperheight]{\imagen}};
+
+        % Rectángulo
+        % \draw [chordcolor,fill={chordcolor}, rotate=20, opacity=0.9, rounded corners=1cm] (-3,-6.6) rectangle (19.6,-18.6);
+        \draw [caja,fill={caja}, rotate=20, opacity=0.9, rounded corners=1cm] (-3,-11.6) rectangle (20.6,-23.6);
+
+        % Título
+        \node at (8.79,-14) {\centering \fontsize{60}{14}\selectfont \bfseries \textcolor{\fontcolor}{\titulo}};
+
+        % Subtítulo
+        \node at (8.79,-16) {\centering \fontsize{30}{14}\selectfont \textcolor{\fontcolor}{\subtitulo}};
+
+        % Autor
+        \node[rotate=20] at (16.75,-18.3) {\centering \fontsize{15}{14}\selectfont \textcolor{\fontcolor}{\autor}};
+
+        % Para calcular el centro
+        % \draw (current page.north east) -- (current page.south west);
+        % \draw (current page.north west) -- (current page.south east);
+
+        %\fill (8.8,-11.6) circle (10pt); % Dibuja un punto en la coordenada (0,0) con un radio de 2pt
+
+    \end{tikzpicture}
+    \newpage
+    
+}
+
+% Intro
+\newcommand{\intro}[1]{\textbf{Intro:} \chordstyle{#1}}
+
+% Licencia
+\newcommand{\licence}{%
+    \thispagestyle{empty}               % Sin encabezado ni pie de página
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[anchor=south west, inner sep=3cm] at (current page.south west) {
+            \begin{minipage}{0.5\paperwidth}
+                \href{https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es}{
+                    \includegraphics[height=2cm]{\dirimages/Licencia.png}
+                }\vspace{1cm}\\
+                Esta obra está bajo una
+                \href{https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es}{
+                    Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+                }\\
+
+                Eres libre de compartir y redistribuir el contenido de esta obra en cualquier medio o formato, siempre y cuando des el crédito adecuado a los autores originales y no persigas fines comerciales. 
+            \end{minipage}
+        };
+    \end{tikzpicture}
+}

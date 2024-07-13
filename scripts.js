@@ -115,7 +115,7 @@ function AdjustOriginalTone(first_time=false) {
             }
 
             // tone_pointer.innerHTML = `<a title="${chord}${variation}">${chord}${variation}<\a>`;
-            tone_pointer.innerHTML = `${chord}${variation}<img src="../images/chords/${NOTES_AMERICAN_SHARP[num]}${variation}.png" alt="Acorde de ${chord}${variation}" class="hover-image">`;
+            tone_pointer.innerHTML = `${chord}${variation}<img src="../images/chords/${NOTES_AMERICAN_FLAT[num]}${variation}.svg" alt="Acorde de ${chord}${variation}" class="hover-image">`;
         } else {
             tone_pointer.setAttribute("acorde", `${tone_pointer.innerHTML}`);
         }
@@ -154,8 +154,9 @@ function Reload() {
         let save_notation = notation;
         notation = [AMERICAN, FLAT];
         let american_chord = Chord(w_note);
+
         // chords[i].innerHTML = `<a title="${chord}${variation}">${chord}${variation}<\a>`
-        chords[i].innerHTML = `${chord}${variation}<img src="../images/chords/${american_chord}${variation}.png" alt="Acorde de ${chord}${variation}" class="hover-image">`;
+        chords[i].innerHTML = `${chord}${variation}<img src="../images/svg_chords/${american_chord}${variation}.svg" alt="Acorde de ${chord}${variation}" class="hover-image">`;
         notation = save_notation;
     }  
 
@@ -317,11 +318,19 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("pauseButton").addEventListener('click', function() {
         if (isScrolling) {
             stopScrolling();
-            this.textContent = '►';
+            // this.textContent = '►';
+            let img = document.getElementById("pauseButton");
+            img.setAttribute("src", "../images/play.svg");
+            img.setAttribute("alt", "play");
+
             console.log("pausando scroll");
         } else {
             startScrolling();
-            this.textContent = '⏸';//'⏸︎'; ⏸
+            // this.textContent = '⏸';//'⏸︎'; ⏸
+            let img = document.getElementById("pauseButton");
+            img.setAttribute("src", "../images/pause.svg");
+            img.setAttribute("alt", "pause");
+
             console.log("reanudando scroll");
         }
         isScrolling = !isScrolling;
