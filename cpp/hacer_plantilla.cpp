@@ -227,7 +227,6 @@ int main(int argc, char** argv){
             </div>\n\
         <div id=\"controls\">\n\
             <img id=\"pauseButton\" src=\"../images/play.svg\" alt=\"play\">\n\
-        </div>
         </div>\n\
         <div id=\"pie\">\n\
             <div id=\"pie-content\">\n\
