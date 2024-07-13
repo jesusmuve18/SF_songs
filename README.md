@@ -35,6 +35,8 @@ Su ejecución será:
 $ ./scripts/generate-all.sh
 ```
 
+Se recomienda que los archivos **.dat** tengan una longitud máxima de 39 caracteres por línea (para su correcta visualización en todos los dispositivos).
+
 ### Generación automática de diagramas de acordes
 
 Se ha desarrollado otro <a href="./latex/svg_maker.sh">script</a> que convierte el diagrama de acordes generado en **latex/diagram_maker.tex** gracias al paquete **jmvsong** (proyecto cuyo repositorio pronto se subirá a github donde aparecerá su uso) a un formato de archivo **svg**. Para ello, será necesario tener instalada la herramienta **pdf2svg** disponible en cualquier sistema operativo.
