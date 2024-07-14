@@ -227,6 +227,10 @@ int main(int argc, char** argv){
             </div>\n\
         <div id=\"controls\">\n\
             <img id=\"pauseButton\" src=\"../images/play.svg\" alt=\"play\">\n\
+             <div id=\"speed-bar\">\n\
+                <input type=\"range\" class=\"scroll-speed-bar\" id=\"scroll-speed-bar\" min=\"1\" max=\"100\" value=\"50\" steps=\"1\" oninput=\"ajustarVelocidad()\">\n\
+                <span class=\"scroll-speed-value\" id=\"scroll-speed-value\">50</span></p>\n\
+            </div>\n\
         </div>\n\
         <div id=\"pie\">\n\
             <div id=\"pie-content\">\n\

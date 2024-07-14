@@ -208,15 +208,14 @@ b:hover .hover-image {
     display: flex; /* Muestra la imagen cuando se pasa el ratón por encima del span */
 }
 
+
 /*SCROLL PLAY/PAUSE*/
-#controls {
-    position: fixed;
-    bottom: 5px;
-    right: 0px;
-    z-index: 1;
-}
 
 #pauseButton {
+    position: fixed;
+    bottom: 10px;
+    right: 0px;
+    z-index: 3;
     opacity: 0.75;
     font-size: 1.2em;
     color: grey;
@@ -230,6 +229,35 @@ b:hover .hover-image {
 
 #pauseButton:hover {
     cursor: pointer;
+}
+
+.scroll-speed-value {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 12px;
+    width: 30px;
+    height: 200px;
+    text-align: center;
+    z-index: 1;
+}
+
+.scroll-speed-bar {
+    display: none;
+    transform: rotate(270deg); /* Gira el deslizable */
+    position: fixed;
+    bottom: 120px;
+    right: -40px;
+    border: 1px solid black;
+    z-index: 2;
+}
+
+#controls:hover .scroll-speed-bar {
+    display: block;
+}
+
+#controls:hover .scroll-speed-value {
+    display: block;
 }
 
 

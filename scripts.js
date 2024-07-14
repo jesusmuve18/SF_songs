@@ -115,7 +115,7 @@ function AdjustOriginalTone(first_time=false) {
             }
 
             // tone_pointer.innerHTML = `<a title="${chord}${variation}">${chord}${variation}<\a>`;
-            tone_pointer.innerHTML = `${chord}${variation}<img src="../images/chords/${NOTES_AMERICAN_FLAT[num]}${variation}.svg" alt="Acorde de ${chord}${variation}" class="hover-image">`;
+            tone_pointer.innerHTML = `${chord}${variation}<img src="../images/svg_chords/${NOTES_AMERICAN_FLAT[num]}${variation}.svg" alt="Acorde de ${chord}${variation}" class="hover-image">`;
         } else {
             tone_pointer.setAttribute("acorde", `${tone_pointer.innerHTML}`);
         }
@@ -301,21 +301,32 @@ async function loadIndex(filename) {
 /**************************************************************************************************************/
 // SCROLLING
 
+// Inicializar la variable con el valor del deslizable
+let speed;
+let isScrolling = false;
+let scrollInterval;
+
 document.addEventListener('DOMContentLoaded', function() {
-    let scrollInterval;
-    let isScrolling = false;
+    
 
     function startScrolling() {
+        speed = speed = document.getElementById("scroll-speed-bar").value;
+
+        let time = speed * (-190/99) + (19990/99); // Interpolación lineal: 1->200, 100->10
+
+        // console.log(`time: ${time}`);
+
+        console.log("Iniciando")
         scrollInterval = setInterval(() => {
-            window.scrollBy(0, 1); // Desplaza hacia abajo 1 píxel
-        }, 200); // Ajusta el intervalo de tiempo según sea necesario
+            window.scrollBy(0, 1); // Desplaza 1 píxel hacia abajo
+        }, time);
     }
 
     function stopScrolling() {
         clearInterval(scrollInterval);
     }
 
-    document.getElementById("pauseButton").addEventListener('click', function() {
+    document.getElementById("pauseButton").addEventListener('click', function () {
         if (isScrolling) {
             stopScrolling();
             // this.textContent = '►';
@@ -335,4 +346,19 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         isScrolling = !isScrolling;
     });
+
 });
+
+function ajustarVelocidad(){
+    speed = document.getElementById("scroll-speed-bar").value;
+    document.getElementById("scroll-speed-value").innerHTML = speed;
+    clearInterval(scrollInterval);
+    isScrolling=false;
+
+    let img = document.getElementById("pauseButton");
+    img.setAttribute("src", "../images/play.svg");
+    img.setAttribute("alt", "play");
+
+    console.log("pausando scroll");
+}
+
