@@ -1,0 +1,17 @@
+#index {
+    padding-left: 20px;
+}
+
+#index a {
+    text-decoration: none;
+    color: black;
+    line-height: 200%;
+}
+
+#index a #song-title {
+    font-weight: 600;
+}
+
+#index a #author {
+    color: grey;
+}

@@ -181,7 +181,7 @@ int main(int argc, char** argv){
     <meta charset=\"UTF-8\">\n\
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\
     <title>" + title + "</title>\n\
-    <link rel=\"stylesheet\" href=\"" + main_dir + "style.css\">\n\
+    <link rel=\"stylesheet\" href=\"" + main_dir + "/styles/style.css\">\n\
     <script src=\"" + main_dir + "scripts.js\"></script>\n\
     <link rel=\"icon\" href=\"" + main_dir + "images/Logo Tau sin fondo.png\">\n\
 </head>\n\
@@ -196,11 +196,11 @@ int main(int argc, char** argv){
 \n\
             <nav>\n\
                 <ul>\n\
-                    <li><a href=\"" + main_dir + "index.html\">Inicio</a></li>\n\
-                    <li><a href=\"" + main_dir + "acordes.html\">Acordes</a></li>\n\
-                    <li><a href=\"#\">Opción 2</a></li>\n\
-                    <li><a href=\"#\">Opción 3</a></li>\n\
-                    <li><a href=\"" + main_dir + "about.html\">Acerca de</a></li>\n\
+                    <a href=\"" + main_dir + "index.html\"><li>Inicio</li></a>\n\
+                    <a href=\"" + main_dir + "indice.html\"><li>Indice</li></a>\n\
+                    <a href=\"" + main_dir + "acordes.html\"><li>Acordes</li></a>\n\
+                    <a href=\"#\"><li>Opción 3</li></a>\n\
+                    <a href=\"" + main_dir + "about.html\"><li>Acerca de</a>\n\
                 </ul>\n\
             </nav>\n\
         </div>\n\
