@@ -134,3 +134,7 @@ done
 
 printf "\n\n"
 echo Se han generado $total_files archivos
+
+# 269 + 17 + 13 + 150 = 449
+percent=$(echo "scale=3; (($total_files-($n-1))*100)/ 449" | bc)
+echo "$percent% completado del cantoral"

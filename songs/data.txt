@@ -24,11 +24,13 @@
 <a href="./songs/Baja_a_Dios_de_las_nubes-L_Alfredo.html">16. <span id="song-title">Baja a Dios de las nubes</span> <span id="author">L Alfredo</span></a><br>
 <a href="./songs/Bendito_seas,_Señor-Popular_Jerez.html">17. <span id="song-title">Bendito seas, Señor</span> <span id="author">Popular Jerez</span></a><br>
 <a href="./songs/Benedicat.html">18. <span id="song-title">Benedicat</span> <span id="author"></span></a><br>
-<a href="./songs/Bien_sé,_Señor-Nico_Montero.html">19. <span id="song-title">Bien sé, Señor</span> <span id="author">Nico Montero</span></a><br>
-<a href="./songs/De_noche_iremos-Taizé.html">20. <span id="song-title">De noche iremos</span> <span id="author">Taizé</span></a><br>
-<a href="./songs/Mi_roca-Ixcís.html">21. <span id="song-title">Mi roca</span> <span id="author">Ixcís</span></a><br>
-<a href="./songs/Resucitados.html">22. <span id="song-title">Resucitados</span> <span id="author"></span></a><br>
-<a href="./songs/Salmo_97_Aleluya-Grupo_San_Francisco.html">23. <span id="song-title">Salmo 97 Aleluya</span> <span id="author">Grupo San Francisco</span></a><br>
+<a href="./songs/Bienaventuranzas_de_33-Toño_Casado_Musical_33.html">19. <span id="song-title">Bienaventuranzas de 33</span> <span id="author">Toño Casado Musical 33</span></a><br>
+<a href="./songs/Bienaventuranzas-Kairoi.html">20. <span id="song-title">Bienaventuranzas</span> <span id="author">Kairoi</span></a><br>
+<a href="./songs/Bien_sé,_Señor-Nico_Montero.html">21. <span id="song-title">Bien sé, Señor</span> <span id="author">Nico Montero</span></a><br>
+<a href="./songs/De_noche_iremos-Taizé.html">22. <span id="song-title">De noche iremos</span> <span id="author">Taizé</span></a><br>
+<a href="./songs/Mi_roca-Ixcís.html">23. <span id="song-title">Mi roca</span> <span id="author">Ixcís</span></a><br>
+<a href="./songs/Resucitados.html">24. <span id="song-title">Resucitados</span> <span id="author"></span></a><br>
+<a href="./songs/Salmo_97_Aleluya-Grupo_San_Francisco.html">25. <span id="song-title">Salmo 97 Aleluya</span> <span id="author">Grupo San Francisco</span></a><br>
 <h2 id="Dios mío y todas mis cosas">Dios mío y todas mis cosas</h2>
 <h2 id="Oración">Oración</h2>
 <h2 id="Navidad">Navidad</h2>
