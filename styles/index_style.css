@@ -15,3 +15,13 @@
 #index a #author {
     color: grey;
 }
+
+#index #enlaces {
+    padding-bottom: 20px;
+}
+
+#index #enlaces a {
+    color: red;
+    font-weight: 600;
+    padding-right: 10px;
+}

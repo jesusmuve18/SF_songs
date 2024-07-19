@@ -30,34 +30,107 @@ process_string() {
     echo "$part1|$part2"
 }
 
+obtener_subcarpetas() {
+    local directorio="$1"
+    subcarpetas=()
+    for dir in "$directorio"/*/; do
+        [ -d "$dir" ] && subcarpetas+=("$(basename "$dir")")
+    done
+    echo "${subcarpetas[@]}"
+}
+
 
 dir_data=./cpp/songs
 dir_html=./songs
 script=./scripts/generate.sh
 index_file=./songs/data.txt
 
+total_files=0
 n=1
 
 # Vacío el archivo de índice
 echo > $index_file
 
+# Obtengo las subcarpetas
+subcarpetas=($(obtener_subcarpetas $dir_data))
+
+echo "<div id=\"enlaces\">" >> $index_file
+# Añado los enlaces al índice
+for sub_dir in "${subcarpetas[@]}";
+do
+    # Le quito el número y cambio '_' por ' '
+    sub_dir_name=$(echo "$( echo $sub_dir | tr '_' ' ')" | cut -d '-' -f 2-)
+
+    echo "  <a href=\"#$sub_dir_name\">$sub_dir_name</a>" >> $index_file
+done
+
+echo "</div>" >> $index_file
+
 for file in $(ls $dir_data); 
 do
-    echo "------------------------------------------"
-    $script $dir_data/$file
-    result=$(process_string $file)
-    title=$(echo "$result" | cut -d'|' -f1)
-    author=$(echo "$result" | cut -d'|' -f2)
-    filename=$(echo "$file" | cut -d'.' -f1)
+    if [[ ! -d "$dir_data/$file" ]]; then # Solo recorro los archivos
+        echo "------------------------------------------"
+        $script $dir_data/$file
+        result=$(process_string $file)
+        title=$(echo "$result" | cut -d'|' -f1)
+        author=$(echo "$result" | cut -d'|' -f2)
+        filename=$(echo "$file" | cut -d'.' -f1)
 
-    echo "Nombre de archivo: $filename"
-    echo "Título: $title"
-    echo "Autor:  $author"
+        echo "Nombre de archivo: $filename"
+        echo "Título: $title"
+        echo "Autor:  $author"
 
-    echo "<a href=\"$dir_html/$filename.html\">$n. <span id=\"song-title\">$title</span> <span id=\"author\">$author</span></a><br>" >> $index_file
-    n=$((n+1))
+        # La añado al índice
+        echo "<a href=\"$dir_html/$filename.html\">$n. <span id=\"song-title\">$title</span> <span id=\"author\">$author</span></a><br>" >> $index_file
+        
+        # Aumento el contador
+        n=$((n+1))
+        total_files=$(($total_files+1))
+    fi
+
+done
+
+
+# Recorro las subcarpetas
+for sub_dir in "${subcarpetas[@]}"; 
+do
+    echo "........................................."
+
+    echo "Añadiendo canciones de $sub_dir..."
+
+    # Le quito el número y cambio '_' por ' '
+    sub_dir_name=$(echo "$( echo $sub_dir | tr '_' ' ')" | cut -d '-' -f 2-)
+
+    # La añado al índice
+    echo "<h2 id=\"$sub_dir_name\">$sub_dir_name</h2>" >> $index_file
+
+    n=1
+
+    for file in $(ls $dir_data/$sub_dir); 
+    do
+        if ! test -d $file; then # Solo recorro los archivos
+            echo "------------------------------------------"
+            $script $dir_data/$sub_dir/$file
+            result=$(process_string $file)
+            title=$(echo "$result" | cut -d'|' -f1)
+            author=$(echo "$result" | cut -d'|' -f2)
+            filename=$(echo "$file" | cut -d'.' -f1)
+
+            echo "Nombre de archivo: $filename"
+            echo "Título: $title"
+            echo "Autor:  $author"
+
+            # La añado al índice
+            echo "<a href=\"$dir_html/$sub_dir/$filename.html\">$n. <span id=\"song-title\">$title</span> <span id=\"author\">$author</span></a><br>" >> $index_file
+            
+            # Aumento el contador
+            n=$((n+1))
+            total_files=$(($total_files+1))
+        fi
+
+    done
 
 done
 
 printf "\n\n"
-echo Se han generado $n archivos
+echo Se han generado $total_files archivos

@@ -1,4 +1,11 @@
 
+<div id="enlaces">
+  <a href="#Dios mío y todas mis cosas">Dios mío y todas mis cosas</a>
+  <a href="#Oración">Oración</a>
+  <a href="#Navidad">Navidad</a>
+  <a href="#Pascua">Pascua</a>
+  <a href="#Otras">Otras</a>
+</div>
 <a href="./songs/Adorando-Sonido_Joven.html">1. <span id="song-title">Adorando</span> <span id="author">Sonido Joven</span></a><br>
 <a href="./songs/Agua_lávame-Brotes_de_Olivo.html">2. <span id="song-title">Agua lávame</span> <span id="author">Brotes de Olivo</span></a><br>
 <a href="./songs/Alaba_a_tu_Señor-Cesáreo_Gabaráin.html">3. <span id="song-title">Alaba a tu Señor</span> <span id="author">Cesáreo Gabaráin</span></a><br>
@@ -8,9 +15,26 @@
 <a href="./songs/Aleluya_de_Taizé-Taizé.html">7. <span id="song-title">Aleluya de Taizé</span> <span id="author">Taizé</span></a><br>
 <a href="./songs/Aleluya_el_Señor_resucitó-Brotes_de_Olivo.html">8. <span id="song-title">Aleluya el Señor resucitó</span> <span id="author">Brotes de Olivo</span></a><br>
 <a href="./songs/Al_encuentro-Brotes_de_Olivo.html">9. <span id="song-title">Al encuentro</span> <span id="author">Brotes de Olivo</span></a><br>
-<a href="./songs/Amando_hasta_el_extremo-Maite_López.html">10. <span id="song-title">Amando hasta el extremo</span> <span id="author">Maite López</span></a><br>
-<a href="./songs/A_ti_que_estás_sentado_en_tu_sillón-Alberto_y_Emilia.html">11. <span id="song-title">A ti que estás sentado en tu sillón</span> <span id="author">Alberto y Emilia</span></a><br>
-<a href="./songs/De_noche_iremos-Taizé.html">12. <span id="song-title">De noche iremos</span> <span id="author">Taizé</span></a><br>
-<a href="./songs/Mi_roca-Ixcís.html">13. <span id="song-title">Mi roca</span> <span id="author">Ixcís</span></a><br>
-<a href="./songs/Resucitados.html">14. <span id="song-title">Resucitados</span> <span id="author"></span></a><br>
-<a href="./songs/Salmo_97_Aleluya-Grupo_San_Francisco.html">15. <span id="song-title">Salmo 97 Aleluya</span> <span id="author">Grupo San Francisco</span></a><br>
+<a href="./songs/Alleluia_7-Taizé.html">10. <span id="song-title">Alleluia 7</span> <span id="author">Taizé</span></a><br>
+<a href="./songs/Amando_hasta_el_extremo-Maite_López.html">11. <span id="song-title">Amando hasta el extremo</span> <span id="author">Maite López</span></a><br>
+<a href="./songs/Amaos-Kairoi.html">12. <span id="song-title">Amaos</span> <span id="author">Kairoi</span></a><br>
+<a href="./songs/Annuncieremo.html">13. <span id="song-title">Annuncieremo</span> <span id="author"></span></a><br>
+<a href="./songs/Aquí_estamos-Brotes_de_Olivo.html">14. <span id="song-title">Aquí estamos</span> <span id="author">Brotes de Olivo</span></a><br>
+<a href="./songs/A_ti_que_estás_sentado_en_tu_sillón-Alberto_y_Emilia.html">15. <span id="song-title">A ti que estás sentado en tu sillón</span> <span id="author">Alberto y Emilia</span></a><br>
+<a href="./songs/Baja_a_Dios_de_las_nubes-L_Alfredo.html">16. <span id="song-title">Baja a Dios de las nubes</span> <span id="author">L Alfredo</span></a><br>
+<a href="./songs/Bendito_seas,_Señor-Popular_Jerez.html">17. <span id="song-title">Bendito seas, Señor</span> <span id="author">Popular Jerez</span></a><br>
+<a href="./songs/Benedicat.html">18. <span id="song-title">Benedicat</span> <span id="author"></span></a><br>
+<a href="./songs/Bien_sé,_Señor-Nico_Montero.html">19. <span id="song-title">Bien sé, Señor</span> <span id="author">Nico Montero</span></a><br>
+<a href="./songs/De_noche_iremos-Taizé.html">20. <span id="song-title">De noche iremos</span> <span id="author">Taizé</span></a><br>
+<a href="./songs/Mi_roca-Ixcís.html">21. <span id="song-title">Mi roca</span> <span id="author">Ixcís</span></a><br>
+<a href="./songs/Resucitados.html">22. <span id="song-title">Resucitados</span> <span id="author"></span></a><br>
+<a href="./songs/Salmo_97_Aleluya-Grupo_San_Francisco.html">23. <span id="song-title">Salmo 97 Aleluya</span> <span id="author">Grupo San Francisco</span></a><br>
+<h2 id="Dios mío y todas mis cosas">Dios mío y todas mis cosas</h2>
+<h2 id="Oración">Oración</h2>
+<h2 id="Navidad">Navidad</h2>
+<h2 id="Pascua">Pascua</h2>
+<h2 id="Otras">Otras</h2>
+<a href="./songs/5-Otras/Despertar-Estopa.html">1. <span id="song-title">Despertar</span> <span id="author">Estopa</span></a><br>
+<a href="./songs/5-Otras/Un_violinista_en_tu_tejado-Melendi.html">2. <span id="song-title">Un violinista en tu tejado</span> <span id="author">Melendi</span></a><br>
+<a href="./songs/5-Otras/Yo_no_estoy_loco-Estopa.html">3. <span id="song-title">Yo no estoy loco</span> <span id="author">Estopa</span></a><br>
+<a href="./songs/5-Otras/Zombie-The_Cranberries.html">4. <span id="song-title">Zombie</span> <span id="author">The Cranberries</span></a><br>
