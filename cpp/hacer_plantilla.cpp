@@ -200,7 +200,7 @@ int main(int argc, char** argv){
                     <a href=\"" + main_dir + "indice.html\"><li>Indice</li></a>\n\
                     <a href=\"" + main_dir + "acordes.html\"><li>Acordes</li></a>\n\
                     <a href=\"#\"><li>Opción 3</li></a>\n\
-                    <a href=\"" + main_dir + "about.html\"><li>Acerca de</a>\n\
+                    <a href=\"" + main_dir + "about.html\"><li>Acerca de</li></a>\n\
                 </ul>\n\
             </nav>\n\
         </div>\n\
