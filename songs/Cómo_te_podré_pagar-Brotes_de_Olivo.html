@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo te podré pagar</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Cómo te podré pagar</div>
+                    <div id="artist">Brotes de Olivo</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">la m</span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>la m</b>              <b>Mi</b>
+Caminaré en tu presencia 
+<b>Fa</b>    <b>Mi</b>            <b>la m</b>
+en la tierra de los vivos.
+                     <b>Mi</b>
+Soy feliz aún cuando digo 
+<b>Mi</b>             <b>la m</b>
+qué desdichado soy.
+                  <b>Mi</b>
+En lo hondo de mi alma 
+<b>re m</b>       <b>Mi</b>         <b>la m</b>  <b>Sol</b>
+te siento fundido en mi.
+          <b>Do</b> <b>Sol</b>     <b>Do</b>
+Tú me has dado mil razones 
+<b>re m</b>            <b>Mi</b>
+para sentirme así.
+<strong>
+<b>re m</b>              <b>Sol</b>
+¿Cómo te podré pagar?
+ <b>Do</b>     <b>Sol /</b><b>Si</b>     <b>la m</b>
+¿Cómo te podré pagar?
+               <b>re m</b>
+¿Cómo te podré pagar 
+      <b>Mi</b>                  <b>la m</b>
+tanto bien como me has hecho? (**)
+</strong>
+                         <b>re m</b>
+Viviré cuanto me has dicho, 
+      <b>Mi</b>          <b>la m</b>
+sí, delante de tu pueblo.
+                  <b>re m</b>
+Tú soltaste mis cadenas.
+      <b>Fa</b> <b>Mi</b>         <b>la m</b>
+Ay Yahvé, yo soy tu siervo.
+               <b>Mi</b>
+Tu siervo para servir 
+<b>re m</b>     <b>Mi</b>           <b>la m</b>     <b>Sol</b>
+allá donde exista un hombre.
+         <b>Do</b> <b>Sol</b>     <b>Do</b>
+Me ofreceré en sacrificio 
+   <b>re m</b>            <b>Mi</b>
+y a todos diré tu nombre.
+<strong>
+<b>re m</b>                <b>Sol</b>
+Un hambre tiene mi vida:
+<b>Do</b>                 <b>la m</b>
+pagarte cuánto te debo.
+               <b>re m</b>
+Viviré para cantar 
+     <b>Mi</b>                   <b>la m</b> <b>La</b>
+tanto bien como me has hecho.
+<b>re m</b>               <b>Sol</b>
+Nunca yo me sentí digno 
+      <b>Do</b>         <b>Sol /</b><b>Si</b>     <b>la m</b>
+de hacer cuanto siempre he hecho.
+                        <b>Mi</b>
+Lo hago porque estás en mí, 
+   <b>Fa</b>         <b>Mi</b>        <b>la m</b>
+Tú sabes que así lo siento.
+<b>re m</b>            <b>Sol</b>
+Tú me diste la vida 
+   <b>Do</b>    <b>Sol /</b><b>Si</b>      <b>la m</b>
+y ahora te la devuelvo.
+               <b>re m</b>
+Viviré para cantar
+      <b>Mi</b>               <b>la m</b>   <b>La</b>
+tanto bien como me has hecho.
+
+<b>re m</b>              <b>Sol</b>
+¿Cómo te podré pagar?
+ <b>Do</b>     <b>Sol /</b><b>Si</b>     <b>la m</b>
+¿Cómo te podré pagar?
+               <b>re m</b>
+¿Cómo te podré pagar 
+      <b>Mi</b>                  <b>la m</b>
+tanto bien como me has hecho? (**)
+</strong>
+
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="50" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">50</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

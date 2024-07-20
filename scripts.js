@@ -146,6 +146,7 @@ function Reload() {
         
         chord = Chord(w_note);      // Contiene el acorde ya transformado
 
+        // lo pongo en minúscula si es menor 
         if(variation.length>0 && variation[0]=="m" && notation[0]==EUROPE){
             chord = chord.toLowerCase();
         }
@@ -155,9 +156,64 @@ function Reload() {
         notation = [AMERICAN, FLAT];
         let american_chord = Chord(w_note);
 
-        // chords[i].innerHTML = `<a title="${chord}${variation}">${chord}${variation}<\a>`
-        chords[i].innerHTML = `${chord}${variation}<img src="../images/svg_chords/${american_chord}${variation}.svg" alt="Acorde de ${chord}${variation}" class="hover-image">`;
+        // Devuelvo la notación
         notation = save_notation;
+
+        
+        // Si es una nota del tipo nota(variación)/nota
+        if(variation.length>0 && variation[variation.length-1]=='/') {
+
+            // Le quito el caracter '/' a la variación anterior
+            variation=variation.slice(0,-1);
+
+            let j=i+1;
+            tmp = chords[j].getAttribute("acorde").split(" ");
+            w_note = tmp[0];            // Contiene la nota (palabra)
+
+
+            let variation2;
+            let chord2;
+
+            if(tmp.length>1){               // Si la nota tiene variación
+                variation2 = tmp[1];         // Contiene la variación (inmutable)
+            } else {
+                variation2 = "";
+            }
+            
+            chord2 = Chord(w_note);      // Contiene el acorde ya transformado
+
+            // lo pongo en minúscula si es menor 
+            if(variation2.length>0 && variation2[0]=="m" && notation[0]==EUROPE){
+                chord2 = chord2.toLowerCase();
+            }
+
+            // Lo pongo temporalmente en Americano para no tener que guardar todas las imágenes 4 veces
+            let save_notation = notation;
+            notation = [AMERICAN, FLAT];
+            let american_chord2 = Chord(w_note);
+            
+            // Devuelvo la notación
+            notation = save_notation;
+
+            chords[i].innerHTML = `${chord}${variation}<img src="../images/svg_chords/${american_chord}${variation}_${american_chord2}${variation2}.svg" alt="Acorde de ${chord}${variation}/${chord2}${variation2}" class="hover-image">`;
+            chords[j].innerHTML = `${chord2}${variation2}<img src="../images/svg_chords/${american_chord}${variation}_${american_chord2}${variation2}.svg" alt="Acorde de ${chord}${variation}/${chord2}${variation2}" class="hover-image">`;
+
+            i++;
+
+        } else {
+            // Lo pongo temporalmente en Americano para no tener que guardar todas las imágenes 4 veces
+            let save_notation = notation;
+            notation = [AMERICAN, FLAT];
+            let american_chord = Chord(w_note);
+
+            // chords[i].innerHTML = `<a title="${chord}${variation}">${chord}${variation}<\a>`
+            chords[i].innerHTML = `${chord}${variation}<img src="../images/svg_chords/${american_chord}${variation}.svg" alt="Acorde de ${chord}${variation}" class="hover-image">`;
+            
+            // Devuelvo la notación
+            notation = save_notation;
+        }
+
+        
     }  
 
 }
