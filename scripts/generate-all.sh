@@ -108,6 +108,7 @@ echo "</div>" >> $index_file
 
 ################################################################################
 # Genero y añado al índice los archivos procesados previamente
+echo "<ol>" >> $index_file
 
 for file in "${archivos[@]}"; 
 do
@@ -124,7 +125,7 @@ do
         echo "Autor:  $author"
 
         # La añado al índice
-        echo "<a href=\"$dir_html/$filename.html\">$n. <span id=\"song-title\">$title</span> <span id=\"author\">$author</span></a><br>" >> $index_file
+        echo "<li><a href=\"$dir_html/$filename.html\"><span id=\"song-title\">$title</span> <span id=\"author\">$author</span></a></li><br>" >> $index_file
         
         # Aumento el contador
         n=$((n+1))
@@ -133,6 +134,7 @@ do
 
 done
 
+echo "</ol>" >> $index_file
 ################################################################################
 # Recorro las subcarpetas
 
@@ -171,6 +173,8 @@ do
     ################################################################################
     # Genero y añado al índice los archivos procesados previamente
 
+    echo "<ol>" >> $index_file
+
     for file in "${archivos[@]}"; 
     do
         if ! test -d $file; then # Solo recorro los archivos
@@ -186,7 +190,7 @@ do
             echo "Autor:  $author"
 
             # La añado al índice
-            echo "<a href=\"$dir_html/$filename.html\">$n. <span id=\"song-title\">$title</span> <span id=\"author\">$author</span></a><br>" >> $index_file
+            echo "<li><a href=\"$dir_html/$filename.html\"><span id=\"song-title\">$title</span> <span id=\"author\">$author</span></a></li><br>" >> $index_file
             
             # Aumento el contador
             n=$((n+1))
@@ -195,15 +199,19 @@ do
 
     done
 
+    echo "</ol>" >> $index_file
+
 done
 
 ################################################################################
 # Salida de información
 printf "\n\n"
-echo Se han generado $total_files archivos
+echo "Se han generado $total_files archivos ($(($n-1)) en \"otros\")"
 
 # 269 + 17 + 13 + 150 = 449
-percent=$(echo "scale=3; (($total_files-($n-1))*100)/ 449" | bc)
+total_files=$(($total_files - $n +1)) # le quito la sección de "otros" (ya que no es del cantoral)
+
+percent=$(echo "scale=3; ($total_files*100)/ 449" | bc)
 echo "$percent% completado del cantoral"
 
 

@@ -104,7 +104,7 @@ nav a {
     color: black;
 }
 
-li:hover {
+nav li:hover {
     background: linear-gradient(to bottom, #cce4ff6e, #ddedff);
     cursor: pointer;
 }

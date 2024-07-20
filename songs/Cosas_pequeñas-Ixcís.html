@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosas pequeñas</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Cosas pequeñas</div>
+                    <div id="artist">Ixcís</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Sol </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>Sol</b>               <b>mi m</b>
+Destellos en la oscuridad,
+       <b>Do</b>               <b>Re</b>
+cada pequeña semilla al amor
+<b>mi m</b>        <b>Do</b>
+como gotas en el mar,
+             <b>la m</b>                <b>Re</b>
+como a un hambriento un poco de pan.
+
+<b>Sol</b>               <b>mi m</b>
+Destellos en la oscuridad,
+       <b>Do</b>                 <b>Re</b>
+esa chispa que puede despertar
+       <b>mi m</b>                 <b>Do</b>
+a un pueblo sin fuerzas para luchar,
+          <b>la m</b>                 <b>Re</b>
+a esa esperanza que te hace soñar.
+
+<b>Do</b>              <b>Re</b>
+En las cosas pequeñas 
+       <b>Sol</b>          <b>mi m</b>
+puedes encontrar lo grande
+<b>la m</b>            <b>Re</b>        <b>Sol</b>  <b>Sol 7</b>
+no esperes a mañana para verlas.
+      <b>Do</b>            <b>Re</b>
+Solo el corazón te hará 
+          <b>Sol</b>      <b>Sol 7</b>
+ver lo importante:
+<b>Do</b>               <b>Re</b>        <b>Sol</b>
+la vida es un regalo de tu Dios,
+         <b>Do</b>          <b>mi m</b>
+que hay que vivir a fondo, 
+    <b>Re</b>            <b>Sol</b> <b>Do</b> <b>mi m</b> <b>Re</b>
+que hay que entregar.
+<strong>
+<b>Sol</b>              <b>Re</b>
+Desde el corazón solo hay amor,
+<b>Do</b>                    <b>Re</b>   <b>Sol</b>
+desde el corazón solo hay amor.
+</strong>
+<b>Sol</b>                <b>mi m</b>
+Destellos en la oscuridad,
+       <b>Do</b>                 <b>Re</b>
+unas manos que ofrecen perdón,
+ <b>mi m</b>                    <b>Do</b>
+cercanas a quien sufre más,
+    <b>la m</b>                      <b>Re</b>
+empujando a este mundo a cambiar.
+
+<b>Sol</b>                <b>mi m</b>
+Destellos en la oscuridad,
+       <b>Do</b>             <b>Re</b>
+cada gesto de fraternidad,
+<b>mi m</b>                        <b>Re</b>
+miradas que alejan la soledad,
+    <b>la m</b>                      <b>Re</b>
+empujando a este mundo a cambiar.
+
+<b>Do</b>                    <b>Re</b>
+Esto os servirá de señal, 
+      <b>Sol</b>     <b>mi m</b>
+un pequeño pañal,
+<b>la m</b>            <b>Re</b>        <b>Sol</b> <b>Sol 7</b>
+un niño en una cueva sin más.
+<b>Do</b>                    <b>Re</b>
+Esto os servirá de señal, 
+      <b>Sol</b>              <b>mi m</b>
+un hombre en el monte está
+<b>Do</b>             <b>Re</b>                 <b>Sol</b>
+colgado de un madero como un criminal,
+    <b>Do</b>       <b>mi m</b>
+por ti y por mí, 
+    <b>Re</b>       <b>Sol</b> <b>Do</b> <b>mi m</b> <b>Re</b>
+por ti y por mí.
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="50" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">50</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

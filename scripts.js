@@ -195,8 +195,8 @@ function Reload() {
             // Devuelvo la notación
             notation = save_notation;
 
-            chords[i].innerHTML = `${chord}${variation}/<img src="../images/svg_chords/${american_chord}${variation}_${american_chord2}${variation2}.svg" alt="Acorde de ${chord}${variation}/${chord2}${variation2}" class="hover-image">`;
-            chords[j].innerHTML = `${chord2}${variation2}<img src="../images/svg_chords/${american_chord}${variation}_${american_chord2}${variation2}.svg" alt="Acorde de ${chord}${variation}/${chord2}${variation2}" class="hover-image">`;
+            chords[i].innerHTML = `${chord}${variation}/${chord2}${variation2}<img src="../images/svg_chords/${american_chord}${variation}_${american_chord2}${variation2}.svg" alt="Acorde de ${chord}${variation}/${chord2}${variation2}" class="hover-image">`;
+            chords[j].innerHTML = `<img src="../images/svg_chords/${american_chord}${variation}_${american_chord2}${variation2}.svg" alt="Acorde de ${chord}${variation}/${chord2}${variation2}" class="hover-image">`;
 
             i++;
 
