@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristo vive</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Cristo vive</div>
+                    <div id="artist">Nico Montero</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Re </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>Re</b>             <b>mi m</b>
+Vale la pena dejarse llevar,
+<b>fa# m</b>           <b>Sol</b>
+vale la pena dejarse quemar,
+<b>Re</b>               <b>La</b>
+vale la pena volver a empezar 
+    <b>Sol</b>     <b>La</b>
+por Cristo.
+
+<b>Re</b>                  <b>mi m</b>
+Aún queda tiempo para regalar,
+<b>fa# m</b>                <b>Sol</b>
+aún quedan fuerzas para trabajar,
+<b>Re</b>                 <b>La</b>         <b>Sol</b>     <b>La</b>
+aún queda gente hambrienta de Cristo.
+<strong>
+<b>Re</b>              <b>mi m</b>
+No vamos solos, aún somos más,
+      <b>fa# m</b>
+somos miles de antorchas 
+     <b>Sol</b>
+y un sol de verdad.
+<b>Re</b>               <b>mi m</b>
+Arde la tierra y grita el mar
+    <b>fa# m</b>          <b>Sol</b>  <b>La</b>
+que Cristo vivo está.
+
+<b>Re</b>      <b>La</b>
+Cristo, luz de los 
+<b>si m</b>           <b>Sol</b>
+pueblos de la tierra.
+          <b>Re</b>
+Cristo es sal 
+       <b>Sol</b>         <b>La</b>
+de una nueva humanidad. (**)
+</strong>
+<b>Re</b>                    <b>mi m</b>
+Deja los rollos que te hacen dudar,
+<b>fa# m</b>                  <b>Sol</b>
+tantas historias que te hacen pasar.
+<b>Re</b>                <b>La</b>
+Deja los miedos y lánzate ya 
+    <b>Sol</b>     <b>La</b>
+por Cristo.
+<strong>
+<b>Re</b>              <b>mi m</b>
+No vamos solos, aún somos más,
+      <b>fa# m</b>
+somos miles de antorchas 
+     <b>Sol</b>
+y un sol de verdad.
+<b>Re</b>               <b>mi m</b>
+Arde la tierra y grita el mar
+    <b>fa# m</b>          <b>Sol</b>  <b>La</b>
+que Cristo vivo está.
+
+<b>Re</b>      <b>La</b>
+Cristo, luz de los 
+<b>si m</b>           <b>Sol</b>
+pueblos de la tierra.
+          <b>Re</b>
+Cristo es sal 
+       <b>Sol</b>         <b>La</b>
+de una nueva humanidad. (**)
+<b>Fa#</b>       <b>si m</b>
+Cristo vive 
+       <b>Sol</b>            <b>Re</b>
+en las calles, las ciudades,
+      <b>Sol</b>              <b>Re</b>
+en los montes y en los valles,
+   <b>Do</b>       <b>La</b>
+en cada corazón (**)
+<b>Re</b>      <b>La</b>
+Cristo, luz de los 
+<b>si m</b>           <b>Sol</b>
+pueblos de la tierra.
+          <b>Re</b>
+Cristo es sal 
+       <b>Sol</b>         <b>La</b>
+de una nueva humanidad. (**)
+         <b>Sol</b>      <b>La</b>  <b>Re</b>
+… de una nueva humanidad.
+</strong>
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dios está aquí</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Dios está aquí</div>
+                    <div id="artist"></div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Do </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><strong>
+<b>Do</b>     <b>Sol</b>  <b>la m</b>
+Dios está aquí,
+    <b>Fa</b>                  <b>Sol</b>    <b>Do</b>  <b>Do 7</b>
+tan cierto como el aire que respiro,
+    <b>Fa</b>               <b>Sol</b>    <b>Do</b> <b>mi m</b> <b>la m</b>
+tan cierto como la mañana se levanta,
+    <b>Fa</b>                   <b>Sol</b>
+tan cierto como que este canto 
+          <b>Do</b>
+lo puedes oír.
+</strong>
+            <b>Sol</b>
+Lo puedes sentir
+  <b>Fa</b>             <b>Sol</b>     <b>Do</b>
+moviéndose entre los que aman,
+          <b>Sol</b>
+lo puedes oír
+   <b>Fa</b>          <b>Sol</b>      <b>Do</b>
+cantando con nosotros aquí,
+             <b>Sol</b>
+lo puedes llevar
+    <b>Fa</b>         <b>Sol</b>     <b>Do</b>
+cuando por esa puerta salgas,
+              <b>Sol</b>
+lo puedes guardar
+    <b>Fa</b>           <b>Sol</b>  <b>Do</b>
+muy dentro de tu corazón.
+
+            <b>Sol</b>
+Lo puedes notar
+     <b>Fa</b>           <b>Sol</b>      <b>Do</b>
+a tu lado en este mismo instante,
+          <b>Sol</b>
+no seas ya más
+   <b>Fa</b>         <b>Sol</b>     <b>Do</b>
+de los que no quieren ver.
+             <b>Sol</b>
+Le puedes contar
+    <b>Fa</b>      <b>Sol</b>     <b>Do</b>
+ese problema que tienes,
+             <b>Sol</b>
+Jesús está aquí
+      <b>Fa</b>             <b>Sol</b>     <b>Do</b>
+si tu quieres, le puedes seguir.
+
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

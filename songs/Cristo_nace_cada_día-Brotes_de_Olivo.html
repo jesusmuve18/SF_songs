@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristo nace cada día</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Cristo nace cada día</div>
+                    <div id="artist">Brotes de Olivo</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">La </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>La</b>                 <b>Re</b>
+Habrá tierra que sembrar,
+<b>La</b>                 <b>Re</b>
+habrá mies que recoger.
+<b>La</b>                  <b>Re</b>
+Por muchos años que pasen
+         <b>La</b>  <b>Mi</b>     <b>fa# m</b>
+no cambiará nuestra fe.
+<b>Re</b>                    <b>La</b>
+La vida es de los que luchan
+<b>Re</b>                  <b>La</b>
+por su propio yo vencer.
+
+                   <b>Re</b>
+Habrá peces que pescar
+<b>La</b>             <b>Re</b>
+y manos para faenar;
+<b>La</b>                 <b>Re</b>
+no importará la tormenta,
+     <b>La</b>        <b>Mi</b>   <b>fa# m</b>
+pues Cristo la calmará.
+<b>Re</b>               <b>La</b>
+Seguiremos en la lucha
+<b>Re</b>                 <b>La</b>     <b>Re</b> <b>La</b>
+por un mundo de hermandad.
+<strong>
+
+Cristo nace cada día
+      <b>Re</b>         <b>Mi</b>      <b>La</b>
+en la cara del obrero cansado,
+      <b>Re</b>            <b>Mi</b>
+en el rostro de los niños
+    <b>La</b>     <b>fa# m</b>
+que ríen jugando,
+          <b>Re</b>          <b>Mi</b>       <b>La</b>
+en cada anciano que tenemos al lado.
+
+Cristo nace cada día,
+      <b>Re</b>           <b>Mi</b>      <b>La</b>
+y por mucho que queramos matarlo,
+    <b>Re</b>           <b>Mi</b>     <b>La</b>      <b>fa# m</b>
+nacerá día tras día, minuto a minuto
+        <b>Re</b>         <b>Mi</b>         <b>La</b>
+en cada hombre que quiera aceptarlo.
+</strong>
+                     <b>Re</b>
+Hay mucha tierra sembrada,
+<b>La</b>                  <b>Re</b>
+el tiempo traerá su fruto,
+<b>La</b>                   <b>Re</b>
+ya vendrá quien lo recoja;
+     <b>La</b>     <b>Mi</b>   <b>fa# m</b>
+de momento, trabajemos
+<b>Re</b>                  <b>La</b>
+y si el mundo se acobarda
+<b>Re</b>              <b>La</b>
+nosotros no callaremos.
+<strong>
+Vamos que ya ha amanecido...
+</strong>
+
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

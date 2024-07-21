@@ -148,6 +148,11 @@ b, #original-tone {
     cursor: pointer;
 }
 
+#reserved {
+    /* font-weight: 600; */
+    color: rgb(82, 82, 82);
+}
+
 #notation {
     display: none;
 }

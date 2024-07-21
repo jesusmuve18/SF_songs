@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El mundo está en la cruz</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">El mundo está en la cruz</div>
+                    <div id="artist">Brotes de Olivo</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">la m</span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>la m</b>                 <b>Sol</b>
+He llegado a la montaña
+                        <b>la m</b>
+y en la cruz te he contemplado
+      <b>Fa</b>              <b>Do</b>
+te he visto ojos de niño,
+      <b>re m</b>          <b>Mi</b>
+tu faz era de soldado.
+
+<b>la m</b>                   <b>Sol</b>
+Tu cuerpo sangrante y roto,
+                       <b>la m</b>
+tus manos viejas de anciano
+      <b>Fa</b>                    <b>Do</b>
+no he visto un Cristo de historia,
+      <b>re m</b>         <b>Mi</b>
+vi un mundo destrozado.
+
+<b>re m</b>               <b>Sol 7</b>
+Una a una, las espinas
+        <b>Do</b>           <b>la m</b>
+de tu cabeza he quitado
+     <b>Fa</b>               <b>Sol</b>
+y de tus manos sangrantes
+     <b>Fa</b>       <b>Mi</b>      <b>la m</b>
+arranqué los fríos clavos
+     <b>re m</b>               <b>Si 7</b>
+y al llegar hasta los pies,
+   <b>Do</b>             <b>la m</b>
+miedo me dio tocarlos
+ <b>Fa</b>                  <b>Sol</b>
+eran la sangre del pueblo
+ <b>Fa</b>       <b>mi</b>           <b>la m</b>
+pobre, guerrero y esclavo.
+
+   <b>Re 7</b>                <b>Sol</b>
+Tu cuerpo sangrante y roto
+      <b>Mi 7</b>            <b>Fa</b>
+sobre mí se ha descolgado
+    <b>re m</b>             <b>Do</b>
+los pies quedaron allí,
+        <b>Fa</b> <b>re m</b>    <b>Mi</b>
+en la cruz aún clavados.
+<strong>
+<b>Fa</b>                   <b>Sol</b>
+Y en tus ojitos de niño
+        <b>Mi</b>      <b>la m</b>
+y tu cara de soldado
+         <b>re m</b>        <b>la m</b>
+ví la humanidad muriendo
+<b>Fa</b>                     <b>Mi</b>
+¡muriendo entre mis brazos!
+<b>Fa</b>                    <b>Sol</b>
+El pueblo que sufre y muere,
+      <b>Mi</b>             <b>la m</b>
+no muere ¡lo hemos matado!
+       <b>re m</b>         <b>la m</b>
+tras pisar su dignidad
+      <b>re m</b>      <b>Mi</b>
+y su fe pisoteado.
+</strong>
+ <b>Re</b>                  <b>Sol</b>
+Y yo, en tanto, seguiré
+<b>Mi</b>                <b>Fa</b>
+dándomelas de cristiano
+   <b>re m</b>                     <b>Do</b>
+pensando que el mal de los hombres
+          <b>Fa</b>   <b>re m</b>    <b>Mi</b>
+se lo hicieron mis contrarios.
+<strong>
+Y en tus ojitos de niño...
+</strong>
+
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

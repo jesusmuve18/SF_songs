@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culpable</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Culpable</div>
+                    <div id="artist">Ixcís</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">la m</span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>la m</b>
+Lo reconozco. 
+               <b>Fa</b>
+A veces de mis faltas 
+                 <b>Sol</b>
+te hago firme culpable 
+              <b>la m</b>   <b>Sol</b>
+para sentirme más ligero. 
+  <b>la m</b>                    <b>Fa</b>
+Y justo en el centro del pecho,
+               <b>Sol</b>
+clavo un puñal de olvido 
+                  <b>la m</b>
+y te odio por completo. 
+         <b>Sol</b>       <b>la m</b>
+Cuerpo, alma y corazón. 
+                    <b>Fa</b>
+Quito los ojos de tu imagen, 
+                  <b>Sol</b>
+me aparto de las luces 
+                    <b>la m</b>
+y me esfuerzo en borrarte. 
+                       <b>Fa</b>
+Y busco esconderme de todo,  
+             <b>Sol</b>
+que te tapen las nubes,  
+               <b>la m</b>      <b>Sol</b>
+que no me roce tu aire. 
+<strong>
+             <b>la m</b>   <b>Fa</b>
+Y es que hay veces 
+               <b>la m</b>
+en que me vuelvo piedra, 
+               <b>Fa</b>  <b>Sol</b>
+y que me tiro al río 
+                  <b>la m</b>
+y que no soy consciente 
+
+que me estoy ahogando 
+   <b>Fa</b> <b>Sol</b>            <b>la m</b>
+y luego me vuelve la cordura 
+               <b>Fa</b>
+y solo eres culpable 
+      <b>Sol</b>       <b>la m</b>
+de quererme tanto.
+</strong>
+        <b>la m</b>
+En ocasiones, te cambio
+              <b>Fa</b>
+por cualquier cosa
+                  <b>Sol</b>
+prefiero mirar al suelo, 
+                  <b>la m</b>          <b>Sol</b>
+prefiero quedarme lejos de tu ser, 
+         <b>la m</b>
+de tu bondad. 
+                         <b>Fa</b>
+Muero, me arriesgo a ser tentado, 
+                 <b>Sol</b>
+a que me coma la vida, 
+                 <b>la m</b>   <b>Sol</b>
+me niego a resucitar.  
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

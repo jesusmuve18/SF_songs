@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desaprender la guerra</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Desaprender la guerra</div>
+                    <div id="artist">Luis guitarra</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Mi </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>Mi</b>
+Desaprender la guerra, 
+        <b>do# m</b>
+realimentar la risa, 
+       <b>fa# m</b>
+deshilachar los miedos, 
+            <b>Si</b>
+curarse las heridas. 
+          <b>Mi</b>
+Difuminar fronteras,
+           <b>do# m</b>
+rehuir de la codicia, 
+     <b>fa# m</b>          <b>La</b>
+anteponer lo ajeno,
+          <b>Si</b>
+negarse a las consignas. 
+<strong>
+        <b>Mi</b>
+Desconvocar el odio,
+      <b>do# m</b>
+desestimar la ira, 
+        <b>fa# m</b>
+rehusar usar la fuerza, 
+         <b>Si</b>
+rodearse de caricias. 
+        <b>Mi</b>
+Reabrir todas las puertas, 
+       <b>do# m</b>
+sitiar cada mentira, 
+           <b>fa# m</b>        <b>La</b>
+pactar sin condiciones, 
+           <b>Si</b>          (<b>Mi</b>)
+rendirse a la Justicia. 
+</strong>
+            <b>Mi</b>
+Rehabilitar los sueños, 
+          <b>do# m</b>
+penalizar las prisas, 
+       <b>fa# m</b>
+indemnizar al alma, 
+        <b>Si</b>
+sumarse a la alegría. 
+          <b>Mi</b>
+Humanizar los credos, 
+          <b>do# m</b>
+purificar la brisa, 
+         <b>fa# m</b>       <b>La</b>
+adecentar la Tierra, 
+        <b>Si</b>
+reinaugurar la Vida. 
+<strong>
+Desconvocar el odio... 
+</strong>
+        <b>La</b>           <b>Si</b>
+Desaprender la guerra, 
+        <b>Re</b>       <b>Mi</b>
+curarse las heridas. 
+        <b>La</b>           <b>Si</b>
+Desaprender la guerra, 
+          <b>Re</b>        <b>Mi</b>
+negarse a las consignas. 
+       <b>fa# m</b>          <b>Si</b>
+Desaprender la guerra, 
+         <b>Re</b>      <b>Mi</b>
+rodearse de caricias. 
+        <b>La</b>            <b>Si</b>
+Desaprender la guerra,
+           <b>Re</b>       <b>Mi</b>
+rendirse a la Justicia. 
+        <b>La</b>            <b>Si</b>
+Desaprender la guerra, 
+          <b>Re</b>      <b>Mi</b>
+sumarse a la alegría. 
+        <b>La</b>            <b>Si</b>
+Desaprender la guerra, 
+               <b>La</b>    <b>Mi</b>
+reinaugurar la Vida.
+
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

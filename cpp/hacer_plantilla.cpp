@@ -143,6 +143,7 @@ int main(int argc, char** argv){
     string main_dir = "../";
     string title = "this is the title";
     string subtitle = "this is the subtitle";
+    int default_speed = 60;
     string tone = "";
     int capo = 0;
     int traspose = 0;
@@ -228,8 +229,8 @@ int main(int argc, char** argv){
         <div id=\"controls\">\n\
             <img id=\"pauseButton\" src=\"../images/play.svg\" alt=\"play\">\n\
              <div id=\"speed-bar\">\n\
-                <input type=\"range\" class=\"scroll-speed-bar\" id=\"scroll-speed-bar\" min=\"1\" max=\"100\" value=\"50\" steps=\"1\" oninput=\"ajustarVelocidad()\">\n\
-                <span class=\"scroll-speed-value\" id=\"scroll-speed-value\">50</span></p>\n\
+                <input type=\"range\" class=\"scroll-speed-bar\" id=\"scroll-speed-bar\" min=\"1\" max=\"100\" value=\"" + to_string(default_speed) + "\" steps=\"1\" oninput=\"ajustarVelocidad()\">\n\
+                <span class=\"scroll-speed-value\" id=\"scroll-speed-value\">" + to_string(default_speed) + "</span></p>\n\
             </div>\n\
         </div>\n\
         <div id=\"pie\">\n\

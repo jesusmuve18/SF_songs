@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>En tus manos</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">En tus manos</div>
+                    <div id="artist">Jesús Cabello</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">La </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>La</b>
+Te aferraste a mi existencia  
+                          <b>Mi</b>
+sin dejarme un segundo de lado.  
+       <b>La</b>
+Soy testigo de que entonces  
+                          <b>Mi</b>
+encendiste una luz en mis sueños.  
+       <b>La</b>
+Entre nubes de ceniza 
+                           <b>Mi</b>
+el futuro está sembrado de miedos.  
+        <b>La</b>
+En cada paso de la vida 
+                        <b>Mi</b>
+reconozco mi latir confiado.
+<strong>
+         <b>do# m</b>
+Porque cuando sopla el viento  
+        <b>La</b>                          <b>Mi</b>
+pongo todo lo que tengo en tus manos.
+         <b>do# m</b>
+Porque fallan los abrazos  
+        <b>La</b>                          <b>Mi</b>
+pongo todo lo que tengo en tus manos.
+            <b>do# m</b>
+Cuando estoy abandonado  
+        <b>La</b>                          <b>Mi</b>
+pongo todo lo que tengo en tus manos.
+      <b>do# m</b>
+Si luchar es lo que quiero  
+        <b>La</b>                       <b>Si</b> <b>Mi</b>
+pongo todo lo que tengo en tus manos.
+</strong>
+<b>La</b>
+Es estrecho tu camino 
+                               <b>Mi</b>
+como el surco que descubre un arado. 
+       <b>La</b>
+No me asustan los temblores 
+                           <b>Mi</b>
+ni ruidos que reclaman mi muerte.
+        <b>La</b>
+Es más fiable tu presencia 
+
+que arriesgar la vida entera
+     <b>Mi</b>
+a la suerte.
+     <b>La</b>
+Eres todo lo que busco 
+
+y desbordas mi inquietud
+         <b>Mi</b>
+de ser humano.
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

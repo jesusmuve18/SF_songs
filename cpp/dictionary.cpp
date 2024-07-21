@@ -17,6 +17,7 @@ class Dictionary {
 public:
     vector<string> notes;
     vector<string> variations;
+    vector<string> reserved;
 
     const string before = "<b>";
     const string after = "</b>";
@@ -36,6 +37,8 @@ public:
                        "aug", "dim", "sus", "add", " ", "/", "+", "-", "maj"};
 
         sort(variations.begin(), variations.end(), compareStringSize); // ordeno las variaciones por longitud
+
+        reserved = { "Intro:", "**", "2ª", "1ª", "2º", "1º" "vez:"};
     }
 
     // Dada una línea de texto la separa en palabras (por espacios)
@@ -81,12 +84,9 @@ public:
     // Dada una línea procesa todos los acordes para su correcta visualización en html
     string ProcessLine(string line, string before = "<b>", string after = "</b>") {
         string result="";
-        
-
 
         if (line.length()!=0){
 
-        
             vector<string> words = split(line); // vector de palabras de la línea
             vector<string> gaps = blankSpaces(line); // vector de espacios en blanco
             string note;
@@ -111,99 +111,117 @@ public:
                     word.erase(word.length()-1);
                 }
 
-                eq1 = false;
+                
 
-                for(auto n = notes.begin(); n!=notes.end() && !eq1; n++){
-                    note = *n;
-                    eq1 = true;
-                    len = note.length();
+                if(find(reserved.begin(), reserved.end(), word)==reserved.end()){
+                    // Si la palabra es reservada
 
-                    for(int i=0; i<len && eq1; i++){
-                        if(i<word.length() && word.at(i)!=note.at(i)){
-                            eq1 = false;
+                    eq1 = false;
+
+                    for(auto n = notes.begin(); n!=notes.end() && !eq1; n++){
+                        note = *n;
+                        eq1 = true;
+                        len = note.length();
+
+                        for(int i=0; i<len && eq1; i++){
+                            if(i<word.length() && word.at(i)!=note.at(i)){
+                                eq1 = false;
+                            }
+                        }
+
+                        if(eq1){
+
+                            eq2 = false;
+
+                            if(word.length() > len){ // La palabra es más larga
+                                for(auto var = variations.begin(); var!=variations.end() && !eq2; var++) {
+                                    variation = *var;
+                                    // eq2 = true;
+                                    eq2 = (word.length() >= len + variation.length());
+
+                                    for(int i = len; i<len + variation.length() && eq2; i++){
+                                        if(i<word.length() && word.at(i)!=variation.at(i-len)){
+                                            eq2 = false;
+                                        }
+                                    }
+
+                                    if(eq2){ // Se ha encontrado coincidencia con la variación
+
+                                        // Miro a ver si en la variación tiene el bajo cambiado
+                                        // en ese caso tendré que hacer que se reconozca como una nota:
+
+                                        bool found = false;
+
+                                        for(int i = len; i<word.length() && !found; i++){
+                                            if(word.at(i)=='/'){
+                                                found = true;
+
+                                                string bass;
+
+                                                // Copio todo lo que hay detrás del caracter '/'
+                                                for(int j=i+1; j<word.length(); j++){
+                                                    bass += word.at(j);
+                                                }
+                                                
+                                                // Compruebo que efectivamente es una nota
+                                                bass = ProcessLine(bass, "</b><b>", "");
+
+                                                // Devuelvo el cambio
+                                                int j;
+                                                for(j=i+1; j<word.length(); j++){
+                                                    word.at(j) = bass.at(j-i-1);
+                                                }
+
+                                                for(int k=j-i-1; k<bass.length(); k++){
+                                                    word.push_back(bass.at(k));
+                                                }
+                                            }
+                                        }
+                                        
+                                        
+                                        word_aux = word;
+                                        word_aux.insert(len, " ");
+                                        word_aux = before + word_aux + after;
+
+                                        if(parenthesis){
+                                            word_aux = "(" + word_aux + ")";
+                                        }
+
+                                        *w = word_aux;
+                                    }
+
+                                }
+
+                                if(!eq2){ // Si la palabra no coincide con ningún acorde (su forma)
+                                    chord_line = false;
+                                }
+
+                            } else { // No tiene variación
+                                word_aux = before + word + after;
+
+                                if(parenthesis){
+                                    word_aux = "(" + word_aux + ")";
+                                }
+                                *w = word_aux;
+                            }                 
                         }
                     }
 
-                    if(eq1){
-
-                        eq2 = false;
-
-                        if(word.length() > len){ // La palabra es más larga
-                            for(auto var = variations.begin(); var!=variations.end() && !eq2; var++) {
-                                variation = *var;
-                                // eq2 = true;
-                                eq2 = (word.length() >= len + variation.length());
-
-                                for(int i = len; i<len + variation.length() && eq2; i++){
-                                    if(i<word.length() && word.at(i)!=variation.at(i-len)){
-                                        eq2 = false;
-                                    }
-                                }
-
-                                if(eq2){ // Se ha encontrado coincidencia con la variación
-
-                                    // Miro a ver si en la variación tiene el bajo cambiado
-                                    // en ese caso tendré que hacer que se reconozca como una nota:
-
-                                    bool found = false;
-
-                                    for(int i = len; i<word.length() && !found; i++){
-                                        if(word.at(i)=='/'){
-                                            found = true;
-
-                                            string bass;
-
-                                            // Copio todo lo que hay detrás del caracter '/'
-                                            for(int j=i+1; j<word.length(); j++){
-                                                bass += word.at(j);
-                                            }
-                                            
-                                            // Compruebo que efectivamente es una nota
-                                            bass = ProcessLine(bass, "</b><b>", "");
-
-                                            // Devuelvo el cambio
-                                            int j;
-                                            for(j=i+1; j<word.length(); j++){
-                                                word.at(j) = bass.at(j-i-1);
-                                            }
-
-                                            for(int k=j-i-1; k<bass.length(); k++){
-                                                word.push_back(bass.at(k));
-                                            }
-                                        }
-                                    }
-                                    
-                                    
-                                    word_aux = word;
-                                    word_aux.insert(len, " ");
-                                    word_aux = before + word_aux + after;
-
-                                    if(parenthesis){
-                                        word_aux = "(" + word_aux + ")";
-                                    }
-
-                                    *w = word_aux;
-                                }
-
-                            }
-
-                            if(!eq2){ // Si la palabra no coincide con ningún acorde (su forma)
-                                chord_line = false;
-                            }
-
-                        } else { // No tiene variación
-                            word_aux = before + word + after;
-
-                            if(parenthesis){
-                                word_aux = "(" + word_aux + ")";
-                            }
-                            *w = word_aux;
-                        }                 
+                    if(!eq1){ // Si la palabra no coincide con ningún acorde (su forma)
+                        chord_line = false;
                     }
-                }
+                } else {
+                    // La palabra "word" es reservada
 
-                if(!eq1){ // Si la palabra no coincide con ningún acorde (su forma)
-                    chord_line = false;
+                    word_aux = word;
+
+                    if(parenthesis){
+                        word_aux = "(" + word_aux + ")";
+                    }
+
+                    word_aux = "<span id=\"reserved\">" + word_aux + "</span>";
+
+                    *w = word_aux;
                 }
             }
 

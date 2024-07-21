@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darnos del todo</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Darnos del todo</div>
+                    <div id="artist">Ixcís</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">La </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>La</b>
+Miro a la cruz y allí te encuentro  
+       <b>fa# m7</b>     <b>La /</b><b>Sol#</b>
+entre llagas, Señor.  
+<b>La</b>
+Miro en mi adentro  
+    <b>La /</b><b>Sol#</b>
+y allí te encuentro.  
+        <b>fa# m7</b>   <b>La /</b><b>Sol#</b>
+Soy tu morada, Señor.  
+<b>Re</b>                  <b>Mi</b>
+Asombrado en tu bondad,  
+<b>Re</b>              <b>Sol maj7</b>
+tu pobreza y humildad,  
+            <b>si m7</b> <b>Re /</b><b>Mi</b>    <b>La</b>
+me hago espaldas de tu amor.  
+<strong>
+<b>La</b>
+Me entrego libremente.  
+    <b>Re</b>       <b>La</b>
+Me doy totalmente.  
+      <b>si m7</b>   <b>Mi</b>     <b>La</b>  <b>fa# m7</b>
+Me entrego a Ti, me doy a Ti,  
+<b>Re</b>             <b>Mi</b>     <b>La</b>      <b>La 7</b>
+Me entrego del todo a ti, mi Dios.  
+      <b>si m7</b>   <b>Mi</b>      <b>La</b>  <b>fa# m7</b>
+Me entrego a Ti, me doy a Ti,  
+       <b>si m7</b>  <b>Mi</b>      <b>La</b>
+Me entrego a Ti, Señor. 
+</strong>
+<b>La</b>
+Miro entre pucheros 
+ <b>La /</b><b>Sol#</b>
+y allí te encuentro.  
+          <b>fa# m7</b>          <b>La /</b><b>Sol#</b>
+Tú me acompañas siempre, Señor.  
+<b>La</b>
+Miro en todas partes  
+   <b>La /</b><b>Sol#</b>
+y allí te encuentro.  
+           <b>fa# m7</b>        <b>La /</b><b>Sol#</b>
+Tú eres la fuente de mi amor;  
+<b>Re</b>                <b>Mi</b>
+y andar en tu verdad,  
+<b>Re</b>             <b>Sol maj7</b>
+caminar en humildad,  
+             <b>si m7</b>     <b>Re /</b><b>Mi</b>   <b>La</b>
+tratar de amistad contigo, Señor.
+<strong>
+Me entrego...
+</strong>
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>
