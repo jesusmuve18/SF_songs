@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Es tu amigo es</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Es tu amigo es</div>
+                    <div id="artist">Kairoi</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Sol </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>Sol</b>  <b>Do</b>      <b>Sol</b>
+Es, tu amigo es, 
+        <b>Do</b>          <b>Re</b>    <b>Sol</b>
+una persona que te quiere así, 
+          <b>Do</b>              <b>Sol</b>
+tal como eres tú, así te acepta él, 
+         <b>Do</b>
+y cuando habla siempre 
+                <b>Re</b>
+lo hace con sinceridad.
+         <b>Sol</b> <b>Do</b>        <b>Sol</b>
+Pues sabe él que sabes tú 
+          <b>Do</b>           <b>Re</b>       <b>Sol</b>
+el gusto amargo de lo que es verdad,
+          <b>Do</b>              <b>Sol</b>
+pero al decírselo abre su corazón, 
+              <b>Do</b>          <b>Re</b>
+porque es tu amigo ¡y eso basta!.
+<strong>
+<b>Sol</b> <b>Do</b>         <b>Sol</b> <b>Do</b>
+Es... tu amigo es, 
+             <b>Sol</b>          <b>Re</b>
+aquel que está a tu lado, es 
+       <b>Do</b>                      <b>mi m</b>
+la sonrisa que contagia con su música,
+       <b>Do</b>          <b>Re</b>   <b>Do</b> <b>Re</b>
+y a cantarla somos tú y yo. 
+<b>Sol</b> <b>Do</b>        <b>Sol</b> <b>Do</b>
+Es... un coro es, 
+            <b>Sol</b>             <b>Re</b>
+cuanto más grande sea mejor es, 
+        <b>Do</b>          <b>mi m</b>
+oh, oh, oh, oh, oh, oh, ooh 
+       <b>Do</b>          <b>Re</b>   <b>Do</b>
+y a cantarla somos tú y yo. 
+</strong>
+<b>Sol</b> <b>Do</b>       <b>Sol</b>
+Es, tu amigo es, 
+          <b>Do</b>           <b>Re</b>  <b>Sol</b>
+lo más precioso de la compañía. 
+         <b>Do</b>              <b>Sol</b>
+y que te ayudará si necesitas de él,
+         <b>Do</b>                     <b>Re</b>
+y muchas veces te parecerá imposible.
+        <b>Sol</b> <b>Do</b>       <b>Sol</b>
+Pero es él, tu amigo es. 
+          <b>Do</b>           <b>Re</b>   <b>Sol</b>
+lo que te falta a ti para vivir. 
+             <b>Do</b>
+te empuja a caminar, 
+          <b>Sol</b>
+te deja a ti ganar
+              <b>Do</b>           <b>Re</b>
+porque es tu amigo iy eso basta!
+
+<b>Sol</b> <b>Do</b>       <b>Sol</b>
+Es, tu amigo es, 
+        <b>Do</b>             <b>Re</b>   <b>Sol</b>
+Uno que te ama y no te pide más;
+        <b>Do</b>               <b>Sol</b>
+y tus locuras él aguanta cada día 
+             <b>Do</b>
+tanto que, a veces,
+               <b>Re</b>
+de su vida te apartaría. 
+       <b>Sol</b>  <b>Do</b>      <b>Sol</b>
+Pero es él, como tu piel, 
+         <b>Do</b>            <b>Re</b>   <b>Sol</b>
+En este mundo no hay nada mejor.
+         <b>Do</b>
+No se lo pintes bien,
+      <b>Sol</b>
+y díselo tal cual,
+              <b>Do</b>          <b>Re</b>
+porque es tu amigo iy eso basta!
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

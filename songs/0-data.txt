@@ -77,6 +77,17 @@
 <li><a href="./songs/En_el_Nombre_del_Padre-Unai_Quirós.html"><span id="song-title">En el Nombre del Padre</span> <span id="author">Unai Quirós</span></a></li><br>
 <li><a href="./songs/En_Espíritu_y_verdad-Ixcís.html"><span id="song-title">En Espíritu y verdad</span> <span id="author">Ixcís</span></a></li><br>
 <li><a href="./songs/En_tus_manos-Jesús_Cabello.html"><span id="song-title">En tus manos</span> <span id="author">Jesús Cabello</span></a></li><br>
+<li><a href="./songs/En_un_portal.html"><span id="song-title">En un portal</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Envíame-Brotes_de_Olivo.html"><span id="song-title">Envíame</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Envíame-Ixcís.html"><span id="song-title">Envíame</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Envíanos_tu_soplo_de_Padre-Brotes_de_Olivo.html"><span id="song-title">Envíanos tu soplo de Padre</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Eres_mi_debilidad-Jorge_Amaya.html"><span id="song-title">Eres mi debilidad</span> <span id="author">Jorge Amaya</span></a></li><br>
+<li><a href="./songs/Es_Jesús_la_esperanza-Jerez.html"><span id="song-title">Es Jesús la esperanza</span> <span id="author">Jerez</span></a></li><br>
+<li><a href="./songs/Es_tu_amigo_es-Kairoi.html"><span id="song-title">Es tu amigo es</span> <span id="author">Kairoi</span></a></li><br>
+<li><a href="./songs/Escucha_tú-Xaquín.html"><span id="song-title">Escucha tú</span> <span id="author">Xaquín</span></a></li><br>
+<li><a href="./songs/Espíritu_de_Dios.html"><span id="song-title">Espíritu de Dios</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Espíritu_Santo_ven.html"><span id="song-title">Espíritu Santo ven</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Está_naciendo_un_nuevo_día-Alberto_y_Emilia.html"><span id="song-title">Está naciendo un nuevo día</span> <span id="author">Alberto y Emilia</span></a></li><br>
 </ol>
 <h2 id="Dios mío y todas mis cosas">Dios mío y todas mis cosas</h2>
 <ol>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eres mi debilidad</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Eres mi debilidad</div>
+                    <div id="artist">Jorge Amaya</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Si </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>Si</b>              <b>Fa#</b>
+Tú me hiciste salir de la nada
+<b>Mi</b>             <b>mi m</b>
+encendiendo la llama apagada,
+<b>sol# m</b>       <b>re# m</b>
+el deseo de darme al hermano
+<b>Mi</b>                <b>Fa#</b>
+donde te siento resucitado.
+
+<b>Si</b>         <b>Fa#</b>
+Necesito tenerte muy cerca,
+<b>Mi</b>              <b>mi m</b>
+eres fuerza que nunca me deja,
+<b>sol# m</b>             <b>re# m</b>
+Aunque a veces la duda me impide
+<b>Mi</b>             <b>Fa#</b>            <b>Fa# 7</b>
+realizar todo lo que me pides.
+<strong>
+      <b>Mi</b>            <b>Fa#</b>
+El sentir de tu llamada,
+     <b>Si</b>     <b>Fa#</b>  <b>sol# m</b>
+el poder de tu mirada,
+        <b>Mi</b>            <b>Fa#</b>
+son tus manos que me abrazan
+       <b>Si</b>     <b>Fa#</b>     <b>sol# m</b>
+y me impulsan como el agua.
+      <b>Mi</b>            <b>Fa#</b>
+Es la fuerza que me lleva
+    <b>Si</b>   <b>Fa#</b>      <b>sol# m</b>
+oh, al amor sin condiciones
+    <b>Mi</b>            <b>mi m</b>        <b>Fa#</b>
+y saber que eres amigo de verdad,
+        <b>Mi</b>          <b>Fa#</b>           <b>Si</b>
+que a pesar de todo eres mi debilidad.
+</strong>
+<b>Si</b>               <b>Fa#</b>
+Hoy tu nombre es más que palabras
+<b>Mi</b>             <b>mi m</b>
+es tu voz que resuena en mi alma,
+<b>sol# m</b>              <b>re# m</b>
+me has mostrado un modo de vida,
+<b>Mi</b>             <b>Fa#</b>
+un sendero de fe compartida.
+
+<b>Si</b>          <b>Fa#</b>
+Abriremos nuevos caminos 
+<b>Mi</b>                <b>mi m</b>
+para aquellos que siguen tus huellas,
+<b>sol# m</b>         <b>re# m</b>
+y se harán realidad nuestros sueños
+<b>Mi</b>             <b>Fa#</b>              <b>Fa# 7</b>
+anunciando una fe sin fronteras.
+<strong>
+      <b>Mi</b>            <b>Fa#</b>
+El sentir de tu llamada,
+     <b>Si</b>     <b>Fa#</b>  <b>sol# m</b>
+el poder de tu mirada,
+        <b>Mi</b>            <b>Fa#</b>
+son tus manos que me abrazan
+       <b>Si</b>     <b>Fa#</b>     <b>sol# m</b>
+y me impulsan como el agua.
+      <b>Mi</b>            <b>Fa#</b>
+Es la fuerza que me lleva
+    <b>Si</b>   <b>Fa#</b>      <b>sol# m</b>
+oh, al amor sin condiciones
+    <b>Mi</b>            <b>mi m</b>        <b>Fa#</b>
+y saber que eres amigo de verdad,
+        <b>Mi</b>          <b>Fa#</b>           <b>Si</b>
+que a pesar de todo eres mi debilidad.
+</strong>
+
+
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

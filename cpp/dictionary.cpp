@@ -38,7 +38,7 @@ public:
 
         sort(variations.begin(), variations.end(), compareStringSize); // ordeno las variaciones por longitud
 
-        reserved = { "Intro:", "**", "2ª", "1ª", "2º", "1º" "vez:"};
+        reserved = { "Intro:", "**", "2ª", "2ª:", "1ª:", "2º:", "1º:" "vez:"};
     }
 
     // Dada una línea de texto la separa en palabras (por espacios)
@@ -100,18 +100,20 @@ public:
             // string after = "</b>";
 
             bool chord_line = true;
-            bool parenthesis;
+            bool parenthesis1, parenthesis2;
 
             for(auto w=words.begin(); w!=words.end() && chord_line; w++){
                 word = *w;
-                parenthesis = (word.at(0) == '(' && word.at(word.length()-1)==')');
+                parenthesis1 = (word.at(0) == '(' );
+                parenthesis2 = (word.at(word.length()-1)==')');
 
-                if(parenthesis){
+                if(parenthesis1){
                     word.erase(0,1);
-                    word.erase(word.length()-1);
                 }
 
-                
+                if(parenthesis2){
+                    word.erase(word.length()-1);
+                }
 
                 if(find(reserved.begin(), reserved.end(), word)==reserved.end()){
                     // Si la palabra es reservada
@@ -183,8 +185,12 @@ public:
                                         word_aux.insert(len, " ");
                                         word_aux = before + word_aux + after;
 
-                                        if(parenthesis){
-                                            word_aux = "(" + word_aux + ")";
+                                        if(parenthesis1){
+                                            word_aux = "(" + word_aux;
+                                        }
+
+                                        if(parenthesis2){
+                                            word_aux = word_aux + ")";
                                         }
 
                                         *w = word_aux;
@@ -198,10 +204,15 @@ public:
 
                             } else { // No tiene variación
                                 word_aux = before + word + after;
-
-                                if(parenthesis){
-                                    word_aux = "(" + word_aux + ")";
+                                
+                                if(parenthesis1){
+                                    word_aux = "(" + word_aux;
                                 }
+
+                                if(parenthesis2){
+                                    word_aux = word_aux + ")";
+                                }
+
                                 *w = word_aux;
                             }                 
                         }
@@ -213,13 +224,17 @@ public:
                 } else {
                     // La palabra "word" es reservada
 
-                    word_aux = word;
+                    word_aux = "<span id=\"reserved\">" + word + "</span>";
 
-                    if(parenthesis){
-                        word_aux = "(" + word_aux + ")";
+                    if(parenthesis1){
+                        word_aux = "(" + word_aux;
                     }
 
-                    word_aux = "<span id=\"reserved\">" + word_aux + "</span>";
+                    if(parenthesis2){
+                        word_aux = word_aux + ")";
+                    }
+
+                    
 
                     *w = word_aux;
                 }
