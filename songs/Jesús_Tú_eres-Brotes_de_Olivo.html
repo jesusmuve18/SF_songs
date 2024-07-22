@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jesús Tú eres</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Jesús Tú eres</div>
+                    <div id="artist">Brotes de Olivo</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">La </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal">   <b>La</b>        <b>Mi</b>   <b>fa# m</b>
+Jesús, quién eres Tú
+               <b>Re</b>
+tan pobre al nacer,
+              <b>Mi</b>
+que mueres en cruz.
+  <b>La</b>        <b>Mi</b>   <b>fa# m</b>
+Tú das, paz al ladrón,
+             <b>Re</b>
+inquietas al fiel,
+            <b>Mi</b>
+prodigas perdón.
+<b>Re</b>             <b>La</b>                <b>si m</b>
+Tú, siendo creador, me quieres a mí,
+            <b>Mi</b>
+que soy pecador.
+<b>Re</b>            <b>La</b>              <b>si m</b>
+Tú, dueño y Señor, me pides a mí
+                <b>Mi</b>
+salvar la creación.
+<strong>
+<b>La</b>                  <b>Mi</b>
+Cristo es sal de la vida
+         <b>Re</b>
+luz en tinieblas,
+         <b>Mi</b>
+es todo amor.
+</strong>
+  <b>La</b>      <b>Mi</b>   <b>fa# m</b>
+Jesús, ya sé de Ti,
+           <b>Re</b>
+algo de tu ser,
+               <b>Mi</b>
+qué quieres de mí.
+     <b>La</b>   <b>Mi</b>  <b>fa# m</b>
+Mas, yo debo saber
+             <b>Re</b>
+qué rumbo seguir
+              <b>Mi</b>
+qué debo de hacer.
+<b>Re</b>               <b>La</b>
+Di, que he de esperar,
+             <b>si m</b>
+que senda seguir,
+                <b>Mi</b>
+por que he de luchar.
+<b>Re</b>       <b>La</b>                <b>si m</b>
+Tú, ayúdame, pues no puedo más
+           <b>Mi</b>
+dudar ni temer.
+
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -118,7 +118,19 @@
 <li><a href="./songs/Himno_del_campamento-Mocedades.html"><span id="song-title">Himno del campamento</span> <span id="author">Mocedades</span></a></li><br>
 <li><a href="./songs/Hoy_el_Señor.html"><span id="song-title">Hoy el Señor</span> <span id="author"></span></a></li><br>
 <li><a href="./songs/Hoy_en_la_Tierra-J_Madurga.html"><span id="song-title">Hoy en la Tierra</span> <span id="author">J Madurga</span></a></li><br>
+<li><a href="./songs/Hoy_te_toca_ser_feliz-Mago_de_Oz.html"><span id="song-title">Hoy te toca ser feliz</span> <span id="author">Mago de Oz</span></a></li><br>
 <li><a href="./songs/Hoy_vengo_arrepentido-Jerez.html"><span id="song-title">Hoy vengo arrepentido</span> <span id="author">Jerez</span></a></li><br>
+<li><a href="./songs/Id_y_enseñad-Garabaín.html"><span id="song-title">Id y enseñad</span> <span id="author">Garabaín</span></a></li><br>
+<li><a href="./songs/Iglesia_peregrina-Garabaín.html"><span id="song-title">Iglesia peregrina</span> <span id="author">Garabaín</span></a></li><br>
+<li><a href="./songs/Imagine-John_Lennon.html"><span id="song-title">Imagine</span> <span id="author">John Lennon</span></a></li><br>
+<li><a href="./songs/Invocación_al_Espíritu-Emaús.html"><span id="song-title">Invocación al Espíritu</span> <span id="author">Emaús</span></a></li><br>
+<li><a href="./songs/Jesús_es_Señor-Kairoi.html"><span id="song-title">Jesús es Señor</span> <span id="author">Kairoi</span></a></li><br>
+<li><a href="./songs/Jesús,_líder_de_la_vida-Brotes_de_Olivo.html"><span id="song-title">Jesús, líder de la vida</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Jesús_Tú_eres-Brotes_de_Olivo.html"><span id="song-title">Jesús Tú eres</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Juntos_cambiaremos_el_mundo-Brotes_de_Olivo.html"><span id="song-title">Juntos cambiaremos el mundo</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Juntos_como_hermanos.html"><span id="song-title">Juntos como hermanos</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/La_aventura_de_vivir-Manuel_Carrasco.html"><span id="song-title">La aventura de vivir</span> <span id="author">Manuel Carrasco</span></a></li><br>
+<li><a href="./songs/La_llevaré_al_desierto-Verbum_Dei.html"><span id="song-title">La llevaré al desierto</span> <span id="author">Verbum Dei</span></a></li><br>
 </ol>
 <h2 id="Dios mío y todas mis cosas">Dios mío y todas mis cosas</h2>
 <ol>

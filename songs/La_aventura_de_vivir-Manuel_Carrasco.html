@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La aventura de vivir</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">La aventura de vivir</div>
+                    <div id="artist">Manuel Carrasco</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Sol </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>Sol</b>
+Tú eres mis alas
+<b>Do</b> <b>Re</b>
+Yo soy tu red
+<b>Sol</b>
+Tú mi esperanza
+<b>Do</b>  <b>Re</b>
+Si estoy sin fe
+<b>Sol</b> <b>Re</b>       <b>mi m</b>
+Yo te sujeto en
+   <b>Do</b>
+La cuerda floja
+<b>Sol</b>  <b>Re</b>
+Tú a mí me salvas
+<b>mi m</b>  <b>Do</b>
+Si todo ahoga
+<strong>
+<b>Do</b>    <b>mi m</b>
+Compartir
+      <b>Re</b>           <b>Sol</b>
+La aventura de la vida
+       <b>Re</b>
+A tu lado
+<b>Do</b> <b>Re</b> <b>Do</b> <b>Re</b>
+Y vivir
+             <b>Sol</b> <b>Do</b>
+Puede que el mundo 
+        <b>Sol</b>         <b>Do</b>
+se rompa a tus pies
+         <b>Sol</b>                <b>Re</b>
+Si tú no puedes, yo te ayudaré 
+         <b>Do</b>            <b>Re</b>    <b>mi m</b>
+Juntos podremos vencer a los miedos
+           <b>Do</b>
+Somos la herida 
+        <b>Re</b>           <b>Do</b> <b>Re</b>
+y la cura en el tiempo
+</strong>
+<b>Sol</b>
+Si estás perdido
+<b>Do</b>  <b>Re</b>
+Yo soy tus pies
+<b>Sol</b>
+Por el camino
+<b>Do</b> <b>Re</b>
+Te guiaré
+<b>Sol</b> <b>Re</b>          <b>mi m</b>
+Tú me enseñaste que
+  <b>Do</b>          <b>Sol</b>
+Debo creer en mí
+   <b>Re</b>
+Y siendo amigos
+<b>mi m</b> <b>Do</b>
+Yo soy feliz.
+<strong>
+<b>Do</b>    <b>mi m</b>
+Compartir
+      <b>Re</b>           <b>Sol</b>
+La aventura de la vida
+       <b>Re</b>
+A tu lado
+<b>Do</b> <b>Re</b> <b>Do</b> <b>Re</b>
+Y vivir
+             <b>Sol</b> <b>Do</b>
+Puede que el mundo 
+        <b>Sol</b>         <b>Do</b>
+se rompa a tus pies
+         <b>Sol</b>                <b>Re</b>
+Si tú no puedes, yo te ayudaré 
+         <b>Do</b>            <b>Re</b>    <b>mi m</b>
+Juntos podremos vencer a los miedos
+           <b>Do</b>
+Somos la herida 
+        <b>Re</b>           <b>Do</b> <b>Re</b>
+y la cura en el tiempo (**)
+</strong>
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

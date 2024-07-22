@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Id y enseñad</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Id y enseñad</div>
+                    <div id="artist">Garabaín</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Do </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>Do</b>        <b>Sol 7</b>      <b>la m</b>
+Sois la semilla que ha de crecer
+          <b>Fa</b>         <b>re m</b>      <b>Sol 7</b>
+sois la estrella que ha de brillar.
+<b>Do</b>       <b>Sol 7</b>      <b>la m</b>       <b>Fa</b>
+Sois levadura, sois grano de sal
+  <b>Do</b>         <b>Sol 7</b>      <b>Do</b>
+antorcha que debe alumbrar.
+
+<b>Do</b>        <b>Sol 7</b>     <b>la m</b>
+Sois la mañana que vuelve a nacer
+          <b>Fa</b>        <b>re m</b>     <b>Sol 7</b>
+sois espiga que vuelve a granar
+<b>Do</b>        <b>Sol 7</b>      <b>la m</b>      <b>Fa</b>
+sois aguijón y caricia a la vez
+   <b>Do</b>         <b>Sol 7</b>        <b>Do</b>
+testigos que voy a enviar.
+<strong>
+<b>Sol 7</b>        <b>Do</b>
+Id, amigos, por el mundo
+<b>Fa</b>             <b>Do</b>
+anunciando el amor
+<b>re m</b>            <b>la m</b>
+mensajeros de la vida,
+<b>Sol 7</b>             <b>Do</b>
+de la paz y el perdón.
+<b>Sol 7</b>          <b>Do</b>
+Sed amigos los testigos
+<b>Fa</b>             <b>Do</b>
+de mi resurrección.
+<b>re m</b>            <b>la m</b>
+Id llevando mi presencia
+<b>Sol 7</b>             <b>Do</b>
+con vosotros estoy.
+</strong>
+<b>Do</b>       <b>Sol 7</b>      <b>la m</b>
+Sois una llama que ha de encender
+         <b>Fa</b>        <b>re m</b>      <b>Sol 7</b>
+resplandores de fe y caridad.
+<b>Do</b>          <b>Sol 7</b>   <b>la m</b>      <b>Fa</b>
+Sois los pastores que han de guiar
+    <b>Do</b>       <b>Sol 7</b>      <b>Do</b>
+al mundo por sendas de paz
+
+<b>Do</b>       <b>Sol 7</b>       <b>la m</b>
+Sois los amigos que quise escoger
+           <b>Fa</b>       <b>re m</b>      <b>Sol 7</b>
+sois palabra que intento gritar.
+<b>Do</b>         <b>Sol 7</b>    <b>la m</b>    <b>Fa</b>
+Sois reino nuevo
+<b>la m</b>     <b>Fa</b>
+que empieza a engendrar
+<b>Do</b>          <b>Sol 7</b>      <b>Do</b>
+justicia, amor y verdad
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>
