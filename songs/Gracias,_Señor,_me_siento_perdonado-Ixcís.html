@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracias, Señor, me siento perdonado</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Gracias, Señor, me siento perdonado</div>
+                    <div id="artist">Ixcís</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Mi </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><strong>
+<b>Mi</b>          <b>La</b>            <b>Mi</b>       <b>Si 7</b>
+Gracias, Señor, me siento perdonado.
+<b>Mi</b>         <b>La</b>             <b>Mi</b>
+Gracias, Señor, por tu perdón.
+Sol#     so#m   La       Mi
+Has cambiado mi luto en danza.
+<b>fa# m</b>                  <b>Si 7</b>
+Ha salido de nuevo el sol.
+           <b>Mi</b> <b>La</b> <b>Si 7</b> <b>Mi</b>
+Gracias, Señor.
+</strong>
+<b>La</b>      <b>Si 7</b>    <b>Mi</b>    <b>do# m</b>
+Y yo creía que no podría
+   <b>La</b>                 <b>Si 7</b>
+de este pozo nunca salir,
+            <b>La</b> <b>Si 7</b>    <b>Mi</b> <b>Si 7</b>
+y Tú lo has hecho por mí.
+
+<b>La</b>      <b>Si 7</b>    <b>Mi</b>     <b>do# m</b>
+Y yo creía que no podría
+<b>La</b>                  <b>Si 7</b>
+volver a tener ilusión.
+         <b>La</b> <b>Si 7</b>     <b>Mi</b>  <b>Si 7</b>
+Ahora me basta tu amor.
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

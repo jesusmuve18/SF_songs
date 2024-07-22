@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hay caminos por andar</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Hay caminos por andar</div>
+                    <div id="artist">Brotes de Olivo</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Do </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><strong>
+<b>Do</b>           <b>Fa</b>        <b>Do</b>
+Tú que andas: sí hay caminos, 
+            <b>Fa</b>          <b>Sol</b>
+lo que hace falta es buscar.
+    <b>Do</b>  <b>Fa</b>       <b>Do</b>    <b>La 7</b>
+Caminante, no lo dudes, 
+<b>re m</b>   <b>Sol</b>         <b>Do</b>
+hay caminos por andar.
+</strong>
+<b>Do</b>                <b>Sol</b>
+Hay caminos por andar 
+      <b>Fa</b>          <b>Do</b>
+o que poco se anduvieron
+                      <b>Sol</b>
+y aunque muchos se cansaron, 
+      <b>Fa</b>              <b>Do</b>    <b>Do 7</b>
+fue andando senderos viejos.
+        <b>Fa</b>
+Como el pueblo de Israel 
+            <b>Sol</b>          <b>Do</b>
+que en su andar por el desierto
+               <b>Sol</b>
+olvidó su libertad 
+<b>Fa</b>                <b>Do</b>      <b>Sol</b>
+para añorar el destierro.
+
+<b>Do</b>                    <b>Sol</b>
+Cuando la ilusión y el gozo 
+  <b>Fa</b>             <b>Do</b>
+repiten sus sentimientos,
+                   <b>Sol</b>
+se está matando la vida
+       <b>Fa</b>               <b>Do</b>    <b>Do 7</b>
+que quiere alcanzar lo eterno.
+        <b>Fa</b>
+No “lo eterno” del mañana, 
+      <b>Sol</b>                <b>Do</b>
+que será siempre algo incierto
+                     <b>Sol</b>
+sino vivir hoy, en todos, 
+<b>Fa</b>                 <b>Do</b>     <b>Sol</b>
+como se vive en el cielo.
+
+<b>Do</b>               <b>Sol</b>
+Si queremos un futuro 
+ <b>Fa</b>                    <b>Do</b>
+fruto de un presente incierto,
+               <b>Sol</b>
+no podemos esperar más 
+    <b>Fa</b>           <b>Do</b>     <b>Do 7</b>
+que duda y desconcierto.
+<b>Fa</b>
+solo el presente que vive 
+     <b>Sol</b>                <b>Do</b>
+para hacer realidad los sueños
+              <b>Sol</b>
+un futuro nos dará 
+<b>Fa</b>                   <b>Do</b>     <b>Sol</b>
+que haga presente el Reino.
+
+<b>Do</b>                <b>Sol</b>
+Hay caminos por andar 
+       <b>Fa</b>            <b>Do</b>
+que al cruzarlos son violentos
+                    <b>Sol</b>
+y entre temblores y dudas 
+     <b>Fa</b>               <b>Do</b>    <b>Do 7</b>
+se recorren muchos trechos.
+    <b>Fa</b>
+Más algo interior nos dice: 
+       <b>Sol</b>         <b>Do</b>
+“En mi nombre, recorredlo,
+                 <b>Sol</b>
+que yo voy por delante, 
+<b>Fa</b>                  <b>Do</b>      <b>Sol</b>
+Yo soy: ¡no tengáis miedo!”
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

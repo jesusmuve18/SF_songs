@@ -88,6 +88,37 @@
 <li><a href="./songs/Espíritu_de_Dios.html"><span id="song-title">Espíritu de Dios</span> <span id="author"></span></a></li><br>
 <li><a href="./songs/Espíritu_Santo_ven.html"><span id="song-title">Espíritu Santo ven</span> <span id="author"></span></a></li><br>
 <li><a href="./songs/Está_naciendo_un_nuevo_día-Alberto_y_Emilia.html"><span id="song-title">Está naciendo un nuevo día</span> <span id="author">Alberto y Emilia</span></a></li><br>
+<li><a href="./songs/Están_encendiendo_antorchas-Alberto_y_Emilia.html"><span id="song-title">Están encendiendo antorchas</span> <span id="author">Alberto y Emilia</span></a></li><br>
+<li><a href="./songs/Estate_Señor_conmigo-Antonio_Alcalde.html"><span id="song-title">Estate Señor conmigo</span> <span id="author">Antonio Alcalde</span></a></li><br>
+<li><a href="./songs/Este_es_el_día_del_Señor-Taizé.html"><span id="song-title">Este es el día del Señor</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Este_insomnio_y_esta_lucha-Ciento_Ochenta_Grados.html"><span id="song-title">Este insomnio y esta lucha</span> <span id="author">Ciento Ochenta Grados</span></a></li><br>
+<li><a href="./songs/Estoy_alegre.html"><span id="song-title">Estoy alegre</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Éxodo_y_liberación-Cesáreo_Gabaráin.html"><span id="song-title">Éxodo y liberación</span> <span id="author">Cesáreo Gabaráin</span></a></li><br>
+<li><a href="./songs/Fuente_viva-Brotes_de_Olivo.html"><span id="song-title">Fuente viva</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Fun,_fun,_fun.html"><span id="song-title">Fun, fun, fun</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Gloria_a_Dios-Kairoi.html"><span id="song-title">Gloria a Dios</span> <span id="author">Kairoi</span></a></li><br>
+<li><a href="./songs/Gloria_(Do).html"><span id="song-title">Gloria (Do)</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Gloria_et_in_terra_pax-Taizé.html"><span id="song-title">Gloria et in terra pax</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Gloria,_Gloria,_Aleluya.html"><span id="song-title">Gloria, Gloria, Aleluya</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Gloria_(rem).html"><span id="song-title">Gloria (rem)</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Gloria_(sim)-Taizé.html"><span id="song-title">Gloria (sim)</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Gracias_a_la_vida-Violeta_Parra.html"><span id="song-title">Gracias a la vida</span> <span id="author">Violeta Parra</span></a></li><br>
+<li><a href="./songs/Gracias,_Señor,_me_siento_perdonado-Ixcís.html"><span id="song-title">Gracias, Señor, me siento perdonado</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Gracias,_Señor-Ixcís.html"><span id="song-title">Gracias, Señor</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Gracias-Brotes_de_Olivo.html"><span id="song-title">Gracias</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Ha_nacido_el_Salvador.html"><span id="song-title">Ha nacido el Salvador</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Hacen_falta,_sí-Brotes_de_Olivo.html"><span id="song-title">Hacen falta, sí</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Hacia_Ti-Ixcís.html"><span id="song-title">Hacia Ti</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Hágase-Migueli.html"><span id="song-title">Hágase</span> <span id="author">Migueli</span></a></li><br>
+<li><a href="./songs/Hasta_en_el_viento.html"><span id="song-title">Hasta en el viento</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Hay_caminos_por_andar-Brotes_de_Olivo.html"><span id="song-title">Hay caminos por andar</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Haz_de_mí,_Señor,_instrumento_de_tu_paz.html"><span id="song-title">Haz de mí, Señor, instrumento de tu paz</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Hazme_instrumento_de_tu_paz.html"><span id="song-title">Hazme instrumento de tu paz</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Himno_a_la_juventud.html"><span id="song-title">Himno a la juventud</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Himno_del_campamento-Mocedades.html"><span id="song-title">Himno del campamento</span> <span id="author">Mocedades</span></a></li><br>
+<li><a href="./songs/Hoy_el_Señor.html"><span id="song-title">Hoy el Señor</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Hoy_en_la_Tierra-J_Madurga.html"><span id="song-title">Hoy en la Tierra</span> <span id="author">J Madurga</span></a></li><br>
+<li><a href="./songs/Hoy_vengo_arrepentido-Jerez.html"><span id="song-title">Hoy vengo arrepentido</span> <span id="author">Jerez</span></a></li><br>
 </ol>
 <h2 id="Dios mío y todas mis cosas">Dios mío y todas mis cosas</h2>
 <ol>

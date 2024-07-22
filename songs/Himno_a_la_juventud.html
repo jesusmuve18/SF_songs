@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himno a la juventud</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Himno a la juventud</div>
+                    <div id="artist"></div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Re </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><strong>
+<b>Re</b>                  <b>Re 7</b>
+¿Dónde está la juventud,
+
+si la tenemos?
+<b>Sol</b>                   <b>sol m</b>
+¿Dónde está nuestro valor?,
+<b>Re</b>                     <b>si m</b>
+¿Dónde la sinceridad que alardeamos?
+<b>mi m</b>                     <b>La</b>
+¿Dónde hemos guardado a Dios?
+<b>Re</b>                       <b>Re 7</b>
+¿Es que ya olvidamos ese afán de lucha
+<b>Sol</b>                  <b>sol m</b>
+por hacer un mundo mejor?
+<b>Re</b>                <b>si m</b>
+¿Es que ya se fue definitivamente
+<b>mi m</b>           <b>La</b>       <b>Re</b>
+de nuestro lado el amor?
+</strong>
+<b>Re</b>
+Hacemos dioses de barro
+<b>Sol</b>                   <b>Re</b>
+con nuestra propia pobreza.
+
+Buscamos a aquel que cuadre
+<b>mi m</b>                  <b>La</b>
+con nuestra forma de ser.
+<b>Re</b>                <b>Re 7</b>
+Lo alabamos y decimos:
+     <b>Sol</b>               <b>sol m</b>
+¡Ese sí que es un gran hombre!
+<b>Re</b>        <b>Sol</b>     <b>La</b>         <b>Re</b>
+Pero no, no vemos que es de carne.
+
+<b>Re</b>
+Vivimos un mundo raro,
+<b>Sol</b>              <b>Re</b>
+sólo queremos progreso.
+
+Nos importan más los perros
+        <b>mi m</b>            <b>La</b>
+que los niños que no nacen.
+<b>Re</b>                <b>Re 7</b>
+Despreciamos a la gente
+<b>Sol</b>                  <b>sol m</b>
+porque se pone en el medio.
+<b>Re</b>             <b>Sol</b>
+¡Ya está bien!
+         <b>La</b>    <b>Re</b>
+¡Vamos a despertarnos!
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>
