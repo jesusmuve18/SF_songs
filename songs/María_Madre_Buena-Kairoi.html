@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>María Madre Buena</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">María Madre Buena</div>
+                    <div id="artist">Kairoi</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">fa# m</span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>fa# m</b>
+Tantas cosas en la vida
+     <b>si m</b>
+nos ofrecen plenitud
+     <b>Mi</b>
+y no son más que mentiras
+        <b>La</b>                 <b>Mi</b>
+que desgastan la inquietud.
+        <b>fa# m</b>
+Tú has llenado mi existencia
+     <b>si m</b>
+al quererme de verdad.
+     <b>Re</b>
+Yo quisiera, Madre buena,
+       <b>Do#</b>
+amarte más.	
+
+    <b>fa# m</b>
+En silencio escuchabas
+     <b>si m</b>
+la Palabra de Jesús
+        <b>Mi</b>
+y la hacías Pan de Vida
+    <b>La</b>                   <b>Mi</b>
+meditando en tu interior.
+    <b>fa# m</b>
+la semilla que ha caído
+      <b>si m</b>
+ya germina y está en flor,
+       <b>Re</b>                     <b>Do#</b>
+con el corazón en fiesta cantaré.
+<strong>
+<b>La</b>    <b>si m</b>  <b>Re</b>    <b>La</b> <b>Mi</b>
+Ave María, Ave María
+</strong>
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

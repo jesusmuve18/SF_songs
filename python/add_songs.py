@@ -11,7 +11,7 @@ def run_script():
     arg4 = combobox.get()
 
     # Obtener la ruta completa del script de bash
-    script_path = os.path.join(os.getcwd(), 'song_adder.sh')
+    script_path = os.path.join(os.getcwd(), 'python/song_adder.sh')
 
     if os.path.isfile(script_path):
         if arg1 and arg3 and arg4:
@@ -39,6 +39,14 @@ def clear_fields():
     entry3.delete("1.0", tk.END)
     combobox.set(options[0])  # Restablecer el valor predeterminado del combobox
 
+def generate():
+    script_path = os.path.join(os.getcwd(), 'scripts/generate-all.sh')
+    result = subprocess.run(['bash', script_path], capture_output=True, text=True)
+
+     # Mostrar la salida del script
+    if result.returncode == 0:
+        output = result.stdout
+        messagebox.showinfo("Resultado", output)
 
 # Crear la ventana principal
 root = tk.Tk()
@@ -73,6 +81,9 @@ execute_button = tk.Button(button_frame, text="Añadir", command=run_script)
 execute_button.pack(side=tk.LEFT, padx=10)
 
 clear_button = tk.Button(button_frame, text="Limpiar Campos", command=clear_fields)
+clear_button.pack(side=tk.LEFT, padx=10)
+
+clear_button = tk.Button(button_frame, text="Generar", command=generate)
 clear_button.pack(side=tk.LEFT, padx=10)
 
 # Iniciar el bucle principal de la interfaz gráfica

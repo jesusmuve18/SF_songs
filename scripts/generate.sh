@@ -36,8 +36,8 @@ then
     dir=$(echo "$result" | head -n 1)   # Primer línea es el directorio
     song=$(echo "$result" | tail -n 1)    # Segunda línea es el nombre del archivo
 
-    echo "Directorio: $dir"
-    echo "Canción: $song"
+    # echo "Directorio: $dir"
+    # echo "Canción: $song"
 
     touch $song_dir/$song.html
     touch ./cpp/out/$song.out

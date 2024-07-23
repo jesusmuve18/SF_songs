@@ -113,16 +113,16 @@ echo "<ol>" >> $index_file
 for file in "${archivos[@]}"; 
 do
     if [[ ! -d "$dir_data/$file" ]]; then # Solo recorro los archivos
-        echo "------------------------------------------"
+        # echo "------------------------------------------"
         $script $dir_data/$file
         result=$(process_string $file)
         title=$(echo "$result" | cut -d'|' -f1)
         author=$(echo "$result" | cut -d'|' -f2)
         filename=$(echo "$file" | cut -d'.' -f1)
 
-        echo "Nombre de archivo: $filename"
-        echo "Título: $title"
-        echo "Autor:  $author"
+        # echo "Nombre de archivo: $filename"
+        # echo "Título: $title"
+        # echo "Autor:  $author"
 
         # La añado al índice
         echo "<li><a href=\"$dir_html/$filename.html\"><span id=\"song-title\">$title</span> <span id=\"author\">$author</span></a></li><br>" >> $index_file
@@ -140,9 +140,9 @@ echo "</ol>" >> $index_file
 
 for sub_dir in "${subcarpetas[@]}"; 
 do
-    echo "........................................."
+    # echo "........................................."
 
-    echo "Añadiendo canciones de $sub_dir..."
+    # echo "Añadiendo canciones de $sub_dir..."
 
     # Le quito el número y cambio '_' por ' '
     sub_dir_name=$(echo "$( echo $sub_dir | tr '_' ' ')" | cut -d '-' -f 2-)
@@ -178,16 +178,16 @@ do
     for file in "${archivos[@]}"; 
     do
         if ! test -d $file; then # Solo recorro los archivos
-            echo "------------------------------------------"
+            # echo "------------------------------------------"
             $script $dir_data/$sub_dir/$file
             result=$(process_string $file)
             title=$(echo "$result" | cut -d'|' -f1)
             author=$(echo "$result" | cut -d'|' -f2)
             filename=$(echo "$file" | cut -d'.' -f1)
 
-            echo "Nombre de archivo: $filename"
-            echo "Título: $title"
-            echo "Autor:  $author"
+            # echo "Nombre de archivo: $filename"
+            # echo "Título: $title"
+            # echo "Autor:  $author"
 
             # La añado al índice
             echo "<li><a href=\"$dir_html/$filename.html\"><span id=\"song-title\">$title</span> <span id=\"author\">$author</span></a></li><br>" >> $index_file
@@ -205,7 +205,7 @@ done
 
 ################################################################################
 # Salida de información
-printf "\n\n"
+# printf "\n\n"
 echo "Se han generado $total_files archivos ($(($n-1)) en \"otros\")"
 
 # 269 + 17 + 13 + 150 = 449

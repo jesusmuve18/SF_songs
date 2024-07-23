@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>María, madre nuestra</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">María, madre nuestra</div>
+                    <div id="artist"></div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Re </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>Re</b>           <b>La</b>
+María, Madre nuestra
+<b>Sol</b>     <b>La</b>    <b>Re</b>
+flor de juventud.
+             <b>La</b>    <b>Sol</b> <b>La</b>   <b>Re</b>
+Camino de mi vida, esa eres tú.
+              <b>La</b> <b>Sol</b>   <b>La</b>   <b>Re</b>
+Soy como un camino al anochecer
+                  <b>La</b>
+que busca en el silencio
+<b>Sol</b>       <b>La</b>      <b>Re</b>  <b>Re 7</b>
+los pasos de tu ayer.
+<strong>
+     <b>Sol</b>           <b>La</b>
+Sin ti el mundo sería
+   <b>Re</b>     <b>fa# m</b>      <b>si m</b>
+como un paisaje sin luz
+   <b>Sol</b>
+un día sin sol
+   <b>La</b>           <b>Re</b>    <b>Re 7</b>
+un rostro sin sonrisa.
+    <b>Sol</b>  <b>La</b>        <b>Re</b> <b>fa# m</b> <b>si m</b>
+Sin ti María, no habría luz
+    <b>Sol</b>       <b>La</b>        <b>Re</b>
+sin ti no habría una sonrisa.
+
+<b>Re</b>          <b>La</b>
+Eres la alegría
+<b>Sol</b>      <b>La</b>              <b>Re</b>
+el despertar de una ilusión.
+          <b>La</b>   <b>Sol</b>          <b>La</b>   <b>Re</b>
+Eres la belleza de una puesta de sol.
+
+             <b>La</b>
+Soy como una barca
+<b>Sol</b>        <b>La</b>    <b>Re</b>
+sin remos, en el mar,
+                <b>La</b>
+que va con la marea
+<b>Sol</b>      <b>La</b>     <b>Re</b>  <b>Re 7</b>
+buscando tu amistad.
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

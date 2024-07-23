@@ -154,6 +154,14 @@
 <li><a href="./songs/Mano_a_mano_con_Dios-Javi_Sánchez.html"><span id="song-title">Mano a mano con Dios</span> <span id="author">Javi Sánchez</span></a></li><br>
 <li><a href="./songs/Marahnata-Nico.html"><span id="song-title">Marahnata</span> <span id="author">Nico</span></a></li><br>
 <li><a href="./songs/Marahnata-Ricardo_Cantalapiedra.html"><span id="song-title">Marahnata</span> <span id="author">Ricardo Cantalapiedra</span></a></li><br>
+<li><a href="./songs/Marannatha,_ven_Señor_Jesús-Brotes_de_Olivo.html"><span id="song-title">Marannatha, ven Señor Jesús</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/María_Madre_Buena-Kairoi.html"><span id="song-title">María Madre Buena</span> <span id="author">Kairoi</span></a></li><br>
+<li><a href="./songs/María,_madre_nuestra.html"><span id="song-title">María, madre nuestra</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/María,_mujer_fuerte-Emaús.html"><span id="song-title">María, mujer fuerte</span> <span id="author">Emaús</span></a></li><br>
+<li><a href="./songs/Más_allá-Gloria_Estefan.html"><span id="song-title">Más allá</span> <span id="author">Gloria Estefan</span></a></li><br>
+<li><a href="./songs/Me_has_seducido,_Señor-Kairoi.html"><span id="song-title">Me has seducido, Señor</span> <span id="author">Kairoi</span></a></li><br>
+<li><a href="./songs/Mi_Dios_en_una_cruz-Ixcís.html"><span id="song-title">Mi Dios en una cruz</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Mi_misión-Musical_33,_Toño_Casado.html"><span id="song-title">Mi misión</span> <span id="author">Musical 33, Toño Casado</span></a></li><br>
 </ol>
 <h2 id="Dios mío y todas mis cosas">Dios mío y todas mis cosas</h2>
 <ol>

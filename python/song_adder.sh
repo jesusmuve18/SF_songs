@@ -1,17 +1,22 @@
 #!/bin/bash
 
-dir=../cpp/songs
+dir=./cpp/songs
 
 title=$1
 author=$2
 song="$3"
 folder=$4
 separator=/
+union=-
 
 if [ "$folder" = "General" ]; then
     echo Categoría: General
 	folder=""
     separator=""
+fi
+
+if [ "$author" = "" ]; then
+	union=""
 fi
 # Sustituyo ' ' por '_'
 title=$(echo "$title" | sed 's/ /_/g')
@@ -23,7 +28,7 @@ folder=$(echo "$folder" | sed 's/ /_/g')
 
 # echo $song > $dir/$folder$separator$title-$author.dat
 
-file_path="$dir/$folder$separator$title-$author.dat"
+file_path="$dir/$folder$separator$title$union$author.dat"
 
 echo "Se va a crear $file_path"
 touch "$file_path"
