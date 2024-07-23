@@ -131,6 +131,29 @@
 <li><a href="./songs/Juntos_como_hermanos.html"><span id="song-title">Juntos como hermanos</span> <span id="author"></span></a></li><br>
 <li><a href="./songs/La_aventura_de_vivir-Manuel_Carrasco.html"><span id="song-title">La aventura de vivir</span> <span id="author">Manuel Carrasco</span></a></li><br>
 <li><a href="./songs/La_llevaré_al_desierto-Verbum_Dei.html"><span id="song-title">La llevaré al desierto</span> <span id="author">Verbum Dei</span></a></li><br>
+<li><a href="./songs/La_luz_de_Dios-Brotes_de_Olivo.html"><span id="song-title">La luz de Dios</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/La_Palabra.html"><span id="song-title">La Palabra</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Laudato.html"><span id="song-title">Laudato</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Let_it_be-The_Beatles.html"><span id="song-title">Let it be</span> <span id="author">The Beatles</span></a></li><br>
+<li><a href="./songs/Llega_el_día-Ixcís.html"><span id="song-title">Llega el día</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Llegaste_Tú-Begoña_Costillo.html"><span id="song-title">Llegaste Tú</span> <span id="author">Begoña Costillo</span></a></li><br>
+<li><a href="./songs/Llevad_la_Buena_Noticia-Brotes_de_Olivo.html"><span id="song-title">Llevad la Buena Noticia</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/LLueve_Tú-Ain_Karem.html"><span id="song-title">LLueve Tú</span> <span id="author">Ain Karem</span></a></li><br>
+<li><a href="./songs/Lo_haremos_juntos-Alberto_y_Emilia.html"><span id="song-title">Lo haremos juntos</span> <span id="author">Alberto y Emilia</span></a></li><br>
+<li><a href="./songs/Lo_nuevo_ha_comenzado-Nico.html"><span id="song-title">Lo nuevo ha comenzado</span> <span id="author">Nico</span></a></li><br>
+<li><a href="./songs/Los_hambrientos-Brotes_de_Olivo.html"><span id="song-title">Los hambrientos</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Los_incontables-Ain_Karem.html"><span id="song-title">Los incontables</span> <span id="author">Ain Karem</span></a></li><br>
+<li><a href="./songs/Los_limpios_de_corazón-Brotes_de_Olivo.html"><span id="song-title">Los limpios de corazón</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Los_mansos-Brotes_de_Olivo.html"><span id="song-title">Los mansos</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Los_misericordiosos-Brotes_de_Olivo.html"><span id="song-title">Los misericordiosos</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Los_pacíficos-Brotes_de_Olivo.html"><span id="song-title">Los pacíficos</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Los_perseguidos-Brotes_de_Olivo.html"><span id="song-title">Los perseguidos</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Los_pobres_(Anawín)-Brotes_de_Olivo.html"><span id="song-title">Los pobres (Anawín)</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Los_que_lloran-Brotes_de_Olivo.html"><span id="song-title">Los que lloran</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Madre_de_nuestra_alegría-Popular.html"><span id="song-title">Madre de nuestra alegría</span> <span id="author">Popular</span></a></li><br>
+<li><a href="./songs/Mano_a_mano_con_Dios-Javi_Sánchez.html"><span id="song-title">Mano a mano con Dios</span> <span id="author">Javi Sánchez</span></a></li><br>
+<li><a href="./songs/Marahnata-Nico.html"><span id="song-title">Marahnata</span> <span id="author">Nico</span></a></li><br>
+<li><a href="./songs/Marahnata-Ricardo_Cantalapiedra.html"><span id="song-title">Marahnata</span> <span id="author">Ricardo Cantalapiedra</span></a></li><br>
 </ol>
 <h2 id="Dios mío y todas mis cosas">Dios mío y todas mis cosas</h2>
 <ol>
@@ -151,6 +174,7 @@
 <li><a href="./songs/Despertar-Estopa.html"><span id="song-title">Despertar</span> <span id="author">Estopa</span></a></li><br>
 <li><a href="./songs/Resucitados.html"><span id="song-title">Resucitados</span> <span id="author"></span></a></li><br>
 <li><a href="./songs/Salmo_97_Aleluya-Grupo_San_Francisco.html"><span id="song-title">Salmo 97 Aleluya</span> <span id="author">Grupo San Francisco</span></a></li><br>
+<li><a href="./songs/Sirenas-Taburete.html"><span id="song-title">Sirenas</span> <span id="author">Taburete</span></a></li><br>
 <li><a href="./songs/Un_violinista_en_tu_tejado-Melendi.html"><span id="song-title">Un violinista en tu tejado</span> <span id="author">Melendi</span></a></li><br>
 <li><a href="./songs/Yo_no_estoy_loco-Estopa.html"><span id="song-title">Yo no estoy loco</span> <span id="author">Estopa</span></a></li><br>
 <li><a href="./songs/Zombie-The_Cranberries.html"><span id="song-title">Zombie</span> <span id="author">The Cranberries</span></a></li><br>

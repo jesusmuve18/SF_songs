@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sirenas</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Sirenas</div>
+                    <div id="artist">Taburete</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">E m</span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>E m</b>            <b>C</b>
+Yendo más despacio
+ <b>G</b>             <b>D</b>
+nunca aprendí a frenar
+<b>E m</b>             <b>C</b>
+ni a volar más alto
+<b>G</b>              <b>D</b>
+no pase de tu portal
+<b>E m</b>          <b>C</b>
+vestias de luto
+<b>G</b>               <b>D</b>
+cuando bailas frenesí
+<b>E m</b>            <b>C</b>
+esto no ha acabado
+<b>G</b>                   <b>D</b>
+no ha llegado a su fiiiiin
+<b>E m</b>                  <b>C</b>
+perdí la fama en un cabaret
+ <b>G</b>                           <b>D</b>
+se han olvidado a que huele la luna
+<b>E m</b>                             <b>C</b>
+y en las cantinas como bailan como cantan
+<b>G</b>                           <b>D</b>
+se han olvidado a que huela la luna
+
+           <b>E m</b>              <b>C</b>
+el dia es claro ha salido solo
+               <b>G</b>                 <b>D</b>
+te han entrado ganas de bebertelo todo
+                 <b>E m</b>                     <b>C</b>
+crees que cuando bailas no se esconde el miedo
+             <b>G</b>               <b>D</b>
+y sobre su cuello flotan los pañuelos
+          <b>E m</b>                  <b>C</b>
+solo hace falta que demos la vuelta
+           <b>G</b>              <b>D</b>
+recapitulemos paguemos a medias
+         <b>E m</b>                    <b>C</b>
+mi sobredosis siempre serán tus piernas
+              <b>G</b>                <b>D</b>
+que beben del metal que hay en tus venas
+            <b>E m</b>                      <b>C</b>
+y en las cantinas como bailan como cantan
+             <b>G</b>                 <b>D</b>
+se han olvidado a que huele la luna
+             <b>E m</b>                   <b>C</b>
+y en las cantinas como rien como bailan
+             <b>G</b>                  <b>D</b>
+se han olvidado a que huele la luna
+
+             <b>E m</b>               <b>C</b>
+el dia es raro ni te echo de menos
+             <b>G</b>                  <b>D</b>
+podría tocarle a cualquiera diez boleros
+             <b>E m</b>            <b>C</b>
+todo se acaba dijiste mirando
+            <b>G</b>                  <b>D</b>
+no pasa nada nos vamos de aquiiii
+        <b>E m</b>
+a casa de dron
+        <b>C</b>
+a casa de dron
+        <b>G</b>
+a casa de dron
+        <b>D</b>
+nos vamos a casaX2
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mano a mano con Dios</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Mano a mano con Dios</div>
+                    <div id="artist">Javi Sánchez</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Do </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><strong>
+<b>Do</b>     <b>Sol</b>      <b>la m</b>  <b>Sol</b>
+Mano a mano con Dios,
+<b>Do</b>        <b>Fa</b>     <b>mi m</b>
+un solo corazón,
+<b>re m</b>   <b>Mi</b>            <b>la m</b>  <b>Fa</b>
+hace vibrar nuestra voz
+<b>Do</b>       <b>Re</b>        <b>Sol</b>
+en una humilde oración.
+<b>Do</b>     <b>Sol</b>      <b>la m</b>  <b>Sol</b>
+Mano a mano con Él,
+<b>Do</b>       <b>Re</b>      <b>Sol</b>
+gritando nuestra fe
+<b>Fa</b>         <b>Mi</b>       <b>la m</b>    <b>Fa</b>
+como instrumento en manos de Él
+<b>Do</b>        <b>Sol</b>     <b>Do</b>
+que quiere serle fiel.
+
+<b>Do</b>  <b>Sol /</b><b>Si</b> <b>la m</b>               <b>Re</b>
+Donde hay odio, poniendo tu amor,
+            <b>Fa</b>                 <b>Sol</b> <b>Mi</b>
+donde haya ofensa, el perdón de Dios,
+              <b>la m</b>
+donde haya discordia, 
+              <b>Fa</b>  <b>fa m</b>
+trayendo la unión,
+<b>Do</b>           <b>Fa</b>
+donde haya error, 
+<b>Do</b>       <b>Fa</b>     <b>Sol</b>
+poner verdad, ¡Señor!
+
+<b>Do</b>   <b>Sol /</b><b>Si</b> <b>la m</b>             <b>Re</b>
+Donde hay duda, poniendo la fe,
+             <b>Fa</b>
+donde haya angustia,
+             <b>Sol</b> <b>Mi</b>
+trayendo esperanza,
+         <b>la m</b>                   <b>Fa</b> <b>fa m</b>
+si hay tinieblas, poniendo la luz,
+<b>Do</b>            <b>Fa</b>
+donde hay tristeza, 
+<b>Do</b>         <b>Fa</b>    <b>Sol</b>
+dando alegría ¡Jesús!
+
+<b>Do</b>   <b>la m</b>                 <b>Re</b>
+Ayúdanos, Señor a no buscar
+<b>Fa</b>                        <b>Sol</b>  <b>Mi</b>
+querer ser consolado sino consolar
+           <b>la m</b>             <b>Fa</b> <b>fa m</b>
+ser comprendido sino comprender
+<b>Do</b>             <b>Fa</b>
+no buscar ser amado,
+<b>Do</b>     <b>Fa</b>      <b>Sol</b>
+sino nosotros amar.
+
+
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

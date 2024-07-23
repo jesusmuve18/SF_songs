@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marahnata</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Marahnata</div>
+                    <div id="artist">Ricardo Cantalapiedra</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Do </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><strong>
+<b>Do</b>        <b>Fa</b> <b>Do</b>
+Marahnata (***)
+</strong>
+<b>Do</b>
+¿A dónde irán nuestras vidas?
+
+¿A dónde irán nuestras penas?
+<b>Fa</b>                  <b>re m</b>
+¿Dónde está la alegría? ¡Ay!
+<b>Fa</b>                <b>Do</b>
+¿En dónde la primavera?
+                        <b>Sol</b>
+¿A dónde irán nuestras vidas? ¡Ay!
+<b>Fa</b>         <b>Sol</b>           <b>Do</b>    <b>Sol</b>
+Si un Salvador no nos llega. ¡Ey!
+<strong>
+<b>Do</b>        <b>Fa</b> <b>Do</b>
+Marahnata (***)
+</strong>
+<b>Do</b>
+¿Para qué tantas palabras?
+
+¿Para qué tantas promesas?
+<b>Fa</b>               <b>re m</b>
+¿Quién cambiará nuestra suerte? ¡Ay!
+<b>Fa</b>                <b>Do</b>
+¿Quién pondrá luz en las sendas?
+                       <b>Sol</b>
+¿Para qué tantas palabras? ¡Ay!
+<b>Fa</b>         <b>Sol</b>           <b>Do</b>   <b>Sol</b>
+Si un Salvador no nos llega ¡Ey!
+<strong>
+<b>Do</b>        <b>Fa</b> <b>Do</b>
+Marahnata (***)
+</strong>
+<b>Do</b>
+¿Qué será de nuestros hijos?
+
+¿Qué será de nuestra tierra?
+<b>Fa</b>                 <b>re m</b>
+¿Qué será de los que sufren? ¡Ay!
+<b>Fa</b>                <b>Do</b>
+¿Qué será de los que esperan?
+                       <b>Sol</b>
+¿Qué será de nuestros hijos? ¡Ay!
+<b>Fa</b>         <b>Sol</b>           <b>Do</b>    <b>Sol</b>
+Si un Salvador no nos llega ¡Ey!
+<strong>
+<b>Do</b>        <b>Fa</b> <b>Do</b>
+Marahnata (***)
+</strong>
+<b>Do</b>
+Se está acabando la noche
+
+y un nuevo día se acerca
+<b>Fa</b>                  <b>re m</b>
+vuelve a nacer la esperanza ¡Ay!
+<b>Fa</b>                 <b>Do</b>
+y se acaba la tristeza
+                         <b>Sol</b>
+y las estrellas ya nos dicen ¡Ay!
+<b>Fa</b>          <b>Sol</b>         <b>Do</b>   <b>Sol</b>
+¡Que el Salvador ya está cerca!
+<strong>
+<b>Do</b>        <b>Fa</b> <b>Do</b>
+Marahnata (***)
+</strong>
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

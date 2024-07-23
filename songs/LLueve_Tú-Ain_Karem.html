@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLueve Tú</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">LLueve Tú</div>
+                    <div id="artist">Ain Karem</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Do </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>Do</b>             <b>Fa</b>
+¡Llueve Tú, perdón!
+        <b>Do</b>            <b>Sol</b>
+¡Llueve Tú, por tu bondad, Señor!
+        <b>Do</b>        <b>Fa</b>
+¡Llueve Tú, misericordia!
+<b>Do</b>      <b>Sol</b>    <b>Do</b>
+¡Llueve Tú, Jesús! (**)
+<b>Do</b>             <b>Fa</b>  <b>Sol</b>   <b>Do</b>  <b>Fa</b> <b>Sol</b>
+Afiánzame con Espíritu generoso (**)
+         <b>Do</b>           <b>Fa</b>
+Nuestras culpas nos abruman,
+     <b>Do</b>        <b>Sol</b>
+pero Tú las perdonas. (**)
+<strong>
+        <b>Do</b>
+¡Llueve Tú sobre nosotros,
+       <b>Fa</b>
+llueve Tú,
+       <b>Do</b>
+llueve Tú sobre nosotros,
+       <b>Sol</b>
+buen Jesús,
+     <b>Do</b>        <b>Do 7</b>
+agua viva derramada,
+     <b>Fa</b>           <b>fa m</b>
+sana todo nuestro mal.
+       <b>Do</b>          <b>Fa</b>
+Llueve Tú sobre nosotros,
+<b>Sol</b>    <b>Do</b>
+llueve Tú!
+</strong>
+     <b>Do</b>                  <b>Fa</b>
+La fidelidad brota de la tierra,
+      <b>Do</b>                  <b>Sol</b>
+la justicia mira desde el cielo. (**)
+<strong>
+        <b>Do</b>
+¡Llueve Tú sobre nosotros,
+       <b>Fa</b>
+llueve Tú,
+       <b>Do</b>
+llueve Tú sobre nosotros,
+       <b>Sol</b>
+buen Jesús,
+     <b>Do</b>        <b>Do 7</b>
+agua viva derramada,
+     <b>Fa</b>           <b>fa m</b>
+sana todo nuestro mal.
+       <b>Do</b>          <b>Fa</b>
+Llueve Tú sobre nosotros,
+<b>Sol</b>    <b>Do</b>
+llueve Tú!
+</strong>
+<b>Do</b>             <b>Fa</b>
+¡Llueve Tú, perdón!
+        <b>Do</b>            <b>Sol</b>
+¡Llueve Tú, por tu bondad, Señor!
+        <b>Do</b>        <b>Fa</b>
+¡Llueve Tú, misericordia!
+<b>Do</b>      <b>Sol</b>    <b>Do</b>
+¡Llueve Tú, Jesús! (**)
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La luz de Dios</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">La luz de Dios</div>
+                    <div id="artist">Brotes de Olivo</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Mi </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>Mi</b>
+Ya bajó nuestro Dios de los cielos, 
+<b>La</b>
+ya descendió de su casa a los suelos,
+<b>Mi</b>
+ya sentiré en mi alma consuelo, 
+ <b>Si 7</b>
+¡aleluya!
+
+<b>Mi</b>
+Ya comenzó el más allá de mi vida, 
+<b>La</b>
+ya se quitó de mi alma la herida,
+<b>Mi</b>
+ya siempre en mí yo tendré nueva vida,
+ <b>Si 7</b>
+¡aleluya!
+<strong>
+          <b>Mi</b>             <b>La</b>
+La luz de Dios llegó hasta mí, 
+      <b>Mi</b>          <b>Si 7</b>
+naciendo pobre en Belén. (**)
+  <b>Mi</b>                  <b>La</b>
+A Dios veré si desde aquí 
+      <b>Mi</b>        <b>Si 7</b>
+me hago pobre como él. (**)
+</strong>
+<b>Mi</b>
+Siempre en la tierra será primavera, 
+<b>La</b>
+siempre la luz vencerá a las tinieblas,
+<b>Mi</b>
+nunca los pueblos tendrán 
+                 <b>Si 7</b>
+ya más guerras, ¡aleluya!
+
+<b>Mi</b>
+Siento mi vida que nace de nuevo, 
+<b>La</b>
+siento mi alma subir a los cielos,
+<b>Mi</b>
+veo a Jesucristo soplando 
+                <b>Si 7</b>
+a los pueblos, ¡aleluya!
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

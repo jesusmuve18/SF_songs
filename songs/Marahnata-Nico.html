@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marahnata</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Marahnata</div>
+                    <div id="artist">Nico</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">do# m</span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><strong>
+<b>do# m</b>       <b>Mi</b>     <b>La</b>
+Marahnata, marahnata,
+<b>fa# m</b>   <b>Si</b>      <b>do# m</b>
+ven, señor, Jesús. (**)
+</strong>
+
+<b>do# m</b>
+Ven, Señor, Jesús
+          <b>Mi</b>
+porque el mundo ardiendo está
+    <b>La</b>            <b>do# m</b>
+hay llamas de terror
+    <b>La</b>         <b>Sol#</b>
+son llamas de dolor
+<b>Re</b>            <b>Do#</b>         <b>fa# m</b>
+se olvidó tu palabra de amor,
+     <b>Re</b>                <b>fa# m</b>
+se cambió por la opresión
+    <b>Re</b>           <b>Do#</b>
+de hombres sobre otros.
+
+<b>do# m</b>
+Ven, señor, Jesús,
+      <b>Mi</b>
+a mis ojos da la luz
+        <b>La</b>          <b>do# m</b>
+como al ciego del camino
+        <b>La</b>       <b>Sol#</b>
+haz que pueda alabarte,
+<b>Re</b>              <b>Do#</b>
+y que sepa encontrarte
+      <b>fa# m</b>
+en el hombre,
+  <b>Re</b>                <b>fa# m</b>
+olvidado por el hombre,
+   <b>Re</b>            <b>Do#</b>
+que ansía tu venida.
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>
