@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Dios está vivo</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Mi Dios está vivo</div>
+                    <div id="artist"></div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Re </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>Re</b>
+Mi Dios está vivo, Él no está muerto.
+   <b>La</b>             <b>Sol</b>        <b>Re</b>
+Mi Dios está vivo en mi corazón.
+<b>Re</b>
+Mi Dios está vivo, ha resucitado,
+   <b>Sol</b>           <b>La</b>
+lo siento en mis manos,
+   <b>Sol</b>            <b>si m</b>
+lo siento en mis pies,
+   <b>Sol</b>          <b>La</b>           <b>Re</b>
+lo siento en mi alma y en mi ser.
+<strong>
+     <b>La</b>                    <b>Re</b>
+Oh...oh. Hay que nacer del agua
+     <b>La</b>
+Oh...oh. Hay que nacer
+      <b>Re</b>         <b>Re 7</b>
+del Espíritu de Dios.
+     <b>Sol</b>           <b>La</b>
+Oh...oh. Hay que nacer
+    <b>Re</b>            <b>si m</b>       <b>Sol</b>
+del agua y del Espíritu de Dios,
+          <b>La</b>         <b>Re</b>
+hay que nacer del Señor. (**)
+</strong>
+   <b>Re</b>              <b>Sol</b>
+Prepárate para que sientas
+   <b>La</b>              <b>Re</b>
+prepárate para que sientas
+   <b>si m</b>             <b>Sol</b>
+prepárate para que sientas
+     <b>La</b>         <b>Re</b>
+el Espíritu de Dios.
+
+<b>Re</b>            <b>Sol</b>
+Déjalo que se mueva
+<b>La</b>            <b>Re</b>
+déjalo que se mueva
+<b>si m</b>           <b>Sol</b>
+déjalo que se mueva
+       <b>La</b>         <b>Re</b>
+dentro de tu corazón.
+
+ <b>Re</b>
+Mi Dios está vivo, Él no está muerto.
+   <b>La</b>             <b>Sol</b>        <b>Re</b>
+Mi Dios está vivo en mi corazón.
+<b>Re</b>
+Lo veo a mi lado, nunca me abandona
+  <b>Sol</b>         <b>La</b>
+lo veo en el aire,
+  <b>Sol</b>           <b>si m</b>
+lo veo junto al mar,
+   <b>Sol</b>         <b>La</b>        <b>Re</b>
+lo veo por el monte caminar.
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Navidad</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Mi Navidad</div>
+                    <div id="artist"></div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Mi </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>Mi</b>               <b>do# m</b>
+Era de noche en un portal
+          <b>La</b>
+cuando un niño
+              <b>Si</b>
+lloraba por amar.
+<b>Mi</b>             <b>do# m</b>
+Sólo buscaba un corazón
+       <b>La</b>           <b>Si</b>
+donde amar esta Navidad.
+<strong>
+       <b>Mi</b>
+Mi Navidad es cada día
+       <b>do# m</b>
+en ese pobre que camina,
+         <b>La</b>
+en esa estrella que ilumina
+       <b>Si</b>
+mi Navidad.
+       <b>Mi</b>
+Mi Navidad es cada día
+        <b>do# m</b>
+en esos niños que sonríen,
+       <b>La</b>           <b>Si</b>
+en esa madre que te da
+       <b>Mi</b>
+su corazón.
+</strong>
+<b>Mi</b>               <b>do# m</b>
+Era de noche en un portal
+        <b>La</b>              <b>Si</b>
+y en la tierra reinó la paz.
+<b>Mi</b>
+Esas pobres gentes
+   <b>do# m</b>
+le fueron a adorar
+       <b>La</b>
+no, no llores
+                <b>Si</b>
+te venimos a cantar.
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedid y se os dará</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Pedid y se os dará</div>
+                    <div id="artist">Ruah</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">La </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>La</b>        <b>Re</b>
+Pedid, pedid y se os dará,
+ <b>Mi</b>
+pedid, llamad, buscad,
+      <b>Re</b>          <b>Mi</b>
+no dejéis de confiar.
+     <b>La</b>
+Vosotros pedid, pedid, pedid, 
+   <b>Re</b>
+pedid y se os dará.
+  <b>Mi</b>
+Pedid, llamar, buscar, 
+        <b>Re</b>
+vuestro Padre siempre da.
+<strong>
+           <b>La</b>
+Y cuando os pidan, cuando os pidan,
+       <b>Re</b>
+cuando busquen,
+            <b>Mi</b>
+cuando os llamen, 
+             <b>La</b>
+repartid el mismo pan,
+ (<b>Re</b> <b>Mi</b>)    <b>La</b>        <b>La 7</b>
+que os entregaron cuando 
+            <b>Re</b>
+tanto pan pedisteis
+        <b>Mi</b>
+Dadles vosotros de comer...
+</strong>
+           <b>La</b>
+...dadles mi pan
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

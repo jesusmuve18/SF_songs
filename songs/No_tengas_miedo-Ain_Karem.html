@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No tengas miedo</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">No tengas miedo</div>
+                    <div id="artist">Ain Karem</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">mi m</span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><span id="reserved">Intro:</span> <b>mi m</b> <b>Re</b> <b>Do</b> <b>Si 7</b>
+
+<b>mi m</b>      <b>Re</b>                     <b>Do</b>
+Escucha bien lo que hoy te digo,
+<b>mi m</b>        <b>Re</b>      <b>Do</b>
+sal de tu miedo y óyeme,
+<b>mi m</b>         <b>Re</b>               <b>Do</b>
+pues cuando aún no habías nacido
+<b>Re</b>               <b>Do</b>  <b>Re</b>
+Yo en tí ya me fijé.
+
+       <b>mi m</b> <b>Re</b>
+Oh, mi Dios, 
+<b>Si 7</b>                   <b>mi m</b>
+sabes que el miedo me frena
+<b>Do</b>     <b>Re</b>           <b>Sol</b>
+mira que no sé expresarme,
+<b>Do</b>         <b>Re</b>         <b>Sol</b>
+aún soy pequeño, déjame.
+<strong>
+<b>Do</b>          <b>Re</b>         <b>Sol</b>        <b>mi m</b>
+No tengas miedo, a tu lado yo estaré,
+<b>Do</b>          <b>Re</b>          <b>Si 7</b>        <b>mi m</b>
+donde te envíe, junto a tí me sentirás,
+  <b>Do</b>      <b>Re</b>       <b>Sol</b>           <b>mi m</b>
+y en tu boca mis palabras yo pondré,
+<b>Do</b>         <b>Re</b>    <b>Sol</b>
+nunca te abandonaré.(**)
+</strong>
+<b>mi m</b>     <b>Re</b>                     <b>Do</b>
+Tendrás autoridad sobre los pueblos
+<b>mi m</b>      <b>Re</b>         <b>Do</b>
+para plantar y derribar,
+<b>mi m</b>        <b>Re</b>              <b>Do</b>
+tú te alzarás pues con mi fuerza
+<b>Re</b>                          <b>Do</b>    <b>Re</b>
+en voz del pobre te transformarás.
+
+       <b>mi m</b> <b>Re</b> <b>Si 7</b>            <b>mi m</b>
+Oh, mi Dios, no desmayaré de nuevo,
+<b>Do</b>          <b>Re</b>        <b>Sol</b>
+aunque el peligro me aceche,
+<b>Do</b>     <b>Re</b>         <b>Sol</b>
+sé que Tú me salvarás.
+<strong>
+<b>Do</b>          <b>Re</b>         <b>Sol</b>        <b>mi m</b>
+No tengas miedo, a tu lado yo estaré,
+<b>Do</b>          <b>Re</b>          <b>Si 7</b>        <b>mi m</b>
+donde te envíe, junto a tí me sentirás,
+  <b>Do</b>      <b>Re</b>       <b>Sol</b>           <b>mi m</b>
+y en tu boca mis palabras yo pondré,
+<b>Do</b>         <b>Re</b>    <b>Sol</b>
+nunca te abandonaré.
+
+<b>Do</b>         <b>Re</b>         <b>Sol</b>        <b>mi m</b>
+No tendré miedo, a mi lado tú estarás,
+<b>Do</b>          <b>Re</b>         <b>Si 7</b>        <b>mi m</b>
+a donde vaya, junto a mí te sentiré,
+  <b>Do</b>      <b>Re</b>       <b>Sol</b>           <b>mi m</b>
+y en tus manos siempre me abandonaré,
+<b>Do</b>      <b>Re</b>      <b>Sol</b>
+solo en Tí confiaré.
+</strong>
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

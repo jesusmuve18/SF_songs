@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No puedo más</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">No puedo más</div>
+                    <div id="artist"></div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">fa# m</span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>fa# m</b>                       <b>Mi</b>
+Cuando la vida pesa ya demasiado
+<b>fa# m</b>                     <b>Mi</b>
+y no sé si Tú estás a mi lado.
+  <b>fa# m</b>           <b>Mi</b>        <b>fa# m</b>
+A veces caigo en la miseria del egoísmo
+           <b>Mi</b>
+y me pierdo entre llantos, 
+  <b>fa# m</b>
+me siento morir,
+                   <b>Mi</b>
+los gritos de este mundo,
+     <b>Re</b>           <b>fa# m</b>
+me encierran a tu voz,
+            <b>Mi</b>
+en un escaparate, 
+   <b>Re</b>
+mensajes de una vida fácil.
+<strong>
+   <b>fa# m</b>       <b>Mi</b>
+No puedo más, dame tu fuerza
+  <b>Re</b>
+envíame tu Espíritu (***)
+     <b>Mi</b>         <b>fa# m</b>
+tu Espíritu de amor.
+</strong>
+<b>fa# m</b>
+Cuando los otros
+                  <b>Mi</b>
+ya no me importan nada,
+<b>fa# m</b>
+olvido que son hermanos 
+         <b>Mi</b>
+por cualquier chorrada,
+ <b>fa# m</b>         <b>Mi</b>          <b>fa# m</b>
+parece como si mi fuerza huyera de mí,
+          <b>Mi</b>
+y no confío en tus huellas, 
+   <b>fa# m</b>
+me olvido de Ti.
+            <b>Mi</b>         <b>Re</b>         <b>fa# m</b>
+Pero Tú me muestras un rayo de tu luz
+              <b>Mi</b>
+y me echas un cable, 
+    <b>Re</b>
+me alientas desde Ti a seguir.
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

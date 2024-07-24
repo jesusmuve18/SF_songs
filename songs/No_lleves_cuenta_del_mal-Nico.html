@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No lleves cuenta del mal</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">No lleves cuenta del mal</div>
+                    <div id="artist">Nico</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">mi </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><strong>
+<b>mi</b> <b>Sol</b> <b>La</b>      <b>mi m</b>
+Señor, ten piedad,
+<b>Do</b>     <b>Re</b>     <b>mi m</b>  <b>Si 7</b>
+Cristo ten piedad. (**)
+</strong>
+<b>mi m</b>       <b>la m</b>     <b>mi m</b>
+Por las veces que caí
+          <b>Sol</b>      <b>Do</b>  <b>Sol /</b><b>Si</b>
+y las que no te seguí
+<b>la m</b>
+por mis maldades
+<b>si m</b>
+y mis torpezas
+<b>Do</b>         <b>Re</b>   <b>mi m</b>     <b>Si 7</b>
+vengo a pedirte perdón.
+
+<b>mi m</b>        <b>la m</b>      <b>mi m</b>
+Aunque me olvide de Ti,
+          <b>Sol</b>      <b>Do</b>  <b>Sol /</b><b>Si</b>
+aunque te falle, Señor,
+<b>la m</b>
+sé que tu gracia
+<b>si m</b>
+no me abandona
+<b>Do</b>          <b>Re</b>       <b>mi m</b>  <b>Si 7</b>
+sé que eres mi salvador.
+
+<b>mi m</b>      <b>la m</b>     <b>mi m</b>
+Mira mi vida, Señor,
+           <b>Sol</b>        <b>Do</b>  <b>Sol /</b><b>Si</b>
+no lleves cuentas del mal
+<b>la m</b>
+que yo no llevo
+<b>si m</b>
+las de mi hermano,
+<b>Do</b>           <b>Re</b>        <b>mi m</b>   <b>Si 7</b>
+que encuentre en Ti la paz.
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

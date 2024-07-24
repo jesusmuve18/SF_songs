@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nada nuevo tras de Ti</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Nada nuevo tras de Ti</div>
+                    <div id="artist">Nico Montero</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Fa </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>Fa</b>    <b>la m</b>                    <b>Sib</b>
+Hoy ya sé, que no hay nada nuevo 
+     <b>Do</b>
+tras de Ti.
+<b>Fa</b>     <b>la m</b>                <b>Sib</b>
+Comprender, que eres mi motivo 
+     <b>Do</b>
+y mi porqué.
+<b>Fa</b>     <b>la m</b>               <b>Sib</b>
+Distinguir, entre mil llamadas 
+      <b>Do</b>
+y tu voz,
+            <b>Sol</b>          <b>Do</b>
+y aunque cada día sea igual,
+    <b>Sib</b>         <b>Do</b>             <b>Fa</b>
+hoy rompes mi rutina y no está mal.
+
+<b>Fa</b>   <b>la m</b>               <b>Sib</b>      <b>Do</b>
+Solo Tú, puedes sorprender mi corazón,
+<b>Fa</b>      <b>la m</b>
+solo en Ti, algo nuevo 
+<b>Sib</b>          <b>Do</b>
+crece en mi interior.
+<b>Fa</b>      <b>la m</b>                <b>Sib</b>
+Junto a Ti, siento que los años 
+       <b>Do</b>
+que se van
+                  <b>Sib</b>     <b>sol m</b>
+no son más que un corto amanecer
+  <b>Sib</b>             <b>Do</b>
+que cada instante es nuevo, 
+        <b>Fa</b>
+y no está mal.
+<strong>
+<b>re m</b>                   <b>la m</b>
+Y aunque pueda conquistar el cielo, 
+
+el mar.
+<b>re m</b>                <b>la m</b>
+Y aunque pueda someter bajo mis pies
+<b>Sib</b>    <b>sib m</b>               <b>Fa</b> <b>la m</b> <b>re m</b>
+todo aquello, con lo que un día soñé.
+ <b>sol m</b>                      <b>Do</b>
+Si no te llevo a Ti, no es nada, 
+
+está de más.
+<b>re m</b>                    <b>la m</b>
+Y aún no acabo de entender el corazón,
+<b>re m</b>                   <b>la m</b>
+tan pequeño y tan inmenso a la vez.
+<b>Sib</b>   <b>sib m</b>               <b>Fa</b> <b>la m</b> <b>re m</b>
+Se desborda, con el fuego de tu fe.
+<b>Sib</b>            <b>Do</b>           <b>Fa</b>
+Y aún late por prenderse (otra vez)
+</strong>
+<b>Fa</b>     <b>la m</b>
+Hoy ya ves, 
+           <b>Sib</b>          <b>Do</b>
+quiero regalarte esta canción.
+<b>Fa</b>    <b>la m</b>              <b>Sib</b>
+Compartir, todo lo que tengo 
+         <b>Do</b>
+y lo que soy.
+<b>Fa</b>   <b>la m</b>           <b>Sib</b>         <b>Do</b>
+Dibujar un paisaje con el corazón
+      <b>Sib</b>          <b>sol m</b>
+con pocas palabras y mi voz,
+       <b>Sib</b>       <b>Do</b>         <b>Fa</b>
+que me va haciendo falta tu calor.
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

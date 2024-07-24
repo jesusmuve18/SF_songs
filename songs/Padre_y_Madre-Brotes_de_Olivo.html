@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padre y Madre</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <a href="#"><li>Opción 3</li></a>
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Padre y Madre</div>
+                    <div id="artist">Brotes de Olivo</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">si m</span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>si m</b>                          <b>La</b>
+Una vida distinta quiero empezar,
+    <b>mi m</b>      <b>Fa#</b>
+sin más dependencias,
+              <b>si m</b>
+sin más malgastar.
+                     <b>Mi</b>
+Dije “Padre, dame mi parte” 
+    <b>La</b>
+y atrás dejé su ley,
+  <b>Sol</b>           <b>Fa#</b>      <b>Sol</b>
+a cambio del vacío del volar 
+  <b>Fa#</b>   <b>si m</b>
+y del tener.
+<strong>
+<b>mi m</b>       <b>La</b>            <b>Re</b>   <b>La</b>  <b>si m</b>
+Padre, pequé, como un siervo trátame.
+      <b>mi m</b>             <b>Fa#</b>
+Malgasté toda tu herencia,
+       <b>Sol</b>  <b>Fa#</b>  <b>si m</b>
+¡por favor acógeme! (**)
+</strong>
+<b>si m</b>
+Con ternura me espera, 
+      <b>La</b>
+¡sigo siendo su hijo!
+<b>mi m</b>              <b>Fa#</b>
+He vuelto a la hacienda,
+                    <b>si m</b>
+es como un nuevo bautizo.
+                  <b>Mi</b>
+Él me acepta cual soy,
+     <b>La</b>
+me enjoya y me viste
+<b>Sol</b>              <b>Fa#</b>
+porque estabas muerto 
+        <b>Sol</b> <b>Fa#</b> <b>si m</b>
+y hoy ya renaciste.
+<strong>
+<b>mi m</b>          <b>La</b>  <b>Re</b>   <b>La</b>   <b>si m</b>
+Padre, a ti iré. Me levantaré.
+<b>mi m</b>       <b>Fa#</b>        <b>Sol</b>  <b>Fa#</b> <b>si m</b>
+No te dejaré por ninguna otra ley (**)
+</strong>
+<b>si m</b>                     <b>La</b>
+De mi egoísmo me levantaré.
+           <b>mi m</b>    <b>Fa#</b>      <b>si m</b>
+De mi prepotencia me levantaré.
+                              <b>La</b>
+Mi autosuficiencia la abandonaré, 
+           <b>mi m</b> <b>Fa#</b>          <b>si m</b>
+porque solo tú eres Padre y Madre.
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>
