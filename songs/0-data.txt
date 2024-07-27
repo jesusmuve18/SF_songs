@@ -192,6 +192,11 @@
 <li><a href="./songs/Paz,_Señor.html"><span id="song-title">Paz, Señor</span> <span id="author"></span></a></li><br>
 <li><a href="./songs/Pedid_y_se_os_dará-Ruah.html"><span id="song-title">Pedid y se os dará</span> <span id="author">Ruah</span></a></li><br>
 <li><a href="./songs/Pequeño_y_pobre-Brotes_de_Olivo.html"><span id="song-title">Pequeño y pobre</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Pescador_de_hombres-Popular.html"><span id="song-title">Pescador de hombres</span> <span id="author">Popular</span></a></li><br>
+<li><a href="./songs/Piensas_en_mí-Nico.html"><span id="song-title">Piensas en mí</span> <span id="author">Nico</span></a></li><br>
+<li><a href="./songs/Pon_tu_mano-Mc_Lellan.html"><span id="song-title">Pon tu mano</span> <span id="author">Mc Lellan</span></a></li><br>
+<li><a href="./songs/Por_este_pan.html"><span id="song-title">Por este pan</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Preferencias-Ciento_Ochenta_Grados.html"><span id="song-title">Preferencias</span> <span id="author">Ciento Ochenta Grados</span></a></li><br>
 </ol>
 <h2 id="Dios mío y todas mis cosas">Dios mío y todas mis cosas</h2>
 <ol>
@@ -209,6 +214,7 @@
 </ol>
 <h2 id="Otras">Otras</h2>
 <ol>
+<li><a href="./songs/Deep_Water_(Acoustic)-American_Authors.html"><span id="song-title">Deep Water (Acoustic)</span> <span id="author">American Authors</span></a></li><br>
 <li><a href="./songs/Despertar-Estopa.html"><span id="song-title">Despertar</span> <span id="author">Estopa</span></a></li><br>
 <li><a href="./songs/Resucitados.html"><span id="song-title">Resucitados</span> <span id="author"></span></a></li><br>
 <li><a href="./songs/Salmo_97_Aleluya-Grupo_San_Francisco.html"><span id="song-title">Salmo 97 Aleluya</span> <span id="author">Grupo San Francisco</span></a></li><br>

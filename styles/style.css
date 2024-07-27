@@ -143,9 +143,10 @@ nav li:hover {
     overflow: visible;  /*Permite que se vean las imágenes aunque se salgan del contenedor*/
 }
 
-b, #original-tone {
+b, #original-tone, b2 {
     color: red;
     cursor: pointer;
+    font-weight: 600;
 }
 
 #reserved {
@@ -210,7 +211,7 @@ aside {
     display: block; /* Muestra la imagen cuando se pasa el ratón por encima del span */
 }
 
-b:hover .hover-image {
+b:hover .hover-image,  b2:hover .hover-image{
     display: flex; /* Muestra la imagen cuando se pasa el ratón por encima del span */
 }
 

@@ -190,6 +190,19 @@ fsexta=,]%
 /******************************************************************/
 
 \vddiagram[%
+nombre=Re,
+variacion=/Fa\#,
+fprimera=3,
+fsegunda=4,
+ftercera=2,
+fcuarta=,
+fquinta=,
+fsexta=1,]%
+{2}{3}{2}{0}{0}{2}
+
+/******************************************************************/
+
+\vddiagram[%
 nombre=Re\#,
 trasteinicial=6,
 cejilla=6,
@@ -373,6 +386,19 @@ fcuarta=2,
 fquinta=3,
 fsexta=,]%
 {x}{3}{3}{4}{5}{x}
+
+/******************************************************************/
+
+\vddiagram[%
+nombre=Mi,
+variacion=m7,
+fprimera=4,
+fsegunda=3,
+ftercera=,
+fcuarta=2,
+fquinta=1,
+fsexta=,]%
+{3}{3}{0}{2}{2}{0}
 
 /******************************************************************/
 
