@@ -8,6 +8,7 @@ def run_script():
     arg1 = entry1.get()
     arg2 = entry2.get()
     arg3 = entry3.get("1.0", tk.END).strip()
+    arg5 = entry4.get()
     arg4 = combobox.get()
 
     # Obtener la ruta completa del script de bash
@@ -17,7 +18,7 @@ def run_script():
         if arg1 and arg3 and arg4:
             try:
                 # Ejecutar el script de bash con los argumentos
-                result = subprocess.run(['bash', script_path, arg1, arg2, arg3, arg4], capture_output=True, text=True)
+                result = subprocess.run(['bash', script_path, arg1, arg2, arg3, arg4, arg5], capture_output=True, text=True)
                 
                 # Mostrar la salida del script
                 if result.returncode == 0:
@@ -61,12 +62,16 @@ tk.Label(root, text="Autor:").pack(pady=5)
 entry2 = tk.Entry(root, width=39)
 entry2.pack(pady=5)
 
+tk.Label(root, text="Cejilla (traste):").pack(pady=5)
+entry4 = tk.Entry(root, width=39)
+entry4.pack(pady=5)
+
 tk.Label(root, text="*Letra (con acordes):").pack(pady=5)
 entry3 = tk.Text(root, width=39)
 entry3.pack(pady=5)
 
 tk.Label(root, text="*Sección:").pack(pady=5)
-options = ["General", "Dios mío y todas mis cosas", "Oración", "Navidad", "Pascua", "Otras"]
+options = ["General", "1-Dios mío y todas mis cosas", "2-Oración", "3-Navidad", "4-Pascua", "5-Otras"]
 combobox = ttk.Combobox(root, values=options, width=39)  # Ancho ajustado
 combobox.pack(pady=5)
 combobox.current(0)  # Establecer la opción predeterminada

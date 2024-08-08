@@ -6,6 +6,7 @@ title=$1
 author=$2
 song="$3"
 folder=$4
+capo=$5
 separator=/
 union=-
 
@@ -35,3 +36,8 @@ touch "$file_path"
 
 # Usar printf para escribir el contenido del texto, preservando los saltos de línea
 printf "%s" "$song" > "$file_path"
+
+if [ "$capo" != "" ]; then
+    echo "" >> "$file_path"
+	echo "<span id="cejilla-original">$capo</span>" >> "$file_path"
+fi

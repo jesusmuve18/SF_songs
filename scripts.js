@@ -14,6 +14,7 @@ const FLAT = "flat";
 // PARAMETERS FOR TONE ADJUSTMENTS
 let tone = +0 ;  // variation (traspose)
 let capo = +0 ;  // fret of the capo
+let given_capo = +0; // fret of the original capo in the song
 let notation = [EUROPE, SHARP];
 let loaded = false;
 
@@ -54,7 +55,8 @@ function Index (note) {
  * @param {*} note 
  */
 function Chord (note) {
-    num = Grade(Index(note)+tone-capo);
+    num = Grade(Index(note)+tone-capo+given_capo);
+
     // console.log(`El índice es ${num}`);
     if(notation[0]==EUROPE) {
         if(notation[1]==SHARP){
@@ -223,6 +225,18 @@ function Load() {
 
     // console.log("Cargando...");
     let chords = document.querySelectorAll("b");
+
+    // ajusto la cejilla y el tono
+    let capo_pointer = document.getElementById("capo");
+    let given_capo_pointer = document.getElementById("cejilla-original");
+    
+    if (capo_pointer!=null && given_capo_pointer!=null) {
+        given_capo = +given_capo_pointer.innerHTML;
+        capo_pointer.innerHTML = given_capo;
+        capo = given_capo;
+        console.log(`capo por defecto = ${capo}`);
+        given_capo_pointer.outerHTML="";
+    }
 
     // console.log(`Se han encontrado ${chords.length} acordes ajustables`);
 
