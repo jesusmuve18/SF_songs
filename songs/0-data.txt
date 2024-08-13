@@ -203,6 +203,10 @@
 <li><a href="./songs/Punta_de_Lanza-Brotes_de_Olivo.html"><span id="song-title">Punta de Lanza</span> <span id="author">Brotes de Olivo</span></a></li><br>
 <li><a href="./songs/Qué_más_quieres-Brotes_de_Olivo.html"><span id="song-title">Qué más quieres</span> <span id="author">Brotes de Olivo</span></a></li><br>
 <li><a href="./songs/Quédate-Fray_Nacho.html"><span id="song-title">Quédate</span> <span id="author">Fray Nacho</span></a></li><br>
+<li><a href="./songs/Quererse-Ixcís.html"><span id="song-title">Quererse</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Quién_puede_amar-Brotes_de_Olivo.html"><span id="song-title">Quién puede amar</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Quién-Luis_Guitarra.html"><span id="song-title">Quién</span> <span id="author">Luis Guitarra</span></a></li><br>
+<li><a href="./songs/Quiero_decir_que_sí-Luis_Alfredo.html"><span id="song-title">Quiero decir que sí</span> <span id="author">Luis Alfredo</span></a></li><br>
 </ol>
 <h2 id="Dios mío y todas mis cosas">Dios mío y todas mis cosas</h2>
 <ol>

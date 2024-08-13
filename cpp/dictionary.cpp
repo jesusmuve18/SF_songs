@@ -33,7 +33,7 @@ public:
 
         sort(notes.begin(), notes.end(), compareStringSize); // ordeno las notas por longitud
 
-        variations = { "M", "m", "7", "6", "5", "4", "9", "11", "13", 
+        variations = { "M", "m", "7", "6", "5", "4", "9", "11", "13", "2", 
                        "aug", "dim", "sus", "add", " ", "/", "+", "-", "maj"};
 
         sort(variations.begin(), variations.end(), compareStringSize); // ordeno las variaciones por longitud
