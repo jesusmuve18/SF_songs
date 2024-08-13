@@ -63,6 +63,7 @@ header {
 }
 
 #search-bar {
+    display: none; /*hasta que no este listo el feature*/
     position: absolute;
     right: 40px;
     height: 30px;
@@ -134,7 +135,7 @@ nav li:hover {
 
 #song-body {
     line-height: 1.5em;
-    font-family: "Fragment Mono";
+    font-family: "Fragment Mono", 'Courier New', Courier, monospace; /*Si no tiene internet tomará la segunda fuente*/
     unicode-bidi: isolate;
     white-space: pre;
     word-wrap: break-word;
@@ -344,7 +345,7 @@ b:hover .hover-image,  b2:hover .hover-image{
         /* padding: 10px 15px 10px 15px; */
         padding-top: 10px;
         padding-bottom: 10px;
-        width: 20vw;
+        width: 25vw;
     }
 
     nav li a {

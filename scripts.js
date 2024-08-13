@@ -315,7 +315,8 @@ function ajustarColumnas() {
     const textoPrincipal = document.getElementById('song-body');
     textoPrincipal.classList.remove('dos-columnas');
 
-    if (textoPrincipal.scrollHeight > 0.57*window.innerHeight) {
+    // Si la canción ocupa más de lo que se puede ver en la pantalla y caben las 2 columnas de ancho (parámetros ajustados por prueba y error)
+    if (textoPrincipal.scrollHeight > 0.57*window.innerHeight && window.innerWidth > 870) {
         console.log("2 columnas");
         textoPrincipal.classList.add('dos-columnas');
     } else {

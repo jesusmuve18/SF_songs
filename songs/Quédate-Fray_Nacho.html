@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quédate</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <!-- <a href="#"><li>Opción 3</li></a> -->
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Quédate</div>
+                    <div id="artist">Fray Nacho</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">si m</span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>si m</b>
+¿Quién sino Tú,
+                       <b>Sol</b>
+que calmaste hasta los mares
+                   <b>mi m</b>            <b>Fa#</b>
+Podrá calmar de mi alma, la tempestad?
+            <b>si m</b>
+¿Quién sino Tú, 
+                 <b>Sol</b>
+que llenaste soledades,
+                   <b>mi m</b>
+Podrá dar a mi esperanza, 
+         <b>Fa#</b>
+un nuevo hogar?
+            <b>si m</b>
+¿Quién sino Tú, 
+                      <b>Sol</b>
+que después de tantos años,
+                    <b>mi m</b>
+Y a pesar de mis rechazos,
+                  <b>Fa#</b>
+sigues dándome tu luz?
+            <b>si m</b>
+¿Quién sino Tú, 
+                     <b>Sol</b>
+que a pesar de mis pecados
+                  <b>mi m</b>
+No te cruzaste de brazos
+
+y en tu abrazo descubrí
+
+Que me amaste desde siempre 
+
+y para siempre?
+<strong>
+           <b>si m</b>
+Quédate, Señor,
+    <b>La</b>                  <b>Sol</b>
+y habita de nuevo en mi alma
+    <b>fa# m</b>               <b>mi m</b>
+Que sola quedó tras mi marcha
+    <b>Re</b>                 <b>La</b>
+Y herida por falta de amor.
+<b>Fa#</b>       <b>si m</b>
+Quédate, Señor,
+    <b>La</b>                  <b>Sol</b>
+inúndame con tu palabra
+    <b>fa# m</b>              <b>mi m</b>
+Seréname, ven, traeme calma
+    <b>Re</b>                <b>La</b>
+Que quiero entregarme a tu amor.
+<b>Fa#</b>      <b>si m</b>            <b>La</b>   <b>Sol</b>
+Quédate, Señor...
+</strong>
+<b>si m</b>
+¿Quién sino Tú,
+                      <b>Sol</b>
+que saciaste a multitudes
+                   <b>mi m</b>
+Podrá alimentar mi alma, 
+         <b>Fa#</b>
+que hambrienta está?
+            <b>si m</b>
+¿Quién sino Tú, 
+                 <b>Sol</b>
+que curaste uno y mil males,
+                   <b>mi m</b>
+Podrá sanar mis heridas?
+          <b>Fa#</b>
+¿Quién sino Tú?
+            <b>si m</b>
+¿Quién sino Tú,
+                        <b>Sol</b>
+que a pesar de estar tan lejos
+                    <b>mi m</b>
+Caminaste hasta mi encuentro
+               <b>Fa#</b>
+para hacerme descubrir
+       <b>si m</b>                      <b>Sol</b>
+Que solo Tú eras lo que yo anhelaba?
+                   <b>mi m</b>
+Y de nuevo intensamente,
+
+en tu abrazo descubrí
+
+Que me amaste desde siempre
+
+y para siempre.
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>
