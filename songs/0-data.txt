@@ -207,6 +207,13 @@
 <li><a href="./songs/Quién_puede_amar-Brotes_de_Olivo.html"><span id="song-title">Quién puede amar</span> <span id="author">Brotes de Olivo</span></a></li><br>
 <li><a href="./songs/Quién-Luis_Guitarra.html"><span id="song-title">Quién</span> <span id="author">Luis Guitarra</span></a></li><br>
 <li><a href="./songs/Quiero_decir_que_sí-Luis_Alfredo.html"><span id="song-title">Quiero decir que sí</span> <span id="author">Luis Alfredo</span></a></li><br>
+<li><a href="./songs/Quiero_ser-Brotes_de_Olivo.html"><span id="song-title">Quiero ser</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Regalada-Ixcís.html"><span id="song-title">Regalada</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Renacer_en_libertad-Brotes_de_Olivo.html"><span id="song-title">Renacer en libertad</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Resucitar-Jesús_Cabello.html"><span id="song-title">Resucitar</span> <span id="author">Jesús Cabello</span></a></li><br>
+<li><a href="./songs/Resurrección-Musical_33,_Toño_Casado.html"><span id="song-title">Resurrección</span> <span id="author">Musical 33, Toño Casado</span></a></li><br>
+<li><a href="./songs/Rey_de_los_cielos_y_Tierras-Brotes_de_Olivo.html"><span id="song-title">Rey de los cielos y Tierras</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Saber_que_vendrás-Blowin'_in_the_Wind,_Bob_Dylan.html"><span id="song-title">Saber que vendrás</span> <span id="author">Blowin' in the Wind, Bob Dylan</span></a></li><br>
 </ol>
 <h2 id="Dios mío y todas mis cosas">Dios mío y todas mis cosas</h2>
 <ol>

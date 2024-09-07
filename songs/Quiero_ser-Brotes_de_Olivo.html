@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiero ser</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <!-- <a href="#"><li>Opción 3</li></a> -->
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Quiero ser</div>
+                    <div id="artist">Brotes de Olivo</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Re </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>Re</b> <b>Sol</b> <b>Do</b>
+Señor: líbrame de pensar 
+          <b>Re</b>   <b>Re 4</b>
+que lo sé todo.
+       <b>Do</b>
+De imponer a los demás 
+         <b>Re</b>      <b>Re 4</b>
+mis pensamientos.
+    <b>Sol</b>       <b>Do</b>
+De creer que estoy
+                          <b>La</b>  <b>La sus4</b>
+más cerca de ti que los demás.
+  <b>Fa</b>   <b>la m</b>    <b>Sol</b>
+Señor: líbrame 
+          <b>Re</b>     (<b>Do</b> <b>mi m</b> <b>Do</b>)
+del descontento.
+<b>Re</b>        <b>Do</b>               <b>Re</b>
+Quiero ser parte de tu proyecto.
+           <b>Do</b>
+que los problemas me sirvan
+     <b>Re</b>     <b>Sol</b>             <b>La</b>  <b>La sus4</b>
+para reforzar mi amor hacia ti.
+            <b>Fa</b>
+Y que no me salga 
+     <b>la m</b>  <b>Sol</b>       <b>Re</b>
+del camino que tú marcas.
+            <b>Fa</b>
+Y que no me quede
+        <b>la m</b> <b>Sol</b>           <b>La</b>
+en el camino que yo mismo trazo.
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

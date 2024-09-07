@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saber que vendrás</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <!-- <a href="#"><li>Opción 3</li></a> -->
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Saber que vendrás</div>
+                    <div id="artist">Blowin' in the Wind, Bob Dylan</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Re </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>Re</b>      <b>Sol</b>       <b>Re</b>         <b>si m</b>
+En este mundo que Cristo nos da
+  <b>Re</b>          <b>Sol</b>       <b>La</b>  <b>La 7</b>
+hacemos la ofrenda del pan.
+   <b>Re</b>     <b>Sol</b>       <b>fa# m</b>      <b>si m</b>
+El pan de nuestro trabajo sin fin
+     <b>Re</b>      <b>Sol</b>     <b>La</b>
+y el vino de nuestro cantar.
+<b>Re</b>          <b>Sol</b>        <b>fa# m</b>        <b>si m</b>
+Traigo ante Ti nuestra justa inquietud:
+  <b>Re</b>        <b>Sol</b>        <b>La</b>   <b>La</b>
+"Amar la Justicia y la Paz".
+<strong>
+<b>Sol</b>           <b>La</b>
+Saber que vendrás,
+  <b>fa# m</b>        <b>si m</b>
+saber que estarás
+   <b>Sol</b>          <b>La</b>        <b>Re</b>
+partiendo a los pobres tu pan. (**)
+</strong>
+<b>Re</b>        <b>Sol</b>       <b>Re</b>          <b>si m</b>
+La sed de todos los hombres sin luz,
+   <b>Re</b>        <b>Sol</b>        <b>La</b>  <b>La 7</b>
+la pena y el triste llorar.
+   <b>Re</b>   <b>Sol</b>        <b>fa# m</b>      <b>si m</b>
+El odio de los que mueren sin fe,
+   <b>Re</b>       <b>Sol</b>      <b>La</b>
+cansados de tanto luchar.
+<b>Re</b>        <b>Sol</b>    <b>fa# m</b>        <b>si m</b>
+En la alegría de nuestra oblación,
+  <b>Re</b>      <b>Sol</b>     <b>La</b>   <b>La 7</b>
+acepta la vida, Señor.
+<strong>
+<b>Sol</b>           <b>La</b>
+Saber que vendrás,
+  <b>fa# m</b>        <b>si m</b>
+saber que estarás
+   <b>Sol</b>          <b>La</b>        <b>Re</b>
+partiendo a los pobres tu pan. (**)
+</strong>
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renacer en libertad</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <!-- <a href="#"><li>Opción 3</li></a> -->
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Renacer en libertad</div>
+                    <div id="artist">Brotes de Olivo</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Sol </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><strong>
+   <b>Sol</b>
+No quiero una libertad 
+
+que me hace libre frente a Ti.
+   <b>mi m</b>
+No quiero quererte más
+
+por imponérmelo a mí mismo.
+   <b>Do</b>
+No quiero más regla que tu amor.
+   <b>Re</b>
+No quiero más regla que tu voz.
+</strong>
+  <b>Sol</b>
+Queremos estrenar vivir en alegría,
+   <b>mi m</b>
+en comunidad, que nazca un nuevo día.
+   <b>la m</b>
+En medio de problemas, 
+luchas y acercamientos,
+  <b>Re</b>
+crecer hacia Ti  
+         (<b>Do</b>)      (<b>Re</b>)
+desde un nuevo pensamiento.
+ <strong>
+   <b>Sol</b>
+No quiero una libertad 
+
+que me hace libre frente a Ti.
+   <b>mi m</b>
+No quiero quererte más
+
+por imponérmelo a mí mismo.
+   <b>Do</b>
+No quiero más regla que tu amor.
+   <b>Re</b>
+No quiero más regla que tu voz.
+</strong>
+<b>Sol</b>
+Para edificar la casa sobre roca,
+      <b>mi m</b>
+fuera dudas, categorías, 
+
+fuera las normas.
+   <b>la m</b>         (<b>Sol /</b><b>Re</b>
+El Reino se construye
+ <b>fa# /</b><b>Re</b>         <b>mi m7</b>)
+confiando en mi voz,
+   <b>Re</b>      (<b>Do</b>
+sintiendo en la prueba 
+ <b>Si /</b><b>Re</b>          <b>La /</b><b>Re</b>)
+"no temáis, soy yo".
+<strong>
+   <b>Sol</b>
+No quiero una libertad 
+
+que me hace libre frente a Ti.
+   <b>mi m</b>
+No quiero quererte más
+
+por imponérmelo a mí mismo.
+   <b>Do</b>
+No quiero más regla que tu amor.
+   <b>Re</b>
+No quiero más regla que tu voz.
+</strong>
+<b>Sol</b>
+Vive la libertad
+  <b>mi m</b>
+mirándote en los demás.
+<b>la m</b>
+Siente que creces al servir,
+         <b>Re</b>
+que los demás renacen... 
+Tú con ellos, al fin. (**)
+<strong>
+   <b>Sol</b>
+No quiero una libertad 
+
+que me hace libre frente a Ti.
+   <b>mi m</b>
+No quiero quererte más
+
+por imponérmelo a mí mismo.
+   <b>Do</b>
+No quiero más regla que tu amor.
+   <b>Re</b>
+No quiero más regla que tu voz.
+          <b>Sol</b>
+No quiero... 
+</strong>
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

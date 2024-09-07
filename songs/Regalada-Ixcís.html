@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regalada</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <!-- <a href="#"><li>Opción 3</li></a> -->
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Regalada</div>
+                    <div id="artist">Ixcís</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">La </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>La</b>
+Te hablo,	Señor,
+            <b>do# m</b>
+de lo mucho que he buscado
+     <b>si m</b>
+tu presencia y tu	legado,
+      <b>Mi</b>
+y del precio	que	pagué.
+
+   <b>La</b>
+Me hablas,	Señor,
+            <b>fa# m		</b>
+de una vida confiada,
+      <b>si m	</b>
+donde ya	no lleve	cargas,	
+      <b>Mi</b>
+donde nada	necesite.
+
+  <b>Re</b>        <b>Mi</b>         <b>fa# m</b>
+Y hoy en tu busca descubrí
+  <b>Mi</b>              <b>Re</b>
+que todo lo que viví
+                   <b>Mi</b>
+fue regalo de tu Amor inesperado.
+
+  <b>Re</b>    <b>Mi</b>         <b>fa# m</b>
+Y hoy descubro ante Tí
+   <b>Mi</b>           <b>Re</b>
+despojada de mi nada
+     <b>si m</b>    <b>Mi</b>
+para ser regalo
+<strong>
+    <b>La</b>        <b>Re</b>       <b>La</b>
+Regalada, una vida regalada
+   <b>Re</b>            <b>La</b>
+si pongo en tu mirada 
+   <b>fa# m</b>         <b>Mi</b>
+el afán de cada día
+   <b>La</b>         <b>Re</b>       <b>La</b>
+Regalada, una vida regalada
+   <b>Re</b>           <b>La</b>
+si mi corazón camina 
+   <b>fa# m</b>         <b>Mi</b>
+por el Reino y su justicia.
+</strong>
+<b>La</b>
+Te hablo, Señor
+             <b>fa# m</b>
+de los miedos del pasado
+     <b>si m</b>
+de las dudas del futuro
+     <b>Mi</b>
+y no veo mi presente.
+
+   <b>La</b>
+Me hablas, Señor
+            <b>fa# m</b>
+de vivir el día a día
+      <b>si m</b>
+acoger el nuevo amanecer
+      <b>Mi</b>
+y su afán con alegría.
+
+  <b>Re</b>        <b>Mi</b>          <b>fa# m</b>
+Y hoy en su busca descubrí
+      <b>Mi</b>
+que no hay miedo
+      <b>Re</b>                     <b>Mi</b>
+si tu mano me sostiene confiada.
+  <b>Re</b>     <b>Mi</b>           <b>fa# m</b>
+Y hoy me descubro ante Tí
+ <b>Mi</b>            <b>Re</b>          <b>si m</b>
+preparada pare ser una vez más 
+         <b>Mi</b>
+de nuevo amada.
+<strong>
+    <b>La</b>        <b>Re</b>       <b>La</b>
+Regalada, una vida regalada
+   <b>Re</b>            <b>La</b>
+si pongo en tu mirada 
+   <b>fa# m</b>         <b>Mi</b>
+el afán de cada día
+   <b>La</b>         <b>Re</b>       <b>La</b>
+Regalada, una vida regalada
+   <b>Re</b>           <b>La</b>
+si mi corazón camina 
+   <b>fa# m</b>              <b>Mi</b>
+por el Reino y su justicia.
+</strong>
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>
