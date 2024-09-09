@@ -235,6 +235,7 @@
 <li><a href="./songs/Despertar-Estopa.html"><span id="song-title">Despertar</span> <span id="author">Estopa</span></a></li><br>
 <li><a href="./songs/El_león_de_la_Tribu_de_Judá-Renovación_Carismática_Católica.html"><span id="song-title">El león de la Tribu de Judá</span> <span id="author">Renovación Carismática Católica</span></a></li><br>
 <li><a href="./songs/Muéstrate_(Frozen)-Gisela,_Isabel_Valls.html"><span id="song-title">Muéstrate (Frozen)</span> <span id="author">Gisela, Isabel Valls</span></a></li><br>
+<li><a href="./songs/Pregón_Pascual-Kiko_Arguello.html"><span id="song-title">Pregón Pascual</span> <span id="author">Kiko Arguello</span></a></li><br>
 <li><a href="./songs/Resucitados.html"><span id="song-title">Resucitados</span> <span id="author"></span></a></li><br>
 <li><a href="./songs/Salmo_97_Aleluya-Grupo_San_Francisco.html"><span id="song-title">Salmo 97 Aleluya</span> <span id="author">Grupo San Francisco</span></a></li><br>
 <li><a href="./songs/Sirenas-Taburete.html"><span id="song-title">Sirenas</span> <span id="author">Taburete</span></a></li><br>
