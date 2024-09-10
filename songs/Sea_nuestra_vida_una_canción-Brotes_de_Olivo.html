@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sea nuestra vida una canción</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <!-- <a href="#"><li>Opción 3</li></a> -->
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Sea nuestra vida una canción</div>
+                    <div id="artist">Brotes de Olivo</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Do </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>Do</b>
+Alabe el corno, la cítara y el arpa,
+         <b>Sol</b>       <b>Do</b>
+el tamboril, las maracas.
+             <b>Sol</b>             <b>la m</b>
+El címbalo sonoro, la buena danza
+           <b>re m</b>           <b>Sol</b>
+¡Cantad de Dios su gran hazaña!
+<strong>
+(<b>Do /</b><b>Re</b>)                 (<b>Sol /</b><b>La</b>)
+ <b>Do</b>                      <b>Sol</b>
+Sea nuestra vida una canción
+   (<b>re m/</b><b>mi m</b>)           (<b>Sol /</b><b>La</b>)
+    <b>re m</b>                 <b>Sol</b>
+que cante la obra del Señor.
+(<b>Do /</b><b>Re</b>)             (<b>Sol /</b><b>La</b>)
+ <b>Do</b>                  <b>Sol</b>
+Vean en mi vida a mi Dios
+      (<b>Fa /</b><b>Sol</b>)   (<b>Sol /</b><b>La</b>)
+       <b>Fa</b>         <b>Sol</b>
+que me trajo a la tierra 
+    (<b>Do /</b><b>Re</b>) (<b>Fa /</b><b>Sol</b>) (<b>Do /</b><b>Re</b>)
+     <b>Do</b>      <b>Fa</b>       <b>Do</b>
+por amor.
+</strong>
+<b>Do</b>
+La vida entera alabe a Dios,
+       <b>Sol</b>                 <b>Do</b>
+Padre, Hijo y Espíritu de amor.
+                 <b>Sol</b>
+Que cante nuestra vida,
+                 <b>la m</b>
+que cante mi oración,
+               <b>re m</b>           <b>Sol</b>
+el canto de mi vida ¡alabe a Dios!
+
+<b>Do</b>
+Alaben las mentes,¡también las almas!
+            <b>Sol</b>               <b>Do</b>
+los pies cansados tras su pisada.
+               <b>Sol</b>             <b>la m</b>
+Los ojos que serenan con sus miradas
+               <b>re m</b>             <b>Sol</b>
+¡vivamos todos juntos una sola alma!
+
+<b>Do</b>
+Que vibren sonajeros, 
+
+¡tocad las palmas!
+            <b>Sol</b>                <b>Do</b>
+Flauta y violín, suenen guitarras.
+                 <b>Sol</b>
+Que griten los silencios, 
+             <b>la m</b>
+susurren las almas,
+                <b>re m</b>
+tornemos las discordias
+              <b>Sol</b>
+por banderas blancas.
+
+<b>Do</b>
+Pongamos en la vida tan solo Palabra.
+                 <b>Sol</b>             <b>Do</b>
+Nazcan nuestras ideas, todas, de alma.
+               <b>Sol</b>
+Convoquen a la vida
+                    <b>la m</b>
+que nos trae Dios y salva
+            <b>re m</b>               <b>Sol</b>
+y Él nos ilumine como sol del alba.
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

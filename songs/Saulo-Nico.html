@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saulo</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <!-- <a href="#"><li>Opción 3</li></a> -->
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Saulo</div>
+                    <div id="artist">Nico</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">la m</span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><span id="reserved">Intro:</span> (<b>re m</b> <b>la m</b> <span id="reserved">-</span> <b>re m</b> <b>Sib</b>)
+
+ <b>re m</b>                 <b>la m</b>
+¿De quién viene esta brisa
+         <b>sol m</b>         <b>re m</b>
+que me inunda el corazón?
+                    <b>la m</b>
+¿De quién son estos brazos 
+         <b>Sib</b>
+que me abrazan?
+(<b>Mi</b> <b>Fa</b>)             <b>Do</b> (<b>Do#</b>)
+Y, ¿de quién esta mirada
+    <b>re m</b>              <b>la m</b>
+que inspira tranquilidad
+<b>sol m</b>             <b>la m</b>
+cuando mi cuerpo tiembla
+            <b>re m</b> <b>Sib</b> <b>Fa</b>        <b>Do</b>
+y siento el dolor en esta soledad?
+<strong>
+<b>re m</b>                <b>la m</b>
+¿Por qué ignoras a Dios
+<b>sol m</b>              <b>re m</b>
+por qué no ves su luz? (**)
+<b>Fa</b>               <b>sol m</b>
+Él está en el desechado,
+ <b>Sib</b>              <b>re m</b>
+vive en el abandonado,
+<b>sol m</b>  (<b>La</b>)   <b>Sib</b>  (<b>Do</b>) <b>re m</b>
+en el mártir de la soledad.
+</strong>
+<b>re m</b>             <b>la m</b>
+¿Cuándo te ignoré,
+       <b>sol m</b>       <b>re m</b>
+cuándo no te supe ver?
+                <b>la m</b>          <b>Sib</b>
+No sabes lo que dices te equivocas.
+(<b>Mi</b> <b>Fa</b>)            <b>Do</b> (<b>Do#</b>)
+No ofendí jamás tu nombre
+   <b>re m</b>              <b>la m</b>
+ni tu ley, lo sabes bien...
+
+<b>re m</b>               <b>la m</b>
+Condenado por mis manos, 
+<b>sol m</b>            <b>re m</b>
+desechado por mi voz,
+                       <b>la m</b>       <b>Sib</b>
+a mi encuentro vienes, oh, amigo mío.
+(<b>Mi</b> <b>Fa</b>)
+Haz caer tu agua
+<b>Do</b> (<b>Do#</b>)  <b>re m</b>              <b>la m</b>
+sobre mi ignorancia y mi error
+<b>sol m</b>               <b>la m</b>
+porque mi cuerpo tiembla 
+            <b>re m</b> <b>Sib</b> <b>Fa</b>        <b>Do</b>
+y siento el dolor en esta soledad.
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

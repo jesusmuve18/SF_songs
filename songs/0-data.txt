@@ -214,6 +214,22 @@
 <li><a href="./songs/Resurrección-Musical_33,_Toño_Casado.html"><span id="song-title">Resurrección</span> <span id="author">Musical 33, Toño Casado</span></a></li><br>
 <li><a href="./songs/Rey_de_los_cielos_y_Tierras-Brotes_de_Olivo.html"><span id="song-title">Rey de los cielos y Tierras</span> <span id="author">Brotes de Olivo</span></a></li><br>
 <li><a href="./songs/Saber_que_vendrás-Blowin'_in_the_Wind,_Bob_Dylan.html"><span id="song-title">Saber que vendrás</span> <span id="author">Blowin' in the Wind, Bob Dylan</span></a></li><br>
+<li><a href="./songs/Sal_de_tu_tierra-Nico_Montero.html"><span id="song-title">Sal de tu tierra</span> <span id="author">Nico Montero</span></a></li><br>
+<li><a href="./songs/Sal_y_Luz-Brotes_de_Olivo.html"><span id="song-title">Sal y Luz</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Santa_María_del_Camino-Popular.html"><span id="song-title">Santa María del Camino</span> <span id="author">Popular</span></a></li><br>
+<li><a href="./songs/Santo,_Bendito_el_que_viene-Nico.html"><span id="song-title">Santo, Bendito el que viene</span> <span id="author">Nico</span></a></li><br>
+<li><a href="./songs/Santo-Carismático.html"><span id="song-title">Santo</span> <span id="author">Carismático</span></a></li><br>
+<li><a href="./songs/Santo-Estepa.html"><span id="song-title">Santo</span> <span id="author">Estepa</span></a></li><br>
+<li><a href="./songs/Santo-Mocedades.html"><span id="song-title">Santo</span> <span id="author">Mocedades</span></a></li><br>
+<li><a href="./songs/Santo-Peruano.html"><span id="song-title">Santo</span> <span id="author">Peruano</span></a></li><br>
+<li><a href="./songs/Santo-The_Beetles.html"><span id="song-title">Santo</span> <span id="author">The Beetles</span></a></li><br>
+<li><a href="./songs/Santo-Zaireño.html"><span id="song-title">Santo</span> <span id="author">Zaireño</span></a></li><br>
+<li><a href="./songs/Saulo-Nico.html"><span id="song-title">Saulo</span> <span id="author">Nico</span></a></li><br>
+<li><a href="./songs/Sé_fiel_a_la_verdad-Brotes_de_Olivo.html"><span id="song-title">Sé fiel a la verdad</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Sé_que_voy_contigo-Brotes_de_Olivo.html"><span id="song-title">Sé que voy contigo</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Sea_nuestra_vida_una_canción-Brotes_de_Olivo.html"><span id="song-title">Sea nuestra vida una canción</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Sea-Brotes_de_Olivo.html"><span id="song-title">Sea</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Señor_Dios_Nuestro-Popular,_Salmo_8.html"><span id="song-title">Señor Dios Nuestro</span> <span id="author">Popular, Salmo 8</span></a></li><br>
 </ol>
 <h2 id="Dios mío y todas mis cosas">Dios mío y todas mis cosas</h2>
 <ol>
