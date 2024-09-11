@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semillas de Comunidad</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <!-- <a href="#"><li>Opción 3</li></a> -->
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Semillas de Comunidad</div>
+                    <div id="artist">Alberto y Emilia</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">mi m</span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>mi m</b>            <b>Si</b>         <b>mi m</b>
+Trataré de olvidar lo anterior.
+     <b>la m</b>      <b>Si</b>         <b>mi m</b>
+Le daré un gran giro a mi vida.
+       <b>Sol</b>    <b>la m</b> <b>Si</b>         <b>mi m</b>
+Desde ahora seré con la humanidad
+     <b>Do</b>       <b>Si</b>    <b>mi m</b>
+la semilla de comunidad.
+
+<b>mi m</b>              <b>Si</b>       <b>mi m</b>
+Me dirán los que me vean luchar:
+       <b>la m</b>      <b>Si</b>               <b>la m</b>
+¿Dónde vas loco?. ¡Si eso es imposible!
+     <b>Sol</b>          <b>la m</b>
+pero sé que, al final, 
+<b>Si</b>              <b>mi m</b>
+siempre encontraré 
+      <b>Do</b>         <b>Si</b>    <b>mi m</b>
+más semillas de amor y fe.
+<strong>
+     <b>Do</b>              <b>Si</b>
+Nada habrá que sienta mío,
+<b>mi m</b>        <b>Sol</b>
+todo se me dió.
+      <b>Do</b>            <b>Si</b>          <b>mi m</b> <b>Mi</b>
+Aceptaré a aquel que llega como es.
+<b>Do</b>              <b>Si</b>    <b>mi m</b>
+No habré de olvidar
+            <b>Do</b>
+lo que dijo Él:
+        <b>la m</b>     <b>Si</b>           <b>mi m</b>
+"siendo pobres, un reino tendréis"
+</strong>
+<b>mi m</b>              <b>Si</b>        <b>la m</b>
+La humildad será siempre mi ley.
+     <b>la m</b>       <b>Si</b>          <b>mi m</b>
+El negar mi persona en cada instante,
+     <b>Sol</b>      <b>la m</b> <b>Si</b>              <b>mi m</b>
+sólo así llegaré a la meta que marqué
+      <b>Do</b>        <b>Si</b>            <b>mi m</b>
+en el día que a Dios me encontré.
+
+<b>mi m</b>   <b>Si</b>               <b>mi m</b>
+Viviré en la alegría de ver 
+     <b>la m</b>       <b>Si</b>        <b>mi m</b>
+cómo día tras día van creciendo
+       <b>Sol</b>       <b>la m</b> <b>Si</b>
+nuevos brotes de paz 
+                 <b>mi m</b>
+que con dolor planté
+          <b>Do</b>        <b>Si</b>      <b>mi m</b>
+y un buen día hacia Él partiré.
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>
