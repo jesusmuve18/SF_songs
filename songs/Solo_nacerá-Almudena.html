@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solo nacerá</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <!-- <a href="#"><li>Opción 3</li></a> -->
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Solo nacerá</div>
+                    <div id="artist">Almudena</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Sol </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>Sol</b>      <b>Re</b>
+Solo nacerá 
+    <b>Do</b>           <b>Re</b>         <b>Sol</b>
+cuando en ti y en mí no quede nada
+                           <b>Re</b>
+cuando las ramas viejas se corten
+  <b>Do</b>     <b>Re</b>         <b>Sol</b>
+y den lugar a otras ramas.
+
+                <b>Re</b>      <b>Do</b> <b>Re</b>
+Mientras siga viviendo
+          <b>Sol</b>
+entre dos aguas 
+                  <b>Re</b>
+no podrá nacer en mí,
+      <b>Do</b>    <b>Re</b>     <b>Sol</b>
+ni llegar a mí su Palabra.
+
+                    <b>Re</b>
+Volverá a nacer de nuevo
+     <b>Do</b>       <b>Re</b>      <b>Sol</b>
+al dejar todo cuanto poseo, 
+                  <b>Re</b>
+al vivir en libertad
+     <b>Do</b>      <b>Re</b>          <b>Sol</b>
+para ser de Dios su mensajero.
+
+<b>Sol</b>
+Con la vida y con la muerte
+     <b>Do</b>
+seguiré gritando en el desierto 
+       <b>Sol</b>
+que el Reino de Dios está cerca
+                         <b>Re</b>   <b>Re 7</b>
+tan cerca que está en ti dentro.
+<strong>
+<b>Sol</b>
+Haz que nazca allí
+      <b>Do</b>
+donde es difícil el comienzo
+      <b>Sol</b>              <b>mi m</b>
+para aquellos que lo conocen
+     <b>Re</b>
+y no saben cómo hacerlo.
+
+<b>Sol</b>
+Haz que viva allí
+         <b>Do</b>
+donde el surco ya está abierto
+      <b>Sol</b>           <b>mi m</b>
+pero no hay semilla que sembrar
+       <b>Re</b>
+porque nadie quiere serlo.
+
+<b>Sol</b>
+Déjalo salir,
+        <b>Do</b>
+estoy seguro que está dentro,
+      <b>Sol</b>            <b>mi m</b>
+no lo tapes, no lo escondas,
+       <b>Re</b>
+no te niegues a tenerlo.
+
+  <b>Sol</b>
+Está naciendo aquí,
+      <b>Do</b>
+no lo dudes, es tremendo
+       <b>Sol</b>          <b>mi m</b>
+que te pida que le ayudes
+       <b>Re</b>
+para hacer un mundo nuevo.
+</strong>
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

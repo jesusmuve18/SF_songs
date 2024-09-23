@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solo quiero decir que te quiero</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <!-- <a href="#"><li>Opción 3</li></a> -->
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Solo quiero decir que te quiero</div>
+                    <div id="artist">La voz del desierto</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">La </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>La</b>                       <b>Re</b>
+Bienaventurados los que aman
+<b>La</b>                  <b>Re</b>
+y yo me siento tan amado Señor.
+<b>La</b>                      <b>Re</b>
+Bienaventurados los que lloran;
+<b>La</b>                         <b>Re</b>
+con sus lágrimas se forman ríos
+                   <b>Sol</b>    <b>Re</b> <b>La</b>
+que conducen hasta Dios.
+
+<b>La</b>                      <b>Re</b>
+Bienaventurados los que buscan la paz;
+<b>La</b>
+y tu paz trajo la paz
+     <b>Re</b>
+a mi pobre corazón.
+<b>La</b>                    <b>Re</b>
+Bienaventurados los sufridos;
+<b>La</b>                       <b>Re</b>
+con tu consuelo me haces fuerte,
+                       <b>Sol</b> <b>Re</b> <b>La</b>
+me acompañas el día de hoy.
+<strong>
+       <b>Re</b>      <b>La</b>
+Solo quiero decir
+         <b>Do# 7</b>        <b>fa# m</b>
+que te quiero y ya está
+        <b>Re</b>       <b>La</b>           <b>Do# 7</b> <b>fa# m</b>
+Solo te quiero decir que te quiero
+      <b>Re</b>      <b>La</b>
+Solo quiero decir
+         <b>Do# 7</b>    <b>fa# m</b>
+gracias por perdonarme
+     <b>Re</b>       <b>Sol</b>   <b>Re</b>       <b>La</b>
+y quererme y amarme tal como soy.
+</strong>
+<b>La</b>                    <b>Re</b>
+Bienaventurados los misericordiosos
+<b>La</b>
+porque de tu perdón 
+<b>Re</b>
+alcanzo yo mi perdón
+<b>La</b>                     <b>Re</b>
+Bienaventurados los limpios;
+<b>La</b>
+porque con tu perfume,
+   <b>Re</b>                     <b>Sol</b> <b>Re</b> <b>La</b>
+me acerco cada vez más a Dios.
+
+<b>La</b>
+Bienaventurados los que 
+<b>Re</b>
+se entregan a los demás;
+<b>La</b>
+y con tu entrega 
+    <b>Re</b>
+mi amor aumenta cada día más.
+<b>La</b>                      <b>Re</b>
+Bienaventurados los que aman;
+<b>La</b>                         <b>Re</b>
+yo me siento tan amado por Ti...
+         <b>Sol</b> <b>Re</b> <b>La</b>
+Oh Señor.
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

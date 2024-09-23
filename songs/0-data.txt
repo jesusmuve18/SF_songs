@@ -234,6 +234,14 @@
 <li><a href="./songs/Señor,_envíanos_tu_Espíritu-Brotes_de_Olivo.html"><span id="song-title">Señor, envíanos tu Espíritu</span> <span id="author">Brotes de Olivo</span></a></li><br>
 <li><a href="./songs/Señor,_hazme_instrumento_de_tu_paz-Franciscano.html"><span id="song-title">Señor, hazme instrumento de tu paz</span> <span id="author">Franciscano</span></a></li><br>
 <li><a href="./songs/Señor_ten_piedad-Jerez.html"><span id="song-title">Señor ten piedad</span> <span id="author">Jerez</span></a></li><br>
+<li><a href="./songs/Ser_con_la_vida-Brotes_de_Olivo.html"><span id="song-title">Ser con la vida</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Sí,_estás_aquí-Emaús.html"><span id="song-title">Sí, estás aquí</span> <span id="author">Emaús</span></a></li><br>
+<li><a href="./songs/Si_no_muero_por_Ti-Almudena.html"><span id="song-title">Si no muero por Ti</span> <span id="author">Almudena</span></a></li><br>
+<li><a href="./songs/Siempre_es_Navidad-Popular.html"><span id="song-title">Siempre es Navidad</span> <span id="author">Popular</span></a></li><br>
+<li><a href="./songs/Solo_nacerá-Almudena.html"><span id="song-title">Solo nacerá</span> <span id="author">Almudena</span></a></li><br>
+<li><a href="./songs/Solo_quiero_decir_que_te_quiero-La_voz_del_desierto.html"><span id="song-title">Solo quiero decir que te quiero</span> <span id="author">La voz del desierto</span></a></li><br>
+<li><a href="./songs/Solo_te_pido.html"><span id="song-title">Solo te pido</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Solo_tu_Espíritu-Ixcís.html"><span id="song-title">Solo tu Espíritu</span> <span id="author">Ixcís</span></a></li><br>
 </ol>
 <h2 id="Dios mío y todas mis cosas">Dios mío y todas mis cosas</h2>
 <ol>
