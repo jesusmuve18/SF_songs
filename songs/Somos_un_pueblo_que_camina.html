@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somos un pueblo que camina</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <!-- <a href="#"><li>Opción 3</li></a> -->
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Somos un pueblo que camina</div>
+                    <div id="artist"></div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">La </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><strong>
+<b>La</b>       <b>Mi 7</b>         <b>fa# m</b>
+Somos un pueblo que camina,
+             <b>Re</b>                  <b>Mi 7</b>
+y juntos caminando podremos alcanzar
+<b>Re</b>      <b>Mi 7</b>            <b>La</b>
+otra ciudad que no se acaba,
+    <b>fa# m</b>       <b>si m</b>
+sin pena ni tristeza,
+<b>Mi 7</b>             <b>La</b>
+ciudad de eternidad.
+</strong>
+<b>La</b>       <b>Re</b>           <b>La</b>
+Somos un pueblo que camina,
+    <b>Re</b>            <b>La</b>
+que marcha por el mundo
+   <b>Mi 7</b>           <b>La</b>
+buscando otra ciudad.
+<b>La</b>        <b>Re</b>        <b>La</b>
+Somos errantes peregrinos
+   <b>Re</b>             <b>La</b>
+en busca de un destino,
+   <b>Re</b>         <b>Mi 7</b>
+destino de unidad.
+<b>Re</b>        <b>Mi 7</b>       <b>La</b>
+Siempre seremos caminantes,
+     <b>fa# m</b>     <b>Re</b>
+pues solo caminando,
+  <b>Si 7</b>         <b>Mi 7</b>
+podremos alcanzar
+<b>Re</b>      <b>Mi 7</b>            <b>La</b>
+otra ciudad que no se acaba,
+    <b>fa# m</b>        <b>si m</b>
+sin penas ni tristezas,
+   <b>Mi 7</b>          <b>La</b>
+ciudad de eternidad.
+
+<b>La</b>         <b>Re</b>           <b>La</b>
+Sufren los hombres, mis hermanos,
+   <b>Re</b>             <b>La</b>
+buscando entre las piedras
+   <b>Mi 7</b>             <b>La</b>
+la parte de su pan.
+<b>La</b>         <b>Re</b>       <b>La</b>
+Sufren los hombres oprimidos,
+    <b>Re</b>             <b>La</b>
+los hombres que no tienen
+   <b>Re</b>          <b>Mi 7</b>
+ni paz ni libertad.
+<b>Re</b>         <b>Mi 7</b>          <b>La</b>
+Sufren los hombres, mis hermanos,
+    <b>fa# m</b>      <b>Re</b>
+mas tú vienes con ellos
+  <b>Si 7</b>          <b>Mi 7</b>
+y en ti alcanzarán
+<b>Re</b>      <b>Mi 7</b>            <b>La</b>
+otra ciudad que no se acaba
+ <b>fa# m</b>        <b>si m</b>
+sin penas ni tristezas,
+   <b>Mi 7</b>          <b>La</b>
+ciudad de eternidad.
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

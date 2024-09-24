@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somos pueblo de Dios</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <!-- <a href="#"><li>Opción 3</li></a> -->
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Somos pueblo de Dios</div>
+                    <div id="artist">Ixcís</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Do </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>Do</b>            <b>Fa</b>
+No hagáis del templo
+      <b>la m</b>        <b>Fa</b>
+un mercado bien montado.
+<b>Do</b>            <b>Fa</b>
+No pongáis el sábado
+      <b>la m</b>            <b>Fa</b>
+por encima del ser humano.
+<b>Do</b>         <b>Fa</b>        <b>Do</b>
+No domestiquéis la Palabra
+       <b>la m</b>  <b>Do</b>
+que os he dado.
+<strong>
+        Ra     mim       lam
+Raza de víboras. Raza de víboras,
+        <b>Fa</b>      <b>mi m</b>           <b>la m</b>
+el vino nuevo se pudre en odres viejos.
+       <b>Fa</b>     <b>mi m</b>       <b>la m</b>
+Raza de víboras, raza de víboras
+        <b>Fa</b>       <b>mi m</b>          <b>la m</b>
+el vino fresco necesita odres nuevos.
+<b>la m/</b><b>Sol</b>  <b>Re 9/</b><b>Fa#</b>  <b>la m7/</b><b>Sol</b>
+</strong>
+<b>Do</b>              <b>Fa</b>
+¿Cuándo el sexo no será
+  <b>la m</b>        <b>Fa</b>
+el único pecado?
+   <b>Do</b>           <b>Fa</b>
+¿Y cuándo la justicia 
+      <b>la m</b>             <b>Fa</b>
+habitará el corazón humano?
+  <b>Do</b>            <b>Fa</b>       <b>Do</b>
+¿Cuándo empezaremos a cambiar,
+       <b>la m</b>   <b>Do</b>
+dar nuevos pasos?
+
+<b>Do</b>               <b>Fa</b>
+¿Cuándo nuestros curas
+      <b>la m</b>       <b>Fa</b>
+serán celibes o casados?
+   <b>Do</b>          <b>Fa</b>
+¿Y cuándo la mujer 
+     <b>la m</b>               <b>Fa</b>
+llegará al ministerio ordenado
+  <b>Do</b>         <b>Fa</b>                   <b>Do</b>
+y no habrá problema alguno en ser gay
+       <b>la m</b>    <b>Do</b>
+y a la vez cristiano?
+<strong>
+        <b>Fa</b>     <b>mi m</b>       <b>la m</b>
+Raza de víboras. Raza de víboras,
+                <b>Fa</b>
+hace frío este invierno,
+     <b>mi m</b>          <b>la m</b>
+hace falta aire nuevo.
+        <b>Fa</b>     <b>mi m</b>       <b>la m</b>
+Raza de víboras, raza de víboras
+               <b>Fa</b>
+hace frío aquí dentro,
+     <b>mi m</b>          <b>la m</b>
+hace falta algo nuevo
+<b>la m/</b><b>Sol</b>  <b>Re 9/</b><b>Fa#</b>  <b>la m7/</b><b>Sol</b>
+</strong>
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

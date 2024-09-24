@@ -242,6 +242,24 @@
 <li><a href="./songs/Solo_quiero_decir_que_te_quiero-La_voz_del_desierto.html"><span id="song-title">Solo quiero decir que te quiero</span> <span id="author">La voz del desierto</span></a></li><br>
 <li><a href="./songs/Solo_te_pido.html"><span id="song-title">Solo te pido</span> <span id="author"></span></a></li><br>
 <li><a href="./songs/Solo_tu_Espíritu-Ixcís.html"><span id="song-title">Solo tu Espíritu</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Somos_pueblo_de_Dios-Ixcís.html"><span id="song-title">Somos pueblo de Dios</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Somos_un_pueblo_que_camina.html"><span id="song-title">Somos un pueblo que camina</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Soy_yo-Almudena.html"><span id="song-title">Soy yo</span> <span id="author">Almudena</span></a></li><br>
+<li><a href="./songs/Suenan_voces_de_paz.html"><span id="song-title">Suenan voces de paz</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Sueño_una_Iglesia-Ixcís.html"><span id="song-title">Sueño una Iglesia</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Sueños_de_la_tierra-Brotes_de_Olivo.html"><span id="song-title">Sueños de la tierra</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Tan_cerca_de_mí.html"><span id="song-title">Tan cerca de mí</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Tan_lejos_y_tan_cerca-Óscar_Gallardo_y_Nico_Hernández.html"><span id="song-title">Tan lejos y tan cerca</span> <span id="author">Óscar Gallardo y Nico Hernández</span></a></li><br>
+<li><a href="./songs/Te_ofreceré_y_alabaré-Jerez.html"><span id="song-title">Te ofreceré y alabaré</span> <span id="author">Jerez</span></a></li><br>
+<li><a href="./songs/Te_presentamos_el_vino_y_el_pan.html"><span id="song-title">Te presentamos el vino y el pan</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Tentaciones-Brotes_de_Olivo.html"><span id="song-title">Tentaciones</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Tiempo-Ciento_Ochenta_Grados.html"><span id="song-title">Tiempo</span> <span id="author">Ciento Ochenta Grados</span></a></li><br>
+<li><a href="./songs/Todo_lo_esperamos_de_Ti-Brotes_de_Olivo.html"><span id="song-title">Todo lo esperamos de Ti</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Todo_va_a_ir_bien-Luis_Guitarra.html"><span id="song-title">Todo va a ir bien</span> <span id="author">Luis Guitarra</span></a></li><br>
+<li><a href="./songs/Todos_juntos-Brotes_de_Olivo.html"><span id="song-title">Todos juntos</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Todos_somos_un_cachito_de_Dios-Brotes_de_Olivo.html"><span id="song-title">Todos somos un cachito de Dios</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Tú,_mi_raíz-Ixcís.html"><span id="song-title">Tú, mi raíz</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Un_nuevo_sitio_disponed.html"><span id="song-title">Un nuevo sitio disponed</span> <span id="author"></span></a></li><br>
 </ol>
 <h2 id="Dios mío y todas mis cosas">Dios mío y todas mis cosas</h2>
 <ol>
