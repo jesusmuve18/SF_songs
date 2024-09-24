@@ -58,7 +58,7 @@
 
 % Comparar cadenas con caracteres compuestos
 % Sintáxis: \ifstrequal{string1}{string2}{code if are equals}{code if not}
-\newcommand{\ifstrequal}[4]{%
+\renewcommand{\ifstrequal}[4]{%
     \IfSubStr{#1}{\#}{%
         \IfSubStr{#2}{\#}{%
             \StrGobbleRight{#1}{1}[\strippedA]%
@@ -86,7 +86,7 @@
 
 % Compara si dos valores numéricos son iguales
 % Sintáxis: \ifnumequal{num1}{num2}{code if are equals}{code if not}
-\newcommand{\ifnumequal}[4]{%
+\renewcommand{\ifnumequal}[4]{%
     \ifnum#1=#2%
         #3%
     \else   
@@ -238,7 +238,9 @@
 % Sintáxis: \chord[m|M|7|...]{Nota}{Palabra sobre la que va la nota o acorde}
 \newcommand{\chord}[3]{%
     %$\overset{\textstyle\text{\chordstyle{\acorde{#1}#2}}}{\vphantom{\text{g}} \textstyle\text{#3}}$%
-    $\overset{\raisebox{4pt}{\text{\chordstyle{\acorde{#1}#2}}}}{\textstyle\text{#3\vphantom{é}}}$% Ajusta la distancia con raisebox
+    %$\overset{\raisebox{3pt}{\text{\chordstyle{\acorde{#1}#2}\vphantom{é}}}}{\textstyle\text{#3\vphantom{é}}}$% Ajusta la distancia con raisebox
+    \renewcommand\useanchorwidth{T}%
+    \stackon{\text{#3\vphantom{é}}}{\text{\chordstyle{\acorde{#1}#2}}}%
 }
 
 %Título

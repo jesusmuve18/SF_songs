@@ -117,7 +117,7 @@ public:
                 }
 
                 if(find(reserved.begin(), reserved.end(), word)==reserved.end()){
-                    // Si la palabra es reservada
+                    // Si la palabra no es reservada
 
                     eq1 = false;
 
@@ -278,4 +278,223 @@ public:
 
         return res;
     }
+
+    string notePart(const string& word) {
+
+        string note;
+        bool eq1=false;
+        int len;
+        string res;
+
+        for(auto n = notes.begin(); n!=notes.end() && !eq1; n++){
+            note = *n;
+            len = note.length();
+            eq1=(len<=word.length());
+
+
+            for(int i=0; i<len && eq1; i++){
+                if(i<word.length() && word.at(i)!=note.at(i)){
+                    eq1 = false;
+                }
+            }
+
+            if(eq1){
+                res=note;
+                res.at(0)=toupper(res.at(0)); //empieza por mayúscula
+            }
+        }
+
+        if(res.at(res.length()-1)=='#'){
+            res.at(res.length()-1)='\\';
+            res+="#";
+        }
+
+        return res;
+    }
+
+    string variationPart(const string&word) { // Todo lo que no es nota
+        return word.substr(notePart(word).length(), word.length());
+    }
+
+    bool chordLine(const string & line){
+
+        bool chord_line = false;  // Por defecto si la línea está vacía devuelve false
+
+        if (line.length()!=0){
+
+            vector<string> words = split(line); // vector de palabras de la línea
+            vector<string> gaps = blankSpaces(line); // vector de espacios en blanco
+            string note;
+            string variation;
+            string word;
+            bool eq1, eq2;
+            int len;
+
+            chord_line = true;
+            bool parenthesis1, parenthesis2;
+
+            for(auto w=words.begin(); w!=words.end() && chord_line; w++){
+                word = *w;
+                parenthesis1 = (word.at(0) == '(' );
+                parenthesis2 = (word.at(word.length()-1)==')');
+
+                if(parenthesis1){
+                    word.erase(0,1);
+                }
+
+                if(parenthesis2){
+                    word.erase(word.length()-1);
+                }
+
+                if(find(reserved.begin(), reserved.end(), word)==reserved.end()){
+                    // Si la palabra es reservada
+
+                    eq1 = false;
+
+                    for(auto n = notes.begin(); n!=notes.end() && !eq1; n++){
+                        note = *n;
+                        eq1 = true;
+                        len = note.length();
+
+                        for(int i=0; i<len && eq1; i++){ // Compruebo si empieza por la nota con la que se está comparando
+                            if(i<word.length() && word.at(i)!=note.at(i)){
+                                eq1 = false;
+                            }
+                        }
+
+                        if(eq1){
+
+                            eq2 = false;
+
+                            if(word.length() > len){ // La palabra es más larga
+                                for(auto var = variations.begin(); var!=variations.end() && !eq2; var++) {
+                                    variation = *var;
+                                    // eq2 = true;
+                                    eq2 = (word.length() >= len + variation.length());
+
+                                    for(int i = len; i<len + variation.length() && eq2; i++){ // Compruebo si sigue por alguna variación
+                                        if(i<word.length() && word.at(i)!=variation.at(i-len)){
+                                            eq2 = false;
+                                        }
+                                    }
+                                }
+
+                                if(!eq2){ // Si la palabra no coincide con ningún acorde (su forma)
+                                    chord_line = false;
+                                }
+
+                            }               
+                        }
+                    }
+
+                    if(!eq1){ // Si la palabra no coincide con ningún acorde (su forma)
+                        chord_line = false;
+                    }
+                }
+            }
+        }
+        return chord_line;
+    }
+
+    string toLatex(string filename) {
+
+        vector<string> caracteres_especiales={"á", "é", "í", "ó", "ú", "Á", "É", "Í", "Ó", "Ú", "ñ", "Ñ"};
+
+        ifstream is;
+        ofstream os;
+
+        string res;
+
+        is.open(filename);
+
+
+        if(is){
+            
+            string line;
+            string chordline;
+            bool hay_palabra;
+            vector<int> inicio, final;
+
+            string comando="\\chord";
+
+            while(getline(is, line)){
+                if(chordLine(line)){ // Si es una línea de acordes
+                    chordline=line; // La guardo en una cadena
+                } else {
+
+                    hay_palabra=false;
+
+                    if(!chordline.empty()) { // Si había antes una línea de acordes
+                        for(int i=0; i<chordline.length(); i++){
+                            if(chordline.at(i)!=' '){ // Se encuentra una posición "ocupada"
+                                if(!hay_palabra){ // Si no había antes una palabra
+                                    hay_palabra=true;
+                                    inicio.push_back(i); // guardo la posición de inicio
+                                }
+                            } else {
+                                if(hay_palabra){
+                                    hay_palabra=false;
+                                    final.push_back(i); // guardo la posición de final
+                                }
+                            }
+                        } if(inicio.size()>final.size()){
+                            final.push_back(chordline.length()); // Si el final de línea es final de palabra
+                        }
+
+                        // Muestro el resultado obtenido
+                        // for(int i=0; i<inicio.size() && i<final.size(); i++){
+                        //     cout<<"Inicio: "<<inicio.at(i)<<": "<<chordline.at(inicio.at(i))<<" , Final: "<<final.at(i)<<": "<<chordline.at(final.at(i)-1)<<endl;
+                        // }
+
+                        
+
+                        // Lo incorporo a la línea que no es de acordes
+                        int desplazamiento=0;
+                        vector<string> words = split(chordline); // vector de palabras de la línea de acordes
+                        int j=0;
+
+                        if(final.at(final.size()-1)>line.size()){ // Si hace falta rellenar con espacios
+                            int dif=final.at(final.size()-1)-line.size();
+                            for(int i=0; i<dif; i++){
+                                line+=' ';
+                            }
+                        }
+
+                        string antes,despues;
+
+                        for(int i=0; i<inicio.size(); i++){
+
+                            antes=comando+"{"+notePart(words.at(j))+"}{"+variationPart(words.at(j))+"}"+"{";
+                            j++;
+
+                            line.insert(inicio.at(i)+desplazamiento,antes);
+                            desplazamiento+=antes.length();
+
+                            despues="}";
+
+                            if(static_cast<int>(line.at(final.at(i)+desplazamiento-1))==static_cast<char>(0xC3)){
+                                desplazamiento++;
+                            }
+
+
+                            line.insert(final.at(i)+desplazamiento, despues);
+                            desplazamiento+=despues.length();
+                        }
+
+                        // cout<<"Linea obtenida: "<<line<<endl;
+                        res+=line+"\n";
+                        chordline.clear();
+                        inicio.clear();
+                        final.clear();
+                    }
+                }
+            }
+        } else {
+            cerr << "Error abriendo el archivo de entrada: " << filename << endl;
+            exit(-2);
+        }
+
+        return res;
+    }
+    
 };

@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage[margin=2cm]{geometry} % Establece todos los márgenes en 2cm
+
+% Cambiar el título del índice
+\renewcommand{\contentsname}{Canciones}
+
+\input{song_commands.tex}
+\usepackage{stackengine}
+\usepackage{mathtools}
+\stackMath
+
+
+% \renewcommand{\chordstyle}[1]{%
+%     \textcolor{chordcolor}{\ttfamily\fontsize{9pt}{15pt}\selectfont\bfseries #1}%
+% }
+
+% Color de resalte
+%\definecolor{chordcolor}{HTML}{6B43FF}%6B43FF
+
+%\renewcommand{\notation}{no}
+
+\begin{document}
+
+    \portada[titulo=Cantoral, subtitulo=misa adoración, autor=Jesús Muñoz Velasco, boxcolor=6B43FF]
+    \newpage
+    \tableofcontents
+    \newpage
+    
+    {\obeylines\obeyspaces
+    \renewcommand\useanchorwidth{T}
+    \begin{spacing}{2.25}
+        \input{../cpp/tmp.txt}
+    \end{spacing}
+    }
+
+    % \input{../cpp/tmp.txt}
+    % \renewcommand\useanchorwidth{T}
+    % \chord{La}{m}{Exu}lten los \chord{Sol}{}{cor}os de los \chord{La}{m}{án}geles,
+
+    % Bue\chord{La}{m}{n}as
+
+    % \chord{La}{m}{Exu}lten
+
+
+    % % $\text{Palabra de a}\stackon{\text{\hbox{bajo}}}{\text{\mathclap{Palabra de arriba}}}$
+    % \renewcommand\useanchorwidth{T}
+    % Palabra de\stackon{\text{bajo}}{\text{Palabra de arriba}} buenas tardes
+
+\end{document}
