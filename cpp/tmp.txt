@@ -4,32 +4,39 @@ y un \chord{Sol}{}{him}no de gloria, aclame el triunfo
 del Señor resuc\chord{La}{m}{ita}do.
 \chord{Fa}{}{  }Álegrese la \chord{Mi}{7}{tie}rra,
 inun\chord{Fa}{}{da}da por la nueva \chord{Mi}{7}{luz}.
+\begin{chorus}
 El esplendor del \chord{La}{m}{Rey}
 destruyó las ti\chord{Sol}{}{nie}blas,
 destruyó las t\chord{Fa}{}{in}ieblas,
 las tinieblas del \chord{Mi}{7}{mun}do. (**)
+\end{chorus}
 \chord{La}{m}{Que} se alegre nuestra Madre la I\chord{Sol}{}{gle}sia,
 resplande\chord{La}{m}{cie}nte, de la \chord{Sol}{}{glo}ria,
 de su Se\chord{La}{m}{ño}r,
 y que \chord{Sol}{}{est}e lugar, resuene unánime,
 la aclamación de un pueblo en\chord{La}{m}{ fi}esta.
+\begin{chorus}
 \chord{Fa}{}{  }El Señor esté con \chord{La}{m}{vos}otros,
 \chord{Fa}{}{  }y con tu es\chord{La}{m}{pí}ritu.
 \chord{Fa}{}{  }Levantemos, el cora\chord{Mi}{7}{zó}n,
 \chord{Fa}{}{  }lo tenemos levantado hacia el Se\chord{Mi}{7}{ño}r.
 Demos gracias al Señor nuestro\chord{La}{m}{ Di}os.
+
 Es \chord{Sol}{}{jus}to y nece\chord{La}{m}{sar}io (**)
+\end{chorus}
 \chord{La}{m}{Rea}lmente es justo y nece\chord{Sol}{}{sar}io,
 exal\chord{La}{m}{tar}, con el \chord{Do}{}{ca}nto 
 la alegría del E\chord{La}{m}{spí}ritu,
 y ele\chord{Sol}{}{var} un himno al Padre todopoderoso
 y a su único Hijo, Jes\chord{La}{m}{ucr}isto.
+
 \chord{La}{m}{Él} ha pagado por\chord{Sol}{}{ to}dos,
 al eterno \chord{La}{m}{Pad}re la deuda de A\chord{Sol}{}{dá}n,
 y con su \chord{La}{m}{san}gre, derra\chord{Do}{}{ma}da,
 derramada por a\chord{La}{m}{mor},
 ha cance\chord{Sol}{}{lad}o, la condena antigua
 del pe\chord{La}{m}{cad}o.
+
 \chord{Fa}{}{  }Esta es la \chord{Mi}{7}{Pas}cua,
 en que se in\chord{Fa}{}{mo}la el Cor\chord{Mi}{7}{der}o.
 Esta \chord{Fa}{}{es} la \chord{Mi}{7}{noc}he,
@@ -37,9 +44,11 @@ en que \chord{Fa}{}{fu}eron liberados
 nuestros padres de E\chord{Mi}{7}{gip}to.
 Esta \chord{Fa}{}{es} la \chord{Mi}{7}{noc}he,
 que nos \chord{Fa}{}{sa}lva de la oscuridad del \chord{Mi}{7}{mal}.
+\begin{chorus}
 Esta es la \chord{La}{m}{noc}he,
 en que Cristo ha vencido a la \chord{Sol}{}{mue}rte
 y del in\chord{Fa}{}{fi}erno, retorna victo\chord{Mi}{7}{rio}so (**)
+\end{chorus}
 \chord{La}{m}{¡O}h admirable condesce\chord{Sol}{}{nde}ncia,
 de tu a\chord{La}{m}{mor}!,
 ¡Oh incomp\chord{Do}{}{ar}able ternura y car\chord{La}{m}{ida}d!
@@ -47,34 +56,48 @@ por resca\chord{Sol}{}{tar} al esclavo,
 has sacrificado al \chord{La}{m}{Hij}o.
 \chord{Fa}{}{  }Sin el pecado de A\chord{Mi}{7}{dá}n,
 \chord{Fa}{}{Cr}isto no nos habría resc\chord{Mi}{7}{ata}do.
+\begin{chorus}
 ¡Oh feliz\chord{La}{m}{ cu}lpa!
 Que mereció tan grande rede\chord{Sol}{}{nto}r,
 ¡oh feliz\chord{La}{m}{ cu}lpa! (**)
 ¡Oh noche marav\chord{Sol}{}{ill}osa,
+
+en que despojaste al Faraón,
 y enriqueciste a Isr\chord{La}{m}{ael}!
 ¡Oh noche marav\chord{Sol}{}{ill}osa,
+
+tú sola conociste la hora,
 en que Cristo resuci\chord{La}{m}{tó}!
 ¡Oh noche que destruyes el p\chord{Sol}{}{eca}do,
 y lavas todas nuestras \chord{La}{m}{cul}pas!
 ¡Oh noche realmente gl\chord{Sol}{}{ori}osa,
 que recon\chord{Fa}{}{ci}lias, al hombre con su \chord{Mi}{7}{Dio}s!
+
 Esta es la \chord{La}{m}{noc}he,
 en que Cristo ha vencido a la \chord{Sol}{}{mue}rte
 y del in\chord{Fa}{}{fi}erno, retorna victo\chord{Mi}{7}{rio}so (**)
+\end{chorus}
 \chord{La}{m}{En }esta noche acepta Padre \chord{Sol}{}{San}to,
 este sacrificio de ala\chord{La}{m}{ban}za,
 que la I\chord{Do}{}{gl}esia,
 te ofrece por medio de sus mi\chord{La}{m}{nis}tros,
 en la li\chord{Sol}{}{tur}gia solemne de este cirio,
 que es signo de la nueva \chord{La}{m}{luz}.
+
 \chord{Fa}{}{  }Te rogamos, Se\chord{Mi}{7}{ño}r,
+\begin{chorus}
 Que este \chord{La}{m}{cir}io
 ofrecido en honor de tu \chord{Sol}{}{nom}bre
 brille ra\chord{La}{m}{dia}nte.
 Llegue hasta Ti como perfume \chord{Sol}{}{sua}ve,
 se confunda con las estrellas del \chord{La}{m}{cie}lo
+
+Lo encuentre encendido,
 el lucero de la ma\chord{Sol}{}{ña}na,
 esa es\chord{Fa}{}{tr}ella, que no conoce el o\chord{Mi}{7}{cas}o.
+
 Que es Cristo tu \chord{La}{m}{Hij}o, resuci\chord{Sol}{}{tad}o,
 resuci\chord{Fa}{}{ta}do de la \chord{Mi}{7}{mue}rte. (**)
-A\chord{La}{m}{mé}n, A\chord{Sol}{}{mé}n, \chord{La}{m}{Amé}n...;
+A\chord{La}{m}{mé}n, A\chord{Sol}{}{mé}n, \chord{La}{m}{Amé}n...
+\end{chorus}
+<span id=cejilla-original>1</span>

@@ -486,6 +486,13 @@ public:
                         chordline.clear();
                         inicio.clear();
                         final.clear();
+                    } else {
+                        if(line=="<strong>") {
+                            line="\\begin{chorus}";
+                        } else if(line=="</strong>"){
+                            line="\\end{chorus}";
+                        }
+                        res+=line+"\n";
                     }
                 }
             }
