@@ -1,0 +1,188 @@
+% Paquete para crear comandos más personalizados
+\usepackage{xparse}
+
+% Paquete para usar varias columnas
+\usepackage{multicol}
+
+% Paquete para colores personalizados
+\usepackage{xcolor}
+
+% Paquete para la imagen de la portada
+\usepackage{graphicx}
+
+% Paquete para parámetros adicionales
+\usepackage{pgfkeys}
+
+% Paquete para figuras
+\usepackage{tikz}
+
+% Paquete para colocar los acordes encima de las palabras
+\usepackage{stackengine}
+\usepackage{mathtools}
+\stackMath
+
+% Paquete para evitar el salto de página al usar twocolumn
+\usepackage{flushend}
+
+% Paquete para enlaces del índice
+\usepackage{hyperref}
+
+% Paquete para personalizar el interlineado
+\usepackage{setspace}
+
+% Tipografía
+\usepackage[defaultfam,tabular,lining]{montserrat} %% Option 'defaultfam'
+%% only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+\renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
+
+% Directorio de imágenes
+\graphicspath{/home/jesusmuve/Documentos/VSCode/LaTeX/documentos/songs/}
+\def\dirimages{/home/jesusmuve/Documentos/VSCode/LaTeX/documentos/songs/images/}
+
+% Ajustar las 2 columnas
+\setlength{\columnsep}{40pt}   % Espacio entre columnas
+\setlength{\columnseprule}{0pt}  % Grosor de la línea divisoria
+
+
+% Numeración de canciones
+\newcounter{contador_canciones}
+
+% Numeración de secciones
+\newcounter{contador_secciones}
+
+% Cambiar el título del índice
+\renewcommand{\contentsname}{Índice}
+
+% Definir cómo va a aparecer una seccion
+\newcommand{\seccion}[1]{
+    \stepcounter{contador_secciones}%
+    \addcontentsline{toc}{section}{\arabic{contador_secciones}. #1}%
+    \textbf{\Huge{#1}}\\
+    \vspace*{0.25cm}
+}
+
+% Establecer longitud de la sangría a cero
+\setlength{\parindent}{0pt}
+
+% Distancia entre párrafos
+\newcommand{\jump}{\vspace*{0.5cm}}
+
+% Interlineado de las canciones
+\def\interlineadocanciones{1.75}
+
+% Estribillo
+\newenvironment{chorus}{%
+    \bfseries
+}{}
+
+% Color para los acordes
+\definecolor{chordcolor}{RGB}{255,87,51}
+
+% Cambio de columna
+\newcommand{\cambiocolumna}{%
+    \vspace*{\fill}
+    \columnbreak
+
+}
+
+\newcommand{\huecotitulo}{%
+    \phantom{\large \textbf{\arabic{contador_canciones}. \titulo}}\\
+    \phantom{\phantom{\large \textbf{\arabic{contador_canciones}. }}\small \textit{\subtitulo}}
+    \vspace*{-0.5cm}\\
+}
+
+% Formato para los acordes
+\newcommand{\chordstyle}[1]{%
+    \fontsize{8pt}{12pt}\textcolor{chordcolor}{\selectfont\bfseries #1}%
+}
+
+% Definición de acorde
+\newcommand{\chord}[3]{%
+    \renewcommand\useanchorwidth{T}%
+    \stackon{\text{#3\vphantom{é}}}{\text{\chordstyle{#1#2}}}%
+}
+
+
+\NewDocumentEnvironment{cancion}{O{} O{}}{%
+    \stepcounter{contador_canciones}%
+    \addcontentsline{toc}{subsection}{\arabic{contador_canciones}. #1\ (\textit{#2})}%
+    \large \textbf{\arabic{contador_canciones}. #1}\\ % Título
+    \def\titulo{#1}%
+    \phantom{\large \textbf{\arabic{contador_canciones}. }}\small \textit{#2}\vspace*{-0.5cm}\\ % Subtítulo
+    \def\subtitulo{#2}%
+    \begin{spacing}{\interlineadocanciones}%
+}%
+{%
+    \end{spacing}%
+}
+
+\NewDocumentCommand{\doscolumnas}{m O{10cm}}{%
+    \vbox to #2{%
+        \begin{multicols}{2}%
+            #1
+        \end{multicols}
+        \vfil%
+    }
+}
+
+% Parámetros por defecto para portada
+\pgfkeys{
+    /portada/.is family, /portada,
+    titulo/.initial=,
+    autor/.initial=,
+    textcolor/.initial=white,
+    subtitulo/.initial=,
+    image/.initial=imagen_portada.jpeg,
+    boxcolor/.initial=,
+}
+
+% Portada
+\newcommand{\portada}[1][]{ % Argumento opcional
+\pgfkeys{/portada, #1}
+    \thispagestyle{empty}
+    \def\titulo{\pgfkeysvalueof{/portada/titulo}}
+    \def\subtitulo{\pgfkeysvalueof{/portada/subtitulo}}
+    \def\autor{\pgfkeysvalueof{/portada/autor}}
+    \def\fontcolor{\pgfkeysvalueof{/portada/textcolor}}
+    \def\imagen{\dirimages\pgfkeysvalueof{/portada/image}}
+
+    \pgfkeys{/portada, boxcolor/.get=\parametrovalor}%
+    \ifx\parametrovalor\empty%
+        \colorlet{caja}{chordcolor}
+    \else%
+        \definecolor{caja}{HTML}{\parametrovalor}
+    \fi%
+
+    % Figuras
+    \begin{tikzpicture}[remember picture, overlay]
+
+        % Fondo
+        \node[inner sep=0pt, anchor=south west] at (current page.south west) {\includegraphics[width=\paperwidth, height=\paperheight]{\imagen}};
+
+        % Rectángulo
+        % \draw [chordcolor,fill={chordcolor}, rotate=20, opacity=0.9, rounded corners=1cm] (-3,-6.6) rectangle (19.6,-18.6);
+        \draw [caja,fill={caja}, rotate=20, opacity=0.9, rounded corners=1cm] (-3,-11.6) rectangle (20.6,-23.6);
+
+        % Título
+        \node at (8.79,-14) {\centering \fontsize{60}{14}\selectfont \bfseries \textcolor{\fontcolor}{\titulo}};
+
+        % Subtítulo
+        \node at (8.79,-16) {\centering \fontsize{30}{14}\selectfont \textcolor{\fontcolor}{\subtitulo}};
+
+        % Autor
+        \node[rotate=20] at (16.75,-18.3) {\centering \fontsize{15}{14}\selectfont \textcolor{\fontcolor}{\autor}};
+
+        % Para calcular el centro
+        % \draw (current page.north east) -- (current page.south west);
+        % \draw (current page.north west) -- (current page.south east);
+
+        %\fill (8.8,-11.6) circle (10pt); % Dibuja un punto en la coordenada (0,0) con un radio de 2pt
+
+    \end{tikzpicture}
+    \newpage
+    
+}
+
+% Intro
+\newcommand{\intro}[1]{\textbf{Intro:} \chordstyle{#1}}

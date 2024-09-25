@@ -279,7 +279,7 @@ public:
         return res;
     }
 
-    string notePart(const string& word) {
+    string notePart(string& word) {
 
         string note;
         bool eq1=false;
@@ -300,19 +300,20 @@ public:
 
             if(eq1){
                 res=note;
-                res.at(0)=toupper(res.at(0)); //empieza por mayúscula
+                // res.at(0)=toupper(res.at(0)); //empieza por mayúscula
             }
         }
 
         if(res.at(res.length()-1)=='#'){
             res.at(res.length()-1)='\\';
+            word.insert((res.length()-1), "\\");
             res+="#";
         }
 
         return res;
     }
 
-    string variationPart(const string&word) { // Todo lo que no es nota
+    string variationPart(string& word) { // Todo lo que no es nota
         return word.substr(notePart(word).length(), word.length());
     }
 
@@ -396,7 +397,7 @@ public:
         return chord_line;
     }
 
-    string toLatex(string filename) {
+    string toLatex(const string& filename, const string& title, const string& subtitle) {
 
         vector<string> caracteres_especiales={"á", "é", "í", "ó", "ú", "Á", "É", "Í", "Ó", "Ú", "ñ", "Ñ"};
 
@@ -414,15 +415,17 @@ public:
             string chordline;
             bool hay_palabra;
             vector<int> inicio, final;
+            string tab="";
 
             string comando="\\chord";
+            res="\\begin{cancion}["+title+"]["+subtitle+"]%\n";
 
             while(getline(is, line)){
                 if(chordLine(line)){ // Si es una línea de acordes
                     chordline=line; // La guardo en una cadena
                 } else {
 
-                    hay_palabra=false;
+                    hay_palabra=false; // Para saber si una posición está ocupada o no
 
                     if(!chordline.empty()) { // Si había antes una línea de acordes
                         for(int i=0; i<chordline.length(); i++){
@@ -444,58 +447,99 @@ public:
                         // Muestro el resultado obtenido
                         // for(int i=0; i<inicio.size() && i<final.size(); i++){
                         //     cout<<"Inicio: "<<inicio.at(i)<<": "<<chordline.at(inicio.at(i))<<" , Final: "<<final.at(i)<<": "<<chordline.at(final.at(i)-1)<<endl;
-                        // }
-
-                        
+                        // }                        
 
                         // Lo incorporo a la línea que no es de acordes
                         int desplazamiento=0;
                         vector<string> words = split(chordline); // vector de palabras de la línea de acordes
                         int j=0;
 
-                        if(final.at(final.size()-1)>line.size()){ // Si hace falta rellenar con espacios
+                        if(final.at(final.size()-1)>=line.size()){ // Si hace falta rellenar con espacios
                             int dif=final.at(final.size()-1)-line.size();
-                            for(int i=0; i<dif; i++){
+                            for(int i=0; i<=dif; i++){
                                 line+=' ';
                             }
                         }
 
                         string antes,despues;
+                        string parentesis1, parentesis2;
 
                         for(int i=0; i<inicio.size(); i++){
+                            
+                            parentesis1="";
+                            parentesis2="";
 
-                            antes=comando+"{"+notePart(words.at(j))+"}{"+variationPart(words.at(j))+"}"+"{";
-                            j++;
+                            // Tratamiento de paréntesis
+                            if(words.at(j).length()>1){
+                                if(words.at(j).at(0)=='('){
+                                    parentesis1='(';
+                                    words.at(0).erase(words.at(j).begin());
+                                }
+                                if(words.at(j).at(words.at(j).length()-1)==')'){
+                                    parentesis2=')';
+                                    words.at(0).erase(--words.at(j).end());
+                                }
+                            }
+
+                            antes=comando+"{"+parentesis1+notePart(words.at(j))+"}{"+variationPart(words.at(j))+parentesis2+"}"+"{";
+                            j++;                            
+
+                            // Evitar separar caracteres con tilde
+                            if((inicio.at(i)+desplazamiento-1)>0 && (inicio.at(i)+desplazamiento-1)<line.length() && static_cast<int>(line.at(inicio.at(i)+desplazamiento-1))==static_cast<char>(0xC3)){
+                                desplazamiento++;
+                            }
 
                             line.insert(inicio.at(i)+desplazamiento,antes);
                             desplazamiento+=antes.length();
 
                             despues="}";
-
-                            if(static_cast<int>(line.at(final.at(i)+desplazamiento-1))==static_cast<char>(0xC3)){
+                            // Evitar separar caracteres con tilde
+                            if((final.at(i)+desplazamiento-1)>0 && (final.at(i)+desplazamiento-1)<line.length() && static_cast<int>(line.at(final.at(i)+desplazamiento-1))==static_cast<char>(0xC3)){
                                 desplazamiento++;
                             }
 
-
                             line.insert(final.at(i)+desplazamiento, despues);
                             desplazamiento+=despues.length();
-                        }
 
-                        // cout<<"Linea obtenida: "<<line<<endl;
-                        res+=line+"\n";
+                        }
+                        
+
+                        res+="\t"+tab+line+"\\\\\n";
                         chordline.clear();
                         inicio.clear();
                         final.clear();
                     } else {
                         if(line=="<strong>") {
-                            line="\\begin{chorus}";
+                            if(res.length()>2){
+                                res.pop_back();
+                                res.pop_back();
+                                res+="jump\\\\\n";
+                            }
+                            res+="\t\\begin{chorus}%\n";
+                            tab="\t";
                         } else if(line=="</strong>"){
-                            line="\\end{chorus}";
+                            if(res.length()>2){
+                                res.pop_back();
+                                res.pop_back();
+                                res+="jump\\\\\n";
+                            }
+                            res+="\t\\end{chorus}%\n";
+                            tab="";
+                        } else if(line==""){
+                            res+="\t\\jump\n";
+                        }else {
+                            res+=tab+line+"\\\\\n";
                         }
-                        res+=line+"\n";
                     }
                 }
             }
+
+            // Le quito el último salto de línea
+            if(res.at(res.length()-1)=='\\')
+                for(int i=0; i<4; i++)
+                    res.pop_back();
+                    
+            res+="\\end{cancion}%\n";
         } else {
             cerr << "Error abriendo el archivo de entrada: " << filename << endl;
             exit(-2);
