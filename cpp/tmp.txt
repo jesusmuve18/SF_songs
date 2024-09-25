@@ -1,31 +1,65 @@
-\begin{cancion}[Himno a la juventud][]%
-	\begin{chorus}%
-		\chord{Re}{}{¿}Dónde está la ju\chord{Re}{7}{ven}tud,\\
-	    si la tenemos?\\
-		\chord{Sol}{}{¿D}ónde está nuestro\chord{sol}{m}{ val}or?,\\
-		\chord{Re}{}{¿}Dónde la sinceridad \chord{si}{m}{que} alardeamos?\\
-		\chord{mi}{m}{¿D}ónde hemos guardado \chord{La}{}{a }Dios?\\
-		\chord{Re}{}{¿}Es que ya olvidamos ese\chord{Re}{7}{ af}án de lucha\\
-		\chord{Sol}{}{por} hacer un mundo me\chord{sol}{m}{jor?} \\
-		\chord{Re}{}{¿}Es que ya se fue\chord{si}{m}{ de}finitivamente\\
-		\chord{mi}{m}{de }nuestro lad\chord{La}{}{o }el amor\chord{Re}{}{? } \jump\\
-	\end{chorus}%
-	\chord{Re}{}{Ha}cemos dioses de barro\\
-	\chord{Sol}{}{con} nuestra propia pob\chord{Re}{}{re}za.\\
-	\jump
-Buscamos a aquel que cuadre\\
-	\chord{mi}{m}{con} nuestra forma de \chord{La}{}{se}r.\\
-	\chord{Re}{}{Lo} alabamos y deci\chord{Re}{7}{mos}:\\
-	¡Ese\chord{Sol}{}{ sí} que es un gran\chord{sol}{m}{ hom}bre!\\
-	\chord{Re}{}{Pe}ro no, n\chord{Sol}{}{o v}emos \chord{La}{}{qu}e es de c\chord{Re}{}{ar}ne.\\
-	\jump
-	\chord{Re}{}{Vi}vimos un mundo raro,\\
-	\chord{Sol}{}{só}lo queremos pr\chord{Re}{}{og}reso.\\
-	\jump
-Nos importan más los perros\\
-	que los \chord{mi}{m}{niñ}os que no na\chord{La}{}{ce}n.\\
-	\chord{Re}{}{De}spreciamos a la \chord{Re}{7}{gen}te\\
-	\chord{Sol}{}{por}que se pone en el \chord{sol}{m}{medi}o.\\
-	\chord{Re}{}{¡}Ya está bien\chord{Sol}{}{!  } \\
-	¡Vamos a\chord{La}{}{ d}espe\chord{Re}{}{rt}arnos!\\
+\begin{cancion}[Muéstrate (Frozen)][Gisela, Isabel Valls]%
+	\chord{}{Intro:}{      } \chord{Fa\#}{}{   } \chord{Do\#}{}{   } \chord{Fa\#}{}{   } \chord{Si}{}{  } \chord{(}{**)}{    }\\
+	Sient\chord{Fa\#}{}{o q}ue todo me tiembla \chord{Do\#}{}{   }\\
+	Del frío no\chord{Fa\#}{}{ es} \chord{Si}{}{  }\\
+	\chord{Fa\#}{}{Hay} algo en el aire\chord{Do\#}{}{   }\\
+	Como un sueño que \\
+	es\chord{Fa\#}{}{tá} pero no \chord{Si}{}{ve}s\jump\\
+	Sé que \chord{Fa\#}{}{est}ás a\chord{Do\#}{}{hí}\\
+	Como un am\chord{re\#}{m}{igo }fi\chord{Do\#}{}{el }\\
+	Estoy lleg\chord{Si}{}{an}do\chord{Do\#}{}{   }\\
+	Y por fin me encu\chord{Fa\#}{}{ent}ro bie\chord{Si}{}{n }\jump\\
+	Siempre \chord{Do\#}{}{fui} una fortaleza\\
+	Con se\chord{Si}{}{cr}etos que guardar\\
+	\chord{La}{}{Ju}sto como tú\\
+	Pero \chord{Re}{}{no} te escondas \chord{Do\#}{}{má}s\jump\\
+	Muéstr\chord{re\#}{m}{ate } \chord{Si}{}{  }\\
+	Quiero cono\chord{Do\#}{}{cer}te\\
+	Muéstr\chord{re\#}{m}{ate } \chord{Si}{}{  }\\
+	Te toca a \chord{Do\#}{}{tí}\jump\\
+	\chord{re\#}{m}{Eres} quizá aquello\chord{Si}{}{ q}ue siempre\\
+	yo año\chord{Fa\#}{}{ré}  \chord{Do\#}{}{   }  \chord{Do\#}{7}{    }\\
+	Muéstr\chord{re\#}{m}{ate } \chord{Si}{}{  }\\
+	Yo quiero a\chord{re\#}{m}{pren}der\\
+	Ah ah, ah \chord{Sol\#}{}{ah  }    \chord{mi}{m}{   }\\
+	Oh oh, oh oh \chord{La}{}{oh}\jump\\
+	Jam\chord{Sol}{}{ás} lo vi tan claro     \chord{Re}{}{  }\\
+	todo en mí era \chord{Sol}{}{tem}or      \chord{Do}{}{  }\\
+	Per\chord{Sol}{}{o a}quí estoy por algo  \chord{Re}{}{  }\jump\\
+	Yo he nacido\chord{Sol}{}{ po}r una razón\chord{Do}{}{  }\jump\\
+	Siempre\chord{Re}{}{ h}e sido diferente	\\
+	Como d\chord{Do}{}{e }otra realidad\\
+	Ser\chord{La\#}{}{á }el día hoy\jump\\
+Serás tú quien\\
+	me en\chord{Re\#}{}{señ}e mi verdad  \chord{Re}{}{  }\jump\\
+	Muéstr\chord{mi}{m}{ate}   \chord{Do}{}{  }\\
+	Ya no estoy tem\chord{Re}{}{bl}ando\\
+	Aq\chord{mi}{m}{uí} est\chord{Do}{}{oy}\\
+	No hay vuel\chord{Re}{}{ta} atrás\\
+	\chord{mi}{m}{Lle}vo esperando una v\chord{Do}{}{id}a yo\jump\\
+	Quiero en\chord{Sol}{}{ten}der    \chord{Re}{}{  }   \chord{Re}{7}{   }\\
+	Oh, muéstr\chord{mi}{m}{ate}   \chord{Do}{}{  }\\
+	Que ya t\chord{la}{m}{e q}uiero v\chord{La}{}{er}\jump\\
+	\chord{Re}{}{ve}n a mí ya\\
+	\chord{Do}{}{Dé}jame entrar \\
+	N\chord{mi}{m}{o e}speraré\\
+	N\chord{Do}{}{i }un día má\chord{Sol}{}{s  }\jump\\
+	Ven \chord{Re}{}{a }mí ya\\
+	\chord{Do}{}{Dé}jame entrar \\
+	N\chord{mi}{m}{o e}speraré\\
+	N\chord{Do}{}{i }un día m\chord{Sol}{}{ás}         \chord{Si}{}{  }\jump\\
+	Donde e\chord{re\#}{m}{l vi}ento halla el\chord{Sol\#}{}{ mar}\\
+	Por el r\chord{Si}{}{í}o la memori\chord{Fa\#}{}{a v}a\\
+	Ven mi \chord{sol\#}{m}{amor }hacia tu ho\chord{Si}{}{ga}r\jump\\
+aquí estoy\jump\jump\\
+	Muéstr\chord{fa}{m}{ate}    \chord{Do\#}{}{   }\\
+	Qu el poder\chord{Re\#}{}{ te} de fuerza\\
+	Elévat\chord{fa}{m}{e  }    \chord{Do\#}{}{   }\\
+	mucho más a\chord{Re\#}{}{llá} \jump\\
+	\chord{fa}{m}{Has} esperado una vi\chord{Do\#}{}{da }y tú\\
+	Y aquí est\chord{Sol\#}{}{oy (}aquí estoy)      \chord{Re\#}{}{   }   \chord{Re\#}{7}{    }\\
+	Oh, muéstr\chord{fa}{m}{ate}   \chord{Do\#}{}{   }\\
+	\chord{La\#}{}{Ah }ah\chord{La\#}{7}{, ah} ah\\
+	\chord{Do\#}{}{Ah }ah ah a\chord{Mi}{}{h }\\
+	\chord{Sol\#}{}{Ah a}h ah ah\\
 \end{cancion}%

@@ -284,7 +284,7 @@ public:
         string note;
         bool eq1=false;
         int len;
-        string res;
+        string res="";
 
         for(auto n = notes.begin(); n!=notes.end() && !eq1; n++){
             note = *n;
@@ -303,8 +303,9 @@ public:
                 // res.at(0)=toupper(res.at(0)); //empieza por mayúscula
             }
         }
+        
 
-        if(res.at(res.length()-1)=='#'){
+        if(!res.empty() && res.at(res.length()-1)=='#'){
             res.at(res.length()-1)='\\';
             word.insert((res.length()-1), "\\");
             res+="#";
@@ -314,7 +315,8 @@ public:
     }
 
     string variationPart(string& word) { // Todo lo que no es nota
-        return word.substr(notePart(word).length(), word.length());
+        string w=word; //Creo una copia
+        return w.substr(notePart(w).length(), w.length());
     }
 
     bool chordLine(const string & line){
@@ -398,16 +400,12 @@ public:
     }
 
     string toLatex(const string& filename, const string& title, const string& subtitle) {
-
-        vector<string> caracteres_especiales={"á", "é", "í", "ó", "ú", "Á", "É", "Í", "Ó", "Ú", "ñ", "Ñ"};
-
         ifstream is;
         ofstream os;
 
         string res;
 
         is.open(filename);
-
 
         if(is){
             
@@ -422,7 +420,11 @@ public:
 
             while(getline(is, line)){
                 if(chordLine(line)){ // Si es una línea de acordes
-                    chordline=line; // La guardo en una cadena
+                    if(chordline.empty()){
+                        chordline=line; // La guardo en una cadena
+                    } else {
+                        // Había antes una línea de acordes
+                    }
                 } else {
 
                     hay_palabra=false; // Para saber si una posición está ocupada o no
@@ -454,10 +456,11 @@ public:
                         vector<string> words = split(chordline); // vector de palabras de la línea de acordes
                         int j=0;
 
-                        if(final.at(final.size()-1)>=line.size()){ // Si hace falta rellenar con espacios
+                        // Si la línea de acordes es mayor que la línea de abajo
+                        if(!final.empty() && final.at(final.size()-1)>=line.size()){ // Si hace falta rellenar con espacios
                             int dif=final.at(final.size()-1)-line.size();
-                            for(int i=0; i<=dif; i++){
-                                line+=' ';
+                            for(int i=0; i<dif; i++){
+                                line+=" ";
                             }
                         }
 
@@ -473,11 +476,11 @@ public:
                             if(words.at(j).length()>1){
                                 if(words.at(j).at(0)=='('){
                                     parentesis1='(';
-                                    words.at(0).erase(words.at(j).begin());
+                                    words.at(j).erase(words.at(j).begin());
                                 }
                                 if(words.at(j).at(words.at(j).length()-1)==')'){
                                     parentesis2=')';
-                                    words.at(0).erase(--words.at(j).end());
+                                    words.at(j).erase(--words.at(j).end());
                                 }
                             }
 
@@ -487,20 +490,23 @@ public:
                             // Evitar separar caracteres con tilde
                             if((inicio.at(i)+desplazamiento-1)>0 && (inicio.at(i)+desplazamiento-1)<line.length() && static_cast<int>(line.at(inicio.at(i)+desplazamiento-1))==static_cast<char>(0xC3)){
                                 desplazamiento++;
+                                line+=" ";  //Al tener una tilde se cuentan mal los espacios por lo que habrá que añadir uno
                             }
 
                             line.insert(inicio.at(i)+desplazamiento,antes);
                             desplazamiento+=antes.length();
 
                             despues="}";
+
                             // Evitar separar caracteres con tilde
                             if((final.at(i)+desplazamiento-1)>0 && (final.at(i)+desplazamiento-1)<line.length() && static_cast<int>(line.at(final.at(i)+desplazamiento-1))==static_cast<char>(0xC3)){
                                 desplazamiento++;
+                                line+=" ";
                             }
 
+                            // cout<<line<<","<<line.length()<<","<<final.at(i)+desplazamiento<<endl;
                             line.insert(final.at(i)+desplazamiento, despues);
                             desplazamiento+=despues.length();
-
                         }
                         
 
@@ -526,7 +532,11 @@ public:
                             res+="\t\\end{chorus}%\n";
                             tab="";
                         } else if(line==""){
-                            res+="\t\\jump\n";
+                            if(res.length()>2){
+                                res.pop_back();
+                                res.pop_back();
+                                res+="jump\\\\\n";
+                            }
                         }else {
                             res+=tab+line+"\\\\\n";
                         }

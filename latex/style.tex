@@ -80,7 +80,7 @@
 \definecolor{chordcolor}{RGB}{255,87,51}
 
 % Cambio de columna
-\newcommand{\cambiocolumna}{%
+\newcommand{\siguientecolumna}{%
     \vspace*{\fill}
     \columnbreak
 
@@ -100,7 +100,7 @@
 % Definición de acorde
 \newcommand{\chord}[3]{%
     \renewcommand\useanchorwidth{T}%
-    \stackon{\text{#3\vphantom{é}}}{\text{\chordstyle{#1#2}}}%
+    \stackon{\text{#3\vphantom{(}}}{\text{\chordstyle{\spaceskip=0.5cm\relax#1#2}\vphantom{(}}}%
 }
 
 
@@ -112,6 +112,7 @@
     \phantom{\large \textbf{\arabic{contador_canciones}. }}\small \textit{#2}\vspace*{-0.5cm}\\ % Subtítulo
     \def\subtitulo{#2}%
     \begin{spacing}{\interlineadocanciones}%
+        \obeyspaces\spaceskip=0.15cm\relax% Personaliza el ancho de los espacios en blanco
 }%
 {%
     \end{spacing}%

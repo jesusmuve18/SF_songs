@@ -18,7 +18,7 @@ obtener_subcarpetas() {
 dir_data=./cpp/songs            # Directorio origen
 dir_out=./latex/songs           # Directorio destino
 script=./cpp/to_latex           # Programa
-general=0-general               # Carpeta por defecto
+general=0-General               # Carpeta por defecto
 
 # Contadores
 total_files=0
@@ -35,10 +35,14 @@ do
         # echo "------------------------------------------"
         echo $file  
 
+        if ! test -d $dir_out/$general; then
+            echo "Creando el directorio"
+            mkdir $dir_out/$general
+        fi
         # Eliminar la extensión '.dat' de $file
         file=$(echo "$file" | sed 's/\.dat$//')
-        touch $dir_out/$sub_dir/$file.tex
-        $script $dir_data/$file.dat > $dir_out/0-General/$file.tex
+        touch $dir_out/$general/$file.tex
+        $script $dir_data/$file.dat > $dir_out/$general/$file.tex
     fi
 done
 
