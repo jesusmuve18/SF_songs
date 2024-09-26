@@ -399,6 +399,126 @@ public:
         return chord_line;
     }
 
+    string unirLineas(const string& linea1, string linea2, string t="\t", string endline="\\\\\n") {
+        string res; // Resultado
+        vector<int> inicio, final;
+        string tab="";
+        bool hay_palabra=false; // Para saber si una posición está ocupada o no
+        string comando="\\chord";
+
+        if(!linea1.empty()) { // Si había antes una línea de acordes
+            for(int i=0; i<linea1.length(); i++){
+                if(linea1.at(i)!=' '){ // Se encuentra una posición "ocupada"
+                    if(!hay_palabra){ // Si no había antes una palabra
+                        hay_palabra=true;
+                        inicio.push_back(i); // guardo la posición de inicio
+                    }
+                } else {
+                    if(hay_palabra){
+                        hay_palabra=false;
+                        final.push_back(i); // guardo la posición de final
+                    }
+                }
+            } if(inicio.size()>final.size()){
+                final.push_back(linea1.length()); // Si el final de línea es final de palabra
+            }
+
+            // Muestro el resultado obtenido
+            // for(int i=0; i<inicio.size() && i<final.size(); i++){
+            //     cout<<"Inicio: "<<inicio.at(i)<<": "<<linea1.at(inicio.at(i))<<" , Final: "<<final.at(i)<<": "<<linea1.at(final.at(i)-1)<<endl;
+            // }                        
+
+            // Lo incorporo a la línea que no es de acordes
+            int desplazamiento=0;
+            vector<string> words = split(linea1); // vector de palabras de la línea de acordes
+            int j=0;
+
+            // Si la línea de acordes es mayor que la línea de abajo
+            if(!final.empty() && final.at(final.size()-1)>=linea2.size()){ // Si hace falta rellenar con espacios
+                int dif=final.at(final.size()-1)-linea2.size();
+                for(int i=0; i<dif; i++){
+                    linea2+=" ";
+                }
+            }
+
+            string antes,despues;
+            string parentesis1, parentesis2;
+
+            for(int i=0; i<inicio.size(); i++){
+                
+                parentesis1="";
+                parentesis2="";
+
+                // Tratamiento de paréntesis
+                if(words.at(j).length()>1){
+                    if(words.at(j).at(0)=='('){
+                        parentesis1='(';
+                        words.at(j).erase(words.at(j).begin());
+                    }
+                    if(words.at(j).at(words.at(j).length()-1)==')'){
+                        parentesis2=')';
+                        words.at(j).erase(--words.at(j).end());
+                    }
+                }
+
+                antes=comando+"{"+parentesis1+notePart(words.at(j))+"}{"+variationPart(words.at(j))+parentesis2+"}"+"{";
+                j++;                            
+
+                // Evitar separar caracteres con tilde
+                if((inicio.at(i)+desplazamiento-1)>0 && (inicio.at(i)+desplazamiento-1)<linea2.length() && static_cast<int>(linea2.at(inicio.at(i)+desplazamiento-1))==static_cast<char>(0xC3)){
+                    desplazamiento++;
+                    linea2+=" ";  //Al tener una tilde se cuentan mal los espacios por lo que habrá que añadir uno
+                }
+
+                linea2.insert(inicio.at(i)+desplazamiento,antes);
+                desplazamiento+=antes.length();
+
+                despues="}";
+
+                // Evitar separar caracteres con tilde
+                if((final.at(i)+desplazamiento-1)>0 && (final.at(i)+desplazamiento-1)<linea2.length() && static_cast<int>(linea2.at(final.at(i)+desplazamiento-1))==static_cast<char>(0xC3)){
+                    desplazamiento++;
+                    linea2+=" ";
+                }
+
+                // cout<<line<<","<<line.length()<<","<<final.at(i)+desplazamiento<<endl;
+                linea2.insert(final.at(i)+desplazamiento, despues);
+                desplazamiento+=despues.length();
+            }
+            
+
+            res+=t+tab+linea2+endline;
+        } else {
+            if(linea2=="<strong>") {
+                if(res.length()>2){
+                    res.pop_back();
+                    res.pop_back();
+                    res+="\\jump"+endline;
+                }
+                res+=t+"\\begin{chorus}%\n";
+                tab="\t";
+            } else if(linea2=="</strong>"){
+                if(res.length()>2){
+                    res.pop_back();
+                    res.pop_back();
+                    res+="\\jump"+endline;
+                }
+                res+=t+"\\end{chorus}%\n";
+                tab="";
+            } else if(linea2==""){
+                if(res.length()>2){
+                    res.pop_back();
+                    res.pop_back();
+                    res+="\\jump"+endline;
+                }
+            }else {
+                res+=tab+linea2+endline;
+            }
+        }
+
+        return res;
+    }
+
     string toLatex(const string& filename, const string& title, const string& subtitle) {
         ifstream is;
         ofstream os;
@@ -411,141 +531,51 @@ public:
             
             string line;
             string chordline;
-            bool hay_palabra;
-            vector<int> inicio, final;
-            string tab="";
 
             string comando="\\chord";
             res="\\begin{cancion}["+title+"]["+subtitle+"]%\n";
 
             while(getline(is, line)){
                 if(chordLine(line)){ // Si es una línea de acordes
-                    if(chordline.empty()){
+                    if(chordline.empty()){ 
                         chordline=line; // La guardo en una cadena
-                    } else {
-                        // Había antes una línea de acordes
-                    }
-                } else {
+                    } else { // Ya había una línea de acordes
 
-                    hay_palabra=false; // Para saber si una posición está ocupada o no
+                        vector<string> chordlines={chordline,line};
 
-                    if(!chordline.empty()) { // Si había antes una línea de acordes
-                        for(int i=0; i<chordline.length(); i++){
-                            if(chordline.at(i)!=' '){ // Se encuentra una posición "ocupada"
-                                if(!hay_palabra){ // Si no había antes una palabra
-                                    hay_palabra=true;
-                                    inicio.push_back(i); // guardo la posición de inicio
-                                }
-                            } else {
-                                if(hay_palabra){
-                                    hay_palabra=false;
-                                    final.push_back(i); // guardo la posición de final
-                                }
-                            }
-                        } if(inicio.size()>final.size()){
-                            final.push_back(chordline.length()); // Si el final de línea es final de palabra
+                        while(getline(is,line) && chordLine(line)){
+                            chordlines.push_back(line);
                         }
 
-                        // Muestro el resultado obtenido
-                        // for(int i=0; i<inicio.size() && i<final.size(); i++){
-                        //     cout<<"Inicio: "<<inicio.at(i)<<": "<<chordline.at(inicio.at(i))<<" , Final: "<<final.at(i)<<": "<<chordline.at(final.at(i)-1)<<endl;
-                        // }                        
+                        for(int i=0; i<chordlines.size()-1; i++){
+                            res+="{\\transparent{0}{"+unirLineas(chordlines.at(i), line, "", "");
 
-                        // Lo incorporo a la línea que no es de acordes
-                        int desplazamiento=0;
-                        vector<string> words = split(chordline); // vector de palabras de la línea de acordes
-                        int j=0;
-
-                        // Si la línea de acordes es mayor que la línea de abajo
-                        if(!final.empty() && final.at(final.size()-1)>=line.size()){ // Si hace falta rellenar con espacios
-                            int dif=final.at(final.size()-1)-line.size();
-                            for(int i=0; i<dif; i++){
-                                line+=" ";
-                            }
-                        }
-
-                        string antes,despues;
-                        string parentesis1, parentesis2;
-
-                        for(int i=0; i<inicio.size(); i++){
+                            // // Le quito el último salto de línea
+                            // if(!res.empty() && res.at(res.length()-1)=='\n'){
+                            //     for(int i=0; i<6; i++)  // Le quito "\\\\\n"
+                            //         res.pop_back();
+                            // }
                             
-                            parentesis1="";
-                            parentesis2="";
-
-                            // Tratamiento de paréntesis
-                            if(words.at(j).length()>1){
-                                if(words.at(j).at(0)=='('){
-                                    parentesis1='(';
-                                    words.at(j).erase(words.at(j).begin());
-                                }
-                                if(words.at(j).at(words.at(j).length()-1)==')'){
-                                    parentesis2=')';
-                                    words.at(j).erase(--words.at(j).end());
-                                }
-                            }
-
-                            antes=comando+"{"+parentesis1+notePart(words.at(j))+"}{"+variationPart(words.at(j))+parentesis2+"}"+"{";
-                            j++;                            
-
-                            // Evitar separar caracteres con tilde
-                            if((inicio.at(i)+desplazamiento-1)>0 && (inicio.at(i)+desplazamiento-1)<line.length() && static_cast<int>(line.at(inicio.at(i)+desplazamiento-1))==static_cast<char>(0xC3)){
-                                desplazamiento++;
-                                line+=" ";  //Al tener una tilde se cuentan mal los espacios por lo que habrá que añadir uno
-                            }
-
-                            line.insert(inicio.at(i)+desplazamiento,antes);
-                            desplazamiento+=antes.length();
-
-                            despues="}";
-
-                            // Evitar separar caracteres con tilde
-                            if((final.at(i)+desplazamiento-1)>0 && (final.at(i)+desplazamiento-1)<line.length() && static_cast<int>(line.at(final.at(i)+desplazamiento-1))==static_cast<char>(0xC3)){
-                                desplazamiento++;
-                                line+=" ";
-                            }
-
-                            // cout<<line<<","<<line.length()<<","<<final.at(i)+desplazamiento<<endl;
-                            line.insert(final.at(i)+desplazamiento, despues);
-                            desplazamiento+=despues.length();
+                            res+="}}\\vspace*{-0.4cm}\\\\\n";
                         }
+
+                        res+=unirLineas(chordlines.at(chordlines.size()-1), line);
                         
-
-                        res+="\t"+tab+line+"\\\\\n";
                         chordline.clear();
-                        inicio.clear();
-                        final.clear();
-                    } else {
-                        if(line=="<strong>") {
-                            if(res.length()>2){
-                                res.pop_back();
-                                res.pop_back();
-                                res+="jump\\\\\n";
-                            }
-                            res+="\t\\begin{chorus}%\n";
-                            tab="\t";
-                        } else if(line=="</strong>"){
-                            if(res.length()>2){
-                                res.pop_back();
-                                res.pop_back();
-                                res+="jump\\\\\n";
-                            }
-                            res+="\t\\end{chorus}%\n";
-                            tab="";
-                        } else if(line==""){
-                            if(res.length()>2){
-                                res.pop_back();
-                                res.pop_back();
-                                res+="jump\\\\\n";
-                            }
-                        }else {
-                            res+=tab+line+"\\\\\n";
-                        }
                     }
+                } else { 
+                    res+=unirLineas(chordline,line);
+                    chordline.clear();
                 }
+
+            }
+
+            if(!chordline.empty()){
+                res+=unirLineas(chordline,"");
             }
 
             // Le quito el último salto de línea
-            if(res.at(res.length()-1)=='\\')
+            if(!res.empty() && res.at(res.length()-1)=='\\')
                 for(int i=0; i<4; i++)
                     res.pop_back();
                     

@@ -30,6 +30,12 @@
 % Paquete para personalizar el interlineado
 \usepackage{setspace}
 
+% Paquete para eliminar líneas vacías cuando hay varias líneas de acordes
+\usepackage{transparent}
+
+% Paquete para hacer comprobaciones de parámetros
+\usepackage{xifthen}
+
 % Tipografía
 \usepackage[defaultfam,tabular,lining]{montserrat} %% Option 'defaultfam'
 %% only if the base font of the document is to be sans serif
@@ -57,9 +63,11 @@
 % Definir cómo va a aparecer una seccion
 \newcommand{\seccion}[1]{
     \stepcounter{contador_secciones}%
+    \setcounter{contador_canciones}{0}% El contador de canciones se reinicia en cada sección
     \addcontentsline{toc}{section}{\arabic{contador_secciones}. #1}%
     \textbf{\Huge{#1}}\\
     \vspace*{0.25cm}
+    
 }
 
 % Establecer longitud de la sangría a cero
@@ -100,13 +108,15 @@
 % Definición de acorde
 \newcommand{\chord}[3]{%
     \renewcommand\useanchorwidth{T}%
-    \stackon{\text{#3\vphantom{(}}}{\text{\chordstyle{\spaceskip=0.5cm\relax#1#2}\vphantom{(}}}%
+    \stackon{\text{#3\vphantom{(}}}{\text{\chordstyle{\transparent{1}\spaceskip=0.5cm\relax#1#2}\vphantom{(}}}%
 }
 
 
 \NewDocumentEnvironment{cancion}{O{} O{}}{%
     \stepcounter{contador_canciones}%
-    \addcontentsline{toc}{subsection}{\arabic{contador_canciones}. #1\ (\textit{#2})}%
+    \ifthenelse{\isempty{#2}}%
+    {\addcontentsline{toc}{subsection}{\arabic{contador_canciones}. #1\ }} % Si no tiene autor especificado
+    {\addcontentsline{toc}{subsection}{\arabic{contador_canciones}. #1\ (\textit{#2})}} % Si tiene autor especificado
     \large \textbf{\arabic{contador_canciones}. #1}\\ % Título
     \def\titulo{#1}%
     \phantom{\large \textbf{\arabic{contador_canciones}. }}\small \textit{#2}\vspace*{-0.5cm}\\ % Subtítulo
