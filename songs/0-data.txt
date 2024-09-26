@@ -260,6 +260,10 @@
 <li><a href="./songs/Todos_somos_un_cachito_de_Dios-Brotes_de_Olivo.html"><span id="song-title">Todos somos un cachito de Dios</span> <span id="author">Brotes de Olivo</span></a></li><br>
 <li><a href="./songs/Tú,_mi_raíz-Ixcís.html"><span id="song-title">Tú, mi raíz</span> <span id="author">Ixcís</span></a></li><br>
 <li><a href="./songs/Un_nuevo_sitio_disponed.html"><span id="song-title">Un nuevo sitio disponed</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Un_poco_de_fe-Ixcís.html"><span id="song-title">Un poco de fe</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Un_pueblo_que_camina.html"><span id="song-title">Un pueblo que camina</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Una_espiga.html"><span id="song-title">Una espiga</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Una_lámpara_encendida-Alberto_y_Emilia.html"><span id="song-title">Una lámpara encendida</span> <span id="author">Alberto y Emilia</span></a></li><br>
 </ol>
 <h2 id="Dios mío y todas mis cosas">Dios mío y todas mis cosas</h2>
 <ol>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un poco de fe</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <!-- <a href="#"><li>Opción 3</li></a> -->
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Un poco de fe</div>
+                    <div id="artist">Ixcís</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">La </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><strong>
+<b>La</b>     <b>Mi</b>      <b>fa# m</b>
+No, no necesito más
+   <b>do# m</b>     <b>Re</b> <b>Mi</b>     <b>La</b> <b>Mi</b>
+No necesito más, solo fe
+<b>La</b>     <b>Mi</b>       <b>fa# m</b>
+No, no necesito más
+       <b>do# m</b>          <b>Re</b>
+para andar sobre los mares
+               <b>La</b> <b>Mi</b>
+que un poco de fe.
+</strong>
+<b>La</b>                  <b>fa# m</b>
+Vivo en la contradicción
+                      <b>Re</b>
+de no andar por tus caminos,
+                      <b>La</b>
+aunque sé que es lo mejor.
+                       <b>fa# m</b>
+No, no hago caso, me resisto,
+                 <b>Re</b>
+no ahondo, me despisto,
+                     <b>La</b>
+ni siquiera sé quién soy.
+<b>Do# 7</b>                 <b>fa# m</b>
+Que tu luz me ayude a ver
+<b>Re</b>                     <b>La</b>
+el sendero que he de andar
+                    <b>Mi</b>
+para llegar a mi verdad.
+<b>Do# 7</b>                 <b>fa# m</b>
+Hazme, Padre, comprender 
+<b>Re</b>              <b>La</b>
+que nada es imposible.
+                 <b>Mi</b>
+Puedo volver a nacer.
+<strong>
+<b>La</b>     <b>Mi</b>      <b>fa# m</b>
+No, no necesito más
+   <b>do# m</b>     <b>Re</b> <b>Mi</b>     <b>La</b> <b>Mi</b>
+No necesito más, solo fe
+<b>La</b>     <b>Mi</b>       <b>fa# m</b>
+No, no necesito más
+       <b>do# m</b>          <b>Re</b>
+para andar sobre los mares
+               <b>La</b> <b>Mi</b>
+que un poco de fe.
+</strong>
+<b>La</b>                  <b>fa# m</b>
+Vivo en la contradicción
+                  <b>Re</b>
+de no ver a mis hermanos
+                  <b>La</b>
+y me cierro en mi yo.
+                    <b>fa# m</b>
+Lucho, me canso y desisto.
+                     <b>Re</b>
+No me encuentro a mí mismo
+                  <b>La</b>
+y me siento aún peor.
+ni siquiera sé quién soy.
+<b>Do# 7</b>                 <b>fa# m</b>
+Que tu luz me ayude a ver
+<b>Re</b>                     <b>La</b>
+el sendero que he de andar
+                    <b>Mi</b>
+para llegar a mi verdad.
+<b>Do# 7</b>                 <b>fa# m</b>
+Hazme, Padre, comprender 
+<b>Re</b>              <b>La</b>
+que nada es imposible.
+                 <b>Mi</b>
+Puedo volver a nacer.
+<strong>
+<b>La</b>     <b>Mi</b>      <b>fa# m</b>
+No, no necesito más
+   <b>do# m</b>     <b>Re</b> <b>Mi</b>     <b>La</b> <b>Mi</b>
+No necesito más, solo fe
+<b>La</b>     <b>Mi</b>       <b>fa# m</b>
+No, no necesito más
+       <b>do# m</b>          <b>Re</b>
+para andar sobre los mares
+               <b>La</b> <b>Mi</b>
+que un poco de fe.
+</strong>
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

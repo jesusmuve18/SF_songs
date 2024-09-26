@@ -115,14 +115,16 @@
 \NewDocumentEnvironment{cancion}{O{} O{}}{%
     \stepcounter{contador_canciones}%
     \ifthenelse{\isempty{#2}}%
-    {\addcontentsline{toc}{subsection}{\arabic{contador_canciones}. #1\ }} % Si no tiene autor especificado
-    {\addcontentsline{toc}{subsection}{\arabic{contador_canciones}. #1\ (\textit{#2})}} % Si tiene autor especificado
+        {\addcontentsline{toc}{subsection}{\arabic{contador_canciones}. #1\ }} % Si no tiene autor especificado
+        {\addcontentsline{toc}{subsection}{\arabic{contador_canciones}. #1\ (\textit{#2})}} % Si tiene autor especificado
     \large \textbf{\arabic{contador_canciones}. #1}\\ % Título
     \def\titulo{#1}%
-    \phantom{\large \textbf{\arabic{contador_canciones}. }}\small \textit{#2}\vspace*{-0.5cm}\\ % Subtítulo
     \def\subtitulo{#2}%
+    \phantom{\large \textbf{\arabic{contador_canciones}. }}\small \textit{#2}%
+    \vspace{-0.5cm}
     \begin{spacing}{\interlineadocanciones}%
-        \obeyspaces\spaceskip=0.15cm\relax% Personaliza el ancho de los espacios en blanco
+        \obeyspaces\spaceskip=0.11cm\relax% Personaliza el ancho de los espacios en blanco
+        
 }%
 {%
     \end{spacing}%

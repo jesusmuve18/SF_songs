@@ -19,6 +19,9 @@ dir_data=./cpp/songs            # Directorio origen
 dir_out=./latex/songs           # Directorio destino
 script=./cpp/to_latex           # Programa
 general=0-General               # Carpeta por defecto
+index=./latex/songs/index.tex
+
+echo > $index  # Vacío el índice
 
 # Contadores
 total_files=0
@@ -43,6 +46,7 @@ do
         file=$(echo "$file" | sed 's/\.dat$//')
         touch $dir_out/$general/$file.tex
         $script $dir_data/$file.dat > $dir_out/$general/$file.tex
+        echo \\input{$dir_out/$general/$file.tex} >> $index
     fi
 done
 
@@ -71,6 +75,7 @@ do
             file=$(echo "$file" | sed 's/\.dat$//')
             touch $dir_out/$sub_dir/$file.tex
             $script $dir_data/$sub_dir/$file.dat > $dir_out/$sub_dir/$file.tex
+            echo \\input{$dir_out/$sub_dir/$file.tex} >> $index
         fi
     done
 done
