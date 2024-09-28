@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ven, Señor</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <!-- <a href="#"><li>Opción 3</li></a> -->
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Ven, Señor</div>
+                    <div id="artist"></div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Mi </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><strong>
+<b>Mi</b>
+Ven, ven, Señor, no tardes,
+<b>La</b>                 <b>Si</b>
+ven, ven, que te esperamos.
+<b>Mi</b>
+Ven, ven, Señor, no tardes.
+<b>La</b>      <b>Si</b>    <b>Mi</b>
+Ven pronto, Señor.
+</strong>
+   <b>Mi</b>
+El mundo muere de frío,
+   <b>Si</b>               <b>Mi</b>
+el alma perdió el calor,
+
+los hombres no son hermanos,
+   <b>Fa#</b>             <b>Si</b>
+el mundo no tiene amor.
+
+  <b>Mi</b>
+Envuelto en sombría noche,
+   <b>Si</b>                 <b>Mi</b>
+el mundo, sin paz, no ve;
+
+buscando va una esperanza,
+   <b>Fa#</b>              <b>Si</b>
+buscando, Señor, tu fe.
+
+   <b>Mi</b>
+Al mundo le falta vida,
+   <b>Si</b>             <b>Mi</b>
+al mundo le falta luz;
+
+al mundo le falta el cielo,
+   <b>Fa#</b>             <b>Si</b>
+al mundo le faltas Tú.
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

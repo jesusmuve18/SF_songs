@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vienen con alegría</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <!-- <a href="#"><li>Opción 3</li></a> -->
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Vienen con alegría</div>
+                    <div id="artist"></div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Re </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><strong>
+<b>Re</b>         <b>La 7</b>  <b>Re</b>
+Vienen con alegría, Señor, cantando
+           <b>La 7</b>  <b>Re</b>
+vienen con alegría, Señor,
+<b>Sol</b>                    <b>Re</b>
+los que caminan por la vida, Señor,
+   <b>Mi</b>               <b>La</b>
+sembrando tu paz y amor.(**)
+</strong>
+<b>Re</b>                        <b>La 7</b>
+Vienen trayendo la esperanza
+                           <b>Re</b>
+a un mundo cargado de ansiedad,
+                                   <b>La 7</b>
+a un mundo que busca y que no alcanza
+                         <b>Re</b>
+caminos de amor y de amistad.
+
+<b>Re</b>                          <b>La 7</b>
+Vienen trayendo entre sus manos
+                             <b>Re</b>
+esfuerzos de hermanos por la paz,
+                         <b>La 7</b>
+deseos de un mundo más humano
+                           <b>Re</b>
+que nacen del bien y la verdad.
+
+<b>Re</b>                     <b>La 7</b>
+Cuando el odio y la violencia
+                     <b>Re</b>
+aniden en nuestro corazón
+                            <b>La 7</b>
+el mundo sabrá que por herencia
+                          <b>Re</b>
+le aguardan tristezas y dolor.
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

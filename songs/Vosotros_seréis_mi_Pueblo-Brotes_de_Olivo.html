@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vosotros seréis mi Pueblo</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <!-- <a href="#"><li>Opción 3</li></a> -->
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Vosotros seréis mi Pueblo</div>
+                    <div id="artist">Brotes de Olivo</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">la m</span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>la m</b>              <b>Re</b>
+La gente de todo el pueblo
+        <b>la m</b>
+en el destierro se dispersó,
+     <b>Fa</b> <b>Sol</b> <b>mi m</b> <b>la m</b>
+se sintió sin pastor.
+                <b>Re</b>
+El dolor, la lejanía,
+        <b>la m</b>
+a todos ellos hizo creer
+    <b>Fa</b> <b>Sol</b> <b>mi m</b> <b>la m</b>
+que Dios les olvidó.
+            <b>Fa</b>     <b>Sol</b>
+Y en su tristeza decían,
+    <b>mi m</b>                   <b>la m</b>
+¿tendrás, de nosotros, compasión?
+  <b>Fa</b> <b>Sol</b> <b>mi m</b>     <b>La</b>
+Y Dios les respondió:
+
+         <b>La</b>    <b>Sol</b>       <b>La</b>      <b>Re</b>
+"Os reuniré de entre los pueblos,
+   <b>si m</b>      <b>do# m</b>   <b>Re</b>  <b>Mi</b>
+vendréis de todo lugar,
+     <b>La</b>    <b>si m</b>      <b>La</b>
+os daré un sólo corazón
+       <b>fa# m</b>   <b>do# m</b>       <b>Re</b>    <b>Mi</b> <b>Mi 7</b>
+y un Espíritu nuevo os haré llegar.
+      <b>La</b>          <b>Re</b> <b>Mi</b> <b>La</b>     <b>Re</b>
+Arrancaré el corazón de piedra,
+ <b>Mi</b>    <b>La</b>    <b>Re</b>          <b>Do#</b>
+y os daré de carne un corazón.
+  <b>fa# m</b>      <b>Re</b>  <b>Mi</b> <b>La</b>
+Vosotros seréis mi pueblo, 
+           <b>Mi</b>      <b>fa# m</b>  <b>Mi</b>
+vosotros seréis mi pueblo
+  <b>Re</b>   <b>Mi</b>         <b>La</b>
+y yo seré vuestro Dios."
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

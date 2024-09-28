@@ -264,6 +264,18 @@
 <li><a href="./songs/Un_pueblo_que_camina.html"><span id="song-title">Un pueblo que camina</span> <span id="author"></span></a></li><br>
 <li><a href="./songs/Una_espiga.html"><span id="song-title">Una espiga</span> <span id="author"></span></a></li><br>
 <li><a href="./songs/Una_lámpara_encendida-Alberto_y_Emilia.html"><span id="song-title">Una lámpara encendida</span> <span id="author">Alberto y Emilia</span></a></li><br>
+<li><a href="./songs/Va_a_morir_un_hombre-Brotes_de_Olivo.html"><span id="song-title">Va a morir un hombre</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Vale_la_pena_seguir-Brotes_de_Olivo.html"><span id="song-title">Vale la pena seguir</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Ven,_Padre-Brotes_de_Olivo.html"><span id="song-title">Ven, Padre</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Ven,_Señor.html"><span id="song-title">Ven, Señor</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Vienen_con_alegría.html"><span id="song-title">Vienen con alegría</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Virgen_de_la_Navidad.html"><span id="song-title">Virgen de la Navidad</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Vive_lo_que_cantas-Ixcís.html"><span id="song-title">Vive lo que cantas</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Volar_con_alas_blancas-Alberto_y_Emilia.html"><span id="song-title">Volar con alas blancas</span> <span id="author">Alberto y Emilia</span></a></li><br>
+<li><a href="./songs/Volverá-Alberto_y_Emilia.html"><span id="song-title">Volverá</span> <span id="author">Alberto y Emilia</span></a></li><br>
+<li><a href="./songs/Vosotros_seréis_mi_Pueblo-Brotes_de_Olivo.html"><span id="song-title">Vosotros seréis mi Pueblo</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Y_yo_que_tengo_voz-Bata.html"><span id="song-title">Y yo que tengo voz</span> <span id="author">Bata</span></a></li><br>
+<li><a href="./songs/Yo_celebraré.html"><span id="song-title">Yo celebraré</span> <span id="author"></span></a></li><br>
 </ol>
 <h2 id="Dios mío y todas mis cosas">Dios mío y todas mis cosas</h2>
 <ol>

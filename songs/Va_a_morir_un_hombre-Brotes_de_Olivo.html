@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Va a morir un hombre</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <!-- <a href="#"><li>Opción 3</li></a> -->
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Va a morir un hombre</div>
+                    <div id="artist">Brotes de Olivo</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Mi </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>Mi</b>                            <b>sol# m</b>
+Va a morir un hombre en la montaña
+   <b>La</b>        <b>Si 7</b>        <b>Mi</b>      <b>La</b> <b>Si 7</b>
+de los males del mundo culpable.
+<b>Mi</b>                     <b>sol# m</b>
+El, rico, pudo nacer y vivir
+ <b>La</b>        <b>Si 7</b>          <b>Mi</b>
+y optó por ser pobre, miserable.
+<b>sol# m</b>                      <b>do# m</b>
+Pidiendo que se amaran los hombres,
+<b>La</b>         <b>Si 7</b>        <b>Mi</b>
+anduvo los caminos incansable.
+<b>fa# m</b>        <b>Si 7</b>             <b>Mi</b>
+Que gran desastre hubiera ocurrido
+<b>La</b>            <b>Si 7</b>        <b>Mi</b>
+si hubieran querido escucharle.
+
+<b>Mi</b>                           <b>sol# m</b>
+Dicen que el hombre que va a morir
+   <b>La</b>        <b>Si 7</b>           <b>Mi</b>    <b>La</b> <b>Si 7</b>
+se acerca hasta otros para hablarles
+<b>Mi</b>                       <b>sol# m</b>
+de cosas como cambiar la vida
+<b>La</b>         <b>Si 7</b>             <b>Mi</b>
+y a muchos pide que le acompañen.
+<b>sol# m</b>                      <b>do# m</b>
+En los caminos pidió a los hombres
+<b>La</b>             <b>Si 7</b>        <b>Mi</b>
+que una tierra de amor anunciasen.
+<b>fa# m</b>        <b>Si 7</b>               <b>Mi</b>
+Mas, esto no es bueno para el pueblo,
+<b>La</b>         <b>Si 7</b>       <b>Mi</b>
+es bueno dejar crucificarle.
+
+<b>Mi</b>
+Se encarna con el que sufre,
+      <b>Si 7</b>
+no condena nunca a nadie,
+<b>La</b>                 <b>Mi</b>
+vino a traernos la vida,
+     <b>La</b>  <b>Si 7</b>      <b>Mi</b>
+¡por eso quieren matarle!
+
+<b>Mi</b>
+Delata a los engreídos,
+      <b>Si 7</b>
+cura a los que tienen males.
+<b>La</b>               <b>Mi</b>
+Pide vivir como lirios,
+     <b>La</b>   <b>Si 7</b>      <b>Mi</b>
+¡por eso quieren matarle!
+
+<b>Mi</b>
+Y a quienes guardan la ley
+      <b>Si 7</b>
+sin que el hombre le importase,
+<b>La</b>              <b>Mi</b>
+llama sepulcros blanqueados,
+     <b>La</b>   <b>Si 7</b>      <b>Mi</b>
+¡por eso quieren matarle!
+
+<b>Mi</b>
+Y a los pobres que han sufrido
+      <b>Si 7</b>
+se desvive por curarles.
+<b>La</b>              <b>Mi</b>
+Pide que todos se amen,
+     <b>La</b>    <b>Si 7</b>     <b>Mi</b>
+¡por eso quieren matarle!
+
+<b>Mi</b>
+Padece con el sediento
+      <b>Si 7</b>
+y con los que tienen hambre.
+<b>La</b>               <b>Mi</b>
+Viene a traernos la Paz
+     <b>La</b>  <b>Si 7</b>       <b>Mi</b>
+¡por eso quieren matarle!
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>
