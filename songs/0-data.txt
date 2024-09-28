@@ -342,7 +342,47 @@
 <li><a href="./songs/Hola,_Dios-Brotes_de_Olivo.html"><span id="song-title">Hola, Dios</span> <span id="author">Brotes de Olivo</span></a></li><br>
 <li><a href="./songs/In_manus_tuas,_Pater-Taizé.html"><span id="song-title">In manus tuas, Pater</span> <span id="author">Taizé</span></a></li><br>
 <li><a href="./songs/In_resurrectione_tua-Taizé.html"><span id="song-title">In resurrectione tua</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Jesucristo_no_permitas.html"><span id="song-title">Jesucristo no permitas</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Jesus_remember_me-Taizé.html"><span id="song-title">Jesus remember me</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Jubilate,_Alleluia-Taizé.html"><span id="song-title">Jubilate, Alleluia</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Jubilate_Coeli-Taizé.html"><span id="song-title">Jubilate Coeli</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Jubilate_Deo-Taizé.html"><span id="song-title">Jubilate Deo</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Jubilate,_servite-Taizé.html"><span id="song-title">Jubilate, servite</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Kyrie_eleison_10-Taizé.html"><span id="song-title">Kyrie eleison 10</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Kyrie_eleison_13-Taizé.html"><span id="song-title">Kyrie eleison 13</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Kyrie_eleison_1-Taizé.html"><span id="song-title">Kyrie eleison 1</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/La_luz_y_las_tinieblas_(El_verbo,_la_luz)-Brotes_de_Olivo.html"><span id="song-title">La luz y las tinieblas (El verbo, la luz)</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/La_mies_es_mucha-Brotes_de_Olivo.html"><span id="song-title">La mies es mucha</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/La_misericordia_del_Señor-Taizé.html"><span id="song-title">La misericordia del Señor</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/La_paz.html"><span id="song-title">La paz</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/La_tiniebla_(la_ténèbre)-Taizé.html"><span id="song-title">La tiniebla (la ténèbre)</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Laudate_Dominum-Taizé.html"><span id="song-title">Laudate Dominum</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Laudate,_omnes_gentes-Taizé.html"><span id="song-title">Laudate, omnes gentes</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Levantaos_está_cerca-Ixcís.html"><span id="song-title">Levantaos está cerca</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Libérame-Brotes_de_Olivo.html"><span id="song-title">Libérame</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Llama_de_amor_viva-Taizé.html"><span id="song-title">Llama de amor viva</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Llega_el_Reino_de_Dios-Ixcís.html"><span id="song-title">Llega el Reino de Dios</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Magnificat-Taizé.html"><span id="song-title">Magnificat</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Mar_adentro-Brotes_de_Olivo.html"><span id="song-title">Mar adentro</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Más_que_el_oro-Ixcís.html"><span id="song-title">Más que el oro</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Me_levantaré-Brotes_de_Olivo.html"><span id="song-title">Me levantaré</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Me_volveré_a_Ti-Brotes_de_Olivo.html"><span id="song-title">Me volveré a Ti</span> <span id="author">Brotes de Olivo</span></a></li><br>
 <li><a href="./songs/Mi_roca-Ixcís.html"><span id="song-title">Mi roca</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Misericordia-Ixcís.html"><span id="song-title">Misericordia</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Muéveme_mi_Dios-Ixcís.html"><span id="song-title">Muéveme mi Dios</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Nada_nos_separará-Brotes_de_Olivo.html"><span id="song-title">Nada nos separará</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Nada_te_turbe-Taizé.html"><span id="song-title">Nada te turbe</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/No_adoréis_a_nadie.html"><span id="song-title">No adoréis a nadie</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/No_hay_que_temer.html"><span id="song-title">No hay que temer</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/No_moriré-Brotes_de_Olivo.html"><span id="song-title">No moriré</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Nuestro_Dios_es_ternura-Taizé.html"><span id="song-title">Nuestro Dios es ternura</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Nunc_Dimittis-Taizé.html"><span id="song-title">Nunc Dimittis</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Oh,_alto_y_glorioso_Dios.html"><span id="song-title">Oh, alto y glorioso Dios</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Oh,_Christe-Taizé.html"><span id="song-title">Oh, Christe</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Oh,_pobreza-Taizé.html"><span id="song-title">Oh, pobreza</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Os_doy_un_mandato_nuevo-Popular.html"><span id="song-title">Os doy un mandato nuevo</span> <span id="author">Popular</span></a></li><br>
+<li><a href="./songs/Ostende_nobis-Taizé.html"><span id="song-title">Ostende nobis</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Padre_únenos-Luis_Alfredo.html"><span id="song-title">Padre únenos</span> <span id="author">Luis Alfredo</span></a></li><br>
 </ol>
 <h2 id="Navidad">Navidad</h2>
 <ol>
