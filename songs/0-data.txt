@@ -282,7 +282,66 @@
 </ol>
 <h2 id="Oración">Oración</h2>
 <ol>
+<li><a href="./songs/A_la_paz_por_el_perdón-Brotes_de_Olivo.html"><span id="song-title">A la paz por el perdón</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Abrid_de_par_en_par.html"><span id="song-title">Abrid de par en par</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Ad_te_Jesus_Christe-Taizé.html"><span id="song-title">Ad te Jesus Christe</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Adoramus_te,_Christe-Taizé.html"><span id="song-title">Adoramus te, Christe</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Adoramus_te_Jesu_Christe-Taizé.html"><span id="song-title">Adoramus te Jesu Christe</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Adoramus_te-Taizé.html"><span id="song-title">Adoramus te</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Alabad_a_Dios,_wyslawiajcie_pana-Taizé.html"><span id="song-title">Alabad a Dios, wyslawiajcie pana</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Beati_voi_poveri-Taizé.html"><span id="song-title">Beati voi poveri</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Bendecid_al_Señor-Taizé.html"><span id="song-title">Bendecid al Señor</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Benedictus_qui_venit-Taizé.html"><span id="song-title">Benedictus qui venit</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Bless_the_Lord_my_soul_(Tengo_sed_de_Ti)-Taizé.html"><span id="song-title">Bless the Lord my soul (Tengo sed de Ti)</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Bonum_est_confidere-Taizé.html"><span id="song-title">Bonum est confidere</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Busco_tu_rostro.html"><span id="song-title">Busco tu rostro</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Cantarei_ao_Señor-Taizé.html"><span id="song-title">Cantarei ao Señor</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Cantate_Domino-Taizé.html"><span id="song-title">Cantate Domino</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Cantemos_al_Señor-Taizé.html"><span id="song-title">Cantemos al Señor</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Como_la_lluvia-Ixcís.html"><span id="song-title">Como la lluvia</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Como_María-Ixcís.html"><span id="song-title">Como María</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Confío_en_Ti-Brotes_de_Olivo.html"><span id="song-title">Confío en Ti</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Confío-Ixcís.html"><span id="song-title">Confío</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Confitemini-Taizé.html"><span id="song-title">Confitemini</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Contemplaré_(wait_for_the_Lord)-Taizé.html"><span id="song-title">Contemplaré (wait for the Lord)</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Cristo_Jesús_(Jésus_le_Christ)-Taizé.html"><span id="song-title">Cristo Jesús (Jésus le Christ)</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Crucem_tuam-Taizé.html"><span id="song-title">Crucem tuam</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Da_pacem_cordium-Taizé.html"><span id="song-title">Da pacem cordium</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Dame_un_corazón_nuevo-Brotes_de_Olivo.html"><span id="song-title">Dame un corazón nuevo</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Dame_un_guía-Brotes_de_Olivo.html"><span id="song-title">Dame un guía</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Danos_la_paz-Grupo_San_Francisco.html"><span id="song-title">Danos la paz</span> <span id="author">Grupo San Francisco</span></a></li><br>
 <li><a href="./songs/De_noche_iremos-Taizé.html"><span id="song-title">De noche iremos</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Deja_tus_redes-Ixcís.html"><span id="song-title">Deja tus redes</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Dejarme_hacer-Ixcís.html"><span id="song-title">Dejarme hacer</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Despiértame-Ixcís.html"><span id="song-title">Despiértame</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Dios_está_con_los_humildes.html"><span id="song-title">Dios está con los humildes</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Diste_la_vida-Brotes_de_Olivo.html"><span id="song-title">Diste la vida</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Domine_Deus-Taizé.html"><span id="song-title">Domine Deus</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Dona_la_pace_Signore-Taizé.html"><span id="song-title">Dona la pace Signore</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Dona_nobis_pace,_Domine-Taizé.html"><span id="song-title">Dona nobis pace, Domine</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Donde_Tú_quieras-Brotes_de_Olivo.html"><span id="song-title">Donde Tú quieras</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/El_alma_que_anda_en_amor-Taizé.html"><span id="song-title">El alma que anda en amor</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/El_árbol_del_arroyo-Brotes_de_Olivo.html"><span id="song-title">El árbol del arroyo</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/El_Señor_es_mi_fortaleza-Taizé.html"><span id="song-title">El Señor es mi fortaleza</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/En_el_mismo_barco-Brotes_de_Olivo.html"><span id="song-title">En el mismo barco</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/En_Espíritu_y_en_Verdad-Brotes_de_Olivo.html"><span id="song-title">En Espíritu y en Verdad</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/En_los_pobres_yo_te_ví-Ixcís.html"><span id="song-title">En los pobres yo te ví</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/En_mi_debilidad-Brotes_de_Olivo.html"><span id="song-title">En mi debilidad</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/En_nuestra_oscuridad_(dans_nos_obscurités)-Taizé.html"><span id="song-title">En nuestra oscuridad (dans nos obscurités)</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/En_Ti_confío_(notre_âme)-Taizé.html"><span id="song-title">En Ti confío (notre âme)</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/En_Ti,_Señor_reposa_(mon_âme_se_repose)-Taizé.html"><span id="song-title">En Ti, Señor reposa (mon âme se repose)</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Entra_en_mi_noche-Ixcís.html"><span id="song-title">Entra en mi noche</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Fortaleza_mía.html"><span id="song-title">Fortaleza mía</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Gloria_tibi_Domine.html"><span id="song-title">Gloria tibi Domine</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Gracias_por_tu_luz_en_la_noche.html"><span id="song-title">Gracias por tu luz en la noche</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Hacedme_un_lugar-Brotes_de_Olivo.html"><span id="song-title">Hacedme un lugar</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Hacer_tu_voluntad-Ixcís.html"><span id="song-title">Hacer tu voluntad</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Hágase-Ixcís.html"><span id="song-title">Hágase</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Hazme_pobre-Brotes_de_Olivo.html"><span id="song-title">Hazme pobre</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Hazme_ver_con_claridad-Brotes_de_Olivo.html"><span id="song-title">Hazme ver con claridad</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Hola,_Dios-Brotes_de_Olivo.html"><span id="song-title">Hola, Dios</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/In_manus_tuas,_Pater-Taizé.html"><span id="song-title">In manus tuas, Pater</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/In_resurrectione_tua-Taizé.html"><span id="song-title">In resurrectione tua</span> <span id="author">Taizé</span></a></li><br>
 <li><a href="./songs/Mi_roca-Ixcís.html"><span id="song-title">Mi roca</span> <span id="author">Ixcís</span></a></li><br>
 </ol>
 <h2 id="Navidad">Navidad</h2>

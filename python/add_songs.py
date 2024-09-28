@@ -39,7 +39,7 @@ def clear_fields():
     entry2.delete(0, tk.END)
     entry4.delete(0, tk.END)
     entry3.delete("1.0", tk.END)
-    combobox.set(options[0])  # Restablecer el valor predeterminado del combobox
+    # combobox.set(options[0])  # Restablecer el valor predeterminado del combobox
 
 def generate():
     script_path = os.path.join(os.getcwd(), 'scripts/generate-all.sh')
