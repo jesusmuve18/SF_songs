@@ -383,6 +383,31 @@
 <li><a href="./songs/Os_doy_un_mandato_nuevo-Popular.html"><span id="song-title">Os doy un mandato nuevo</span> <span id="author">Popular</span></a></li><br>
 <li><a href="./songs/Ostende_nobis-Taizé.html"><span id="song-title">Ostende nobis</span> <span id="author">Taizé</span></a></li><br>
 <li><a href="./songs/Padre_únenos-Luis_Alfredo.html"><span id="song-title">Padre únenos</span> <span id="author">Luis Alfredo</span></a></li><br>
+<li><a href="./songs/Paso_la_vida_dormido-Brotes_de_Olivo.html"><span id="song-title">Paso la vida dormido</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Pequeño_y_hermano.html"><span id="song-title">Pequeño y hermano</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Per_crucem-Taizé.html"><span id="song-title">Per crucem</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Pídeme_cuanto_quieras-Brotes_de_Olivo.html"><span id="song-title">Pídeme cuanto quieras</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Pongo_mi_vida_en_tus_manos-Luis_Guitarra.html"><span id="song-title">Pongo mi vida en tus manos</span> <span id="author">Luis Guitarra</span></a></li><br>
+<li><a href="./songs/Que_bueno_es_alabarte_Señor.html"><span id="song-title">Que bueno es alabarte Señor</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Quiero_nacer-Nico_Montero.html"><span id="song-title">Quiero nacer</span> <span id="author">Nico Montero</span></a></li><br>
+<li><a href="./songs/Resta_con_noi-Taizé.html"><span id="song-title">Resta con noi</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Señor,_enséñanos_a_orar-Brotes_de_Olivo.html"><span id="song-title">Señor, enséñanos a orar</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Señor_escúchanos-Popular.html"><span id="song-title">Señor escúchanos</span> <span id="author">Popular</span></a></li><br>
+<li><a href="./songs/Señor,_que_florezca_tu_justicia-Taizé.html"><span id="song-title">Señor, que florezca tu justicia</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Shema_Israel-Popular_Judía.html"><span id="song-title">Shema Israel</span> <span id="author">Popular Judía</span></a></li><br>
+<li><a href="./songs/Si_no_tengo_amor-Brotes_de_Olivo.html"><span id="song-title">Si no tengo amor</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Sigue_habiendo-Ixcís.html"><span id="song-title">Sigue habiendo</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Sin_tu_misericordia.html"><span id="song-title">Sin tu misericordia</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Sois_la_sal-Luis_Guitarra.html"><span id="song-title">Sois la sal</span> <span id="author">Luis Guitarra</span></a></li><br>
+<li><a href="./songs/Solo_con_tu_amor-Grupo_San_Francisco.html"><span id="song-title">Solo con tu amor</span> <span id="author">Grupo San Francisco</span></a></li><br>
+<li><a href="./songs/Surrexit_Christus-Taizé.html"><span id="song-title">Surrexit Christus</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Surrexit_Dominus_vere-Taizé.html"><span id="song-title">Surrexit Dominus vere</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Te_adoramos.html"><span id="song-title">Te adoramos</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Te_seguiré-Ixcís.html"><span id="song-title">Te seguiré</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Tengo_fe-Nico_Montero.html"><span id="song-title">Tengo fe</span> <span id="author">Nico Montero</span></a></li><br>
+<li><a href="./songs/Todo_está_en_tu_adentro-Brotes_de_Olivo.html"><span id="song-title">Todo está en tu adentro</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Transforma_mi_mente-Brotes_de_Olivo.html"><span id="song-title">Transforma mi mente</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Tu_lluvia_desciende-Ixcís.html"><span id="song-title">Tu lluvia desciende</span> <span id="author">Ixcís</span></a></li><br>
 </ol>
 <h2 id="Navidad">Navidad</h2>
 <ol>
