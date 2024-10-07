@@ -407,7 +407,31 @@
 <li><a href="./songs/Tengo_fe-Nico_Montero.html"><span id="song-title">Tengo fe</span> <span id="author">Nico Montero</span></a></li><br>
 <li><a href="./songs/Todo_está_en_tu_adentro-Brotes_de_Olivo.html"><span id="song-title">Todo está en tu adentro</span> <span id="author">Brotes de Olivo</span></a></li><br>
 <li><a href="./songs/Transforma_mi_mente-Brotes_de_Olivo.html"><span id="song-title">Transforma mi mente</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Tú_eres_mi_fuerza-Ixcís.html"><span id="song-title">Tú eres mi fuerza</span> <span id="author">Ixcís</span></a></li><br>
 <li><a href="./songs/Tu_lluvia_desciende-Ixcís.html"><span id="song-title">Tu lluvia desciende</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Tú_me_has_llamado-Brotes_de_Olivo.html"><span id="song-title">Tú me has llamado</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Tú,_mi_pilar-Brotes_de_Olivo.html"><span id="song-title">Tú, mi pilar</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Tú_nos_amaste_(Toi,_tu_nous_aimes)-Taizé.html"><span id="song-title">Tú nos amaste (Toi, tu nous aimes)</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Tu_ternura-Ixcís.html"><span id="song-title">Tu ternura</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Ubi_caritas-Taizé.html"><span id="song-title">Ubi caritas</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Un_solo_corazón-Ixcís.html"><span id="song-title">Un solo corazón</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Una_vez_más-Ixcís.html"><span id="song-title">Una vez más</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Uno_en_el_amor-Brotes_de_Olivo.html"><span id="song-title">Uno en el amor</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Utufuile.html"><span id="song-title">Utufuile</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Vamos_por_el_mundo.html"><span id="song-title">Vamos por el mundo</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Velaré_ante_Ti-Taizé.html"><span id="song-title">Velaré ante Ti</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Velaré_(Bleibet_hier)-Taizé.html"><span id="song-title">Velaré (Bleibet hier)</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Ven_espíritu_de_Dios_(Tui_amoris)-Taizé.html"><span id="song-title">Ven espíritu de Dios (Tui amoris)</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Ven,_Espíritu_de_Dios-Ixcís.html"><span id="song-title">Ven, Espíritu de Dios</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Ven,_seréname-Ixcís.html"><span id="song-title">Ven, seréname</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Ven,_te_llamo_a_ti-Brotes_de_Olivo.html"><span id="song-title">Ven, te llamo a ti</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Vengo_aquí_mi_Señor-Brotes_de_Olivo.html"><span id="song-title">Vengo aquí mi Señor</span> <span id="author">Brotes de Olivo</span></a></li><br>
+<li><a href="./songs/Veni_Creator_Spiritus-Taizé.html"><span id="song-title">Veni Creator Spiritus</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Veni_lumen-Taizé.html"><span id="song-title">Veni lumen</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Veni_Sancte_Spiritus-Taizé.html"><span id="song-title">Veni Sancte Spiritus</span> <span id="author">Taizé</span></a></li><br>
+<li><a href="./songs/Venid_conmigo-Ain_Karem.html"><span id="song-title">Venid conmigo</span> <span id="author">Ain Karem</span></a></li><br>
+<li><a href="./songs/Vuelvo-Ixcís.html"><span id="song-title">Vuelvo</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/Yo_digo_Dios.html"><span id="song-title">Yo digo Dios</span> <span id="author"></span></a></li><br>
 </ol>
 <h2 id="Navidad">Navidad</h2>
 <ol>
