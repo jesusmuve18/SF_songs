@@ -165,6 +165,12 @@ b, #original-tone, b2 {
     font-weight: 550;
 }
 
+.hidden {
+    display: none;
+    height: 0;
+    width: 0;
+}
+
 /*ASIDE*/
 
 aside {
