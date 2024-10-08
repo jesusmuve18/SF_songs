@@ -279,6 +279,13 @@
 </ol>
 <h2 id="Dios mío y todas mis cosas">Dios mío y todas mis cosas</h2>
 <ol>
+<li><a href="./songs/En_una_cumbre_de_Asís-Grupo_San_Francisco.html"><span id="song-title">En una cumbre de Asís</span> <span id="author">Grupo San Francisco</span></a></li><br>
+<li><a href="./songs/Entrañas_de_Misericordia-Grupo_San_Francisco.html"><span id="song-title">Entrañas de Misericordia</span> <span id="author">Grupo San Francisco</span></a></li><br>
+<li><a href="./songs/Oí_tu_voz-Grupo_San_Francisco.html"><span id="song-title">Oí tu voz</span> <span id="author">Grupo San Francisco</span></a></li><br>
+<li><a href="./songs/Renaceré_(6)-Grupo_San_Francisco.html"><span id="song-title">Renaceré (6)</span> <span id="author">Grupo San Francisco</span></a></li><br>
+<li><a href="./songs/Te_doy_gracias-Grupo_San_Francisco.html"><span id="song-title">Te doy gracias</span> <span id="author">Grupo San Francisco</span></a></li><br>
+<li><a href="./songs/Ubuntu-Grupo_San_Francisco.html"><span id="song-title">Ubuntu</span> <span id="author">Grupo San Francisco</span></a></li><br>
+<li><a href="./songs/Vives_en_mí-Grupo_San_Francisco.html"><span id="song-title">Vives en mí</span> <span id="author">Grupo San Francisco</span></a></li><br>
 </ol>
 <h2 id="Oración">Oración</h2>
 <ol>

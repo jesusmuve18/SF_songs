@@ -113,7 +113,9 @@ function AdjustOriginalTone(first_time=false) {
             }
 
             if(variation.length>0 && variation[0]=="m" && notation[0]==EUROPE){
-                chord = chord.toLowerCase();
+                if(!(variation.length>1 && variation[1]=="a")){
+                    chord = chord.toLowerCase();
+                }
             }
 
             // tone_pointer.innerHTML = `<a title="${chord}${variation}">${chord}${variation}<\a>`;
@@ -152,7 +154,9 @@ function Reload() {
 
             // lo pongo en minúscula si es menor 
             if(variation.length>0 && variation[0]=="m" && notation[0]==EUROPE){
-                chord = chord.toLowerCase();
+                if(!(variation.length>1 && variation[1]=="a")){
+                    chord = chord.toLowerCase();
+                }
             }
 
             // Lo pongo temporalmente en Americano para no tener que guardar todas las imágenes 4 veces
@@ -188,7 +192,9 @@ function Reload() {
 
                 // lo pongo en minúscula si es menor 
                 if(variation2.length>0 && variation2[0]=="m" && notation[0]==EUROPE){
-                    chord2 = chord2.toLowerCase();
+                    if(!(variation2.length>1 && variation2[1]=="a")){
+                        chord2 = chord2.toLowerCase();
+                    }
                 }
 
                 // Lo pongo temporalmente en Americano para no tener que guardar todas las imágenes 4 veces
