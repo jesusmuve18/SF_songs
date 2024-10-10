@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muéveme siempre hacia Ti</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <!-- <a href="#"><li>Opción 3</li></a> -->
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Muéveme siempre hacia Ti</div>
+                    <div id="artist">Grupo San Francisco</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Do </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><span id="reserved">Intro:</span> <b>Do</b> <b>Sib</b>
+
+ <b>Do</b>
+¡Qué bien se está aquí, Señor!,
+<b>Sib</b>
+yo repito cuando rezo,
+<b>Do</b>
+¡Qué bien se está aquí, Señor!,
+<b>La#</b>
+en mi zona de confort. (**)
+
+<b>Fa</b>                 <b>Do</b>
+Pero tú no quieres eso.
+<b>Sib</b>        <b>Fa</b>       <b>Do</b>
+Pero tú no quieres eso.
+
+<b>Do</b>                 <b>Sib</b>
+Nos pides salir al mundo,
+<b>Fa</b>                   <b>Do</b>
+Ser tu caricia y tus besos
+<b>Do</b>                      <b>Sib</b>
+Que dan consuelo al que sufre
+<b>Fa</b>                    <b>Sib</b>
+Al hambriento, al que está solo, 
+   <b>Do</b>
+al preso
+<b>Do</b>                     <b>Sib</b>
+Al que se embarca en patera
+<b>Fa</b>                    <b>Do</b>
+Al desahuciado, al sintecho...
+<b>Do</b>               <b>Sib</b>
+A la mujer maltratada,
+<b>Fa</b>                     <b>Do</b>
+Al que se siente un deshecho.
+<strong>
+<b>Do</b>
+Muéveme, muéveme,
+<b>Sib</b>
+Muéveme siempre hacia Ti. (**)
+</strong>
+(Nos pides salir al mundo,
+Ser tu caricia y tus besos
+Que dan consuelo al que sufre
+Al desahuciado, al sintecho...)
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

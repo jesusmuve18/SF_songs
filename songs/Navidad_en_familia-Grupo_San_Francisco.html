@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navidad en familia</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <!-- <a href="#"><li>Opción 3</li></a> -->
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Navidad en familia</div>
+                    <div id="artist">Grupo San Francisco</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Do </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><span id="reserved">Intro:</span> <b>Do</b> <b>Fa</b>
+
+<b>Do</b>    <b>Fa</b>    <b>Do</b>
+Han pasado 2000 años
+       <b>Sol</b>            <b>Do</b>
+de que Dios se hizo pequeño,
+        <b>Do</b>     <b>Fa</b>    <b>Do</b>
+se hizo pobre, muy humilde,
+     <b>Sol</b>            <b>Do</b>  <b>Do 7</b>
+pues así quiere su reino.
+<strong>
+  <b>Fa</b>     <b>Sol</b>        <b>Do</b>   <b>Do 7</b>
+Jesús ya viene a tu vida,
+  <b>Fa</b>     <b>Sol</b>          <b>Do</b>  <b>La 7</b>
+Jesús ya viene a tu hogar.
+<b>re m</b>    <b>Sol</b>      <b>Do</b>  <b>mi m</b> <b>la m</b>
+En una familia unida
+ <b>re m</b>             <b>Sol</b> (<span id="reserved">2ª</span> <span id="reserved">vez:</span> <b>Sol</b> <b>Do</b>)
+siempre será Navidad. (**)
+</strong>
+      <b>Do</b>       <b>Fa</b>    <b>Do</b>
+En el mundo en que vivimos
+<b>Sol</b>               <b>Do</b>
+solo queremos prestigio,
+      <b>Fa</b>         <b>Do</b>
+mucho dinero y poder
+       <b>Sol</b>           <b>Do</b>    <b>Do 7</b>
+¿dónde va a nacer el Hijo?
+
+<b>Do</b>      <b>Fa</b>         <b>Do</b>
+Vamos a cambiar de vida,
+   <b>Sol</b>           <b>Do</b>
+limpiemos el corazón,
+     <b>Fa</b> <b>Do</b>   <b>Fa</b>      <b>Do</b>
+transformémoslo en pesebre
+        <b>Sol</b>            <b>Do</b>   <b>Do 7</b>
+pa' que nazca el niño Dios.
+
+<b>Do</b>       <b>Fa</b>    <b>Do</b>
+La Venida de Jesús
+      <b>Sol</b>            <b>Do</b>
+no confundas con regalos.
+     <b>Fa</b> <b>Do</b> <b>Fa</b>        <b>Do</b>
+El regalo que Él nos trae:
+     <b>Sol</b>          <b>Do</b>     <b>Do 7</b>
+el amor de los hermanos.
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

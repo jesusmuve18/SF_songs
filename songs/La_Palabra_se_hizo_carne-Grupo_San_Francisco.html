@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Palabra se hizo carne</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <!-- <a href="#"><li>Opción 3</li></a> -->
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">La Palabra se hizo carne</div>
+                    <div id="artist">Grupo San Francisco</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">La </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>La</b>                  <b>do# m</b>
+El Señor miró a los hombres
+<b>Re</b>                   <b>Mi</b>
+les habló por los profetas,
+<b>La</b>               <b>do# m</b>
+pero como no escuchaban
+   <b>Re</b>                <b>Mi</b>
+mandó a su hijo a la Tierra.
+<b>La</b>                 <b>do# m</b>
+El mundo estaba en tinieblas,
+<b>Re</b>                   <b>Mi</b>
+brilló de pronto una luz
+<b>La</b>                 <b>do# m</b>
+que dio color a la tierra:
+    <b>Re</b>          <b>Mi</b> <b>Re</b>
+era la Luz de Jesús.
+
+<b>do# m</b> <b>Mi</b> <b>Re</b> <b>do# m</b> <b>Mi</b>
+
+<b>La</b>               <b>do# m</b>
+Donde menos se esperaba
+  <b>Re</b>                <b>Mi</b>
+nació la Piedra Angular.
+<b>La</b>                <b>do# m</b>
+En el corazón del pobre
+<b>Re</b>                 <b>Mi</b>
+ha instalado su portal.
+<b>fa# m</b>              <b>do# m</b>
+Forja de espadas arados,
+<b>Re</b>                  <b>Mi</b>
+podaderas de las lanzas;
+<b>fa# m</b>                 <b>do# m</b>
+trae dignidad al humillado,
+   <b>Re</b>          <b>Mi</b> <b>Re</b> <b>do# m</b> <b>Mi</b> <b>Re</b> <b>do# m</b> <b>Mi</b>
+justicia, paz y esperanza.
+
+<b>La</b>               <b>do# m</b>
+Desbordados por su amor
+   <b>Re</b>             <b>Mi</b>
+proclamamos con María
+<b>La</b>               <b>do# m</b>
+la grandeza del Señor
+<b>Re</b>                 <b>Mi</b>
+pequeño, pobre,... Mesías
+<b>fa# m</b>                <b>do# m</b>
+que eligió un pobre portal
+<b>Re</b>                 <b>Mi</b>
+porque no quiere fortunas
+<b>fa# m</b>           <b>do# m</b>
+y que cada Navidad
+  <b>Re</b>                 <b>Mi</b>  <b>Re</b>
+busca en tu interior su cuna.
+
+<b>do# m</b> <b>Mi</b> <b>Re</b> <b>do# m</b> <b>Mi</b>
+<strong>
+<b>La</b>                 <b>do# m</b>
+La Palabra se hizo carne
+   <b>Re</b>                <b>Mi</b>
+y Dios nos mostró su rostro.
+<b>La</b>                 <b>do# m</b>
+Nos ha nacido el Mesías,
+     <b>Re</b>            <b>Mi</b>
+Emmanuel: Dios con nosotros.
+<b>fa# m</b>                 <b>do# m</b>
+Hoy es un día de esperanza,
+    <b>Re</b>            <b>Mi</b>
+de amor y fraternidad,
+<b>fa# m</b>                  <b>do# m</b>
+porque en un pobre pesebre
+    <b>Mi</b> <b>Re</b> <b>do# m</b>
+comenzó        
+<b>Re</b> <b>La</b> <b>Mi</b> <b>La</b> <b>do# m</b> <b>Re</b> <b>La</b> <b>Mi</b> <b>La</b>
+la Navidad.
+</strong>
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

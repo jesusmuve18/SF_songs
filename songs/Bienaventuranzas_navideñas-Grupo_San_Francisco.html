@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienaventuranzas navideñas</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <!-- <a href="#"><li>Opción 3</li></a> -->
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Bienaventuranzas navideñas</div>
+                    <div id="artist">Grupo San Francisco</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Sol </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>Sol</b>             <b>Do</b>       <b>Sol</b>    <b>Do</b>
+Los pobres de Espíritu ven al Señor
+    <b>Sol</b>       <b>Do</b>
+que nace en pesebre, 
+     <b>Sol</b>      <b>Do</b>    <b>Re</b>
+no quiere mansión.
+
+    <b>mi m</b> <b>si m</b>       <b>Do</b>          <b>Sol</b>
+Los mansos esperan a Dios en la Tierra,
+  <b>mi m</b>      <b>si m</b>
+esperan que nazca en 
+<b>Do</b>       <b>Re</b>
+un mundo sin guerra.
+
+<b>Sol</b>             <b>Do</b>
+Los hombres que lloran 
+<b>Sol</b>         <b>Do</b>
+tienen un anhelo,
+    <b>Sol</b>     <b>Do</b>         <b>Sol</b>      <b>Do</b>  <b>Re</b>
+que nazca Jesús y les traiga consuelo.
+
+   <b>mi m</b>         <b>si m</b>
+A aquellos que luchan 
+    <b>Do</b>        <b>Sol</b>
+con sed de justicia
+    <b>mi m</b>     <b>si m</b>       <b>Do</b>        <b>Re</b>
+los sacia Jesús y les da su caricia.
+
+<b>Sol</b>      <b>Do</b>         <b>Sol</b>           <b>Do</b>
+Su misericordia les da a los que aman
+    <b>Sol</b>       <b>Do</b>
+y a todos los hombres
+    <b>Sol</b>     <b>Do</b>       <b>Re</b>
+su amor les derrama.
+
+   <b>mi m</b>         <b>si m</b>    <b>Do</b>            <b>Sol</b>
+A aquellos que tienen limpio el corazón
+  <b>mi m</b>        <b>si m</b>
+Jesús se les muestra, 
+<b>Do</b>        <b>Re</b>
+ven que nace Dios.
+
+<b>Sol</b>          <b>Do</b>
+Construye la paz en 
+   <b>Sol</b>  <b>Do</b>      <b>Sol</b> <b>Do</b>
+tu entorno y tu vida;
+    <b>Sol</b>      <b>Do</b>
+los hijos de Dios 
+      <b>Sol</b>  <b>Do</b>   <b>Sol</b> <b>Do</b> <b>Sol</b> <b>Re</b>
+todos somos familia.
+
+  <b>mi m</b>      <b>si m</b>      <b>Do</b>           <b>Sol</b>
+Y si te persiguen recuerda que a Él
+   <b>mi m</b>       <b>si m</b>
+también lo mataron
+  <b>Do</b>             <b>Re</b>
+y hoy vuelve a nacer
+<strong>
+     <b>Sol</b>   <b>Do</b>    <b>Sol</b> <b>Sol 7</b>
+Tu familia puede ser
+    <b>Do</b>       <b>la m</b>     <b>Re</b>
+Navidad que acoge en casa
+       <b>mi m</b>        <b>si m</b> <b>Do</b>
+si a Jesús dejáis nacer
+<b>la m</b>               <b>Re</b> (<span id="reserved">2ª:</span> <b>la m</b> <b>Re</b> <b>Sol</b>)
+con sus bienaventuranzas.
+</strong>
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misericordiosos como Dios</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <!-- <a href="#"><li>Opción 3</li></a> -->
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Misericordiosos como Dios</div>
+                    <div id="artist">Grupo San Francisco</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Do </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>Do</b>
+Cargar sobre mis hombros 
+<b>Sol</b>                   <b>la m</b>
+con las penas del que sufre,
+<b>mi m</b>
+Curarle las heridas
+<b>Fa</b>            <b>Do</b>    <b>Do 7</b>
+al que padece dolor,
+<b>Fa</b>                <b>Sol</b>
+Sacar del agujero a ese 
+(<b>Sol#</b>)       <b>la m</b>
+que la droga hunde,
+<b>Fa</b>                  <b>Sol</b>   <b>Do</b>
+Ser misericordiosos como Dios.
+
+<b>Do</b>
+Partir con el hambriento 
+<b>Sol</b>                 <b>la m</b>
+nuestro pan de cada día
+<b>mi m</b>
+Y dedicar mi tiempo 
+<b>Fa</b>                <b>Do</b>   <b>Do 7</b>
+al que no ve solución,
+<b>Fa</b>
+Acompañar caminos 
+  <b>Sol</b>      (<b>Sol#</b>)  <b>la m</b>
+y llenarlos de alegría,
+<b>Fa</b>                  <b>Sol</b>   <b>Do</b>  (<b>Sol</b>)
+Ser misericordiosos como Dios.
+<strong>
+<b>Do</b>              <b>Sol</b>
+Hace falta un poquito de calor 
+        <b>mi m</b>    <b>la m</b>
+en este mundo frío
+<b>Fa</b>               <b>re m</b>
+Hace falta la ternura y el amor 
+      <b>Fa</b>                     <b>Sol</b>
+entre tanta indiferencia y dolor
+       <b>re m</b>                <b>Sol</b>
+¡Necesitamos que vengas! ¡Señor!
+       <b>re m</b>                   <b>Sol</b>
+¡Necesitamos que renazca tu amor!
+<b>Mi</b>             <b>la m</b>
+Llena de misericordia nuestras vidas
+ <b>Fa</b>              <b>Sol</b>           <b>Do</b>
+¡Haznos misericordiosos! ¡Oh, Dios!
+</strong>
+<b>Do</b>
+Mirar a los hermanos 
+<b>Sol</b>                  <b>la m</b>
+desde abajo y no de arriba
+<b>mi m</b>
+Sentirnos pequeñitos 
+<b>Fa</b>               <b>Do</b>   <b>Do 7</b>
+ante toda tu Creación
+<b>Fa</b>                        <b>Sol</b>
+No ver mota en el ojo del hermano 
+      (<b>Sol#</b>)        <b>la m</b>
+cuando yo tengo una viga
+<b>Fa</b>
+Dejarme acariciar y perdonar
+<b>Sol</b>             <b>Do</b>        (<b>Sol</b>)
+por tu infinita compasión
+<strong>
+<b>Do</b>              <b>Sol</b>
+Hace falta un poquito de calor 
+        <b>mi m</b>    <b>la m</b>
+en este mundo frío
+<b>Fa</b>               <b>re m</b>
+Hace falta la ternura y el amor 
+      <b>Fa</b>                     <b>Sol</b>
+entre tanta indiferencia y dolor
+       <b>re m</b>                <b>Sol</b>
+¡Necesitamos que vengas! ¡Señor!
+       <b>re m</b>                   <b>Sol</b>
+¡Necesitamos que renazca tu amor!
+<b>Mi</b>             <b>la m</b>
+Llena de misericordia nuestras vidas
+ <b>Fa</b>              <b>Sol</b>           <b>Do</b>
+¡Haznos misericordiosos! ¡Oh, Dios!
+</strong>
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>
