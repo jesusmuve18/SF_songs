@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfecta Alegría</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <!-- <a href="#"><li>Opción 3</li></a> -->
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Perfecta Alegría</div>
+                    <div id="artist">Brotes de Olivo</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Re </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><span id="reserved">Intro:</span> <b>Re</b> <b>Re 9</b> (<span id="reserved">**</span>)
+
+   <b>Re</b>
+No puedo borrar la injusticia de otros
+     <b>Sol</b>       <b>La</b>    <b>Re</b>
+pero puedo ser justo
+
+no puedo cambiar 
+
+el corazón de los hombres, 
+     <b>Do</b>               <b>La</b>
+pero puedo cambiar el mío.
+   <b>Sol</b>              <b>Re</b>
+No puedo acallar el odio, 
+         <b>si m7</b>        <b>La</b>
+pero sí amar a quien odia.
+ <b>Sol</b>                  <b>Re</b>
+Amar sin medida es la única vía 
+     <b>Do</b> <b>La</b>              <b>Re</b>  <b>Re</b> <b>Re 9</b> (<span id="reserved">**</span>)
+de vivir la Perfecta Alegría.
+
+<b>Re</b>
+Quiero vivir en verdad, 
+             <b>Sol</b>      <b>Re</b>
+no quiero mentir ni callar.
+
+Quiero caminar a tu vera,
+     <b>Do</b>         <b>La</b>
+ni delante ni detrás.
+  <b>Sol</b>               <b>Re</b>
+Podría denunciar el mal, 
+                 <b>si m7</b>
+pero renuncio y anuncio 
+                 <b>La</b>
+la alegría que anhelo.
+<b>Sol</b>
+La paz que deseo, 
+   <b>Re</b>             <b>Do</b>      <b>La</b>
+la luz que un día vi al vivir
+               <b>Re</b>     <b>Re</b> <b>Re 9</b> (<span id="reserved">**</span>)
+la Perfecta Alegría.
+
+ <b>Re</b>                   <b>si m7</b>
+Amar sin medida es la única vía 
+     <b>Sol</b>                <b>La</b>
+de vivir la Perfecta Alegría,
+ <b>Sol</b>             <b>Re</b>       <b>si m7</b>
+Amar es la única vía de vivir 
+               <b>La</b>
+la Perfecta Alegría,
+ <b>Do</b>            <b>La</b>
+Amar es vivir
+               <b>Re</b>   <b>Re</b> <b>Re 9</b> (<span id="reserved">**</span>)
+la Perfecta Alegría.
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

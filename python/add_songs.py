@@ -72,7 +72,7 @@ entry3 = tk.Text(root, width=39)
 entry3.pack(pady=5)
 
 tk.Label(root, text="*Sección:").pack(pady=5)
-options = ["General", "1-Oración", "2-Dios mío y todas mis cosas", "3-Qué noche tan grande", "4-Pascua", "5-Otras"]
+options = ["General", "1-Oración", "2-Dios mío y todas mis cosas", "3-Qué noche tan grande", "4-Te_llena_de_vida","5-Pascua", "6-Otras"]
 combobox = ttk.Combobox(root, values=options, width=39)  # Ancho ajustado
 combobox.pack(pady=5)
 combobox.current(0)  # Establecer la opción predeterminada

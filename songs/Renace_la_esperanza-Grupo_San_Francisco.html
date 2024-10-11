@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renace la esperanza</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <!-- <a href="#"><li>Opción 3</li></a> -->
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Renace la esperanza</div>
+                    <div id="artist">Grupo San Francisco</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">La </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>La</b>                 <b>La /</b><b>Sol#</b>
+Cuando todo está perdido 
+
+y el dolor ya te desgarra,
+       <b>La /</b><b>Fa#</b>
+cuando ves negro el camino, 
+       <b>si m</b>
+cuando todo se te acaba,
+            <b>do# m</b>
+cuando un clavo te perfora 
+     <b>Re</b>
+y tu corazón traspasa,
+   <b>La</b>
+Yú nunca nos abandonas 
+      <b>Mi</b>           <b>La</b>
+y renace la esperanza.
+<strong>
+  <b>Re</b>  <b>La</b>           <b>Mi</b>             <b>La</b>
+Tú, Señor, eres la fuente de mi vida,
+       <b>Re</b>              <b>La</b>
+me acompañas, me consuelas,
+       <b>Mi</b>          <b>La</b>
+y me curas las heridas,
+     <b>Re</b>           <b>La</b>
+me regalas los hermanos, 
+     <b>Mi</b>         <b>fa# m</b>
+me regalas la familia,
+  <b>Re</b>             <b>La</b>
+vivificas mi existencia
+     <b>Mi</b>           <b>La</b>
+a través de sus caricias.
+
+<b>Re</b>                    <b>do# m</b>
+..Cuando todo está perdido
+     <b>Re</b>            <b>La</b>
+y el dolor ya me desgarra
+      <b>Re</b>    <b>La</b>
+Yú, Señor resucitado,
+     <b>Mi</b>           <b>La</b>
+me devuelves la esperanza.
+</strong>
+<b>La</b>                 <b>La /</b><b>Sol#</b>
+Cuando me siento impotente
+
+ante tanto sufrimiento
+               <b>La /</b><b>Fa#</b>
+Cuando veo a tanta gente
+               <b>si m</b>
+padeciendo mil tormentos.
+       <b>do# m</b>
+Cuando me fallan las fuerzas,
+ <b>Re</b>
+cuando veo que ya no alcanzan
+      <b>La</b>
+Tú me insuflas fortaleza 
+    <b>Mi</b>          <b>La</b>
+y renace la esperanza.
+<span id=cejilla-original>1</span>
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

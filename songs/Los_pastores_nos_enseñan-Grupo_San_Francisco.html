@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los pastores nos enseñan</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <!-- <a href="#"><li>Opción 3</li></a> -->
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Los pastores nos enseñan</div>
+                    <div id="artist">Grupo San Francisco</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">La </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>La</b>                  <b>Si</b>
+Hemos ido hoy al portal
+<b>Do</b>   <b>Si</b>         <b>La</b>
+para conocer al Niño.
+<b>La</b>                  <b>Si</b>
+La sorpresa fue genial:
+<b>Do</b>          <b>Si</b>             <b>La</b>
+me ha dicho que es mi hermanito
+<b>re m</b>                 <b>Do</b>
+y me ha querido anunciar
+      <b>Si</b>               <b>La</b>
+que Papá es el Dios bendito,
+<b>re m</b>                 <b>Do</b>
+que tengo muchos hermanos
+       <b>Si</b>             <b>La</b>
+y Él escucha nuestros gritos.
+<strong>
+<b>Si</b>            <b>La</b>
+Po eso quiero rezar
+    <b>Si</b>             <b>La</b>
+con todos el Padre Nuestro
+          <b>re m</b>        <b>Do</b>
+porque el Padre celestial
+         <b>Si</b>               <b>La</b>
+manda al Hijo a nuestro encuentro.
+<b>Si</b>                 <b>La</b>
+Los pastores nos enseñan
+<b>Si</b>               <b>La</b>
+desde su simplicidad
+     <b>re m</b>       <b>Do</b>
+a cantar el aleluya,
+    <b>Si</b>         <b>La</b>
+a vivir la Navidad.
+</strong>
+<b>La</b>                <b>Si</b>
+En el portal de Belén
+<b>Do</b>    <b>Si</b>       <b>La</b>
+todos son bien recibidos,
+<b>La</b>                <b>Si</b>
+a todos nos miran bien,
+<b>Do</b>          <b>Si</b>         <b>La</b>
+todos somos acogidos.
+<b>re m</b>                  <b>Do</b>
+María y José nos reciben
+        <b>Si</b>            <b>La</b>
+con las puertas bien abiertas,
+<b>re m</b>                      <b>Do</b>
+el Niño nos mira y dice:
+       <b>Si</b>              <b>La</b>
+"yo cargo con vuestras penas".
+<strong>
+<b>Si</b>            <b>La</b>
+Po eso quiero rezar
+    <b>Si</b>             <b>La</b>
+con todos el Padre Nuestro
+          <b>re m</b>        <b>Do</b>
+porque el Padre celestial
+         <b>Si</b>               <b>La</b>
+manda al Hijo a nuestro encuentro.
+<b>Si</b>                 <b>La</b>
+Los pastores nos enseñan
+<b>Si</b>               <b>La</b>
+desde su simplicidad
+     <b>re m</b>       <b>Do</b>
+a cantar el aleluya,
+    <b>Si</b>         <b>La</b>
+a vivir la Navidad.
+</strong>
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>
