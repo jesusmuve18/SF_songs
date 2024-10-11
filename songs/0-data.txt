@@ -455,11 +455,16 @@
 <li><a href="./songs/Bienaventuranzas_navideñas-Grupo_San_Francisco.html"><span id="song-title">Bienaventuranzas navideñas</span> <span id="author">Grupo San Francisco</span></a></li><br>
 <li><a href="./songs/Brotará_el_amor-Grupo_San_Francisco.html"><span id="song-title">Brotará el amor</span> <span id="author">Grupo San Francisco</span></a></li><br>
 <li><a href="./songs/Con_tanta_luz_de_Navidad-Grupo_San_Francisco.html"><span id="song-title">Con tanta luz de Navidad</span> <span id="author">Grupo San Francisco</span></a></li><br>
+<li><a href="./songs/El_Ángel_anunció-Grupo_San_Francisco.html"><span id="song-title">El Ángel anunció</span> <span id="author">Grupo San Francisco</span></a></li><br>
 <li><a href="./songs/El_Dios_Todobondadoso-Grupo_San_Francisco.html"><span id="song-title">El Dios Todobondadoso</span> <span id="author">Grupo San Francisco</span></a></li><br>
 <li><a href="./songs/La_Palabra_se_hizo_carne-Grupo_San_Francisco.html"><span id="song-title">La Palabra se hizo carne</span> <span id="author">Grupo San Francisco</span></a></li><br>
+<li><a href="./songs/Nacerá_el_Señor-Grupo_San_Francisco.html"><span id="song-title">Nacerá el Señor</span> <span id="author">Grupo San Francisco</span></a></li><br>
 <li><a href="./songs/Navidad_en_familia-Grupo_San_Francisco.html"><span id="song-title">Navidad en familia</span> <span id="author">Grupo San Francisco</span></a></li><br>
 <li><a href="./songs/Niño_Dios-Grupo_San_Francisco.html"><span id="song-title">Niño Dios</span> <span id="author">Grupo San Francisco</span></a></li><br>
+<li><a href="./songs/Poner_el_Belén-Grupo_San_Francisco.html"><span id="song-title">Poner el Belén</span> <span id="author">Grupo San Francisco</span></a></li><br>
 <li><a href="./songs/Qué_noche_tan_grande-Grupo_San_Francisco.html"><span id="song-title">Qué noche tan grande</span> <span id="author">Grupo San Francisco</span></a></li><br>
+<li><a href="./songs/Si_es_navidad-Grupo_San_Francisco_.html"><span id="song-title">Si es navidad</span> <span id="author">Grupo San Francisco </span></a></li><br>
+<li><a href="./songs/Tu_ternura_es_Navidad-Grupo_San_Francisco.html"><span id="song-title">Tu ternura es Navidad</span> <span id="author">Grupo San Francisco</span></a></li><br>
 </ol>
 <h2 id="Pascua">Pascua</h2>
 <ol>

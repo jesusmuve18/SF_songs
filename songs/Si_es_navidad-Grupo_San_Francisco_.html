@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Si es navidad</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <!-- <a href="#"><li>Opción 3</li></a> -->
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Si es navidad</div>
+                    <div id="artist">Grupo San Francisco </div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">La 9</span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>La 9</b>                    <b>Re 9</b>
+Llega el invierno y contento 
+  <b>La 9</b>        <b>Re 9</b>
+espero la Navidad
+<b>La 9</b>               <b>Re 9</b>
+y preocupado no encuentro 
+    <b>si m7</b>         <b>Re 9</b>
+a Jesús en su portal. 
+
+<b>La 9</b>                <b>Re 9</b>
+Porque lo hemos cambiado 
+<b>La 9</b>                  <b>Re 9</b>
+por consumismo  y progreso,
+<b>La 9</b>                    <b>do# m</b>
+canto esperanza a los niños
+               <b>si m7</b>
+que están olvidados
+                 <b>Re 9</b>
+que no están tan lejos. 
+
+<b>fa# m</b>                  <b>do# m7</b>
+Pueblos que ven a sus hijos
+   <b>Re 9</b>             <b>Mi</b>
+partiendo con un fusil,
+<b>fa# m</b>               <b>do# m7</b>
+miran al cielo y esperan 
+          <b>si m7</b>             <b>Re 9</b>
+que una estrella apague la guerra.
+<strong>
+<b>La 9</b>    <b>do# m9</b>
+Busca, sueña, 
+<b>Re 9</b>                <b>Mi</b>
+abre un camino sin huellas. 
+<b>La 9</b>    <b>do# m</b>
+Canta, ríe, 
+ <b>Re 9</b>                 <b>Mi</b>
+siente que todo es posible...
+             <b>La 9</b>
+...si es Navidad. 
+</strong>
+<b>La 9</b>               <b>Re 9</b>
+En Navidad sé que Tú
+<b>La 9</b>              <b>Re 9</b>
+das otra oportunidad
+<b>La 9</b>            <b>do# m9</b>
+dibujas una sonrisa
+      <b>si m7</b>               <b>Re 9</b>
+en el llanto de la humanidad.
+
+<b>fa# m</b>                  <b>do# m7</b>
+Pueblos que en otras orillas
+<b>Re 9</b>                <b>Mi</b>
+buscan el pan y la vid, 
+<b>fa# m</b>               <b>do# m7</b>
+miran al cielo y recuerdan 
+          <b>si m7</b>                   <b>Re 9</b>
+que una estrella rompió las fronteras. 
+
+<strong>
+<b>La 9</b>    <b>do# m9</b>
+Busca, sueña, 
+<b>Re 9</b>                <b>Mi</b>
+abre un camino sin huellas. 
+<b>La 9</b>    <b>do# m</b>
+Canta, ríe, 
+ <b>Re 9</b>                 <b>Mi</b>
+siente que todo es posible... 
+</strong>
+<b>fa# m</b>                <b>Re 9</b>
+Si tú buscas, si tú sueñas, 
+      <b>re m</b>           <b>Mi</b>
+Si tú cantas, si tú ríes...
+              <b>La 9</b> <b>do# m7</b> <b>Re 9</b> <b>Mi</b>
+... si es Navidad, 
+          <b>La 9</b> <b>do# m7</b> <b>Re 9</b> <b>Mi</b>
+si es Navidad, 
+          <b>La 9</b>
+si es Navidad.
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

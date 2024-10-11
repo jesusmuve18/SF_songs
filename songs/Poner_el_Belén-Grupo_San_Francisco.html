@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poner el Belén</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <!-- <a href="#"><li>Opción 3</li></a> -->
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Poner el Belén</div>
+                    <div id="artist">Grupo San Francisco</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">La </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>La</b>
+Miran atrás con nostalgia,
+      <b>Re</b>
+dejan toda una vida y caminan.
+<b>si m</b>                 (<b>si m/</b><b>La</b>)
+Huyen de la guerra, buscan una casa,
+    <b>Re</b>                        <b>Mi</b>
+una puerta que se abra en sus vidas.
+
+<b>La</b>
+Todos les damos la espalda,
+    <b>Re</b>
+encerrados en nuestra comodidad.
+     <b>si m</b>                  (<b>si m/</b><b>La</b>)
+No tenemos lugar, nuestra casa
+     <b>Re</b>                 <b>Mi</b>
+ya rebosa de fiestas de Navidad.
+
+<b>fa# m</b>               <b>La</b>
+Llaman muchos cada día,
+<b>Re</b>                  <b>Mi</b>
+sin rumbo buscan donde morar.
+<b>La</b>           <b>si m</b>          <b>do# m</b> <b>Re</b>
+Bien podrían ser José y María.
+<b>Mi</b>
+Y no hay sitio,
+   <b>Re</b>            <b>do# m</b>
+...veinte siglos llevan
+<b>si m</b>         <b>La</b>
+buscando un portal.
+
+<b>si m</b> <b>do# m</b> <b>Re</b> <b>Mi</b> <b>Re</b> <b>do# m</b>
+<strong>
+      <b>si m</b>  <b>La</b>
+Poner el belén,
+                         <b>do# m</b>
+acoger al que llama a tu puerta.
+
+Ver al que sufre, abrir los ojos,
+      <b>si m</b>
+darse cuenta,
+     <b>Re</b>
+no mirar para otro sitio, 
+       <b>Mi</b>
+ver la estrella (**)
+<b>La</b>              <b>si m</b>        <b>do# m</b>
+Poner el belén, poner el belén,
+<b>Re</b>         <b>Mi</b> <b>Re</b> <b>do# m</b> <b>si m</b> <b>La</b>
+poner el belén.
+</strong>
+<b>La</b>
+No hay que perder la esperanza,
+          <b>Re</b>
+hay quien tiene entrañas de María,
+    <b>si m</b>                   (<b>si m/</b><b>La</b>)
+los sienta a su mesa, les abre su casa,
+   <b>Re</b>                 <b>Mi</b>
+prepara una cuna al Mesías.
+
+<b>La</b>
+Tender la mano, escucharlos,
+       <b>Re</b>
+sen sensibles a tanta necesidad.
+<b>si m</b>              (<b>si m/</b><b>La</b>)
+Darles caricias, cuidarlos,
+     <b>Re</b>               <b>Mi</b>
+devolverles a todos su dignidad.
+
+<b>fa# m</b>            <b>La</b>
+Darles calor de familia,
+     <b>Re</b>
+rescatar de la patera 
+           <b>Mi</b>
+a quien se va a ahogar,
+<b>La</b>       <b>si m</b>         <b>do# m</b> <b>Re</b>
+dejar de ser piedras frías.
+<b>Mi</b>
+Dar la vida,
+<b>Re</b>           <b>do# m</b>       <b>si m</b> <b>La</b>
+ser manos de Dios para acariciar.
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>
