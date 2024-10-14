@@ -38,7 +38,7 @@ public:
 
         sort(variations.begin(), variations.end(), compareStringSize); // ordeno las variaciones por longitud
 
-        reserved = { "Intro:", "Final:", "**", "***", "****", "2ª", "2ª:", "1ª:", "2º:", 
+        reserved = { "Intro:", "Final:", "**", "***", "****", "2ª", "2ª:", "1ª", "1ª:", "2º:", 
                      "1º:", "vez:", "-"};
     }
 

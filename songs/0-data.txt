@@ -76,7 +76,7 @@
 <li><a href="./songs/En_comunidad_resucitamos-Brotes_de_Olivo.html"><span id="song-title">En comunidad resucitamos</span> <span id="author">Brotes de Olivo</span></a></li><br>
 <li><a href="./songs/En_el_alma_del_cantor-Brotes_de_Olivo.html"><span id="song-title">En el alma del cantor</span> <span id="author">Brotes de Olivo</span></a></li><br>
 <li><a href="./songs/En_el_Nombre_del_Padre-Unai_Quirós.html"><span id="song-title">En el Nombre del Padre</span> <span id="author">Unai Quirós</span></a></li><br>
-<li><a href="./songs/En_Espíritu_y_verdad-Ixcís.html"><span id="song-title">En Espíritu y verdad</span> <span id="author">Ixcís</span></a></li><br>
+<li><a href="./songs/En_Espíritu_y_en_verdad-Ixcís.html"><span id="song-title">En Espíritu y en verdad</span> <span id="author">Ixcís</span></a></li><br>
 <li><a href="./songs/En_tus_manos-Jesús_Cabello.html"><span id="song-title">En tus manos</span> <span id="author">Jesús Cabello</span></a></li><br>
 <li><a href="./songs/En_un_portal.html"><span id="song-title">En un portal</span> <span id="author"></span></a></li><br>
 <li><a href="./songs/Envíame-Brotes_de_Olivo.html"><span id="song-title">Envíame</span> <span id="author">Brotes de Olivo</span></a></li><br>
@@ -479,7 +479,7 @@
 <li><a href="./songs/Niño_Dios-Grupo_San_Francisco.html"><span id="song-title">Niño Dios</span> <span id="author">Grupo San Francisco</span></a></li><br>
 <li><a href="./songs/Poner_el_Belén-Grupo_San_Francisco.html"><span id="song-title">Poner el Belén</span> <span id="author">Grupo San Francisco</span></a></li><br>
 <li><a href="./songs/Renace_la_esperanza-Grupo_San_Francisco.html"><span id="song-title">Renace la esperanza</span> <span id="author">Grupo San Francisco</span></a></li><br>
-<li><a href="./songs/Resucitó.html"><span id="song-title">Resucitó. Hazlo posible por amor</span> <span id="author">Grupo San Francisco</span></a></li><br>
+<li><a href="./songs/Resucitó,_Hazlo_posible_por_amor-Grupo_San_Francisco.html"><span id="song-title">Resucitó, Hazlo posible por amor</span> <span id="author">Grupo San Francisco</span></a></li><br>
 <li><a href="./songs/Salmo_97_Aleluya-Grupo_San_Francisco.html"><span id="song-title">Salmo 97 Aleluya</span> <span id="author">Grupo San Francisco</span></a></li><br>
 <li><a href="./songs/Santos_de_lo_cotidiano-Grupo_San_Francisco.html"><span id="song-title">Santos de lo cotidiano</span> <span id="author">Grupo San Francisco</span></a></li><br>
 <li><a href="./songs/Sin_Jesús_no_hay_Navidad-Grupo_San_Francisco.html"><span id="song-title">Sin Jesús no hay Navidad</span> <span id="author">Grupo San Francisco</span></a></li><br>
