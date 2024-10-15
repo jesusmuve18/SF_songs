@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage[margin=2cm]{geometry} % Establece todos los márgenes en 2cm
+
+
+
+% \input{song_commands.tex}
+\input{style.tex}
+
+% \renewcommand{\chord}[3]{#3} % Quitar acordes
+
+\begin{document}
+ 
+    % helvetica en el cuerpo del documento
+    \sffamily
+
+    \portada[titulo=Cantoral, subtitulo=Grupo San Francisco Granada]
+    \newpage
+    \tableofcontents
+    \newpage
+
+    \seccion{General}
+
+    \begin{multicols*}{2}
+        \input{../songs/0-General/Amando_hasta_el_extremo-Maite_López.tex}
+    \end{multicols*}
+
+    
+
+\end{document}
+
+% {\obeylines\obeyspaces
+    % \renewcommand\useanchorwidth{T}
+    % \begin{spacing}{2.25}
+    %     \obeylines\obeyspaces
+    %     \input{../cpp/tmp.txt}
+    % \end{spacing}
+    % }
+
+    % \input{../cpp/tmp.txt}
+    % \renewcommand\useanchorwidth{T}
+    % \chord{La}{m}{Exu}lten los \chord{Sol}{}{cor}os de los \chord{La}{m}{án}geles,
+
+    % Bue\chord{La}{m}{n}as
+
+    % \chord{La}{m}{Exu}lten
+
+
+    % % $\text{Palabra de a}\stackon{\text{\hbox{bajo}}}{\text{\mathclap{Palabra de arriba}}}$
+    % \renewcommand\useanchorwidth{T}
+    % Palabra de\stackon{\text{bajo}}{\text{Palabra de arriba}} buenas tardes
