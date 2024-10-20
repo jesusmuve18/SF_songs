@@ -3,19 +3,22 @@
 
 const NOTES_AMERICAN_SHARP = [ "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
 const NOTES_AMERICAN_FLAT = [ "C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab", "A", "Bb", "B"];
-const NOTES_EUROPE_SHARP = [ "Do", "Do#", "Re", "Re#", "Mi", "Fa", "Fa#", "Sol", "Sol#", "La", "Sib", "Si"];
+const NOTES_AMERICAN_STANDARD = [ "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "Bb", "B"];
+const NOTES_EUROPE_SHARP = [ "Do", "Do#", "Re", "Re#", "Mi", "Fa", "Fa#", "Sol", "Sol#", "La", "La#", "Si"];
 const NOTES_EUROPE_FLAT = [ "Do", "Reb", "Re", "Mib", "Mi", "Fa", "Solb", "Sol", "Lab", "La", "Sib", "Si"];
+const NOTES_EUROPE_STANDARD = [ "Do", "Do#", "Re", "Re#", "Mi", "Fa", "Fa#", "Sol", "Sol#", "La", "Sib", "Si"];
 
 const EUROPE = "europe";
 const AMERICAN = "american";
 const SHARP = "sharp";
 const FLAT = "flat";
+const STANDARD = "standard"
 
 // PARAMETERS FOR TONE ADJUSTMENTS
 let tone = +0 ;  // variation (traspose)
 let capo = +0 ;  // fret of the capo
 let given_capo = +0; // fret of the original capo in the song
-let notation = [EUROPE, SHARP];
+let notation = [EUROPE, STANDARD];
 let loaded = false;
 
 
@@ -28,9 +31,7 @@ function Grade (note){
     while (note < 0){
         note += 12;
     }
-
     return note % 12;
-    
 }
 
 /**
@@ -61,14 +62,18 @@ function Chord (note) {
     if(notation[0]==EUROPE) {
         if(notation[1]==SHARP){
             return NOTES_EUROPE_SHARP[num];
-        } else {
+        } else if (notation[1]==FLAT){
             return NOTES_EUROPE_FLAT[num];
+        } else {
+            return NOTES_EUROPE_STANDARD[num]
         }
     } else {
         if(notation[1]==SHARP){
             return NOTES_AMERICAN_SHARP[num];
-        } else {
+        } else if (notation[1]==FLAT){
             return NOTES_AMERICAN_FLAT[num];
+        } else {
+            return NOTES_AMERICAN_STANDARD[num]
         }
     }
 }
