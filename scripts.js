@@ -3,7 +3,7 @@
 
 const NOTES_AMERICAN_SHARP = [ "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
 const NOTES_AMERICAN_FLAT = [ "C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab", "A", "Bb", "B"];
-const NOTES_EUROPE_SHARP = [ "Do", "Do#", "Re", "Re#", "Mi", "Fa", "Fa#", "Sol", "Sol#", "La", "La#", "Si"];
+const NOTES_EUROPE_SHARP = [ "Do", "Do#", "Re", "Re#", "Mi", "Fa", "Fa#", "Sol", "Sol#", "La", "Sib", "Si"];
 const NOTES_EUROPE_FLAT = [ "Do", "Reb", "Re", "Mib", "Mi", "Fa", "Solb", "Sol", "Lab", "La", "Sib", "Si"];
 
 const EUROPE = "europe";
@@ -324,7 +324,7 @@ function ajustarColumnas() {
     // Si la canción ocupa más de lo que se puede ver en la pantalla y caben las 2 columnas de ancho (parámetros ajustados por prueba y error)
     if (textoPrincipal.scrollHeight > 0.57*window.innerHeight && window.innerWidth > 870) {
         console.log("2 columnas");
-        textoPrincipal.classList.add('dos-columnas');
+        // textoPrincipal.classList.add('dos-columnas');
     } else {
         console.log("1 columna");
     }
