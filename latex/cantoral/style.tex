@@ -78,7 +78,7 @@
 \setlength{\parindent}{0pt}
 
 % Distancia entre párrafos
-\newcommand{\jump}{\vspace*{0.5cm}}
+\newcommand{\jump}{\vspace*{-0.25cm}}
 
 % Interlineado de las canciones
 \def\interlineadocanciones{1.75}
@@ -111,9 +111,16 @@
 }
 
 % Definición de acorde
+% \newcommand{\chord}[3]{%
+%     \renewcommand\useanchorwidth{T}%
+%     \stackon{\text{#3\vphantom{(}}}{\text{\chordstyle{\transparent{1}\spaceskip=0.5cm\relax#1#2}\vphantom{(}}}%
+% }
 \newcommand{\chord}[3]{%
-    \renewcommand\useanchorwidth{T}%
-    \stackon{\text{#3\vphantom{(}}}{\text{\chordstyle{\transparent{1}\spaceskip=0.5cm\relax#1#2}\vphantom{(}}}%
+  \setbox0=\hbox{#3}% almacenar el primer argumento en una caja
+  \setbox1=\hbox to \wd0{\chordstyle{#1#2\hss}}% Crear caja superior con el mismo ancho y centrado
+  \leavevmode% asegurar que el contenido se renderiza en modo horizontal
+  \rlap{\copy0}% renderizar el contenido base sin mover el punto de referencia
+  \raisebox{2ex}{\copy1}% apilar el contenido sobre el base con ajuste vertical
 }
 
 

@@ -1,0 +1,14 @@
+\documentclass[12pt]{article}
+
+\newcommand{\acorde}[2]{%
+  \setbox0=\hbox{#1}% almacenar el primer argumento en una caja
+  \setbox1=\hbox to \wd0{#2\hss}% Crear caja superior con el mismo ancho y centrado
+  \leavevmode
+  \leavevmode% asegurar que el contenido se renderiza en modo horizontal
+  \rlap{\copy0}% renderizar el contenido base sin mover el punto de referencia
+  \raisebox{2ex}{\copy1}% apilar el contenido sobre el base con ajuste vertical
+}
+
+\begin{document}
+    \acorde{buenisimas}{Do}
+\end{document}

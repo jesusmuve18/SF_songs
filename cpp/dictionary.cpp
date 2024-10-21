@@ -326,6 +326,11 @@ public:
         if (line.length()!=0){
 
             vector<string> words = split(line); // vector de palabras de la línea
+
+            if(words.size()==0){ // Si no tiene palabras
+                return false;
+            }
+
             vector<string> gaps = blankSpaces(line); // vector de espacios en blanco
             string note;
             string variation;
@@ -399,8 +404,8 @@ public:
         return chord_line;
     }
 
-    string unirLineas(const string& linea1, string linea2, string t="\t", string endline="\\\\\n") {
-        string res; // Resultado
+    void unirLineas(const string& linea1, string linea2, string & res, string t="\t", string endline="\\\\\n") {
+        // string res; // Resultado
         vector<int> inicio, final;
         string tab="";
         bool hay_palabra=false; // Para saber si una posición está ocupada o no
@@ -492,31 +497,31 @@ public:
             if(linea2=="<strong>") {
                 if(res.length()>2){
                     res.pop_back();
-                    res.pop_back();
+                    // res.pop_back();
                     res+="\\jump"+endline;
                 }
                 res+=t+"\\begin{chorus}%\n";
                 tab="\t";
             } else if(linea2=="</strong>"){
-                if(res.length()>2){
+                if(res.length()>3){
                     res.pop_back();
                     res.pop_back();
-                    res+="\\jump"+endline;
+                    res.pop_back();
+                    // res+="\\jump"+endline;
+                    res+=endline;
                 }
-                res+=t+"\\end{chorus}%\n";
+                res+=t+"\\end{chorus}%\n"+t+"\\jump"+endline;
                 tab="";
-            } else if(linea2==""){
+            } else if(split(linea2).size()==0){
                 if(res.length()>2){
                     res.pop_back();
-                    res.pop_back();
-                    res+="\\jump"+endline;
+                    // res.pop_back();
+                    res+="\n"+t+"\\jump"+endline;
                 }
             }else {
                 res+=tab+linea2+endline;
             }
         }
-
-        return res;
     }
 
     string toLatex(const string& filename, const string& title, const string& subtitle) {
@@ -533,10 +538,13 @@ public:
             string chordline;
 
             string comando="\\chord";
-            res="\\begin{cancion}["+title+"]["+subtitle+"]%\n";
+            // res="\\begin{cancion}["+title+"]["+subtitle+"]%\n";
 
             while(getline(is, line)){
+                // cout<<"line: ["<<line<<"]";
+
                 if(chordLine(line)){ // Si es una línea de acordes
+                    // cout<<" es de acordes"<<endl;
                     if(chordline.empty()){ 
                         chordline=line; // La guardo en una cadena
                     } else { // Ya había una línea de acordes
@@ -548,7 +556,8 @@ public:
                         }
 
                         for(int i=0; i<chordlines.size()-1; i++){
-                            res+="{\\transparent{0}{"+unirLineas(chordlines.at(i), line, "", "");
+                            res+="{\\transparent{0}{";
+                            unirLineas(chordlines.at(i), line, res,"", "");
 
                             // // Le quito el último salto de línea
                             // if(!res.empty() && res.at(res.length()-1)=='\n'){
@@ -559,19 +568,21 @@ public:
                             res+="}}\\vspace*{-0.4cm}\\\\\n";
                         }
 
-                        res+=unirLineas(chordlines.at(chordlines.size()-1), line);
+                        unirLineas(chordlines.at(chordlines.size()-1), line, res);
                         
                         chordline.clear();
                     }
                 } else { 
-                    res+=unirLineas(chordline,line);
+                    // cout<<" NO es de acordes"<<endl;
+                    // cout<<"Uniendo ["<<chordline<<"]["<<line<<"]:"<<unirLineas(chordline,line, res)<<endl;
+                    unirLineas(chordline,line, res);
                     chordline.clear();
                 }
 
             }
 
             if(!chordline.empty()){
-                res+=unirLineas(chordline,"");
+                unirLineas(chordline,"", res);
             }
 
             // Le quito el último salto de línea
@@ -585,7 +596,7 @@ public:
             exit(-2);
         }
 
-        return res;
+        return "\\begin{cancion}["+title+"]["+subtitle+"]%\n"+res;
     }
     
 };
