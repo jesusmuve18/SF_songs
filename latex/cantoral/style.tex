@@ -126,6 +126,7 @@
 
 \NewDocumentEnvironment{cancion}{O{} O{}}{%
     \stepcounter{contador_canciones}%
+    \phantomsection % Crear un ancla para el hipervínculo
     \ifthenelse{\isempty{#2}}%
         {\addcontentsline{toc}{subsection}{\arabic{contador_canciones}. #1\ }} % Si no tiene autor especificado
         {\addcontentsline{toc}{subsection}{\arabic{contador_canciones}. #1\ (\textit{#2})}} % Si tiene autor especificado
