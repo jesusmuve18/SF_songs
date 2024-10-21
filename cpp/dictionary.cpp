@@ -540,11 +540,15 @@ public:
             string comando="\\chord";
             // res="\\begin{cancion}["+title+"]["+subtitle+"]%\n";
 
+            bool empty_line=false;
+
             while(getline(is, line)){
                 // cout<<"line: ["<<line<<"]";
 
                 if(chordLine(line)){ // Si es una línea de acordes
                     // cout<<" es de acordes"<<endl;
+                    empty_line=false;
+                    
                     if(chordline.empty()){ 
                         chordline=line; // La guardo en una cadena
                     } else { // Ya había una línea de acordes
@@ -575,8 +579,24 @@ public:
                 } else { 
                     // cout<<" NO es de acordes"<<endl;
                     // cout<<"Uniendo ["<<chordline<<"]["<<line<<"]:"<<unirLineas(chordline,line, res)<<endl;
-                    unirLineas(chordline,line, res);
-                    chordline.clear();
+                    
+                    if(chordline.empty()) {
+                        if(split(line).size()==0){
+                            if(empty_line) {
+                                unirLineas(chordline,line, res);
+                            } else {
+                                empty_line=true;
+                            }
+                            
+                        } else {
+                            empty_line=false;
+                            unirLineas(chordline,line, res);
+                        }
+                    } else {
+                        unirLineas(chordline,line, res);
+                        chordline.clear();
+                    }
+                        
                 }
 
             }
