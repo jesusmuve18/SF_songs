@@ -36,6 +36,9 @@
 % Paquete para hacer comprobaciones de parámetros
 \usepackage{xifthen}
 
+% Paquete para uso de '_'
+\usepackage[strings]{underscore}
+
 % Tipografía
 % \usepackage[defaultfam,tabular,lining]{montserrat} %% Option 'defaultfam'
 % %% only if the base font of the document is to be sans serif
@@ -116,8 +119,8 @@
 %     \stackon{\text{#3\vphantom{(}}}{\text{\chordstyle{\transparent{1}\spaceskip=0.5cm\relax#1#2}\vphantom{(}}}%
 % }
 \newcommand{\chord}[3]{%
-  \setbox0=\hbox{#3}% almacenar el primer argumento en una caja
-  \setbox1=\hbox to \wd0{\chordstyle{#1#2\hss}}% Crear caja superior con el mismo ancho y centrado
+  \setbox0=\hbox{\text{#3\vphantom{(}}}% almacenar el primer argumento en una caja
+  \setbox1=\hbox to \wd0{\text{\chordstyle{\transparent{1}\spaceskip=0.5cm\relax#1#2}\vphantom{(}}\hss}% Crear caja superior con el mismo ancho y centrado
   \leavevmode% asegurar que el contenido se renderiza en modo horizontal
   \rlap{\copy0}% renderizar el contenido base sin mover el punto de referencia
   \raisebox{2ex}{\copy1}% apilar el contenido sobre el base con ajuste vertical
@@ -130,13 +133,13 @@
     \ifthenelse{\isempty{#2}}%
         {\addcontentsline{toc}{subsection}{\arabic{contador_canciones}. #1\ }} % Si no tiene autor especificado
         {\addcontentsline{toc}{subsection}{\arabic{contador_canciones}. #1\ (\textit{#2})}} % Si tiene autor especificado
-    \large \textbf{\arabic{contador_canciones}. #1}\\ % Título
-    \def\titulo{#1}%
-    \def\subtitulo{#2}%
-    \phantom{\large \textbf{\arabic{contador_canciones}. }}\small \textit{#2}%
+        \large \textbf{\arabic{contador_canciones}. \parbox[t]{0.8\linewidth}{#1}} \\
+        \def\titulo{#1}%
+        \def\subtitulo{#2}%
+        \phantom{\large \textbf{\arabic{contador_canciones}. }}\small \textit{#2}%
     % \vspace{0.5cm}
     \begin{spacing}{\interlineadocanciones}%
-        \obeyspaces\spaceskip=0.11cm\relax% Personaliza el ancho de los espacios en blanco
+        \obeyspaces\spaceskip=0.15cm\relax% Personaliza el ancho de los espacios en blanco
         
 }%
 {%

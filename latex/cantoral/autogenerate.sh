@@ -1,12 +1,34 @@
 #!/bin/bash
 
-cd ./latex/cantoral
+# Script que añade todas las canciones de $dir_origin al documento $out
+
+# cd ./latex/cantoral
 
 #Parámetros
 out=./cantoral.tex
 dir_origin=../../cpp/songs
 script=../../cpp/to_latex
 
+################################################################################
+# Obtengo el array de archivos ordenado como si '_' fuera ' '
+
+archivos=($(find "$dir_origin" -maxdepth 1 -type f -exec basename {} \;))
+
+# Reemplazar '_' por ' ' en cada elemento del array
+for i in "${!archivos[@]}"; do
+    archivos[$i]=$(echo "${archivos[$i]}" | sed 's/_/ /g')
+done
+
+# Ordeno los archivos por orden alfabético
+mapfile -t archivos < <(printf "%s\n" "${archivos[@]}" | sort)
+
+# Recorro los archivos y le vuelvo a cambiar ' ' por '_'
+for i in "${!archivos[@]}"; do
+    archivos[$i]=$(echo "${archivos[$i]}" | sed 's/ /_/g')
+done
+
+# Ya están ordenados y listos para su uso (devueltos al formato original)
+################################################################################
 
 # Vacío el archivo de salida y lo relleno con la plantilla
 echo "\documentclass[12pt]{article}
@@ -31,15 +53,17 @@ echo "\documentclass[12pt]{article}
     \begin{multicols*}{2}
     " > $out
 
-for file in "$dir_origin"/*; do
-    if [ -f "$file" ]; then
+for file in "${archivos[@]}"; 
+do  
+    
+    if [ -f "$dir_origin/$file" ]; then
         echo "Archivo: $(basename "$file")"
 
-        $script $file >> $out
+        $script $dir_origin/$file >> $out
         echo >> $out
 
-    elif [ -d "$file" ]; then
-        echo "Carpeta: $(basename "$file")"
+    elif [ -d "$dir_origin/$file" ]; then
+        echo "Carpeta: $(basename "$dir_origin/$file")"
     fi
 done
 

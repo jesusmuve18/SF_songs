@@ -316,7 +316,15 @@ public:
 
     string variationPart(string& word) { // Todo lo que no es nota
         string w=word; //Creo una copia
-        return w.substr(notePart(w).length(), w.length());
+        string res=w.substr(notePart(w).length(), w.length());
+
+        if(!res.empty() && res.at(res.length()-1)=='#'){
+            res.at(res.length()-1)='\\';
+            word.insert((res.length()-1), "\\");
+            res+="#";
+        }
+
+        return res;
     }
 
     bool chordLine(const string & line){
@@ -467,21 +475,35 @@ public:
                 }
 
                 antes=comando+"{"+parentesis1+notePart(words.at(j))+"}{"+variationPart(words.at(j))+parentesis2+"}"+"{";
-                j++;                            
+                j++;
 
                 // Evitar separar caracteres con tilde
-                if((inicio.at(i)+desplazamiento-1)>0 && (inicio.at(i)+desplazamiento-1)<linea2.length() && static_cast<int>(linea2.at(inicio.at(i)+desplazamiento-1))==static_cast<char>(0xC3)){
+                if((inicio.at(i)+desplazamiento-1)>0 && (inicio.at(i)+desplazamiento-1)<linea2.length() && (static_cast<int>(linea2.at(inicio.at(i)+desplazamiento-1))==static_cast<char>(0xC3) )){
                     desplazamiento++;
                     linea2+=" ";  //Al tener una tilde se cuentan mal los espacios por lo que habrá que añadir uno
                 }
 
+                // Evitar fallo con el signo '¡'
+                if((inicio.at(i)+desplazamiento-1)>=0 && (inicio.at(i)+desplazamiento-1)<linea2.length() && (static_cast<int>(linea2.at(inicio.at(i)+desplazamiento-1))==-62 )){
+                    desplazamiento++;
+                    linea2+=" ";
+                }
+
                 linea2.insert(inicio.at(i)+desplazamiento,antes);
+
+
                 desplazamiento+=antes.length();
 
                 despues="}";
 
                 // Evitar separar caracteres con tilde
                 if((final.at(i)+desplazamiento-1)>0 && (final.at(i)+desplazamiento-1)<linea2.length() && static_cast<int>(linea2.at(final.at(i)+desplazamiento-1))==static_cast<char>(0xC3)){
+                    desplazamiento++;
+                    linea2+=" ";
+                }
+
+                // Evitar fallo con el signo '¡'
+                if((final.at(i)+desplazamiento-1)>=0 && (final.at(i)+desplazamiento-1)<linea2.length() && (static_cast<int>(linea2.at(final.at(i)+desplazamiento-1))==-62 )){
                     desplazamiento++;
                     linea2+=" ";
                 }
