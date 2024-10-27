@@ -569,7 +569,13 @@ public:
 
                 if(chordLine(line)){ // Si es una línea de acordes
                     // cout<<" es de acordes"<<endl;
-                    empty_line=false;
+
+                    if(empty_line){
+                        res+="\\jump\n";
+                        empty_line=false;
+                    }
+
+                    
                     
                     if(chordline.empty()){ 
                         chordline=line; // La guardo en una cadena
