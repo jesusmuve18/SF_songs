@@ -234,6 +234,7 @@
 <li><a href="./songs/Sea_nuestra_vida_una_canción-Brotes_de_Olivo.html"><span id="song-title">Sea nuestra vida una canción</span> <span id="author">Brotes de Olivo</span></a></li><br>
 <li><a href="./songs/Sea-Brotes_de_Olivo.html"><span id="song-title">Sea</span> <span id="author">Brotes de Olivo</span></a></li><br>
 <li><a href="./songs/Semillas_de_Comunidad-Alberto_y_Emilia.html"><span id="song-title">Semillas de Comunidad</span> <span id="author">Alberto y Emilia</span></a></li><br>
+<li><a href="./songs/Señor_Dios_Nuestro-Popular,_Salmo_8.html"><span id="song-title">Señor Dios Nuestro</span> <span id="author">Popular, Salmo 8</span></a></li><br>
 <li><a href="./songs/Señor,_envíanos_tu_Espíritu-Brotes_de_Olivo.html"><span id="song-title">Señor, envíanos tu Espíritu</span> <span id="author">Brotes de Olivo</span></a></li><br>
 <li><a href="./songs/Señor,_hazme_instrumento_de_tu_paz-Franciscano.html"><span id="song-title">Señor, hazme instrumento de tu paz</span> <span id="author">Franciscano</span></a></li><br>
 <li><a href="./songs/Señor_ten_piedad-Jerez.html"><span id="song-title">Señor ten piedad</span> <span id="author">Jerez</span></a></li><br>
