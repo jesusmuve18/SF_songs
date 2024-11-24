@@ -159,3 +159,9 @@ También se podrá cambiar desde el archivo *html* mediante la línea
 Con las mismas combinaciones anteriormente mencionadas.
 
 Por el funcionamiento del programa que traduce las canciones es posible que se produzca algún error en la traducción. Por ejemplo si aparece en una línea únicamente la palabra "Amen", el intérprete podría pensar que se trata de un "A" (La) "m" (menor) y con algún tipo de variación añadida "en". Para evitar esto, de momento bastará con incluir algún caracter "ilegal" para una línea de acordes, por ejemplo *\&nbsp;* al final de la línea, que añadiría un caracter en blanco (y no se vería en el *html*).
+
+Para añadir una cejilla (por defecto) se deberá ubicar en cualquier lugar del archivo de la canción (preferentemente al final) la siguiente sentencia:
+```html
+<span id="cejilla-original"> num-traste </span>
+```
+donde *num-traste* es solo un número.
