@@ -504,6 +504,7 @@
 <li><a href="./songs/Resucitados.html"><span id="song-title">Resucitados</span> <span id="author"></span></a></li><br>
 <li><a href="./songs/Salmo_97_Aleluya-Grupo_San_Francisco.html"><span id="song-title">Salmo 97 Aleluya</span> <span id="author">Grupo San Francisco</span></a></li><br>
 <li><a href="./songs/Sirenas-Taburete.html"><span id="song-title">Sirenas</span> <span id="author">Taburete</span></a></li><br>
+<li><a href="./songs/Sixtinain-Guitarricadelafuente.html"><span id="song-title">Sixtinain</span> <span id="author">Guitarricadelafuente</span></a></li><br>
 <li><a href="./songs/Solo-Myles_Smith.html"><span id="song-title">Solo</span> <span id="author">Myles Smith</span></a></li><br>
 <li><a href="./songs/Todo_es_de_mi_Cristo.html"><span id="song-title">Todo es de mi Cristo</span> <span id="author"></span></a></li><br>
 <li><a href="./songs/Un_violinista_en_tu_tejado-Melendi.html"><span id="song-title">Un violinista en tu tejado</span> <span id="author">Melendi</span></a></li><br>

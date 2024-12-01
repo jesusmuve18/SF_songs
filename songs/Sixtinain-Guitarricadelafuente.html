@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sixtinain</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <!-- <a href="#"><li>Opción 3</li></a> -->
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Sixtinain</div>
+                    <div id="artist">Guitarricadelafuente</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">C </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>C</b>   <b>G</b>  <b>A m</b>  <b>F</b>
+
+    <b>C</b>           <b>G</b>
+Cantar para olvidar
+   <b>A m</b>               <b>F</b>
+El sabor amargo del mar
+    <b>C</b>               <b>G</b>
+Y beber y beber y beber
+       <b>A m</b>               <b>F</b>
+Hasta perder la formalidad
+
+<b>C</b>            <b>G</b>
+Ponme otra copa...
+<b>A m</b>          <b>F</b>
+Prueba o verdad
+<b>C</b>              <b>G</b>
+Con el alma rota
+           <b>A m</b>
+A mis cicatrices
+             <b>F</b>      <b>G</b>
+Vinagre con sal
+
+<b>C</b>                     <b>E</b>
+Voy viajando con las olas
+                  <b>A m</b>
+Evitando el temporal
+                   <b>F</b>
+No me falla la memoria
+           <b>G</b>      <b>C</b>
+Y tu tampoco lo harás
+
+<b>C</b>                    <b>E</b>
+Tarareando esta historia
+                     <b>A m</b>
+Hasta que no haya finaL
+                     <b>F</b>
+En lo alto de la gloria
+         <b>G</b>            <b>C</b>       <b>G</b>
+Y en lo bajo de este bar
+
+
+<b>C</b>           <b>G</b>
+No queda nadie
+<b>A m</b>          <b>F</b>
+A quien llamar
+<b>C</b>                <b>G</b>       <b>A m</b>
+Se acabaron los escondites
+              <b>F</b>
+Las horas de más
+
+<b>C</b>           <b>G</b>
+Ódiame fuerte
+<b>A m</b>         <b>F</b>
+Quiéreme más
+<b>C</b>               <b>G</b>            <b>A m</b>
+Tuviste la suerte de haber nacido
+            <b>F</b>     <b>G</b>
+En ese sixtinain
+
+<b>C</b>                     <b>E</b>
+Voy viajando con las olas
+                  <b>A m</b>
+Evitando en temporal
+                   <b>F</b>
+No me falla la memoria
+         <b>G</b>         <b>C</b>
+Y tu tampoco lo harás
+
+<b>C</b>                  <b>E</b>
+Alargando esta historia 
+                  <b>A m</b>
+hasta que no haya final
+                   <b>F</b>             <b>G</b>
+En lo alto de la gloria 
+        <b>G</b>            <b>C</b>   <b>E</b>
+y en lo bajo de este bar
+
+<b>A m</b>           <b>G</b>       <b>C</b>   <b>E</b>  <b>A m</b> <b>G</b> <b>F</b>
+En lo bajo de este bar
+
+<b>C</b>       <b>E</b>         <b>A m</b>
+En lo alto de la gloria 
+        <b>G</b>            <b>C</b>
+y en lo bajo de este bar
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>
