@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padre</title>
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="../scripts.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+
+            <nav>
+                <ul>
+                    <a href="../index.html"><li>Inicio</li></a>
+                    <a href="../indice.html"><li>Indice</li></a>
+                    <a href="../acordes.html"><li>Acordes</li></a>
+                    <!-- <a href="#"><li>Opción 3</li></a> -->
+                    <a href="../about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+
+            <aside>
+                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
+                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
+            </aside>
+
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Padre</div>
+                    <div id="artist">Sonido Joven</div>
+                     <div id="tone">
+                        Tono: <span id="original-tone">Re </span><br>
+                        Cejilla: traste <span id="capo">0</span><br>
+                        Transpuesta: <span id="traspose">0</span> semitonos
+                    </div>
+                </div>
+                <div id="song-body" class="texto-principal"><b>Re</b>                 <b>mi m</b>
+Padre, que a todos amas por igual,
+         <b>fa# m</b>
+sin distinguir raza ni color,
+         <b>Sol</b>            <b>sol m</b>
+sin distinguir nacionalidad.
+       <b>La 7</b>
+Quiero pedirte...
+
+<b>Re</b>              <b>mi m</b>
+Padre, pedirte unión fraternal
+         <b>fa# m</b>
+para los hombres y con tu amor
+             <b>Sol</b>
+que haya una misma voluntad...
+<b>La</b>      <b>Re</b>   <b>Re 7</b>
+tu voluntad.
+<strong>
+              <b>Sol</b>      <b>La</b>
+Que todos tus hijos reciban
+   <b>Re</b>
+el pan de cada día,
+               <b>Sol</b>     <b>La</b>         <b>Re</b>
+que si a nadie sobra a nadie faltará.
+         <b>mi m</b>
+Quiero vivir en la esperanza
+        <b>fa# m</b>
+de un mañana en justa paz
+       <b>mi m</b>
+ya que con un sólo techo
+        <b>Sol</b>       <b>La</b>
+también hay felicidad.
+</strong>
+<b>Re</b>                 <b>mi m</b>
+Padre, he aquí mis manos tómalas,
+        <b>fa# m</b>
+aquí mi tiempo y mi oración;
+ <b>Sol</b>    <b>La</b>    <b>Re</b>    <b>Re 7</b>
+ayúdame a ayudar.
+<strong>
+              <b>Sol</b>      <b>La</b>
+Que todos tus hijos reciban
+   <b>Re</b>
+el pan de cada día,
+               <b>Sol</b>     <b>La</b>         <b>Re</b>
+que si a nadie sobra a nadie faltará.
+         <b>mi m</b>
+Quiero vivir en la esperanza
+        <b>fa# m</b>
+de un mañana en justa paz
+       <b>mi m</b>
+ya que con un sólo techo
+        <b>Sol</b>       <b>La</b>
+también hay felicidad.
+</strong>
+<b>Re</b>
+Padre...
+</div>
+                </div>
+            </div>
+        <div id="controls">
+            <img id="pauseButton" src="../images/play.svg" alt="play">
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+        <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+</body>
+</html>

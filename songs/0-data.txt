@@ -112,7 +112,7 @@
 <li><a href="./songs/Hacen_falta,_sí-Brotes_de_Olivo.html"><span id="song-title">Hacen falta, sí</span> <span id="author">Brotes de Olivo</span></a></li><br>
 <li><a href="./songs/Hacia_Ti-Ixcís.html"><span id="song-title">Hacia Ti</span> <span id="author">Ixcís</span></a></li><br>
 <li><a href="./songs/Hágase-Migueli.html"><span id="song-title">Hágase</span> <span id="author">Migueli</span></a></li><br>
-<li><a href="./songs/Hasta_en_el_viento.html"><span id="song-title">Hasta en el viento</span> <span id="author"></span></a></li><br>
+<li><a href="./songs/Hasta_en_el_viento-Sonido_Joven.html"><span id="song-title">Hasta en el viento</span> <span id="author">Sonido Joven</span></a></li><br>
 <li><a href="./songs/Hay_caminos_por_andar-Brotes_de_Olivo.html"><span id="song-title">Hay caminos por andar</span> <span id="author">Brotes de Olivo</span></a></li><br>
 <li><a href="./songs/Haz_de_mí,_Señor,_instrumento_de_tu_paz.html"><span id="song-title">Haz de mí, Señor, instrumento de tu paz</span> <span id="author"></span></a></li><br>
 <li><a href="./songs/Hazme_instrumento_de_tu_paz.html"><span id="song-title">Hazme instrumento de tu paz</span> <span id="author"></span></a></li><br>
@@ -191,7 +191,7 @@
 <li><a href="./songs/Padre_Nuestro-Grupo_San_Francisco.html"><span id="song-title">Padre Nuestro</span> <span id="author">Grupo San Francisco</span></a></li><br>
 <li><a href="./songs/Padre_Nuestro-Simon_y_Garfunkel.html"><span id="song-title">Padre Nuestro</span> <span id="author">Simon y Garfunkel</span></a></li><br>
 <li><a href="./songs/Padre_y_Madre-Brotes_de_Olivo.html"><span id="song-title">Padre y Madre</span> <span id="author">Brotes de Olivo</span></a></li><br>
-<li><a href="./songs/Padre-Colegio_Compañía_de_María.html"><span id="song-title">Padre</span> <span id="author">Colegio Compañía de María</span></a></li><br>
+<li><a href="./songs/Padre-Sonido_Joven.html"><span id="song-title">Padre</span> <span id="author">Sonido Joven</span></a></li><br>
 <li><a href="./songs/Paz,_Señor.html"><span id="song-title">Paz, Señor</span> <span id="author"></span></a></li><br>
 <li><a href="./songs/Pedid_y_se_os_dará-Ruah.html"><span id="song-title">Pedid y se os dará</span> <span id="author">Ruah</span></a></li><br>
 <li><a href="./songs/Pequeño_y_pobre-Brotes_de_Olivo.html"><span id="song-title">Pequeño y pobre</span> <span id="author">Brotes de Olivo</span></a></li><br>
