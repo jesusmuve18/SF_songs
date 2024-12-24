@@ -374,6 +374,10 @@ b:hover .hover-image,  b2:hover .hover-image{
     #search-bar {
         display: none;
     }
+
+    #index>ol {
+        /* background-color: red; */
+    }
 }
 
 
