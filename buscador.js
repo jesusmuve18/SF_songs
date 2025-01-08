@@ -6,8 +6,6 @@ window.addEventListener('load', function() {
 });
 
 function busqueda(w) {
-    console.log("buscando..."+w);
-
     const enlaces = document.querySelector('#enlaces');
         
     // Ocultar los enlaces iniciales al empezar a buscar
@@ -32,7 +30,8 @@ function busqueda(w) {
         const author = authorElement ? authorElement.textContent.trim() : 'Autor no encontrado';
 
         if(title.toLowerCase().includes(w.toLowerCase()) 
-            || author.toLowerCase().includes(w.toLowerCase())) {
+            || author.toLowerCase().includes(w.toLowerCase())
+            || (`${title.toLowerCase()} ${author.toLowerCase()}`).includes(w.toLowerCase())) {
             li.classList.remove("filtro");
         } else {
             li.classList.add("filtro");
@@ -49,10 +48,10 @@ document.addEventListener("keyup", e=>{
         if(e.key == 'Enter'){
             e.target.blur();
             escribiendo=false;
-        }
+        } else {
+            busqueda(e.target.value);
+        }   
 
-        busqueda(e.target.value);
-        
     } else {
 
         if(e.key != "Tab" && e.key != "ArrowDown" && e.key != 'ArrowUp'){
