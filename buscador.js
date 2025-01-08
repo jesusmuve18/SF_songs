@@ -1,9 +1,19 @@
+let escribiendo=false;
+let barra_busqueda;
+
+window.addEventListener('load', function() {
+    barra_busqueda = document.querySelector('#buscador');
+});
+
 document.addEventListener("keyup", e=>{
     if(e.target.matches("#buscador")){
+
+        escribiendo=true;
 
         // Ocultar el teclado al pulsar enter
         if(e.key == 'Enter'){
             e.target.blur();
+            escribiendo=false;
         }
 
         const enlaces = document.querySelector('#enlaces');
@@ -37,5 +47,33 @@ document.addEventListener("keyup", e=>{
             }
         });
         
+    } else {
+
+        if(e.key != "Tab" && e.key != "ArrowDown" && e.key != 'ArrowUp'){
+            // Si no se pulsa sobre el input, al escribir aparecerá en el input
+            barra_busqueda.focus();
+
+            if (/^[a-zA-Z0-9]$/.test(e.key)){
+                barra_busqueda.value=e.key;
+                escribiendo=true;
+            } else 
+                barra_busqueda.select();
+        }
+    }
+})
+
+let primera_vez=true;
+
+// La primera vez que se clica en la página se empieza a escuchar el click en la barra de busqueda
+document.addEventListener('click', e => {
+    if(primera_vez){
+            barra_busqueda.addEventListener('click', function() {
+            // Si no se está escribiendo se selecciona el texto
+            if(!escribiendo){
+                barra_busqueda.select();
+            }
+        })
+
+        primera_vez=false;
     }
 })
