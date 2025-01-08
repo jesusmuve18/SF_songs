@@ -1,6 +1,14 @@
 document.addEventListener("keyup", e=>{
     if(e.target.matches("#buscador")){
 
+        const enlaces = document.querySelector('#enlaces');
+
+        if(e.target.value.toLowerCase() == ""){
+            enlaces.classList.remove("filtro");
+        } else {
+            enlaces.classList.add("filtro");
+        }
+
         // Seleccionar el índice
         const container = document.getElementById('index');
 
