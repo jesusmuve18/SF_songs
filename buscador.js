@@ -10,11 +10,6 @@ document.addEventListener("keyup", e=>{
             enlaces.classList.add("filtro");
         }
 
-        // Ocultar el teclado al pulsar enter
-        if (e.key === 'Enter') {
-            this.blur(); // Esto quita el foco del input, lo que oculta el teclado
-        }
-
         // Seleccionar el índice
         const container = document.getElementById('index');
 
@@ -42,32 +37,8 @@ document.addEventListener("keyup", e=>{
     }
 })
 
-// document.addEventListener("keyup", (e) => {
-//     if (e.target.matches("#buscador")) {
-//         const listItems = document.querySelectorAll("#song-list li");
-
-//         // Inicializar el índice de la numeración
-//         let index = 1;
-
-//         listItems.forEach((li, originalIndex) => {
-//             const titleElement = li.querySelector("#song-title");
-//             const authorElement = li.querySelector("#author");
-
-//             const title = titleElement ? titleElement.textContent.trim() : "";
-//             const author = authorElement ? authorElement.textContent.trim() : "";
-
-//             if (
-//                 title.toLowerCase().includes(e.target.value.toLowerCase()) ||
-//                 author.toLowerCase().includes(e.target.value.toLowerCase())
-//             ) {
-//                 li.classList.remove("filtro"); // Mostrar
-//                 li.style.display = ""; // Asegurarse de que esté visible
-//                 li.setAttribute("value", originalIndex + 1); // Forzar la numeración
-//                 index++;
-//             } else {
-//                 li.classList.add("filtro"); // Ocultar
-//                 li.style.display = "none"; // Ocultar completamente
-//             }
-//         });
-//     }
-// });
+document.getElementById('buscador').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        this.blur(); // Esto quita el foco del input, lo que oculta el teclado
+    }
+});
