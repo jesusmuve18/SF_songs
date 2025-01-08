@@ -1,0 +1,126 @@
+#sesiones {
+    padding: 10px 0 10px 0;
+}
+
+#contenedor-boton {
+    display: flex;
+    justify-content: center;
+}
+
+#contenedor-boton button {
+    background: none;
+    padding: 10px 15px 10px 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: large;
+}
+
+#contenedor-boton button:hover {
+    background-color: rgba(176, 212, 236, 0.514);
+    cursor: pointer;
+}
+
+.hidden2 {
+    display: none;
+}
+
+.filtro {
+    display: none;
+}
+
+#ventana-emergente {
+    position: absolute;
+    left: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    background-color: rgba(24, 24, 24, 0.76);
+    justify-items: center;
+    align-content: center;
+}
+
+#ventana-emergente > #cuadro-ventana {
+    background-color: white;
+    width: 80%;
+    height: 80%;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#index {
+    margin-top: 10px;
+    overflow-y: scroll;
+    height: 120vw;
+}
+
+#contenedor-sesiones a #song-title {
+    font-weight: 600;
+    color: black;
+}
+
+#contenedor-sesiones li a{
+    line-height: 150%;
+}
+
+#contenedor-sesiones a #author {
+    color: grey;
+    padding-left: 5px;
+}
+
+/*MÓVIL*/
+@media (orientation: portrait) {
+
+#buscador-container {
+    /* background-color: red; */
+    /* justify-content: center; */
+    /* padding-bottom: 30px; */
+}
+
+input {
+    width: 80vw;
+    padding: 10px 0 10px 0;
+    outline: none;
+    /* border-radius: 25px; */
+    border: none;
+    border-bottom: 1px solid black;
+    background: none;
+    
+}
+
+#info {
+    padding-bottom: 10px;
+}
+
+ol {
+    padding-left: 35px;
+    width: 80%;
+    margin-top: 0;
+}
+
+ol > li > a {
+    text-decoration: none;
+}
+
+#index a #song-title {
+    font-weight: 600;
+    color: black;
+}
+
+#index li a{
+    line-height: 150%;
+}
+
+#index a #author {
+    color: grey;
+    padding-left: 5px;
+}
+
+#enlaces {
+    display: none;
+    height: 0;
+}
+
+}

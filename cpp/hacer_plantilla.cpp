@@ -183,7 +183,7 @@ int main(int argc, char** argv){
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\
     <title>" + title + "</title>\n\
     <link rel=\"stylesheet\" href=\"" + main_dir + "/styles/style.css\">\n\
-    <script src=\"" + main_dir + "scripts.js\"></script>\n\
+    <script src=\"" + main_dir + "javascript/scripts.js\"></script>\n\
     <link rel=\"icon\" href=\"" + main_dir + "images/Logo Tau sin fondo.png\">\n\
 </head>\n\
 <body>\n\
