@@ -34,7 +34,7 @@
     left: 0;
     left: 0;
     width: 100%;
-    height: 80%;
+    height: 70%;
     background-color: rgba(24, 24, 24, 0.76);
     justify-items: center;
     align-content: center;
@@ -53,7 +53,8 @@
 #index {
     margin-top: 10px;
     overflow-y: scroll;
-    height: 120vw;
+    height: 90vw;
+    font-size: 14px;
 }
 
 #contenedor-sesiones a #song-title {
@@ -95,9 +96,13 @@ input {
 }
 
 ol {
-    padding-left: 35px;
+    padding-left: 30px;
     width: 80%;
     margin-top: 0;
+}
+
+h2 {
+    font-size: 15px;
 }
 
 ol > li > a {

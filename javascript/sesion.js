@@ -2,6 +2,10 @@
 let list = [];
 let primera_vez=true;
 
+function open(href) {
+    console.log(`Intentando abrir ${href}`);
+}
+
 function add_song() {
     const ventana=document.querySelector('#ventana-emergente');
 
@@ -10,7 +14,7 @@ function add_song() {
 
         if(primera_vez) {
             // Evitamos que se abran los enlaces
-            const links = document.querySelectorAll('a');
+            let links = document.querySelectorAll('#index ol li a');
 
             links.forEach(link => {
                 link.addEventListener('click', function(event) {
@@ -25,8 +29,22 @@ function add_song() {
                     // Añado la canción a la interfaz
                     const contenedor=document.querySelector('#contenedor-sesiones>ol');
                     contenedor.innerHTML+="<li>"+link.outerHTML+"</li>";
+
+                    // Evitamos que se abran los enlaces
+                    let links = document.querySelectorAll('#sesiones ol li a');
+
+                    links.forEach(link => {
+                        link.addEventListener('click', function(event) {
+                            event.preventDefault(); // Evita la navegación
+                            
+                            open(link.href);
+                        });
+                    });
                 });
             });
+
+            
+
             primera_vez=false;
         }
         
