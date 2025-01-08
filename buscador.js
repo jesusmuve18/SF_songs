@@ -2,11 +2,17 @@ document.addEventListener("keyup", e=>{
     if(e.target.matches("#buscador")){
 
         const enlaces = document.querySelector('#enlaces');
-
+        
+        // Ocultar los enlaces iniciales al empezar a buscar
         if(e.target.value.toLowerCase() == ""){
             enlaces.classList.remove("filtro");
         } else {
             enlaces.classList.add("filtro");
+        }
+
+        // Ocultar el teclado al pulsar enter
+        if (e.key === 'Enter') {
+            this.blur(); // Esto quita el foco del input, lo que oculta el teclado
         }
 
         // Seleccionar el índice
