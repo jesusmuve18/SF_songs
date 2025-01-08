@@ -5,6 +5,41 @@ window.addEventListener('load', function() {
     barra_busqueda = document.querySelector('#buscador');
 });
 
+function busqueda(w) {
+    console.log("buscando..."+w);
+
+    const enlaces = document.querySelector('#enlaces');
+        
+    // Ocultar los enlaces iniciales al empezar a buscar
+    if(w.toLowerCase() == ""){
+        enlaces.classList.remove("filtro");
+    } else {
+        enlaces.classList.add("filtro");
+    }
+
+    // Seleccionar el índice
+    const container = document.getElementById('index');
+
+    // Seleccionar todos los <li> dentro del contenedor
+    const listItems = container.querySelectorAll('li');
+
+    // Recorrer los elementos <li> y extraer los detalles
+    listItems.forEach(li => {
+        const titleElement = li.querySelector('#song-title');
+
+        const authorElement = li.querySelector('#author');
+        const title = titleElement ? titleElement.textContent.trim() : 'Título no encontrado';
+        const author = authorElement ? authorElement.textContent.trim() : 'Autor no encontrado';
+
+        if(title.toLowerCase().includes(w.toLowerCase()) 
+            || author.toLowerCase().includes(w.toLowerCase())) {
+            li.classList.remove("filtro");
+        } else {
+            li.classList.add("filtro");
+        }
+    });
+}
+
 document.addEventListener("keyup", e=>{
     if(e.target.matches("#buscador")){
 
@@ -16,36 +51,7 @@ document.addEventListener("keyup", e=>{
             escribiendo=false;
         }
 
-        const enlaces = document.querySelector('#enlaces');
-        
-        // Ocultar los enlaces iniciales al empezar a buscar
-        if(e.target.value.toLowerCase() == ""){
-            enlaces.classList.remove("filtro");
-        } else {
-            enlaces.classList.add("filtro");
-        }
-
-        // Seleccionar el índice
-        const container = document.getElementById('index');
-
-        // Seleccionar todos los <li> dentro del contenedor
-        const listItems = container.querySelectorAll('li');
-
-        // Recorrer los elementos <li> y extraer los detalles
-        listItems.forEach(li => {
-            const titleElement = li.querySelector('#song-title');
-
-            const authorElement = li.querySelector('#author');
-            const title = titleElement ? titleElement.textContent.trim() : 'Título no encontrado';
-            const author = authorElement ? authorElement.textContent.trim() : 'Autor no encontrado';
-
-            if(title.toLowerCase().includes(e.target.value.toLowerCase()) 
-               || author.toLowerCase().includes(e.target.value.toLowerCase())) {
-                li.classList.remove("filtro");
-            } else {
-                li.classList.add("filtro");
-            }
-        });
+        busqueda(e.target.value);
         
     } else {
 
@@ -56,6 +62,7 @@ document.addEventListener("keyup", e=>{
             if (/^[a-zA-Z0-9]$/.test(e.key)){
                 barra_busqueda.value=e.key;
                 escribiendo=true;
+                busqueda(e.key);
             } else 
                 barra_busqueda.select();
         }
