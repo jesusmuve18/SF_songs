@@ -1,6 +1,11 @@
 document.addEventListener("keyup", e=>{
     if(e.target.matches("#buscador")){
 
+        // Ocultar el teclado al pulsar enter
+        if(e.key == 'Enter'){
+            e.target.blur();
+        }
+
         const enlaces = document.querySelector('#enlaces');
         
         // Ocultar los enlaces iniciales al empezar a buscar
@@ -20,8 +25,6 @@ document.addEventListener("keyup", e=>{
         listItems.forEach(li => {
             const titleElement = li.querySelector('#song-title');
 
-            console.log(titleElement.innerHTML);
-
             const authorElement = li.querySelector('#author');
             const title = titleElement ? titleElement.textContent.trim() : 'Título no encontrado';
             const author = authorElement ? authorElement.textContent.trim() : 'Autor no encontrado';
@@ -36,9 +39,3 @@ document.addEventListener("keyup", e=>{
         
     }
 })
-
-document.getElementById('buscador').addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') {
-        this.blur(); // Esto quita el foco del input, lo que oculta el teclado
-    }
-});
