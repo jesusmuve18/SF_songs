@@ -55,11 +55,19 @@ function add_song() {
 document.addEventListener('click', e=> {
     if(e.target.matches('#add')){
         add_song();;
-    } else if(e.target.matches('#ventana-emergente')){
+    } else if(e.target.matches('#ventana-emergente') 
+                || e.target.matches('#pie')){
         const ventana=document.querySelector('#ventana-emergente');
 
         if(ventana!=null) {
             ventana.classList.add('hidden2');
+        }
+    } else if(e.target.matches('#save')){
+        let title=window.prompt("Nombre de la sesión:");
+        if(title!=null)
+            window.alert(`Sesión \"${title}\" guardada con éxito.\nEl enlace a tu sesión es:\n${window.location.origin}/sesiones/${title}.html`)
+        else {
+            window.confirm(`¿Está seguro de que quiere cancelar?`);
         }
     }
 })
