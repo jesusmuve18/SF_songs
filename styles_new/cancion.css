@@ -146,7 +146,7 @@ b:hover .hover-image,  b2:hover .hover-image{
 }
 
 @media (orientation: portrait)  {
-    #song {
+    #song-body {
         font-size: 0.85em;
     }
 }
