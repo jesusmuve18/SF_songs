@@ -47,7 +47,6 @@
 #song-body b, #original-tone, #info b2 {
     color: red;
     cursor: pointer;
-    font-weight: 600;
 }
 
 #reserved {
@@ -143,5 +142,11 @@ b:hover .hover-image,  b2:hover .hover-image{
 
 #controls:hover .scroll-speed-value {
     display: block;
+}
+
+@media (orientation: portrait)  {
+    #song {
+        font-size: 0.85em;
+    }
 }
 
