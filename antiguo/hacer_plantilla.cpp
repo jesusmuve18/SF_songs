@@ -197,7 +197,7 @@ int main(int argc, char** argv){
     <div id=\"pagina\">\n\
         <div id=\"cabecera\">\n\
             <header>\n\
-                <img id=\"logo\" src=\"" + main_dir + "images/logo_sf.png\" alt=\"Logo Sf\">\n\
+                <img id=\"logo\" src=\"" + main_dir + "logo_sf.png\" alt=\"Logo Sf\">\n\
                 <div id=\"grupo-sf\">Grupo San Francisco</div>\n\
                 <button id=\"icono-buscar\" class=\"hidden\"><img src=\"" + main_dir + "images/search.svg\"></button>\n\
                 <button id=\"icono-tools\"><img src=\"" + main_dir + "images/tools.svg\"></button>\n\
@@ -206,10 +206,10 @@ int main(int argc, char** argv){
 \n\
             <nav>\n\
                 <ul>\n\
-                    <li><a href=\"" + main_dir + "index.html\">Inicio</a><img src=\"" + main_dir + "images/right-arrow.svg\"></li>\n\
-                    <li><a href=\"" + main_dir + "indice.html\">Indice</a><img src=\"" + main_dir + "images/right-arrow.svg\"></li>\n\
-                    <li><a href=\"" + main_dir + "acordes.html\">Acordes</a><img src=\"" + main_dir + "images/right-arrow.svg\"></li>\n\
-                    <li><a href=\"" + main_dir + "about.html\">Acerca de</a><img src=\"" + main_dir + "images/right-arrow.svg\"></li>\n\
+                    <li><a href=\"" + main_dir + "index2.html\">Inicio</a><img src=\"" + main_dir + "images/right-arrow.svg\"></li>\n\
+                    <li><a href=\"" + main_dir + "indice2.html\">Indice</a><img src=\"" + main_dir + "images/right-arrow.svg\"></li>\n\
+                    <li><a href=\"" + main_dir + "acordes2.html\">Acordes</a><img src=\"" + main_dir + "images/right-arrow.svg\"></li>\n\
+                    <li><a href=\"" + main_dir + "about2.html\">Acerca de</a><img src=\"" + main_dir + "images/right-arrow.svg\"></li>\n\
                 </ul>\n\
             </nav>\n\
 \n\
@@ -249,13 +249,13 @@ int main(int argc, char** argv){
 \n\
         <div id=\"cuerpo\">\n\
             <div id=\"notation\">europe sharp</div>\n\
-            <div id=\"title\">" + title +"</div>\n\
-            <div id=\"artist\">" + subtitle + "</div>\n\
+            <div id=\"title\">A ti que estás sentado en tu sillón</div>\n\
+            <div id=\"artist\">Alberto y Emilia</div>\n\
             <div id=\"info\">\n\
                 <div id=\"tone\">\n\
                     <b>Tono: </b> <span id=\"original-tone\">" + tone + "</span><br>\n\
-                    <b>Cejilla: </b>traste <span id=\"capo\">" + to_string(capo) + "</span><br>\n\
-                    <b>Transpuesta:</b> <span id=\"traspose\">" + to_string(traspose) + "</span> semitonos\n\
+                    <b>Cejilla: </b>traste <span id=\"" + to_string(capo) + "\">0</span><br>\n\
+                    <b>Transpuesta:</b> <span id=\"" + to_string(traspose) + "\">0</span> semitonos\n\
                 </div>\n\
             </div>\n\
             <div id=\"song-body\" class=\"texto-principal\">" + song + "</div>\n\

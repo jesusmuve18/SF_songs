@@ -4,48 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Annuncieremo</title>
-    <link rel="stylesheet" href="..//styles/style.css">
-    <script src="../javascript/scripts.js"></script>
-    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+    <link rel="stylesheet" href="../styles_new/general.css">
+    <link rel="stylesheet" href="../styles_new/cabecera.css">
+    <link rel="stylesheet" href="../styles_new/cancion.css">
+
+    <script src="../javascript/cabecera.js"></script>
+    <script src="../javascript/acordes.js"></script>
+    <script src="../javascript/scroll.js"></script>
+    <script src="../javascript/tools.js"></script>
+
+    <link rel="icon" href="../images/logo_sf.png">
 </head>
 <body>
     <div id="pagina">
         <div id="cabecera">
             <header>
-                <img id="logo" src="../images/Logo Tau sin fondo.png" alt="Logo Sf">
-                <div id="grupo-sf">Grupo San Francisco Granada</div>
-                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+                <img id="logo" src="../images/logo_sf.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco</div>
+                <button id="icono-buscar" class="hidden"><img src="../images/search.svg"></button>
+                <button id="icono-tools"><img src="../images/tools.svg"></button>
+                <button id="icono-menu"><img src="../images/menu.svg"></button>
             </header>
 
             <nav>
                 <ul>
-                    <a href="../index.html"><li>Inicio</li></a>
-                    <a href="../indice.html"><li>Indice</li></a>
-                    <a href="../acordes.html"><li>Acordes</li></a>
-                    <!-- <a href="#"><li>Opción 3</li></a> -->
-                    <a href="../about.html"><li>Acerca de</li></a>
+                    <li><a href="../index.html">Inicio</a><img src="../images/right-arrow.svg"></li>
+                    <li><a href="../indice.html">Indice</a><img src="../images/right-arrow.svg"></li>
+                    <li><a href="../acordes.html">Acordes</a><img src="../images/right-arrow.svg"></li>
+                    <li><a href="../about.html">Acerca de</a><img src="../images/right-arrow.svg"></li>
                 </ul>
             </nav>
-        </div>
-        <div id="contenido">
 
-            <aside>
-                Cejilla: <span id="plus-min" onclick="incCapo()">+</span> <span id="plus-min" onclick="incCapo(-1)">-</span><br>
-                Tono: <span id="plus-min" onclick="incTone()">+</span> <span id="plus-min" onclick="incTone(-1)">-</span>
-            </aside>
-
-            <div id="song">
-                <div id="notation">europe sharp</div>
-                <div id="info">
-                    <div id="title">Annuncieremo</div>
-                    <div id="artist"></div>
-                     <div id="tone">
-                        Tono: <span id="original-tone">Mi </span><br>
-                        Cejilla: traste <span id="capo">0</span><br>
-                        Transpuesta: <span id="traspose">0</span> semitonos
-                    </div>
+            <div id="contenedor-buscador">
+                <div id="marco-buscador">
+                    <input type="text" name="buscador" id="buscador" placeholder="Buscar...">
                 </div>
-                <div id="song-body" class="texto-principal">(<b>Do#</b>)        (<b>Fa#</b>)       (<b>Do#</b>)
+            </div>
+        </div>
+
+        <div id="contenedor-tools">
+            <h2>Herramientas</h2>
+            <div id="herramientas">
+                <div id="ajuste-cejilla">
+                    <b>Cejilla: </b>
+                    <button id="dim-capo">-</button>
+                    <input id="input-ajuste-cejilla" type="number">
+                    <button id="inc-capo">+</button>
+                </div>
+                <div id="ajuste-tono">
+                    <b>Tono: </b>
+                    <button id="dim-tone">-</button>
+                    <input id="input-ajuste-tono" type="number">
+                    <button id="inc-tone">+</button>
+                </div>
+                <div id="ajuste-velocidad">
+                    <b>Velocidad: </b>
+                    <button id="dim-velocidad">-</button>
+                    <input id="input-ajuste-velocidad" type="number">
+                    <button id="inc-velocidad">+</button>
+                </div>
+            </div>
+            <div id="contenedor-reestablecer">
+                <button id="reestablecer">Reestablecer</button>
+            </div>
+        </div>
+
+        <div id="cuerpo">
+            <div id="notation">europe sharp</div>
+            <div id="title">Annuncieremo</div>
+            <div id="artist"></div>
+            <div id="info">
+                <div id="tone">
+                    <b>Tono: </b> <span id="original-tone">Mi </span><br>
+                    <b>Cejilla: </b>traste <span id="capo">0</span><br>
+                    <b>Transpuesta:</b> <span id="traspose">0</span> semitonos
+                </div>
+            </div>
+            <div id="song-body" class="texto-principal">(<b>Do#</b>)        (<b>Fa#</b>)       (<b>Do#</b>)
 <b>Mi</b>                         <b>Si</b>
 Annunceremo che tu sei verità
                (<b>Fa#</b>)
@@ -58,18 +93,15 @@ delle nostre città
             <b>fa# m</b>     <b>La</b>         <b>Si</b>
 senza paura anche tu lo puoi cantare.
 </div>
-                </div>
-            </div>
+             </div>
+        </div>
+
+
         <div id="controls">
             <img id="pauseButton" src="../images/play.svg" alt="play">
              <div id="speed-bar">
                 <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
                 <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
-            </div>
-        </div>
-        <div id="pie">
-            <div id="pie-content">
-                 &copy; JesusMuve
             </div>
         </div>
     </div>

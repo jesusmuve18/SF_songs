@@ -182,92 +182,60 @@ int main(int argc, char** argv){
     <meta charset=\"UTF-8\">\n\
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\
     <title>" + title + "</title>\n\
-    <link rel=\"stylesheet\" href=\"" + main_dir + "styles_new/general.css\">\n\
-    <link rel=\"stylesheet\" href=\"" + main_dir + "styles_new/cabecera.css\">\n\
-    <link rel=\"stylesheet\" href=\"" + main_dir + "styles_new/cancion.css\">\n\
-\n\
-    <script src=\"" + main_dir + "javascript/cabecera.js\"></script>\n\
-    <script src=\"" + main_dir + "javascript/acordes.js\"></script>\n\
-    <script src=\"" + main_dir + "javascript/scroll.js\"></script>\n\
-    <script src=\"" + main_dir + "javascript/tools.js\"></script>\n\
-\n\
-    <link rel=\"icon\" href=\"" + main_dir + "images/logo_sf.png\">\n\
+    <link rel=\"stylesheet\" href=\"" + main_dir + "/styles/style.css\">\n\
+    <script src=\"" + main_dir + "javascript/scripts.js\"></script>\n\
+    <link rel=\"icon\" href=\"" + main_dir + "images/Logo Tau sin fondo.png\">\n\
 </head>\n\
 <body>\n\
     <div id=\"pagina\">\n\
         <div id=\"cabecera\">\n\
             <header>\n\
-                <img id=\"logo\" src=\"" + main_dir + "images/logo_sf.png\" alt=\"Logo Sf\">\n\
-                <div id=\"grupo-sf\">Grupo San Francisco</div>\n\
-                <button id=\"icono-buscar\" class=\"hidden\"><img src=\"" + main_dir + "images/search.svg\"></button>\n\
-                <button id=\"icono-tools\"><img src=\"" + main_dir + "images/tools.svg\"></button>\n\
-                <button id=\"icono-menu\"><img src=\"" + main_dir + "images/menu.svg\"></button>\n\
+                <img id=\"logo\" src=\"" + main_dir + "images/Logo Tau sin fondo.png\" alt=\"Logo Sf\">\n\
+                <div id=\"grupo-sf\">Grupo San Francisco Granada</div>\n\
+                <input type=\"text\" id=\"search-bar\" placeholder=\"Pulsa aquí para buscar\">\n\
             </header>\n\
 \n\
             <nav>\n\
                 <ul>\n\
-                    <li><a href=\"" + main_dir + "index.html\">Inicio</a><img src=\"" + main_dir + "images/right-arrow.svg\"></li>\n\
-                    <li><a href=\"" + main_dir + "indice.html\">Indice</a><img src=\"" + main_dir + "images/right-arrow.svg\"></li>\n\
-                    <li><a href=\"" + main_dir + "acordes.html\">Acordes</a><img src=\"" + main_dir + "images/right-arrow.svg\"></li>\n\
-                    <li><a href=\"" + main_dir + "about.html\">Acerca de</a><img src=\"" + main_dir + "images/right-arrow.svg\"></li>\n\
+                    <a href=\"" + main_dir + "index.html\"><li>Inicio</li></a>\n\
+                    <a href=\"" + main_dir + "indice.html\"><li>Indice</li></a>\n\
+                    <a href=\"" + main_dir + "acordes.html\"><li>Acordes</li></a>\n\
+                    <!-- <a href=\"#\"><li>Opción 3</li></a> -->\n\
+                    <a href=\"" + main_dir + "about.html\"><li>Acerca de</li></a>\n\
                 </ul>\n\
             </nav>\n\
-\n\
-            <div id=\"contenedor-buscador\">\n\
-                <div id=\"marco-buscador\">\n\
-                    <input type=\"text\" name=\"buscador\" id=\"buscador\" placeholder=\"Buscar...\">\n\
-                </div>\n\
-            </div>\n\
         </div>\n\
+        <div id=\"contenido\">\n\
 \n\
-        <div id=\"contenedor-tools\">\n\
-            <h2>Herramientas</h2>\n\
-            <div id=\"herramientas\">\n\
-                <div id=\"ajuste-cejilla\">\n\
-                    <b>Cejilla: </b>\n\
-                    <button id=\"dim-capo\">-</button>\n\
-                    <input id=\"input-ajuste-cejilla\" type=\"number\">\n\
-                    <button id=\"inc-capo\">+</button>\n\
+            <aside>\n\
+                Cejilla: <span id=\"plus-min\" onclick=\"incCapo()\">+</span> <span id=\"plus-min\" onclick=\"incCapo(-1)\">-</span><br>\n\
+                Tono: <span id=\"plus-min\" onclick=\"incTone()\">+</span> <span id=\"plus-min\" onclick=\"incTone(-1)\">-</span>\n\
+            </aside>\n\
+\n\
+            <div id=\"song\">\n\
+                <div id=\"notation\">europe sharp</div>\n\
+                <div id=\"info\">\n\
+                    <div id=\"title\">" + title + "</div>\n\
+                    <div id=\"artist\">" + subtitle + "</div>\n\
+                     <div id=\"tone\">\n\
+                        Tono: <span id=\"original-tone\">" + tone + "</span><br>\n\
+                        Cejilla: traste <span id=\"capo\">" + to_string(capo) + "</span><br>\n\
+                        Transpuesta: <span id=\"traspose\">" + to_string(traspose) + "</span> semitonos\n\
+                    </div>\n\
                 </div>\n\
-                <div id=\"ajuste-tono\">\n\
-                    <b>Tono: </b>\n\
-                    <button id=\"dim-tone\">-</button>\n\
-                    <input id=\"input-ajuste-tono\" type=\"number\">\n\
-                    <button id=\"inc-tone\">+</button>\n\
-                </div>\n\
-                <div id=\"ajuste-velocidad\">\n\
-                    <b>Velocidad: </b>\n\
-                    <button id=\"dim-velocidad\">-</button>\n\
-                    <input id=\"input-ajuste-velocidad\" type=\"number\">\n\
-                    <button id=\"inc-velocidad\">+</button>\n\
+                <div id=\"song-body\" class=\"texto-principal\">" + song +"</div>\n\
                 </div>\n\
             </div>\n\
-            <div id=\"contenedor-reestablecer\">\n\
-                <button id=\"reestablecer\">Reestablecer</button>\n\
-            </div>\n\
-        </div>\n\
-\n\
-        <div id=\"cuerpo\">\n\
-            <div id=\"notation\">europe sharp</div>\n\
-            <div id=\"title\">" + title +"</div>\n\
-            <div id=\"artist\">" + subtitle + "</div>\n\
-            <div id=\"info\">\n\
-                <div id=\"tone\">\n\
-                    <b>Tono: </b> <span id=\"original-tone\">" + tone + "</span><br>\n\
-                    <b>Cejilla: </b>traste <span id=\"capo\">" + to_string(capo) + "</span><br>\n\
-                    <b>Transpuesta:</b> <span id=\"traspose\">" + to_string(traspose) + "</span> semitonos\n\
-                </div>\n\
-            </div>\n\
-            <div id=\"song-body\" class=\"texto-principal\">" + song + "</div>\n\
-             </div>\n\
-        </div>\n\
-\n\
-\n\
         <div id=\"controls\">\n\
             <img id=\"pauseButton\" src=\"../images/play.svg\" alt=\"play\">\n\
              <div id=\"speed-bar\">\n\
                 <input type=\"range\" class=\"scroll-speed-bar\" id=\"scroll-speed-bar\" min=\"1\" max=\"100\" value=\"" + to_string(default_speed) + "\" steps=\"1\" oninput=\"ajustarVelocidad()\">\n\
                 <span class=\"scroll-speed-value\" id=\"scroll-speed-value\">" + to_string(default_speed) + "</span></p>\n\
+            </div>\n\
+        </div>\n\
+        <div id=\"pie\">\n\
+            <div id=\"pie-content\">\n\
+                 &copy; JesusMuve\n\
             </div>\n\
         </div>\n\
     </div>\n\
