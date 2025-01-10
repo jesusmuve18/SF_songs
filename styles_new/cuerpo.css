@@ -49,6 +49,7 @@
     font-size: 11pt;
     padding: 5px 0 5px 7px;
     height: 40px;
+    justify-content: center;
 }
 
 #cuerpo #indice ol li a #song-title{
@@ -66,7 +67,7 @@
     /* background-color: red; */
     padding: 0 10px 0 10px;
     position: absolute;
-    transform: translateY(5px);
+    transform: translateY(10px);
     left: 20px;
     height: 30px;
     width: 20px;
