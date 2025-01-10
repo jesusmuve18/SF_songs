@@ -36,10 +36,26 @@
     color: #6e729f;
 }
 
+#cuerpo #indice ol {
+    margin: 0;
+    padding: 0;
+}
+
 #cuerpo #indice ol li{
     margin: 5px 0 5px 0;
     list-style: none;
-    counter-increment: list-counter;
+    align-items: center;
+    /* background-color: red; */
+}
+
+#cuerpo #indice ol li #list-number {
+    font-size: 11pt;
+    width: 40px;
+    height: 30px;
+    /* background-color: blue; */
+    text-align: center;
+    align-content: center;
+    border-right: 2px solid #6e729f;
 }
 
 #cuerpo #indice ol li a{
@@ -61,21 +77,10 @@
     color: gray;
 }
 
-#cuerpo #indice ol li::before {
-    content: counter(list-counter);
-    font-size: 11pt;
-    /* background-color: red; */
-    padding: 0 10px 0 10px;
-    position: absolute;
-    transform: translateY(10px);
-    left: 20px;
-    height: 30px;
-    width: 20px;
-    align-content: center;
-    justify-items: center;
-    text-align: center;
-    border-right: 2px solid #6e729f;
+.hidden {
+    display: none;
 }
 
-
-
+.visible-list-item {
+    display: flex;
+}

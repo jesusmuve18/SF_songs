@@ -1,5 +1,6 @@
 let escribiendo=false;
 let barra_busqueda;
+let visible=('visible-list-item')
 
 window.addEventListener('load', function() {
     barra_busqueda = document.querySelector('#buscador');
@@ -18,36 +19,37 @@ function busqueda(w) {
     // Seleccionar el índice
     const container = document.getElementById('indice');
 
-    console.log(container.innerHTML);
-
     // Seleccionar todos los <li> dentro del contenedor
     const listItems = container.querySelectorAll('#indice li');
 
     // Recorrer los elementos <li> y extraer los detalles
     listItems.forEach(li => {
-        console.log(li);
-
         const titleElement = li.querySelector('#song-title');
 
         const authorElement = li.querySelector('#author');
         const title = titleElement ? titleElement.textContent.trim() : 'Título no encontrado';
         const author = authorElement ? authorElement.textContent.trim() : 'Autor no encontrado';
 
+        console.log(`${title}, ${author}`);
+
         if(title.toLowerCase().includes(w.toLowerCase()) 
             || author.toLowerCase().includes(w.toLowerCase())
             || (`${title.toLowerCase()} ${author.toLowerCase()}`).includes(w.toLowerCase())) {
             li.classList.remove(oculto);
+            li.classList.add(visible);
         } else {
+            li.classList.remove(visible);
             li.classList.add(oculto);
         }
     });
 }
 
+
+
 document.addEventListener("keyup", e=>{
     if(e.target.matches("#buscador")){
 
         escribiendo=true;
-        console.log("Escribiendo");
 
         // Ocultar el teclado al pulsar enter
         if(e.key == 'Enter'){

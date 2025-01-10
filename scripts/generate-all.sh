@@ -129,7 +129,7 @@ do
         # echo "Autor:  $author"
 
         # La añado al índice
-        echo "<li value=\"$local_counter\"><a href=\"$dir_html/$filename.html\"><span id=\"song-title\">$title</span> <span id=\"author\">$author</span></a></li>" >> $index_file
+        echo "<li class=\"visible-list-item\"><span id=\"list-number\">$local_counter</span><a href=\"$dir_html/$filename.html\"><span id=\"song-title\">$title</span> <span id=\"author\">$author</span></a></li>" >> $index_file
         
         # Aumento el contador
         n=$((n+1))
@@ -196,7 +196,7 @@ do
             # echo "Autor:  $author"
 
             # La añado al índice
-            echo "<li value=\"$n\"><a href=\"$dir_html/$filename.html\"><span id=\"song-title\">$title</span> <span id=\"author\">$author</span></a></li>" >> $index_file
+            echo "<li class=\"visible-list-item\"><span id=\"list-number\">$n</span><a href=\"$dir_html/$filename.html\"><span id=\"song-title\">$title</span> <span id=\"author\">$author</span></a></li>" >> $index_file
             
             # Aumento el contador
             n=$((n+1))

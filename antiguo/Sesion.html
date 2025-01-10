@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargador</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/sesion_style.css">
+    <script src="javascript/scripts.js"></script>
+    <script src="javascript/sesion.js"></script>
+    <link rel="icon" href="../images/Logo Tau sin fondo.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="images/Logo Tau sin fondo.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco Granada</div>
+                <input type="text" id="search-bar" placeholder="Pulsa aquí para buscar">
+            </header>
+        
+            <nav>
+                <ul>
+                    <a href="./index.html"><li>Inicio</li></a>
+                    <a href="./indice.html"><li>Indice</li></a>
+                    <a href="./acordes.html"><li>Acordes</li></a>
+                    <!-- <a href="#"><li>Opción 3</li></a> -->
+                    <a href="./about.html"><li>Acerca de</li></a>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido">
+            <div id="ventana-emergente" class="hidden2">
+                <div id="cuadro-ventana">
+                    <div id="buscador-container">
+                        <input type="text" name="buscador" id="buscador" placeholder="Buscar...">
+                        <div id="index"></div>
+                        <div id="index-list">
+                            <script>loadIndex("./songs/0-data.txt")</script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="song">
+                <div id="notation">europe sharp</div>
+                <div id="info">
+                    <div id="title">Sesiones</div>
+                    <div id="artist">Creacion</div>
+                </div>
+                <div id="sesiones">
+                    <div id="contenedor-sesiones">
+                        <ol></ol>
+                    </div>
+                </div>
+                <div id="contenedor-boton">
+                    <button id="add" > + </button> 
+                    <button id="save" > 🗸 </button>
+                </div>
+            </div>
+        </div>
+            <div id="pie">
+            <div id="pie-content">
+                 &copy; JesusMuve
+            </div>
+        </div>
+    </div>
+
+    
+
+</body>
+</html>
