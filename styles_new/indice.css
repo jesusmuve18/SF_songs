@@ -1,8 +1,5 @@
-#cuerpo {
-    padding: 20px;
-}
-
 #cuerpo h2 {
+    font-weight: 700;
     margin: 0;
     margin-bottom: 20px;
 }

@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Noto+Sans+Mono:wght@100..900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.fragment-mono-regular {
+    font-family: "Fragment Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.fragment-mono-regular-italic {
+    font-family: "Fragment Mono", monospace;
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+/*SONG*/
+
+#cuerpo #title {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+#cuerpo #artist {
+    color: grey;
+}
+
+#cuerpo #info {
+    font-size: 11pt;
+    /* background-color: pink; */
+    padding-left: 10px;
+    margin: 10px 0 10px 0;
+    border-left: 2px solid #6e729f;
+}
+
+#song-body {
+    line-height: 1.5em;
+    font-family: "Fragment Mono", 'Courier New', Courier, monospace; /*Si no tiene internet tomará la segunda fuente*/
+    unicode-bidi: isolate;
+    white-space: pre;
+    word-wrap: break-word;
+    break-inside: avoid;
+    
+    overflow: visible;  /*Permite que se vean las imágenes aunque se salgan del contenedor*/
+}
+
+#song-body b, #original-tone, #info b2 {
+    color: red;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#reserved {
+    /* font-weight: 600; */
+    color: rgb(82, 82, 82);
+}
+
+#notation {
+    display: none;
+}
+
+.hidden {
+    display: none;
+    height: 0;
+    width: 0;
+}
+
+/*CHORD IMAGES*/
+.hover-image {
+    display: none; /*Oculta la imagen por defecto */
+    position: fixed;
+    top: 35%; /* Muestra la imagen justo debajo del texto "Lam" */
+    left: 50%; 
+    transform: translateX(-50%);
+    border: 1px solid #ccc;
+    background-color: #fff;
+    height: 250px;
+    image-rendering: pixelated; /*Para que no se pixelen los laterales*/
+    padding: 5px;
+    z-index: 1; /* Asegura que la imagen esté encima de otros elementos */
+    white-space: nowrap; /* Evita que la imagen se corte */
+    overflow: hidden;
+}
+
+#original-tone:hover .hover-image {
+    display: block; /* Muestra la imagen cuando se pasa el ratón por encima del span */
+}
+
+b:hover .hover-image,  b2:hover .hover-image{
+    display: flex; /* Muestra la imagen cuando se pasa el ratón por encima del span */
+}
+
+
+/*SCROLL PLAY/PAUSE*/
+
+#pauseButton {
+    position: fixed;
+    bottom: 10px;
+    right: 0px;
+    z-index: 3;
+    opacity: 0.75;
+    font-size: 1.2em;
+    color: grey;
+    padding: 10px;
+    background: none;
+    height: 15px;
+    width: 30px;
+    text-align: right;
+    border: none;
+}
+
+#pauseButton:hover {
+    cursor: pointer;
+}
+
+.scroll-speed-value {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 12px;
+    width: 30px;
+    height: 200px;
+    text-align: center;
+    z-index: 1;
+}
+
+.scroll-speed-bar {
+    display: none;
+    transform: rotate(270deg); /* Gira el deslizable */
+    position: fixed;
+    bottom: 120px;
+    right: -40px;
+    border: 1px solid black;
+    z-index: 2;
+    color: red;
+    border-radius: 10px;
+    outline: none;
+}
+
+#controls:hover .scroll-speed-bar {
+    display: block;
+}
+
+#controls:hover .scroll-speed-value {
+    display: block;
+}
+
+/*TOOLS*/
+#contenedor-tools {
+    position: absolute;
+    width: 100vw;
+    background-color: #6e729f;
+}
+
+#contenedor-tools h2 {
+    margin: 0;
+    padding: 20px 0 0 20px;
+    color: white;
+}
+
+#contenedor-tools #herramientas {
+    padding: 20px;    
+}
+
+#contenedor-tools #herramientas b{
+    color: white;
+    padding-bottom: 10px;
+    margin-right: auto;
+}
+
+#contenedor-tools #herramientas div {
+    padding: 0 40px 10px 40px;
+    display: flex;
+    align-items: center;
+}
+
+#contenedor-tools #herramientas button {
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-weight: 600;
+    color: white;
+    font-size: 16pt;
+    background-color: #6e729f;
+    margin: 5px;
+}
+
+#contenedor-tools #herramientas button:hover {
+    cursor: pointer;
+    background-color: #959ad3;
+}
+
+#contenedor-tools #herramientas input {
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 2px;
+    text-align: center;
+    font-family: 'Open Sans';
+}
+
+.visible-tools {
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+}
+

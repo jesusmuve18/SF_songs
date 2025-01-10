@@ -39,6 +39,10 @@ header button:hover {
     height: 20px;
 }
 
+#icono-tools img {
+    height: 20px;
+}
+
 #cabecera nav{
     background-color: #6e729f;
     position: absolute;
