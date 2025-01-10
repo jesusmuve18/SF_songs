@@ -47,6 +47,7 @@
 #song-body b, #original-tone, #info b2 {
     color: red;
     cursor: pointer;
+    font-weight: 600;
 }
 
 #reserved {
