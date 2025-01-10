@@ -1,5 +1,6 @@
 
 <div id="enlaces">
+  <a>Todas</a>
   <a href="#Oración">Oración</a>
   <a href="#Dios mío y todas mis cosas">Dios mío y todas mis cosas</a>
   <a href="#Qué noche tan grande">Qué noche tan grande</a>
@@ -7,7 +8,7 @@
   <a href="#Pascua">Pascua</a>
   <a href="#Otras">Otras</a>
 </div>
-<ol>
+<div id="General" class="seccion-indice"><ol>
 <li value="1"><a href="./songs/A_ti_que_estás_sentado_en_tu_sillón-Alberto_y_Emilia.html"><span id="song-title">A ti que estás sentado en tu sillón</span> <span id="author">Alberto y Emilia</span></a></li>
 <li value="2"><a href="./songs/Adorando-Sonido_Joven.html"><span id="song-title">Adorando</span> <span id="author">Sonido Joven</span></a></li>
 <li value="3"><a href="./songs/Agua_lávame-Brotes_de_Olivo.html"><span id="song-title">Agua lávame</span> <span id="author">Brotes de Olivo</span></a></li>
@@ -280,7 +281,8 @@
 <li value="270"><a href="./songs/Vosotros_seréis_mi_Pueblo-Brotes_de_Olivo.html"><span id="song-title">Vosotros seréis mi Pueblo</span> <span id="author">Brotes de Olivo</span></a></li>
 <li value="271"><a href="./songs/Y_yo_que_tengo_voz-Bata.html"><span id="song-title">Y yo que tengo voz</span> <span id="author">Bata</span></a></li>
 <li value="272"><a href="./songs/Yo_celebraré.html"><span id="song-title">Yo celebraré</span> <span id="author"></span></a></li>
-</ol>
+</ol></div>
+<div id="Oración" class="seccion-indice">
 <h2 id="Oración">Oración</h2>
 <ol>
 <li value="1"><a href="./songs/A_la_paz_por_el_perdón-Brotes_de_Olivo.html"><span id="song-title">A la paz por el perdón</span> <span id="author">Brotes de Olivo</span></a></li>
@@ -434,7 +436,8 @@
 <li value="149"><a href="./songs/Venid_conmigo-Ain_Karem.html"><span id="song-title">Venid conmigo</span> <span id="author">Ain Karem</span></a></li>
 <li value="150"><a href="./songs/Vuelvo-Ixcís.html"><span id="song-title">Vuelvo</span> <span id="author">Ixcís</span></a></li>
 <li value="151"><a href="./songs/Yo_digo_Dios.html"><span id="song-title">Yo digo Dios</span> <span id="author"></span></a></li>
-</ol>
+</ol></div>
+<div id="Dios mío y todas mis cosas" class="seccion-indice">
 <h2 id="Dios mío y todas mis cosas">Dios mío y todas mis cosas</h2>
 <ol>
 <li value="1"><a href="./songs/A_mi_encuentro-Grupo_San_Francisco.html"><span id="song-title">A mi encuentro</span> <span id="author">Grupo San Francisco</span></a></li>
@@ -454,7 +457,8 @@
 <li value="15"><a href="./songs/Te_doy_gracias-Grupo_San_Francisco.html"><span id="song-title">Te doy gracias</span> <span id="author">Grupo San Francisco</span></a></li>
 <li value="16"><a href="./songs/Ubuntu-Grupo_San_Francisco.html"><span id="song-title">Ubuntu</span> <span id="author">Grupo San Francisco</span></a></li>
 <li value="17"><a href="./songs/Vives_en_mí-Grupo_San_Francisco.html"><span id="song-title">Vives en mí</span> <span id="author">Grupo San Francisco</span></a></li>
-</ol>
+</ol></div>
+<div id="Qué noche tan grande" class="seccion-indice">
 <h2 id="Qué noche tan grande">Qué noche tan grande</h2>
 <ol>
 <li value="1"><a href="./songs/Bienaventuranzas_navideñas-Grupo_San_Francisco.html"><span id="song-title">Bienaventuranzas navideñas</span> <span id="author">Grupo San Francisco</span></a></li>
@@ -466,7 +470,8 @@
 <li value="7"><a href="./songs/Navidad_en_familia-Grupo_San_Francisco.html"><span id="song-title">Navidad en familia</span> <span id="author">Grupo San Francisco</span></a></li>
 <li value="8"><a href="./songs/Qué_noche_tan_grande-Grupo_San_Francisco.html"><span id="song-title">Qué noche tan grande</span> <span id="author">Grupo San Francisco</span></a></li>
 <li value="9"><a href="./songs/Si_es_navidad-Grupo_San_Francisco_.html"><span id="song-title">Si es navidad</span> <span id="author">Grupo San Francisco </span></a></li>
-</ol>
+</ol></div>
+<div id="Te llena de vida" class="seccion-indice">
 <h2 id="Te llena de vida">Te llena de vida</h2>
 <ol>
 <li value="1"><a href="./songs/En_Ti_brillamos,_Señor-Grupo_San_Francisco.html"><span id="song-title">En Ti brillamos, Señor</span> <span id="author">Grupo San Francisco</span></a></li>
@@ -481,10 +486,12 @@
 <li value="10"><a href="./songs/Santos_de_lo_cotidiano-Grupo_San_Francisco.html"><span id="song-title">Santos de lo cotidiano</span> <span id="author">Grupo San Francisco</span></a></li>
 <li value="11"><a href="./songs/Sin_Jesús_no_hay_Navidad-Grupo_San_Francisco.html"><span id="song-title">Sin Jesús no hay Navidad</span> <span id="author">Grupo San Francisco</span></a></li>
 <li value="12"><a href="./songs/Tu_ternura_es_Navidad-Grupo_San_Francisco.html"><span id="song-title">Tu ternura es Navidad</span> <span id="author">Grupo San Francisco</span></a></li>
-</ol>
+</ol></div>
+<div id="Pascua" class="seccion-indice">
 <h2 id="Pascua">Pascua</h2>
 <ol>
-</ol>
+</ol></div>
+<div id="Otras" class="seccion-indice">
 <h2 id="Otras">Otras</h2>
 <ol>
 <li value="1"><a href="./songs/Arrancármelo-Wos.html"><span id="song-title">Arrancármelo</span> <span id="author">Wos</span></a></li>
@@ -507,4 +514,4 @@
 <li value="18"><a href="./songs/Vieni_Spirito.html"><span id="song-title">Vieni Spirito</span> <span id="author"></span></a></li>
 <li value="19"><a href="./songs/Yo_no_estoy_loco-Estopa.html"><span id="song-title">Yo no estoy loco</span> <span id="author">Estopa</span></a></li>
 <li value="20"><a href="./songs/Zombie-The_Cranberries.html"><span id="song-title">Zombie</span> <span id="author">The Cranberries</span></a></li>
-</ol>
+</ol></div>

@@ -1,0 +1,100 @@
+header{
+    display: flex;
+    background-color: #23275b;
+    align-items: center;
+    height: 7vh;
+    padding: 0 10px 0 20px;
+}
+
+#logo {
+    max-height: 40px;
+}
+
+#grupo-sf {
+    font-weight: bold;
+    color: white;
+    padding-left: 20px;
+    font-family: 'Open Sans';
+    margin-right: auto; /*Empuja los iconos a la derecha*/
+}
+
+header button{
+    height: 40px;
+    width: 40px;
+    background: none;
+    border: none;
+    border-radius: 5px;
+}
+
+header button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+#icono-buscar img{
+    height: 17px;
+}
+
+#icono-menu img{
+    height: 20px;
+}
+
+#cabecera nav{
+    background-color: #6e729f;
+    position: absolute;
+    width: 100vw;
+}
+
+#cabecera nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+#cabecera nav ul li{
+    padding: 15px 10px 15px 20px;
+    display: flex;
+    align-items: center;
+}
+
+#cabecera nav ul li:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+#cabecera nav ul li a{
+    margin-right: auto;
+    text-decoration: none;
+    color: white;
+    font-family: 'Open Sans';
+    font-weight: 600;
+}
+
+#cabecera nav ul li img{
+    max-height: 25px;
+}
+
+.hidden{
+    display: none;
+}
+
+#cabecera #marco-buscador{
+    background-color: #6e729f;
+    height: 7vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100vw;
+}
+
+#cabecera #contenedor-buscador #buscador{
+    width: 90vw;
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+}
+

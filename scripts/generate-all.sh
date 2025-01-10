@@ -95,6 +95,8 @@ done
 subcarpetas=($(obtener_subcarpetas $dir_data))
 
 echo "<div id=\"enlaces\">" >> $index_file
+echo "  <a>Todas</a>" >> $index_file
+
 # Añado los enlaces al índice
 for sub_dir in "${subcarpetas[@]}";
 do
@@ -108,7 +110,7 @@ echo "</div>" >> $index_file
 
 ################################################################################
 # Genero y añado al índice los archivos procesados previamente
-echo "<ol>" >> $index_file
+echo "<div id=\"General\" class=\"seccion-indice\"><ol>" >> $index_file
 
 local_counter=1
 
@@ -137,7 +139,7 @@ do
 
 done
 
-echo "</ol>" >> $index_file
+echo "</ol></div>" >> $index_file
 ################################################################################
 # Recorro las subcarpetas
 
@@ -151,6 +153,7 @@ do
     sub_dir_name=$(echo "$( echo $sub_dir | tr '_' ' ')" | cut -d '-' -f 2-)
 
     # La añado al índice
+    echo "<div id=\"$sub_dir_name\" class=\"seccion-indice\">" >> $index_file
     echo "<h2 id=\"$sub_dir_name\">$sub_dir_name</h2>" >> $index_file
 
     n=1
@@ -202,7 +205,7 @@ do
 
     done
 
-    echo "</ol>" >> $index_file
+    echo "</ol></div>" >> $index_file
 
 done
 

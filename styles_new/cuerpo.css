@@ -1,0 +1,80 @@
+#cuerpo {
+    padding: 20px;
+}
+
+#cuerpo h2 {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+#cuerpo #indice #enlaces {
+    display: flex;
+    overflow-x: scroll;
+    margin-bottom: 20px;
+}
+
+#cuerpo #indice #enlaces::-webkit-scrollbar {
+    display: none; /* Oculta el scrollbar en Chrome, Edge y Safari */
+}
+
+#cuerpo #indice #enlaces a{
+    text-decoration: none;
+    padding: 0 10px 0 10px;
+    margin: 0 5px 0 5px;
+    border-radius: 25px;
+    border: 2px solid #6e729f;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+#cuerpo #indice #enlaces a.selected {
+    background-color: #6e729f;
+    color: white;
+}
+
+#cuerpo #indice #enlaces a.not-selected{
+    color: #6e729f;
+}
+
+#cuerpo #indice ol li{
+    margin: 5px 0 5px 0;
+    list-style: none;
+    counter-increment: list-counter;
+}
+
+#cuerpo #indice ol li a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    font-size: 11pt;
+    padding: 5px 0 5px 7px;
+    height: 40px;
+}
+
+#cuerpo #indice ol li a #song-title{
+    color: black;
+    font-weight: bold;
+}
+
+#cuerpo #indice ol li a #author{
+    color: gray;
+}
+
+#cuerpo #indice ol li::before {
+    content: counter(list-counter);
+    font-size: 11pt;
+    /* background-color: red; */
+    padding: 0 10px 0 10px;
+    position: absolute;
+    transform: translateY(5px);
+    left: 20px;
+    height: 30px;
+    width: 20px;
+    align-content: center;
+    justify-items: center;
+    text-align: center;
+    border-right: 2px solid #6e729f;
+}
+
+
+
