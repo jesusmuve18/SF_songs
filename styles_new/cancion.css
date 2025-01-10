@@ -36,6 +36,7 @@
     line-height: 1.5em;
     font-family: "Fragment Mono", 'Courier New', Courier, monospace; /*Si no tiene internet tomará la segunda fuente*/
     unicode-bidi: isolate;
+    font-size: 13px;
     white-space: pre;
     word-wrap: break-word;
     break-inside: avoid;
