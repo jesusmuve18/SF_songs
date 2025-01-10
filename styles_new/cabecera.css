@@ -43,6 +43,7 @@ header button:hover {
     background-color: #6e729f;
     position: absolute;
     width: 100vw;
+    z-index: 1;
 }
 
 #cabecera nav ul{
@@ -89,6 +90,7 @@ header button:hover {
     justify-content: center;
     position: absolute;
     width: 100vw;
+    z-index: 1;
 }
 
 #cabecera #contenedor-buscador #buscador{
