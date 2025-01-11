@@ -18,7 +18,7 @@ def run_script():
         if arg1 and arg3 and arg4:
             try:
                 # Ejecutar el script de bash con los argumentos
-                result = sbprocess.run(['bash', script_path, arg1, arg2, arg3, arg4, arg5], capture_output=True, text=True)
+                result = subprocess.run(['bash', script_path, arg1, arg2, arg3, arg4, arg5], capture_output=True, text=True)
                 
                 # Mostrar la salida del script
                 if result.returncode == 0:
