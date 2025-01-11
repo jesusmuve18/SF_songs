@@ -45,7 +45,7 @@
     overflow: visible;  /*Permite que se vean las imágenes aunque se salgan del contenedor*/
 }
 
-#song-body b, #original-tone, #info b2 {
+#song-body b, #original-tone, b2 {
     color: red;
     cursor: pointer;
     font-weight: 600;
