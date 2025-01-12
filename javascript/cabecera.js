@@ -40,6 +40,7 @@ window.addEventListener('load', function(){
         } else {
             menu_buscar.classList.remove(oculto);
             mostrar_buscar=true;
+            this.document.querySelector('#buscador').focus();
         }
     });
 
