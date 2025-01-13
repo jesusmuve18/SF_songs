@@ -37,7 +37,6 @@
     line-height: 1.5em;
     font-family: "Fragment Mono", 'Courier New', Courier, monospace; /*Si no tiene internet tomará la segunda fuente*/
     unicode-bidi: isolate;
-    font-size: 13px;
     white-space: pre;
     word-wrap: break-word;
     break-inside: avoid;
@@ -146,9 +145,18 @@ b:hover .hover-image,  b2:hover .hover-image{
     display: block;
 }
 
-@media (orientation: portrait)  {
+/* @media (orientation: portrait)  {
+    #song-body {
+        font-size: 0.87em;
+    }
+} */
+
+/* Solo se aplica para pantallas de menos de 400px*/
+@media (max-width: 400px)  {
     #song-body {
         font-size: 0.87em;
     }
 }
+
+
 
