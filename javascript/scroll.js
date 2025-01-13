@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function ajustarVelocidad(){
     speed = document.getElementById("scroll-speed-bar").value;
+    this.document.querySelector('#input-ajuste-velocidad').value=speed;
     document.getElementById("scroll-speed-value").innerHTML = speed;
     clearInterval(scrollInterval);
     isScrolling=false;

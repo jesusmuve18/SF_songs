@@ -63,6 +63,13 @@ document.addEventListener("keyup", e=>{
 
         if(e.key != "Tab" && e.key != "ArrowDown" && e.key != 'ArrowUp'){
             // Si no se pulsa sobre el input, al escribir aparecerá en el input
+            // Mostraré el input
+            if(!mostrar_buscar){
+                menu_buscar.classList.remove(oculto);
+                mostrar_buscar=true;
+                this.document.querySelector('#buscador').focus();
+            }
+
             barra_busqueda.focus();
 
             if (/^[a-zA-Z0-9]$/.test(e.key)){

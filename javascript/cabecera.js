@@ -41,6 +41,7 @@ window.addEventListener('load', function(){
             menu_buscar.classList.remove(oculto);
             mostrar_buscar=true;
             this.document.querySelector('#buscador').focus();
+            this.document.querySelector('#buscador').select();
         }
     });
 

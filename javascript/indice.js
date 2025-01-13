@@ -1,4 +1,5 @@
 let enlaces;
+let entradas_indice;
 let selected_style='selected';
 let not_selected_style='not-selected';
 let secciones_indice;
@@ -11,6 +12,8 @@ window.addEventListener('load', async function(){
 
     enlaces=this.document.querySelectorAll('#indice #enlaces a');
     secciones_indice=this.document.querySelectorAll('.seccion-indice');
+
+    entradas_indice=this.document.querySelectorAll('.seccion-indice ol li')
 
     enlaces.forEach(enlace=>{
 
@@ -63,6 +66,16 @@ window.addEventListener('load', async function(){
             }
 
         })
+    })
+
+    entradas_indice.forEach(entrada=>{
+        let href=entrada.querySelector('a');
+
+        if(href){
+            entrada.addEventListener('click', e=>{
+                this.window.open(href.href, "_self");
+            })
+        }
     })
 });
 
