@@ -18,12 +18,12 @@ Consideramos además el conjunto $B$ dado por los mismos caracteres pero en may�
 
 Podemos definir la aplicación $toUpper:A \to B$ que asigna a cada caracter de $A$ su correspondiente caracter en mayúsculas de $B$. Es fácil ver que esta aplicación es biyectiva y su inversa la denotaremos por $toLower: B \to A$. Podremos denotar también $B=toUpper(A)$.
 
-Definimos también el conjunto $V=\{a,e,i,o,u\}\subset A$ de las vocales, el conjunto $T$ de acentos\footnote{Cabe destacar que $T$ no es un conjunto de caracteres sino de tildes (variaciones)} y consideramos el conjunto $W$ el cual incluye todas las variaciones de dichas vocales mediante los acentos de $T$. Consideramos entonces la aplicación $tilde: T \times V \to W$ el cual añade el acento de $T$ a la vocal de $V$ resultando en un elemento de $W$.
+Definimos también el conjunto $V=\{a,e,i,o,u\}\subset A$ de las vocales, el conjunto $T$ de acentos\footnote{Cabe destacar que $T$ no es un conjunto de caracteres sino de tildes (variaciones)} y consideramos el conjunto $W$ el cual incluye todas las variaciones de dichas vocales y del conjunto mediante los acentos de $T$. Consideramos entonces la aplicación $tilde: T \times V \to W$ el cual añade el acento de $T$ a la vocal de $V$ resultando en un elemento de $W$.
 
-Definimos el conjunto $P$ como el conjunto de caracteres que no se encuentra en $A\cap B \cap V \cap W$, el cual incluye signos de puntuación y el resto de caracteres ASCII. Al conjunto de caracteres ASCII lo denotaremos por $\Omega$ y de esta forma tenemos que $\{A,B,V,W,P\}$ define una partición de $\Omega$, es decir
+Definimos el conjunto $P$ como el conjunto de caracteres que no se encuentra en $A\cap B \cap W \cap toUpper(W)$, el cual incluye signos de puntuación y el resto de caracteres ASCII. Al conjunto de caracteres ASCII lo denotaremos por $\Omega$ y de esta forma tenemos que $\{A,B,W,toUpper(W),P\}$ define una partición de $\Omega$, es decir
 \begin{enumerate}
     \item $A\cup B \cup V \cup W \cup P = \Omega$
-    \item $X\cap Y = \emptyset\ \ \forall X,Y\in \{A,B,V,W,P\},\ \  X\neq Y$
+    \item $X\cap Y = \emptyset\ \ \forall X,Y\in \{A,B,W,toUpper(W),P\},\ \  X\neq Y$
 \end{enumerate}
 
 Definiremos una \textbf{palabra} p como un vector de elementos de $\Omega$, es decir
@@ -94,7 +94,7 @@ Definiremos la \textbf{sustitución} como $Sus:\Omega^n \times \Omega \times \bb
 \begin{align*}
     Sus(p,x,i) = (x_1, \dots, x_{i-1}, x, x_{i+1}, \dots, x_n)
 \end{align*}
-y diremos que insertamos el sustituimos por caracter $x$ la posición i-ésima de la palabra $p$.
+y diremos que sustituimos la posición i-ésima de la palabra $p$ por el caracter $x$.
 
 A estas tres aplicaciones las llamaremos \textbf{aplicaciones elementales}.
 
@@ -102,7 +102,14 @@ A estas tres aplicaciones las llamaremos \textbf{aplicaciones elementales}.
 
 La primera distancia que se define que verifica todos los requisitos del problema podría ser la conocida como \textbf{ distancia de Levenshtein}. Esta distancia consiste en encontrar el número de inserciones, eliminaciones y sustituciones mínimas necesarias para transformar una palabra $p$ en otra $p'$, es decir
 \begin{align*}
-    d_L(p,p')=k \sii \text{ se puede pasar de $p$ a $p'$ con $k$ aplicaciones elementales}
+    d_L(p,p')=k \sii \left\{
+        \begin{array}{c}
+            \text{se puede pasar de $p$ a $p'$ con $k$ aplicaciones elementales}\\
+            \wedge\\
+            \nexists k'\in \bb{N} \text{ con } k'<k \text{ tal que se puede pasar de $p$ a $p'$ con} \\
+            \text{$k'$ aplicaciones elementales}
+        \end{array} 
+    \right.
 \end{align*}
 
 Notemos que esta distancia toma valores en $\bb{N}$ y que no es muy precisa ya que tenemos que $d((c,a), (c,a,s,a)) = d((c,a), (x,\tilde{n}))$ lo cual parece poco intuitivo y poco práctico para comparar palabras.
@@ -198,21 +205,56 @@ Por lo que podríamos considerar la siguiente representación en el plano:
 \end{tikzpicture}
 \end{center}
 
-De esta forma tendremos definida una distancia entre caracteres dada por $d_2(c_1, c_2) = \sqrt{(c_{11} - c_{21})^2 + (c_{12} - c_{22})^2}$ donde $c_1=(c_{11}, c_{12})$, $c_2=(c_{21}, c_{22})$. Sin embargo vamos a considerar una nueva distancia $d$ dada por 
+De esta forma tendremos definida una distancia entre caracteres dada por $d_2(c_1, c_2) = \sqrt{(c_{11} - c_{21})^2 + (c_{12} - c_{22})^2}$ donde $c_1=(c_{11}, c_{12})$, $c_2=(c_{21}, c_{22})$. Sin embargo, vamos a considerar una nueva distancia $d:A\times A \to \bb{R}^+$ dada por 
 \begin{align*}
     d(c_1, c_2) = \frac{d_2(c_1, c_2)}{\sqrt{\max\limits_{c\in A}\{d_2(c_1, c)\} \cdot \max\limits_{c\in A}\{d_2(c_2, c)\}}}
 \end{align*}
 
 y de esta forma tendremos que $d$ sigue siendo una distancia y además $0 \leq d(c_1, c_2) \leq 1$ verificándose que 
 \begin{enumerate}
-    \item $d(c_1, c_2) = 0 \sii c_1=c_2$ (por ser $d_2$ una distancia)
+    \item $d(c_1, c_2) = 0 \sii d_2(c_1,c_2)=0 \sii c_1=c_2$ (por ser $d_2$ una distancia)
     \item $d(c_1, c_2) = 1 \sii d_2(c_1, c_2) =\max\limits_{c\in A}\{d_2(c_1, c)\} = \max\limits_{c\in A}\{d_2(c_2, c)\}$, es decir, si $c_1$ y $c_2$ son los caracteres más alejados mutuamente.
 \end{enumerate}
 
-De esta forma podemos definir una matriz $M\in \cc{M}_{27}(\bb{R})$ dada por 
+\begin{proof}
+    Veamos que $d$ así definida es una distancia sobre el conjunto de caracteres $A$. Para ello tendremos que ver que verifica las propiedades de una distancia:
+    \begin{enumerate}
+        \item Veamos que $d(c_1, c_2)\geq 0$ $\forall c_1,c_2\in A$. Para ello utilizamos la definición y que $d_2$ es una distancia bien definida y tenemos que 
+        \begin{align*}
+            \left.
+            \begin{array}{c}
+                d_2(c_1,c_2) \geq 0\\
+                \max\limits_{c\in A}\{d_2(c_1, c)\} \geq 0\\
+                \max\limits_{c\in A}\{d_2(c_2, c)\} \geq 0
+            \end{array}
+            \right\}
+            \Rightarrow d(c_1,c_2) \geq 0
+        \end{align*}
+        Además, ya se ha visto que $d(c_1, c_2) = 0 \sii c_1=c_2$.
+
+        \item Veamos que es simétrica, es decir que $d(c_1, c_2)=d(c_2,c_1)$.
+        \begin{align*}
+            d(c_1,c_2) &= \frac{d_2(c_1, c_2)}{\sqrt{\max\limits_{c\in A}\{d_2(c_1, c)\} \cdot \max\limits_{c\in A}\{d_2(c_2, c)\}}} = 
+            \frac{d_2(c_2, c_1)}{\sqrt{\max\limits_{c\in A}\{d_2(c_2, c)\} \cdot \max\limits_{c\in A}\{d_2(c_1, c)\}}} \\
+            &= d(c_2,c_1)
+        \end{align*}
+        donde hemos aplicado que $d_2$ es una distancia y que el producto en $\bb{R}$ es conmutativo
+        \item Veamos que verifica la desigualdad triangular, es decir que
+        \begin{align*}
+            d(c_1,c_2) \leq d(c_1, c_3) + d(c_3,c_2)
+        \end{align*}
+        Para simplificar la notación tomaré como $m_i=\max\limits_{c\in A}\{d_2(c_i, c)\}$ para cada $i=1,2,3$.
+
+        %TODO: vas por aquí
+    \end{enumerate}
+\end{proof}
+
+De esta forma podemos definir una matriz $M_d\in \cc{M}_{27}(\bb{R})$ dada por 
 \begin{align*}
-    \{a_{ij}\}_{i,j} = \{d(c_i, c_j)\}_{i,j}
+    M_d=\{m_{ij}\}_{i,j} = \{d(c_i, c_j)\}_{i,j}
 \end{align*}
-y $M$ será simétrica y será la \textbf{matriz de distancias}.
+y $M_d$ será la \textbf{matriz de distancias}.
+
+Notemos que $M_d$ será simétrica y la diagonal principal será nula (por ser $d$ una distancia).
 
 \end{document}
