@@ -1,0 +1,218 @@
+\documentclass[12pt]{article}
+
+\input{preambulo.tex}
+
+\begin{document}
+
+\section{Definición del problema}
+
+Definimos en primer lugar el conjunto $A$ como el conjunto de caracteres definidos en la lengua española en minúscula, sin tener en cuenta signos de puntuación ni acentos. Es decir, 
+\begin{gather*}
+    A=\{a,b,c,d,e,f,g,h,i,j,k,l,m,n,\tilde{n},o,p,q,r,s,t,u,v,w,x,y,z\}
+\end{gather*}
+
+Consideramos además el conjunto $B$ dado por los mismos caracteres pero en mayúscula. Es decir, 
+\begin{gather*}
+    B=\{A,B,C,D,E,F,G,H,I,J,K,L,M,N,\tilde{N},O,P,Q,R,S,T,U,W,X,Y,Z\}
+\end{gather*}
+
+Podemos definir la aplicación $toUpper:A \to B$ que asigna a cada caracter de $A$ su correspondiente caracter en mayúsculas de $B$. Es fácil ver que esta aplicación es biyectiva y su inversa la denotaremos por $toLower: B \to A$. Podremos denotar también $B=toUpper(A)$.
+
+Definimos también el conjunto $V=\{a,e,i,o,u\}\subset A$ de las vocales, el conjunto $T$ de acentos\footnote{Cabe destacar que $T$ no es un conjunto de caracteres sino de tildes (variaciones)} y consideramos el conjunto $W$ el cual incluye todas las variaciones de dichas vocales mediante los acentos de $T$. Consideramos entonces la aplicación $tilde: T \times V \to W$ el cual añade el acento de $T$ a la vocal de $V$ resultando en un elemento de $W$.
+
+Definimos el conjunto $P$ como el conjunto de caracteres que no se encuentra en $A\cap B \cap V \cap W$, el cual incluye signos de puntuación y el resto de caracteres ASCII. Al conjunto de caracteres ASCII lo denotaremos por $\Omega$ y de esta forma tenemos que $\{A,B,V,W,P\}$ define una partición de $\Omega$, es decir
+\begin{enumerate}
+    \item $A\cup B \cup V \cup W \cup P = \Omega$
+    \item $X\cap Y = \emptyset\ \ \forall X,Y\in \{A,B,V,W,P\},\ \  X\neq Y$
+\end{enumerate}
+
+Definiremos una \textbf{palabra} p como un vector de elementos de $\Omega$, es decir
+\begin{gather*}
+    p=(x_1,\dots,x_n) \text{ con } x_i\in \Omega \ \ \ \forall i\in 1,\dots,n
+\end{gather*}
+
+\begin{observacion}
+    Este concepto es más extenso que el de palabra que se entiende en el lenguaje ya que a priori puede contener cualquier signo de puntuación, incluyendo caracteres en blanco (espacios).
+\end{observacion}
+
+Diremos que una palabra es \textbf{propia} si no contiene espacios en blanco, es decir, si 
+\begin{align*}
+    p=(x_1,\dots,x_n) \text{ con } x_i\in \Omega \setminus \{\text{` '}\} \ \ \ \forall i\in 1,\dots,n
+\end{align*}
+
+Diremos que $n$ es la \textbf{longitud} de la palabra. Además por la definición de $p$ tenemos que $p$ tiene longitud $n$ si y solo si $p\in \Omega^n$.
+
+De esta forma, el problema que se plantea es encontrar una aplicación
+\begin{align*}
+    d:\Omega^n\times \Omega^m \to \bb{R}^+\ \ \ m,n\in \bb{N}
+\end{align*}
+
+de forma que $d$ sea una distancia en el espacio $\Omega^n\times \Omega^m$.
+
+Para seguir trabajando con la notación adecuada definiremos unos cuantos conceptos que serán útiles.
+
+Definiremos la aplicación $C:\Omega^n\to \Omega$ como los \textbf{caracteres} de una palabra y estará definida como 
+\begin{align*}
+    C(p)=\{x_1,\dots,x_n\}, \ \ \text{ para } p=(x_1,\dots,x_n)
+\end{align*}
+Notemos que con esta aplicación se pierde la propiedad de orden que tenía $p$ como vector.
+
+Definimos así una \textbf{subpalabra} $sp$ de una palabra $p\in \Omega^n$ como una proyección con respecto a las coordenadas i-ésima a la (i+k)-esima de $p$, es decir, $sp$ será una subpalabra de $p$ si y solo si 
+\begin{align*}
+    sp = \pi_{i,i+1,\dots,i+k}(p) \text{ con } 1\leq i,\ \ i+k\leq n
+\end{align*}
+
+Notaremos por $SP(p)$ al conjunto de subpalabras de $p$.
+
+Algunas propiedades inmediatas son
+\begin{enumerate}
+    \item $C(sp)\subseteq C(p)$
+    \item $sp \in \Omega^{k+1}$, es decir, $sp$ tiene longitud $k+1 \leq n$.
+\end{enumerate}
+Podemos además definir una aplicación aditiva como
+\begin{align*}
+    +:\Omega^n \times \Omega^m \to \Omega^{m+n}\\
+    +(p,p')= p + p'=(x_1, \dots, x_n, x'_1, \dots,x'_n)
+\end{align*}
+
+Notemos que con esta definición, la suma no es conmutativa pero sí es asociativa. Podemos entenderla como una concatenación de las palabras $p$ y $p'$. 
+
+Definiremos tres aplicaciones bastante importantes para las soluciones propuestas.
+Definimos la \textbf{insercion} como la aplicación $Ins:\Omega^n \times \Omega \times \bb{N}\cap [0,n] \to \Omega^{n+1}$ dada por 
+\begin{align*}
+    Ins(p,x,i) = (x_1, \dots, x_{i-1}, x, x_i, \dots, x_n)
+\end{align*}
+y diremos que insertamos en la palabra $p$ el caracter $x$ en la posición i-ésima.
+
+Definiremos la \textbf{eliminación} como $Del:\Omega^n \times \bb{N}\cap [0,n] \to \Omega^{n-1}$ dada por
+\begin{align*}
+    Del(p,i) = (x_1,\dots,x_{i-1}, x_{i+1}, \dots, x_n)
+\end{align*}
+y diremos que eliminamos el caracter i-ésimo de la palabra $p$.
+
+Definiremos la \textbf{sustitución} como $Sus:\Omega^n \times \Omega \times \bb{N}\cap [0,n] \to \Omega^n$ dada por
+\begin{align*}
+    Sus(p,x,i) = (x_1, \dots, x_{i-1}, x, x_{i+1}, \dots, x_n)
+\end{align*}
+y diremos que insertamos el sustituimos por caracter $x$ la posición i-ésima de la palabra $p$.
+
+A estas tres aplicaciones las llamaremos \textbf{aplicaciones elementales}.
+
+\section{Primera solución}
+
+La primera distancia que se define que verifica todos los requisitos del problema podría ser la conocida como \textbf{ distancia de Levenshtein}. Esta distancia consiste en encontrar el número de inserciones, eliminaciones y sustituciones mínimas necesarias para transformar una palabra $p$ en otra $p'$, es decir
+\begin{align*}
+    d_L(p,p')=k \sii \text{ se puede pasar de $p$ a $p'$ con $k$ aplicaciones elementales}
+\end{align*}
+
+Notemos que esta distancia toma valores en $\bb{N}$ y que no es muy precisa ya que tenemos que $d((c,a), (c,a,s,a)) = d((c,a), (x,\tilde{n}))$ lo cual parece poco intuitivo y poco práctico para comparar palabras.
+
+\section{Segunda solución}
+
+La segunda solución que se plantea está basada en la anterior pero añade un \textbf{peso} a cada aplicación elemental. Para ello definiremos una distancia geométrica sobre un teclado real considerando para ello cada caracter de $A$ como la coordenada central de cada tecla y utilizando la distancia euclídea en $\bb{R}^2$.
+Sabemos que un teclado estándard QWERTY (de móvil) tiene la siguiente distribución:
+
+\begin{center}
+    \includegraphics[width=7cm]{teclado.png}
+\end{center}
+
+Por lo que podríamos considerar la siguiente representación en el plano:
+\vspace*{0.5cm}
+
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1}
+
+\begin{center}
+\begin{tikzpicture}
+
+    \draw[thick] (0,-2)--(0,3);
+    \draw[thick] (-1,0)--(10,0);
+    \draw[thick] (1,-0.15) node[below]{$1$} -- (1,0.15);
+    \draw[thick] (2,-0.15) node[below]{$2$} -- (2,0.15);
+    \draw[thick] (3,-0.15) node[below]{$3$} -- (3,0.15);
+    \draw[thick] (4,-0.15) node[below]{$4$} -- (4,0.15);
+    \draw[thick] (5,-0.15) node[below]{$5$} -- (5,0.15);
+    \draw[thick] (6,-0.15) node[below]{$6$} -- (6,0.15);
+    \draw[thick] (7,-0.15) node[below]{$7$} -- (7,0.15);
+    \draw[thick] (8,-0.15) node[below]{$8$} -- (8,0.15);
+    \draw[thick] (9,-0.15) node[below]{$9$} -- (9,0.15);
+
+    \draw[thick] (-0.15,1) node[left]{$1$} -- (0.15,1);
+    \draw[thick] (-0.15,2) node[left]{$2$} -- (0.15,2);
+    
+
+
+    \draw [fill=ududff] (1.5,0) circle (2.5pt);
+    \draw[color=ududff] (1.66,0.42) node {$z$};
+    \draw [fill=ududff] (2.5,0) circle (2.5pt);
+    \draw[color=ududff] (2.66,0.42) node {$x$};
+    \draw [fill=ududff] (3.5,0) circle (2.5pt);
+    \draw[color=ududff] (3.66,0.42) node {$c$};
+    \draw [fill=ududff] (4.5,0) circle (2.5pt);
+    \draw[color=ududff] (4.66,0.42) node {$v$};
+    \draw [fill=ududff] (5.5,0) circle (2.5pt);
+    \draw[color=ududff] (5.66,0.42) node {$b$};
+    \draw [fill=ududff] (6.5,0) circle (2.5pt);
+    \draw[color=ududff] (6.66,0.42) node {$n$};
+    \draw [fill=ududff] (7.5,0) circle (2.5pt);
+    \draw[color=ududff] (7.66,0.42) node {$m$};
+    \draw [fill=ududff] (0,1) circle (2.5pt);
+    \draw[color=ududff] (0.16,1.42) node {$a$};
+    \draw [fill=ududff] (1,1) circle (2.5pt);
+    \draw[color=ududff] (1.16,1.42) node {$s$};
+    \draw [fill=ududff] (2,1) circle (2.5pt);
+    \draw[color=ududff] (2.16,1.42) node {$d$};
+    \draw [fill=ududff] (3,1) circle (2.5pt);
+    \draw[color=ududff] (3.16,1.42) node {$f$};
+    \draw [fill=ududff] (4,1) circle (2.5pt);
+    \draw[color=ududff] (4.16,1.42) node {$g$};
+    \draw [fill=ududff] (5,1) circle (2.5pt);
+    \draw[color=ududff] (5.16,1.42) node {$h$};
+    \draw [fill=ududff] (6,1) circle (2.5pt);
+    \draw[color=ududff] (6.16,1.42) node {$j$};
+    \draw [fill=ududff] (7,1) circle (2.5pt);
+    \draw[color=ududff] (7.16,1.42) node {$k$};
+    \draw [fill=ududff] (8,1) circle (2.5pt);
+    \draw[color=ududff] (8.16,1.42) node {$l$};
+    \draw [fill=ududff] (9,1) circle (2.5pt);
+    \draw[color=ududff] (9.16,1.42) node {$\tilde{n}$};
+    \draw [fill=ududff] (0,2) circle (2.5pt);
+    \draw[color=ududff] (0.16,2.42) node {$q$};
+    \draw [fill=ududff] (1,2) circle (2.5pt);
+    \draw[color=ududff] (1.16,2.42) node {$w$};
+    \draw [fill=ududff] (2,2) circle (2.5pt);
+    \draw[color=ududff] (2.16,2.42) node {$e$};
+    \draw [fill=ududff] (3,2) circle (2.5pt);
+    \draw[color=ududff] (3.16,2.42) node {$r$};
+    \draw [fill=ududff] (4,2) circle (2.5pt);
+    \draw[color=ududff] (4.16,2.42) node {$t$};
+    \draw [fill=ududff] (5,2) circle (2.5pt);
+    \draw[color=ududff] (5.16,2.42) node {$y$};
+    \draw [fill=ududff] (6,2) circle (2.5pt);
+    \draw[color=ududff] (6.16,2.42) node {$u$};
+    \draw [fill=ududff] (7,2) circle (2.5pt);
+    \draw[color=ududff] (7.16,2.42) node {$i$};
+    \draw [fill=ududff] (8,2) circle (2.5pt);
+    \draw[color=ududff] (8.16,2.42) node {$o$};
+    \draw [fill=ududff] (9,2) circle (2.5pt);
+    \draw[color=ududff] (9.16,2.42) node {$p$};
+\end{tikzpicture}
+\end{center}
+
+De esta forma tendremos definida una distancia entre caracteres dada por $d_2(c_1, c_2) = \sqrt{(c_{11} - c_{21})^2 + (c_{12} - c_{22})^2}$ donde $c_1=(c_{11}, c_{12})$, $c_2=(c_{21}, c_{22})$. Sin embargo vamos a considerar una nueva distancia $d$ dada por 
+\begin{align*}
+    d(c_1, c_2) = \frac{d_2(c_1, c_2)}{\sqrt{\max\limits_{c\in A}\{d_2(c_1, c)\} \cdot \max\limits_{c\in A}\{d_2(c_2, c)\}}}
+\end{align*}
+
+y de esta forma tendremos que $d$ sigue siendo una distancia y además $0 \leq d(c_1, c_2) \leq 1$ verificándose que 
+\begin{enumerate}
+    \item $d(c_1, c_2) = 0 \sii c_1=c_2$ (por ser $d_2$ una distancia)
+    \item $d(c_1, c_2) = 1 \sii d_2(c_1, c_2) =\max\limits_{c\in A}\{d_2(c_1, c)\} = \max\limits_{c\in A}\{d_2(c_2, c)\}$, es decir, si $c_1$ y $c_2$ son los caracteres más alejados mutuamente.
+\end{enumerate}
+
+De esta forma podemos definir una matriz $M\in \cc{M}_{27}(\bb{R})$ dada por 
+\begin{align*}
+    \{a_{ij}\}_{i,j} = \{d(c_i, c_j)\}_{i,j}
+\end{align*}
+y $M$ será simétrica y será la \textbf{matriz de distancias}.
+
+\end{document}
