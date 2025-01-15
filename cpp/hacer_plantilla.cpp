@@ -83,7 +83,7 @@ string Tono(string song){
 
         if(eq){ // Se ha encontrado una coincidencia de la palabra before
             tmp = "";
-
+            
             for(int i=d.before.length(); i<w.length(); i++){  // Guardo el resto temporalmente
                 tmp += w.at(i);
             }
@@ -264,7 +264,7 @@ int main(int argc, char** argv){
 \n\
 \n\
         <div id=\"controls\">\n\
-            <img id=\"pauseButton\" src=\"../images/play.svg\" alt=\"play\">\n\
+            <div id=\"pauseButton-frame\"><img id=\"pauseButton\" src=\"../images/play_2.svg\" alt=\"play\"></div>\n\
              <div id=\"speed-bar\">\n\
                 <input type=\"range\" class=\"scroll-speed-bar\" id=\"scroll-speed-bar\" min=\"1\" max=\"100\" value=\"" + to_string(default_speed) + "\" steps=\"1\" oninput=\"ajustarVelocidad()\">\n\
                 <span class=\"scroll-speed-value\" id=\"scroll-speed-value\">" + to_string(default_speed) + "</span></p>\n\

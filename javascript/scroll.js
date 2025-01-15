@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
             stopScrolling();
             // this.textContent = '►';
             let img = document.getElementById("pauseButton");
-            img.setAttribute("src", "../images/play.svg");
+            img.setAttribute("src", "../images/play_2.svg");
             img.setAttribute("alt", "play");
 
             console.log("pausando scroll");
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
             startScrolling();
             // this.textContent = '⏸';//'⏸︎'; ⏸
             let img = document.getElementById("pauseButton");
-            img.setAttribute("src", "../images/pause.svg");
+            img.setAttribute("src", "../images/pause_2.svg");
             img.setAttribute("alt", "pause");
 
             console.log("reanudando scroll");
