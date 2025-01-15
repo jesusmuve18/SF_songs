@@ -196,6 +196,23 @@ header button:hover {
         border-radius: 5px;
         border: none;
     }
+
+    #contenedor-tools{
+        right: 0;
+        width: 400px;
+    }
+
+    /* Quitar los botones en navegadores basados en Webkit (Chrome, Safari, Edge) */
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Quitar los botones en Firefox */
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
 }
 
 /*VISTA MOVIL*/
