@@ -1,5 +1,46 @@
-\begin{cancion}[prueba][]%
-{\transparent{0}{\chord{Do}{}{Es}te\chord{Re}{}{ e}s\chord{Mi}{}{ e}l día en que actuó el Señor.}}\vspace*{-0.4cm}\\
-{\transparent{0}{\chord{Sol}{}{Est}e\chord{Si}{}{ e}s\chord{La}{}{ e}l día en que actuó el Señor.}}\vspace*{-0.4cm}\\
-	\chord{Re}{}{Es}t\chord{La}{}{e }e\chord{Mi}{}{s }e\chord{Do}{}{l }día en que actuó el Señor.\\
+\begin{cancion}[Sin aire][Christian I]%
+	\chord{}{Intro:}{      } \chord{G}{}{ } \chord{E}{m}{  } \chord{A}{m}{  } \chord{D}{}{ }\\
+	\chord{G}{}{H}oy me he desper\chord{E}{m}{ta}do\\
+	y al mi\chord{A}{m}{ra}r no estás \chord{D}{}{a}hí.\\
+	\chord{G}{}{H}oy me he dado cu\chord{E}{m}{en}ta\\
+	tras la tor\chord{A}{m}{me}nta solo estás\chord{D}{}{ }tú.\\
+\jump
+	Me gustaría s\chord{G}{}{a}ber\\
+	cómo podar mis r\chord{E}{m}{aí}ces \\
+	para que \chord{A}{m}{no} se produzca\\
+	ansiedad en \chord{D}{}{t}i.\\
+\jump
+	Me gustaría s\chord{G}{}{a}ber\\
+	cómo callar mis ve\chord{E}{m}{rd}ades\\
+	para que \chord{A}{m}{no} se produzca \\
+	ansiedad en \chord{D}{}{t}i.\\\jump\\
+	\begin{chorus}%
+	Pero cómo no d\chord{G}{}{e}cirte\\
+	que pue\chord{E}{m}{do} vivir sin aire\\
+	pero no sin \chord{A}{m}{ti}, sin \chord{D}{}{t}i.\\
+\jump
+	Cómo no d\chord{G}{}{e}cirte\\
+	que pue\chord{E}{m}{do} vivir sin aire\\
+	pero no sin \chord{A}{m}{ti}, sin \chord{D}{}{t}i.\\
+	\end{chorus}%
+	\jump\\
+	Eres canción de\chord{G}{}{ }cuna\\
+	para todo aquel que ha sido olvi\chord{E}{m}{da}do\\
+	Y eres la espe\chord{A}{m}{ra}nza \\
+	de todo aquel que había t\chord{D}{}{i}rado\\
+	las ganas de vi\chord{G}{}{v}ir solo, en soledad,\\
+	sin nadie a su \chord{E}{m}{la}do\\
+	y es que no \chord{A}{m}{pu}edo más seguir \chord{D}{}{a}sí.\\\jump\\
+	\begin{chorus}%
+	Cómo no d\chord{G}{}{e}cirte\\
+	que pue\chord{E}{m}{do} vivir sin aire\\
+	pero no sin \chord{A}{m}{ti}, sin \chord{D}{}{t}i.\\
+\jump
+	Cómo no d\chord{G}{}{e}cirte\\
+	que pue\chord{E}{m}{do} vivir sin aire\\
+	pero no sin \chord{A}{m}{ti}, sin \chord{D}{}{t}i.\\
+	\end{chorus}%
+	\jump\\
+	Eres la diosa for\chord{G}{}{t}una...\\
+<span id=cejilla-original>4</span>\\
 \end{cancion}%
