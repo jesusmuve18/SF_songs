@@ -13,6 +13,22 @@ function guardarSesiones(){
     localStorage.setItem('sesiones', JSON.stringify(sesiones));
 }
 
+async function loadIndex(filename) {
+    let text;
+    try {
+        const response = await fetch(filename);
+        if (!response.ok) {
+            throw new Error('Error al cargar el archivo');
+        }
+        text = await response.text();
+
+    } catch (error) {
+        text = 'Error al cargar el archivo: ' + error.message;
+    }
+
+    return text;
+}
+
 // VISTAS
 
 function indexView(sesiones){
@@ -21,7 +37,7 @@ function indexView(sesiones){
     let i=0;
 
     sesiones.forEach(s => {
-        res+=`<li> ${s} 
+        res+=`<li><a id="entrada-sesion" data-my-id=${i}>${s[0]}</a>
               <button id="editar-sesion" data-my-id="${i}">Editar</button>
               <button id="eliminar-sesion" data-my-id="${i}">Eliminar</button></li>`;
         i++;
@@ -34,8 +50,18 @@ function indexView(sesiones){
     return res;
 }
 
-function editSesionView(){
-    return `<button id="pagina-principal">Volver</button>`;
+function editSesionView(id){
+
+    let res=`<ol>`;
+
+    for(let i=1; i<sesiones[id].length; i++) {
+        res+=`<li>${sesiones[id][i].titulo} ${sesiones[id][i].autor} <button id="eliminar-cancion" data-my-sesion="${id}" data-my-id="${i}">Eliminar</button></li>`;
+    }
+
+    res += `</ol>`;
+    res += `<button id="add-cancion" data-my-id="${id}">Añadir</button>`
+    res += `<button id="pagina-principal">Volver</button>`;
+    return res;
 }
 
 function editTitleView(id) {
@@ -58,6 +84,31 @@ function updateTitleView(id) {
 
     return `<h2 id="titulo-sesion">${sesiones[id][0]}</h2>
             <button id="editar-titulo-sesion" data-my-id="${id}">Editar</button>`;
+}
+
+async function addSongView(id) {
+
+    let res = `<button id="cancelar-add-cancion" data-my-id="${id}">Cancelar</button>`;
+    // console.log(res);
+
+    res += `<div id="lista-canciones-add">`;
+    res += await loadIndex("./songs/0-data.txt");
+    res += `</div>`;
+
+
+    return res;
+}
+
+function loadSesionView(id){
+    let res=`<ol>`;
+
+    for(let i=1; i<sesiones[id].length; i++){
+        res+=`<li><a href="${sesiones[id][i].href}"><span id="song-title">${sesiones[id][i].titulo}</span> <span id="author">${sesiones[id][i].autor}</span></li>`
+    }
+
+    res+=`</ol>`
+
+    return res;
 }
 
 // CONTROLADORES
@@ -85,7 +136,7 @@ function editSesionContr(id) {
 
     document.getElementById("titulo").innerHTML = `<h2 id="titulo-sesion">${titulo_sesion}</h2>
                                                    <button id="editar-titulo-sesion" data-my-id="${id}">Editar</button>`;
-    document.getElementById("main").innerHTML = editSesionView(titulo_sesion);
+    document.getElementById("main").innerHTML = editSesionView(id);
 }
 
 function editTitleContr(id) {
@@ -106,6 +157,55 @@ function deleteSesionContr(id) {
     }
 }
 
+async function addSongContr(id) {
+    console.log("click");
+
+    // Cargo el índice
+    document.getElementById("main").innerHTML = await addSongView(id);
+
+    // Elimino los enlaces del principio
+    document.getElementById("enlaces").outerHTML = "";
+
+    // Formateo toda la lista
+    let list = document.querySelectorAll("#lista-canciones-add li");
+
+    list.forEach(li =>{
+        li.dataset.myId = id; 
+        li.querySelector("#song-title").dataset.myId = id;
+        li.querySelector("#author").dataset.myId = id;
+    })
+}
+
+function updateSongContr(id, target) {
+
+    let link =target.closest("a");
+
+    console.log(link);
+
+    let title = link.querySelector("#song-title").innerHTML;
+    let author = link.querySelector("#author").innerHTML;
+    let ref = link.href;
+
+    sesiones[id].push({titulo:title, autor:author, href:ref});
+    guardarSesiones();
+    editSesionContr(id);
+}
+
+function removeSongContr(sesion, id) {
+
+    console.log(sesion);
+
+    sesiones[sesion].splice(id, 1);
+    guardarSesiones();
+
+    editSesionContr(sesion);
+}
+
+function loadSesionContr(id) {
+    document.getElementById("titulo").innerHTML = `<h2>${sesiones[id][0]}</h2>`
+    document.getElementById("main").innerHTML = loadSesionView(id);
+}
+
 
 // EVENTOS
 document.addEventListener('click', ev=>{
@@ -115,6 +215,13 @@ document.addEventListener('click', ev=>{
     else if (ev.target.matches('#pagina-principal')) indexContr();
     else if (ev.target.matches('#editar-sesion')) editSesionContr(ev.target.dataset.myId);
     else if (ev.target.matches('#eliminar-sesion'))  deleteSesionContr(ev.target.dataset.myId);
+    else if (ev.target.matches("#add-cancion")) addSongContr(ev.target.dataset.myId);
+    else if (ev.target.matches("#cancelar-add-cancion")) editSesionContr(ev.target.dataset.myId);
+    else if (ev.target.matches("#lista-canciones-add *")) {
+        ev.preventDefault();
+        updateSongContr(ev.target.dataset.myId, ev.target);
+    } else if (ev.target.matches("#eliminar-cancion")) removeSongContr(ev.target.dataset.mySesion, ev.target.dataset.myId)
+    else if (ev.target.matches("#entrada-sesion")) loadSesionContr(ev.target.dataset.myId);
 })
 
 document.addEventListener('DOMContentLoaded', ev=> indexContr());
