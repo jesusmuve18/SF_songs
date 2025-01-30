@@ -1,0 +1,8 @@
+#titulo {
+    display: flex;
+    margin: 0;
+}
+
+#titulo > h2 {
+    margin-right: 10px;
+}
