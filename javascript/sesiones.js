@@ -103,10 +103,13 @@ function loadSesionView(id){
     let res=`<ol>`;
 
     for(let i=1; i<sesiones[id].length; i++){
-        res+=`<li><a href="${sesiones[id][i].href}"><span id="song-title">${sesiones[id][i].titulo}</span> <span id="author">${sesiones[id][i].autor}</span></li>`
+        res+=`<li><a href="${sesiones[id][i].href}"><span id="song-title">${sesiones[id][i].titulo}</span> <span id="author">${sesiones[id][i].autor}</span></a></li>`
     }
 
     res+=`</ol>`
+
+    res += `<!--button id="editar-sesion" data-my-id="${id}">Editar</button-->`;
+    res += `<button id="pagina-principal">Volver</button>`;
 
     return res;
 }
