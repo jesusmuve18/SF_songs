@@ -2,6 +2,9 @@
 const INICIAL = JSON.stringify([]);
 const TITULO = `<h2>Sesiones</h2>`;
 
+let visible='visible-list-item';
+let oculto='hidden';
+
 localStorage.setItem('sesiones', localStorage.getItem('sesiones') || INICIAL);
 // localStorage.setItem('sesiones', INICIAL);
 
@@ -27,6 +30,47 @@ async function loadIndex(filename) {
     }
 
     return text;
+}
+
+function busqueda(w) {
+
+    console.log(w);
+
+    const enlaces = document.querySelector('#enlaces');
+        
+    // Ocultar los enlaces iniciales al empezar a buscar
+    if(w.toLowerCase() == ""){
+        enlaces.classList.remove(oculto);
+    } else {
+        enlaces.classList.add(oculto);
+    }
+
+    // Seleccionar el índice
+    const container = document.getElementById('lista-canciones-add');
+
+    // Seleccionar todos los <li> dentro del contenedor
+    const listItems = container.querySelectorAll('li');
+
+    // Recorrer los elementos <li> y extraer los detalles
+    listItems.forEach(li => {
+        const titleElement = li.querySelector('#song-title');
+
+        const authorElement = li.querySelector('#author');
+        const title = titleElement ? titleElement.textContent.trim() : 'Título no encontrado';
+        const author = authorElement ? authorElement.textContent.trim() : 'Autor no encontrado';
+
+        // console.log(`${title}, ${author}`);
+
+        if(title.toLowerCase().includes(w.toLowerCase()) 
+            || author.toLowerCase().includes(w.toLowerCase())
+            || (`${title.toLowerCase()} ${author.toLowerCase()}`).includes(w.toLowerCase())) {
+            li.classList.remove(oculto);
+            li.classList.add(visible);
+        } else {
+            li.classList.remove(visible);
+            li.classList.add(oculto);
+        }
+    });
 }
 
 // VISTAS
@@ -88,7 +132,8 @@ function updateTitleView(id) {
 
 async function addSongView(id) {
 
-    let res = `<button id="cancelar-add-cancion" data-my-id="${id}">Cancelar</button>`;
+    let res = `<input id="barra-busqueda-canciones-sesion" placeholder="Buscar canciones...">`
+    res += `<button id="cancelar-add-cancion" data-my-id="${id}">Cancelar</button>`;
     // console.log(res);
 
     res += `<div id="lista-canciones-add">`;
@@ -167,7 +212,7 @@ async function addSongContr(id) {
     document.getElementById("main").innerHTML = await addSongView(id);
 
     // Elimino los enlaces del principio
-    document.getElementById("enlaces").outerHTML = "";
+    // document.getElementById("enlaces").outerHTML = "";
 
     // Formateo toda la lista
     let list = document.querySelectorAll("#lista-canciones-add li");
@@ -225,6 +270,12 @@ document.addEventListener('click', ev=>{
         updateSongContr(ev.target.dataset.myId, ev.target);
     } else if (ev.target.matches("#eliminar-cancion")) removeSongContr(ev.target.dataset.mySesion, ev.target.dataset.myId)
     else if (ev.target.matches("#entrada-sesion")) loadSesionContr(ev.target.dataset.myId);
+})
+
+document.addEventListener('keyup', ev => {
+    if (ev.target.matches("#barra-busqueda-canciones-sesion")){
+        busqueda(ev.target.value);
+    }
 })
 
 document.addEventListener('DOMContentLoaded', ev=> indexContr());
