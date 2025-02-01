@@ -90,4 +90,13 @@ document.addEventListener('DOMContentLoaded', ev=>{
 
     // Oculto los menús disponibles
     ocultarTodo();
+
+    document.querySelector('#cabecera nav').innerHTML = 
+    `<ul>
+        <li><a href="../index.html">Inicio</a><img src="../images/right-arrow.svg"></li>
+        <li><a href="../indice.html">Indice</a><img src="../images/right-arrow.svg"></li>
+        <li><a href="../sesiones.html">Sesiones</a><img src="../images/right-arrow.svg"></li>
+        <li><a href="../acordes.html">Acordes</a><img src="../images/right-arrow.svg"></li>
+        <li><a href="../about.html">Acerca de</a><img src="../images/right-arrow.svg"></li>
+    </ul>`;
 })
