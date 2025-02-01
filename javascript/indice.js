@@ -4,6 +4,8 @@ let selected_style='selected';
 let not_selected_style='not-selected';
 let secciones_indice;
 
+let oculto='hidden';
+
 let selected;
 
 window.addEventListener('load', async function(){
