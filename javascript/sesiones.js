@@ -4,6 +4,7 @@ const TITULO = `<h2>Sesiones</h2>`;
 const ADD_SESION = `<img src="images/add.svg" id="add-sesion-icon">`;
 const EDIT = `images/edit.svg`;
 const ID_EDIT = `edit-sesion-icon`;
+const ID_EDIT_TITLE = `edit-title-icon`;
 const REMOVE = `images/bin.svg`;
 const ID_REMOVE_SESION = `remove-sesion-icon`;
 const ID_REMOVE_SONG = `remove-song-icon`;
@@ -11,6 +12,7 @@ const ADD_SONG = `images/add.svg`;
 const ID_ADD_SONG = `add-song-icon`;
 const SAVE_SESION = `images/save.svg`;
 const ID_SAVE_SESION = `save-sesion-icon`;
+const ICONO_VOLVER = `<img src="images/left-arrow.svg" id="pagina-principal">`
 
 const SELECTED_STYLE='selected';
 const NOT_SELECTED_STYLE='not-selected';
@@ -112,7 +114,7 @@ function indexView(sesiones){
 function editSesionView(id){
 
     let res = `<button id="add-cancion" data-my-id="${id}"><img src=${ADD_SONG} data-my-id="${id}" id=${ID_ADD_SONG}></button>`
-    res += `<button id="pagina-principal"><img src=${SAVE_SESION} data-my-id="${id}" id=${ID_SAVE_SESION}></button>`;
+    res += `<button id="guardar-sesion" data-my-id="${id}"><img src=${SAVE_SESION} data-my-id="${id}" id=${ID_SAVE_SESION}></button>`;
 
     res += `<ol>`;
 
@@ -162,7 +164,10 @@ async function addSongView(id) {
 }
 
 function loadSesionView(id){
-    let res=`<ol>`;
+    let res = `<button id="editar-sesion" data-my-id="${id}">Editar</button>`;
+    // res += `<button id="pagina-principal">Volver</button>`;
+
+    res += `<ol>`;
 
     if(sesiones[id].length>1) {
         for(let i=1; i<sesiones[id].length; i++){
@@ -173,10 +178,6 @@ function loadSesionView(id){
     }
 
     res+=`</ol>`
-
-    res += `<!--button id="editar-sesion" data-my-id="${id}">Editar</button-->`;
-    res += `<button id="pagina-principal">Volver</button>`;
-
     return res;
 }
 
@@ -185,6 +186,7 @@ function loadSesionView(id){
 function indexContr() {
     document.getElementById("titulo").innerHTML = TITULO + `<button id="nueva-sesion">${ADD_SESION}</button>`;
     document.getElementById("main").innerHTML = indexView(sesiones);
+    document.getElementById("boton-volver-pagina-principal").innerHTML = "";
 }
 
 function newSesionContr() {
@@ -204,8 +206,10 @@ function editSesionContr(id) {
     titulo_sesion=sesiones[id][0];
 
     document.getElementById("titulo").innerHTML = `<h2 id="titulo-sesion">${titulo_sesion}</h2>
-                                                   <button id="editar-titulo-sesion" data-my-id="${id}">Editar</button>`;
+                                                   <button id="editar-titulo-sesion" data-my-id="${id}"><img src="${EDIT}" id="${ID_EDIT_TITLE}" data-my-id="${id}"></button>`;
     document.getElementById("main").innerHTML = editSesionView(id);
+
+    document.getElementById("boton-volver-pagina-principal").innerHTML = ICONO_VOLVER;
 }
 
 function editTitleContr(id) {
@@ -331,6 +335,7 @@ function removeSongContr(sesion, id) {
 function loadSesionContr(id) {
     document.getElementById("titulo").innerHTML = `<h2>${sesiones[id][0]}</h2>`
     document.getElementById("main").innerHTML = loadSesionView(id);
+    document.getElementById("boton-volver-pagina-principal").innerHTML = ICONO_VOLVER;
 }
 
 
@@ -349,6 +354,7 @@ document.addEventListener('click', ev=>{
         updateSongContr(ev.target.dataset.myId, ev.target);
     } else if (ev.target.matches("#eliminar-cancion, #eliminar-cancion *")) removeSongContr(ev.target.dataset.mySesion, ev.target.dataset.myId)
     else if (ev.target.matches("#entrada-sesion")) loadSesionContr(ev.target.dataset.myId);
+    else if (ev.target.matches("#guardar-sesion, #guardar-sesion *")) loadSesionContr(ev.target.dataset.myId);
 })
 
 document.addEventListener('keyup', ev => {

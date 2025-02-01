@@ -69,7 +69,7 @@ li#entrada-sesion:hover{
     cursor: pointer;
 }
 
-#edit-sesion-icon, #remove-sesion-icon, #remove-song-icon {
+#edit-sesion-icon, #remove-sesion-icon, #remove-song-icon, #edit-title-icon {
     max-height: 20px;
     opacity: 0.5;
 }
@@ -177,6 +177,7 @@ li#entrada-sesion:hover{
     display: none; /* Oculta el scrollbar en Chrome, Edge y Safari */
 }
 
+
 #main #enlaces a{
     text-decoration: none;
     padding: 0 10px 0 10px;
@@ -196,10 +197,29 @@ li#entrada-sesion:hover{
     color: white;
 }
 
-#main #enlaces a.not-selected{
+#main #enlaces a.not-selected {
     color: #6e729f;
 }
 
+#titulo-sesion-input {
+    height: 24px;
+    padding: 5px 0 5px 0;
+    margin: 17.5px 0 17.5px 0;
+    font-size: 24px;
+    font-family: 'Open Sans';
+    font-weight: 600;
+}
+
+/*Bóton volver a página principal*/
+#boton-volver-pagina-principal {
+    /* position: absolute; */
+}
+
+#boton-volver-pagina-principal img {
+    max-height: 30px;
+    position: absolute;
+    transform: translate(-15px, -10px);
+}
 
 /*VISTA MOVIL*/
 @media (orientation: portrait){
