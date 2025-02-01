@@ -1,6 +1,21 @@
 // MODELO
 const INICIAL = JSON.stringify([]);
 const TITULO = `<h2>Sesiones</h2>`;
+const ADD_SESION = `<img src="images/add.svg" id="add-sesion-icon">`;
+const EDIT = `images/edit.svg`;
+const ID_EDIT = `edit-sesion-icon`;
+const REMOVE = `images/bin.svg`;
+const ID_REMOVE_SESION = `remove-sesion-icon`;
+const ID_REMOVE_SONG = `remove-song-icon`;
+const ADD_SONG = `images/add.svg`;
+const ID_ADD_SONG = `add-song-icon`;
+const SAVE_SESION = `images/save.svg`;
+const ID_SAVE_SESION = `save-sesion-icon`;
+
+const SELECTED_STYLE='selected';
+const NOT_SELECTED_STYLE='not-selected';
+
+
 
 let visible='visible-list-item';
 let oculto='hidden';
@@ -81,30 +96,32 @@ function indexView(sesiones){
     let i=0;
 
     sesiones.forEach(s => {
-        res+=`<li><a id="entrada-sesion" data-my-id=${i}>${s[0]}</a>
-              <button id="editar-sesion" data-my-id="${i}">Editar</button>
-              <button id="eliminar-sesion" data-my-id="${i}">Eliminar</button></li>`;
+        res+=`<li id="entrada-sesion" data-my-id=${i}><a id="entrada-sesion" data-my-id=${i}>${s[0]}</a>
+              <button id="editar-sesion" data-my-id="${i}"><img src="${EDIT}" id="${ID_EDIT}" data-my-id="${i}"></button>
+              <button id="eliminar-sesion" data-my-id="${i}"><img src="${REMOVE}" id="${ID_REMOVE_SESION}" data-my-id="${i}"></button></li>`;
         i++;
     });
 
     res+=`</ul>`;
 
-    res+=`<button id="nueva-sesion">Nueva</button>`;
+    // res+=`<button id="nueva-sesion">Nueva</button>`;
 
     return res;
 }
 
 function editSesionView(id){
 
-    let res=`<ol>`;
+    let res = `<button id="add-cancion" data-my-id="${id}"><img src=${ADD_SONG} data-my-id="${id}" id=${ID_ADD_SONG}></button>`
+    res += `<button id="pagina-principal"><img src=${SAVE_SESION} data-my-id="${id}" id=${ID_SAVE_SESION}></button>`;
+
+    res += `<ol>`;
 
     for(let i=1; i<sesiones[id].length; i++) {
-        res+=`<li>${sesiones[id][i].titulo} ${sesiones[id][i].autor} <button id="eliminar-cancion" data-my-sesion="${id}" data-my-id="${i}">Eliminar</button></li>`;
+        res+=`<li id="lista-canciones"><span id="list-number">${i}</span><span id="info-cancion"><span id="song-title">${sesiones[id][i].titulo}</span><span id="author">${sesiones[id][i].autor}</span></span> <button id="eliminar-cancion" data-my-sesion="${id}" data-my-id="${i}"><img src="${REMOVE}" id="${ID_REMOVE_SONG}" data-my-sesion="${id}" data-my-id="${i}"></button></li>`;
     }
 
     res += `</ol>`;
-    res += `<button id="add-cancion" data-my-id="${id}">Añadir</button>`
-    res += `<button id="pagina-principal">Volver</button>`;
+    
     return res;
 }
 
@@ -147,8 +164,12 @@ async function addSongView(id) {
 function loadSesionView(id){
     let res=`<ol>`;
 
-    for(let i=1; i<sesiones[id].length; i++){
-        res+=`<li><a href="${sesiones[id][i].href}"><span id="song-title">${sesiones[id][i].titulo}</span> <span id="author">${sesiones[id][i].autor}</span></a></li>`
+    if(sesiones[id].length>1) {
+        for(let i=1; i<sesiones[id].length; i++){
+            res+=`<li id="lista-canciones"><span id="list-number">${i}</span><a id="info-cancion" href="${sesiones[id][i].href}"><span id="song-title">${sesiones[id][i].titulo}</span> <span id="author">${sesiones[id][i].autor}</span></a></li>`
+        }
+    } else {
+        res+= `No hay canciones aún`;
     }
 
     res+=`</ol>`
@@ -162,7 +183,7 @@ function loadSesionView(id){
 // CONTROLADORES
 
 function indexContr() {
-    document.getElementById("titulo").innerHTML = TITULO;
+    document.getElementById("titulo").innerHTML = TITULO + `<button id="nueva-sesion">${ADD_SESION}</button>`;
     document.getElementById("main").innerHTML = indexView(sesiones);
 }
 
@@ -211,8 +232,6 @@ async function addSongContr(id) {
     // Cargo el índice
     document.getElementById("main").innerHTML = await addSongView(id);
 
-    // Elimino los enlaces del principio
-    // document.getElementById("enlaces").outerHTML = "";
 
     // Formateo toda la lista
     let list = document.querySelectorAll("#lista-canciones-add li");
@@ -222,11 +241,69 @@ async function addSongContr(id) {
         li.querySelector("#song-title").dataset.myId = id;
         li.querySelector("#author").dataset.myId = id;
     })
+
+    let selected;
+
+    let enlaces=document.querySelectorAll('#enlaces a');
+    let secciones_indice=document.querySelectorAll('.seccion-indice');
+
+    enlaces.forEach(enlace=>{
+
+        console.log("Accediendo a enlaces");
+
+        // Al principio se selecciona 'Todas'
+        if(enlace.innerHTML=='Todas'){
+            enlace.classList.add(SELECTED_STYLE);
+            selected=enlace;
+        } else {
+            console.log(enlace.innerHTML);
+            enlace.classList.add(NOT_SELECTED_STYLE);
+        }
+        
+
+        enlace.addEventListener('click', e=>{
+            e.preventDefault();
+
+            // Si el enlace no es el que había seleccionado
+            if(enlace!=selected){
+
+                // Cambio los estilo de la caja
+                selected.classList.remove(SELECTED_STYLE);
+                selected.classList.add(NOT_SELECTED_STYLE);
+
+                enlace.classList.remove(NOT_SELECTED_STYLE);
+                enlace.classList.add(SELECTED_STYLE);
+                
+                selected=enlace;
+
+                if(enlace.innerHTML=="Todas"){
+                    // Muestro todas las secciones
+                    secciones_indice.forEach(seccion=>{
+                        seccion.classList.remove(oculto);
+                    })
+                } else {
+                    // Oculto todas las secciones que no sean esta
+                    secciones_indice.forEach(seccion=>{
+                        if(seccion.id!=enlace.innerHTML){
+                            console.log(`ocultando ${seccion.id}`);
+                            seccion.classList.add(oculto);
+                        } else {
+                            console.log(`mostrando ${seccion.id}`);
+                            seccion.classList.remove(oculto);
+                        }
+                    })
+                }
+
+                
+            }
+
+        })
+    })
 }
 
 function updateSongContr(id, target) {
 
-    let link =target.closest("a");
+    let link =target.closest("a")??target.querySelector("a");
 
     console.log(link);
 
@@ -243,10 +320,12 @@ function removeSongContr(sesion, id) {
 
     console.log(sesion);
 
-    sesiones[sesion].splice(id, 1);
-    guardarSesiones();
+    if(window.confirm(`Está seguro de querer eliminar la canción "${sesiones[sesion][id].titulo}" de la sesión "${sesiones[sesion][0]}"?\nAVISO: Esta acción no se puede deshacer`)) {
+        sesiones[sesion].splice(id, 1);
+        guardarSesiones();
 
-    editSesionContr(sesion);
+        editSesionContr(sesion);
+    }    
 }
 
 function loadSesionContr(id) {
@@ -257,18 +336,18 @@ function loadSesionContr(id) {
 
 // EVENTOS
 document.addEventListener('click', ev=>{
-    if      (ev.target.matches('#nueva-sesion')) newSesionContr();
-    else if (ev.target.matches('#editar-titulo-sesion')) editTitleContr(ev.target.dataset.myId);
-    else if (ev.target.matches('#actualizar-titulo-sesion')) updateTitleContr(ev.target.dataset.myId);
-    else if (ev.target.matches('#pagina-principal')) indexContr();
-    else if (ev.target.matches('#editar-sesion')) editSesionContr(ev.target.dataset.myId);
-    else if (ev.target.matches('#eliminar-sesion'))  deleteSesionContr(ev.target.dataset.myId);
-    else if (ev.target.matches("#add-cancion")) addSongContr(ev.target.dataset.myId);
-    else if (ev.target.matches("#cancelar-add-cancion")) editSesionContr(ev.target.dataset.myId);
-    else if (ev.target.matches("#lista-canciones-add *")) {
+    if      (ev.target.matches('#nueva-sesion, #nueva-sesion *')) newSesionContr();
+    else if (ev.target.matches('#editar-titulo-sesion, #editar-titulo-sesion *')) editTitleContr(ev.target.dataset.myId);
+    else if (ev.target.matches('#actualizar-titulo-sesion *, #actualizar-titulo-sesion')) updateTitleContr(ev.target.dataset.myId);
+    else if (ev.target.matches('#pagina-principal, #pagina-principal *')) indexContr();
+    else if (ev.target.matches('#editar-sesion, #editar-sesion *')) editSesionContr(ev.target.dataset.myId);
+    else if (ev.target.matches('#eliminar-sesion, #eliminar-sesion *'))  deleteSesionContr(ev.target.dataset.myId);
+    else if (ev.target.matches("#add-cancion, #add-cancion *")) addSongContr(ev.target.dataset.myId);
+    else if (ev.target.matches("#cancelar-add-cancion, #cancelar-add-cancion *")) editSesionContr(ev.target.dataset.myId);
+    else if (ev.target.matches("#lista-canciones-add .seccion-indice *")) {
         ev.preventDefault();
         updateSongContr(ev.target.dataset.myId, ev.target);
-    } else if (ev.target.matches("#eliminar-cancion")) removeSongContr(ev.target.dataset.mySesion, ev.target.dataset.myId)
+    } else if (ev.target.matches("#eliminar-cancion, #eliminar-cancion *")) removeSongContr(ev.target.dataset.mySesion, ev.target.dataset.myId)
     else if (ev.target.matches("#entrada-sesion")) loadSesionContr(ev.target.dataset.myId);
 })
 
