@@ -1,6 +1,7 @@
 let escribiendo=false;
 let barra_busqueda;
-let visible=('visible-list-item')
+let visible='visible-list-item';
+let oculto=`hidden`;
 
 window.addEventListener('load', function() {
     barra_busqueda = document.querySelector('#buscador');

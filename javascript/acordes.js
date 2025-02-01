@@ -56,7 +56,7 @@ function Index (note) {
  * @param {*} note 
  */
 function Chord (note) {
-    num = Grade(Index(note)+tone-capo+given_capo);
+    let num = Grade(Index(note)+tone-capo+given_capo);
 
     // console.log(`El índice es ${num}`);
     if(notation[0]==EUROPE) {

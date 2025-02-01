@@ -186,10 +186,10 @@ int main(int argc, char** argv){
     <link rel=\"stylesheet\" href=\"" + main_dir + "styles_new/cabecera.css\">\n\
     <link rel=\"stylesheet\" href=\"" + main_dir + "styles_new/cancion.css\">\n\
 \n\
-    <script src=\"" + main_dir + "javascript/cabecera.js\"></script>\n\
-    <script src=\"" + main_dir + "javascript/acordes.js\"></script>\n\
-    <script src=\"" + main_dir + "javascript/scroll.js\"></script>\n\
-    <script src=\"" + main_dir + "javascript/tools.js\"></script>\n\
+    <script type=\"module\" src=\"" + main_dir + "javascript/cabecera2.js\"></script>\n\
+    <script type=\"module\" src=\"" + main_dir + "javascript/acordes.js\"></script>\n\
+    <script type=\"module\" src=\"" + main_dir + "javascript/scroll.js\"></script>\n\
+    <script type=\"module\" src=\"" + main_dir + "javascript/tools.js\"></script>\n\
 \n\
     <link rel=\"icon\" href=\"" + main_dir + "images/logo_sf.png\">\n\
 </head>\n\

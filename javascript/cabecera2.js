@@ -50,16 +50,28 @@ document.addEventListener('click', ev=>{
     }
 
     if(!encontrado) {
-        ocultarTodo();
-
-        for(let i=0; i<mostrando.length; i++){
-            mostrando[i]=false;
-        }
+        
         
         if(ev.target.matches(enlaces_menu)){
             let link =ev.target.parentElement.querySelector("a")??ev.target.querySelector("a");
             window.open(link.href, "_self");
+            encontrado=true;
         }
+
+        // No ocultar los menús si es uno de ellos
+        if(ev.target.matches('#contenedor-buscador *') ||
+           ev.target.matches('#contenedor-tools *')){
+            encontrado=true;
+        };
+
+        if(!encontrado) {
+            ocultarTodo();
+
+            for(let i=0; i<mostrando.length; i++){
+                mostrando[i]=false;
+            }
+        }
+        
     }
 })
 
