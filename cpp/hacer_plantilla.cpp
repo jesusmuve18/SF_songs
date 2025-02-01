@@ -186,7 +186,7 @@ int main(int argc, char** argv){
     <link rel=\"stylesheet\" href=\"" + main_dir + "styles_new/cabecera.css\">\n\
     <link rel=\"stylesheet\" href=\"" + main_dir + "styles_new/cancion.css\">\n\
 \n\
-    <script type=\"module\" src=\"" + main_dir + "javascript/cabecera2.js\"></script>\n\
+    <script type=\"module\" src=\"" + main_dir + "javascript/cabecera2_canciones.js\"></script>\n\
     <script type=\"module\" src=\"" + main_dir + "javascript/acordes.js\"></script>\n\
     <script type=\"module\" src=\"" + main_dir + "javascript/scroll.js\"></script>\n\
     <script type=\"module\" src=\"" + main_dir + "javascript/tools.js\"></script>\n\
