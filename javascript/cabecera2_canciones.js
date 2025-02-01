@@ -53,7 +53,7 @@ document.addEventListener('click', ev=>{
         
         
         if(ev.target.matches(enlaces_menu)){
-            let link =ev.target.parentElement.querySelector("a")??ev.target.querySelector("a");
+            let link =ev.target.querySelector("a")??ev.target.parentElement.querySelector("a");
             window.open(link.href, "_self");
             encontrado=true;
         }
