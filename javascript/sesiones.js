@@ -13,6 +13,10 @@ const ID_ADD_SONG = `add-song-icon`;
 const SAVE_SESION = `images/save.svg`;
 const ID_SAVE_SESION = `save-sesion-icon`;
 const ICONO_VOLVER = `<img src="images/left-arrow.svg" id="pagina-principal">`
+const ACCEPT = `images/accept.svg`
+const ID_ACCEPT = `accept-icon`
+const CANCEL = `images/cancel.svg`
+const ID_CANCEL = `cancel-icon`
 
 const SELECTED_STYLE='selected';
 const NOT_SELECTED_STYLE='not-selected';
@@ -51,7 +55,7 @@ async function loadIndex(filename) {
 
 function busqueda(w) {
 
-    console.log(w);
+    // console.log(w);
 
     const enlaces = document.querySelector('#enlaces');
         
@@ -129,7 +133,7 @@ function editSesionView(id){
 
 function editTitleView(id) {
     return `<input type="text" id="titulo-sesion-input" value="${sesiones[id][0]}">
-            <button id="actualizar-titulo-sesion" data-my-id="${id}">Aceptar</button>`;
+            <button id="actualizar-titulo-sesion" data-my-id="${id}"><img src="${ACCEPT}" id="${ID_ACCEPT}" data-my-id="${id}"</button>`;
 }
 
 function updateTitleView(id) {
@@ -137,22 +141,22 @@ function updateTitleView(id) {
     titulo_sesion = document.getElementById("titulo-sesion-input").value;
 
     if(titulo_sesion!="") {
-        console.log(`Actualizando el titulo de la sesion ${id}`);
+        // console.log(`Actualizando el titulo de la sesion ${id}`);
 
-        console.log(`Se quiere actualizar ${sesiones[id][0]} a ${titulo_sesion}`);
+        // console.log(`Se quiere actualizar ${sesiones[id][0]} a ${titulo_sesion}`);
 
         sesiones[id][0]=titulo_sesion;
         guardarSesiones();
     }
 
     return `<h2 id="titulo-sesion">${sesiones[id][0]}</h2>
-            <button id="editar-titulo-sesion" data-my-id="${id}">Editar</button>`;
+            <button id="editar-titulo-sesion" data-my-id="${id}"><img src="${EDIT}" id="${ID_EDIT_TITLE}" data-my-id="${id}">`;
 }
 
 async function addSongView(id) {
 
     let res = `<input id="barra-busqueda-canciones-sesion" placeholder="Buscar canciones...">`
-    res += `<button id="cancelar-add-cancion" data-my-id="${id}">Cancelar</button>`;
+    res += `<button id="cancelar-add-cancion" data-my-id="${id}"><img src="${CANCEL}" data-my-id="${id}" id="${ID_CANCEL}"></button>`;
     // console.log(res);
 
     res += `<div id="lista-canciones-add">`;
@@ -164,7 +168,7 @@ async function addSongView(id) {
 }
 
 function loadSesionView(id){
-    let res = `<button id="editar-sesion" data-my-id="${id}">Editar</button>`;
+    let res = `<button id="editar-sesion" data-my-id="${id}"><span id="editar-sesion-icon" data-my-id="${id}">Editar</span></button>`;
     // res += `<button id="pagina-principal">Volver</button>`;
 
     res += `<ol>`;
@@ -174,7 +178,7 @@ function loadSesionView(id){
             res+=`<li id="lista-canciones"><span id="list-number">${i}</span><a id="info-cancion" href="${sesiones[id][i].href}"><span id="song-title">${sesiones[id][i].titulo}</span> <span id="author">${sesiones[id][i].autor}</span></a></li>`
         }
     } else {
-        res+= `No hay canciones aún`;
+        res+= `<br>No hay canciones aún`;
     }
 
     res+=`</ol>`
@@ -214,6 +218,11 @@ function editSesionContr(id) {
 
 function editTitleContr(id) {
     document.getElementById("titulo").innerHTML = editTitleView(id);
+
+    // Hago que el puntero se active automáticamente y se coloque al final de la entrada
+    document.getElementById("titulo-sesion-input").focus();
+    let longitud_entrada = document.getElementById("titulo-sesion-input").value.length;
+    document.getElementById("titulo-sesion-input").setSelectionRange(longitud_entrada, longitud_entrada);
 }
 
 function updateTitleContr(id) {
@@ -222,7 +231,7 @@ function updateTitleContr(id) {
 
 
 function deleteSesionContr(id) {
-    console.log(`Se quiere eliminar la sesion ${id}`);
+    // console.log(`Se quiere eliminar la sesion ${id}`);
     if(window.confirm(`Está seguro de eliminar la sesión "${sesiones[id][0]}".\n\nAVISO: esta acción no se puede deshacer`)){
         sesiones.splice(id,1);
         guardarSesiones();
@@ -231,7 +240,7 @@ function deleteSesionContr(id) {
 }
 
 async function addSongContr(id) {
-    console.log("click");
+    // console.log("click");
 
     // Cargo el índice
     document.getElementById("main").innerHTML = await addSongView(id);
@@ -253,14 +262,14 @@ async function addSongContr(id) {
 
     enlaces.forEach(enlace=>{
 
-        console.log("Accediendo a enlaces");
+        // console.log("Accediendo a enlaces");
 
         // Al principio se selecciona 'Todas'
         if(enlace.innerHTML=='Todas'){
             enlace.classList.add(SELECTED_STYLE);
             selected=enlace;
         } else {
-            console.log(enlace.innerHTML);
+            // console.log(enlace.innerHTML);
             enlace.classList.add(NOT_SELECTED_STYLE);
         }
         
