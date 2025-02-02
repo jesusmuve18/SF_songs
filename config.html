@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+
+    <link rel="stylesheet" href="./styles_new/general.css">
+    <link rel="stylesheet" href="./styles_new/cabecera.css">
+    <link rel="stylesheet" href="./styles_new/configuracion.css">
+
+
+    <script type="module" src="javascript/cabecera2.js"></script>
+    <script type="module" src="javascript/configuracion.js"></script>
+
+
+    <link rel="icon" href="./images/logo_sf.png">
+</head>
+<body>
+    <div id="cabecera">
+        <header>
+            <img id="logo" src="images/logo_sf.png" alt="Logo Sf">
+            <div id="grupo-sf">Grupo San Francisco</div>
+            <button id="icono-buscar" class="hidden"><img src="images/search.svg"></button>
+            <button id="icono-tools" class="hidden"><img src="images/tools.svg"></button>
+            <button id="icono-menu"><img src="images/menu.svg"></button>
+        </header>
+    
+        <nav></nav>
+    </div>
+
+    <div id="cuerpo">
+        <h2>Configuración</h2>
+        <div id="configuraciones">
+            <h3>Cifrado</h3>
+            <div id="cifrado">
+                <span id="cifrado-europeo">Europeo <input type="checkbox"></span>
+                <span id="cifrado-americano">Americano <input type="checkbox"></span>
+            </div>
+            <h3>Notación</h3>
+            <div id="notacion">
+                <span id="notacion-estandar">Estándar <input type="checkbox"></span>
+                <span id="notacion-sostenidos">Sostenidos <input type="checkbox"></span>
+                <span id="notacion-bemoles">Bemoles <input type="checkbox"></span>
+            </div>  
+        </div>
+    </div>
+    <div id="vista-previa"></div>
+</body>
+</html>

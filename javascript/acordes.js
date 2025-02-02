@@ -18,7 +18,13 @@ const STANDARD = "standard"
 let tone = +0 ;  // variation (traspose)
 let capo = +0 ;  // fret of the capo
 let given_capo = +0; // fret of the original capo in the song
-let notation = [EUROPE, STANDARD];
+// let notation = [EUROPE, STANDARD];
+
+const INICIAL = JSON.stringify([EUROPE, STANDARD]);
+
+localStorage.setItem('notation', localStorage.getItem('notation') || INICIAL);
+let notation = JSON.parse(localStorage.getItem('notation')); // Cojo la notación de lo que tengo guardado
+
 let loaded = false;
 
 

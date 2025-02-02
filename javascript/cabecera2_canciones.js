@@ -98,5 +98,6 @@ document.addEventListener('DOMContentLoaded', ev=>{
         <li><a href="../sesiones.html">Sesiones</a><img src="../images/right-arrow.svg"></li>
         <li><a href="../acordes.html">Acordes</a><img src="../images/right-arrow.svg"></li>
         <li><a href="../about.html">Acerca de</a><img src="../images/right-arrow.svg"></li>
+        <li><a href="../config.html">Configuración</a><img src="../images/right-arrow.svg"></li>
     </ul>`;
 })
