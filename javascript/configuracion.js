@@ -135,7 +135,9 @@ function clickCheckboxContr(item) {
         checkbox.checked=true;
         guardarNotacion();
         preView();
-    };
+    } else {
+        checkbox.checked=true;
+    }
 }
 
 
