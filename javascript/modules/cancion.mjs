@@ -255,13 +255,7 @@ function Cancion(capo = 0, speed = 60, tone = 0) {
         }
         
         if (capo_pointer!=null && given_capo_pointer!=null) {
-            given_capo = +given_capo_pointer.innerHTML;
-    
-            if(given_capo > 0) {
-                capo_pointer.innerHTML = `traste ${given_capo}`;
-            } else {
-                capo_pointer.innerHTML = 'no';
-            }
+            // given_capo = +given_capo_pointer.innerHTML;
             
             // console.log(`capo por defecto = ${capo}`);
             given_capo_pointer.outerHTML="";
