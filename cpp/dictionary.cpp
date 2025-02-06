@@ -552,12 +552,14 @@ public:
 
         string res;
 
+
         is.open(filename);
 
         if(is){
             
             string line;
             string chordline;
+            string endline = "\\\\\n";
 
             string comando="\\chord";
             // res="\\begin{cancion}["+title+"]["+subtitle+"]%\n";
@@ -571,7 +573,7 @@ public:
                     // cout<<" es de acordes"<<endl;
 
                     if(empty_line){
-                        res+="\\jump\n";
+                        res+="\\jump"+endline;
                         empty_line=false;
                     }
 
