@@ -218,7 +218,7 @@ function Cancion(capo = 0, speed = 60, tone = 0) {
      * @param {*} note 
      */
     const Chord = (note) => {
-        let num = Grade(Index(note)+ +cancion.getTone() - +cancion.getCapo());
+        let num = Grade(Index(note)+ +getTone() - +getCapo() + +_original_capo);
 
         // console.log(`El índice es ${num}`);
         if(notation[0]==_EUROPE) {
@@ -244,25 +244,19 @@ function Cancion(capo = 0, speed = 60, tone = 0) {
     const Load = () => {
 
         // console.log("Cargando...");
-        let chords = document.querySelectorAll("b, #original-tone");
+        let chords = document.querySelectorAll("b, #original-tone");        
     
-        // ajusto la cejilla y el tono
-        let capo_pointer = document.getElementById("capo");
+        // ajusto la cejilla original
         let given_capo_pointer = document.getElementById("cejilla-original");
     
         if(given_capo_pointer) {
             setOriginalCapo(+given_capo_pointer.innerHTML);
-        }
-        
-        if (capo_pointer!=null && given_capo_pointer!=null) {
-            // given_capo = +given_capo_pointer.innerHTML;
-            
-            // console.log(`capo por defecto = ${capo}`);
+            _capo = _original_capo; // No lo hago con set para evitar Reload() 
             given_capo_pointer.outerHTML="";
         }
     
         // console.log(`Se han encontrado ${chords.length} acordes ajustables`);
-    
+        
         for(let i=0; i<chords.length; i++){
             if(chords[i].getAttribute("id")!="reserved"){
                 chords[i].setAttribute("acorde", `${chords[i].innerHTML}`);
@@ -281,7 +275,7 @@ function Cancion(capo = 0, speed = 60, tone = 0) {
     
         // Ajustar los acordes del cuerpo
         for(let i=0; i<chords.length; i++){
-    
+
             if(chords[i].getAttribute("id")!="reserved"){
                 tmp = chords[i].getAttribute("acorde").split(" ");
                 w_note = tmp[0];            // Contiene la nota (palabra)
