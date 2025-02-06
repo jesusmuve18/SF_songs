@@ -1,0 +1,55 @@
+#menu-icon {
+    border-radius: 3px;
+    background-color: #23275b;
+    height: 15px;
+    padding: 3px;
+    transform: translateY(4px);
+}
+
+h3 {
+    margin-bottom: 5px;
+}
+
+h4 {
+    margin-bottom: 0;
+}
+
+p {
+    margin-top: 0;
+}
+
+#identar {
+    margin-left: 15px;
+}
+
+#play-pause-icon {
+    background-color: #6e729f;
+    height: 10px;
+    padding: 8px;
+    border-radius: 25px;
+    transform: translateY(5px);
+}
+
+#icon {
+    border-radius: 3px;
+    height: 15px;
+    padding: 3px;
+    transform: translateY(4px);
+}
+
+ul {
+    list-style: none;
+    padding-left: 15px;
+}
+
+ul li {
+    display: flex;
+}
+
+ul li b {
+    padding-right: 5px;
+}
+
+#cuerpo {
+    margin-bottom: 40px;
+}

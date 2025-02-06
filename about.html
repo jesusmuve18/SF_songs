@@ -9,9 +9,9 @@
 
     <link rel="stylesheet" href="./styles_new/general.css">
     <link rel="stylesheet" href="./styles_new/cabecera.css">
+    <link rel="stylesheet" href="./styles_new/about.css">
 
     <script type="module" src="javascript/cabecera2.js"></script>
-    <script type="module" src="javascript/buscador_new.js"></script>
 
     <link rel="icon" href="./images/logo_sf.png">
 </head>
@@ -20,57 +20,80 @@
         <header>
             <img id="logo" src="images/logo_sf.png" alt="Logo Sf">
             <div id="grupo-sf">Grupo San Francisco</div>
-            <button id="icono-buscar" class="hidden"><img src="images/search.svg"></button>
-            <button id="icono-tools" class="hidden"><img src="images/tools.svg"></button>
             <button id="icono-menu"><img src="images/menu.svg"></button>
         </header>
     
-        <nav>
-            <ul>
-                <li><a href="./index.html">Inicio</a><img src="images/right-arrow.svg"></li>
-                <li><a href="./indice.html">Indice</a><img src="images/right-arrow.svg"></li>
-                <li><a href="./acordes.html">Acordes</a><img src="images/right-arrow.svg"></li>
-                <li><a href="./about.html">Acerca de</a><img src="images/right-arrow.svg"></li>
-            </ul>
-        </nav>
+        <nav></nav>
 
-        <div id="contenedor-buscador">
-            <div id="marco-buscador">
-                <input type="text" name="buscador" id="buscador" placeholder="Buscar...">
-            </div>
-        </div>
-    </div>
-
-    <div id="contenedor-tools">
-        <h2>Herramientas</h2>
-        <div id="herramientas">
-            <div id="ajuste-cejilla">
-                <b>Cejilla: </b>
-                <button id="dim-capo">-</button>
-                <input id="input-ajuste-cejilla" type="number">
-                <button id="inc-capo">+</button>
-            </div>
-            <div id="ajuste-tono">
-                <b>Tono: </b>
-                <button id="dim-tone">-</button>
-                <input id="input-ajuste-tono" type="number">
-                <button id="inc-tone">+</button>
-            </div>
-            <div id="ajuste-velocidad">
-                <b>Velocidad: </b>
-                <button id="dim-velocidad">-</button>
-                <input id="input-ajuste-velocidad" type="number">
-                <button id="inc-velocidad">+</button>
-            </div>
-        </div>
-        <div id="contenedor-reestablecer">
-            <button id="reestablecer">Reestablecer</button>
-        </div>
     </div>
 
     <div id="cuerpo">
         <h2>Acerca de</h2>
-        Esta página se encuentra en reparación. Sentimos las molestias.
+        <p>Esta página tiene como principal objetivo servir de cantoral virtual especialmente para guitarra y piano.</p>
+
+        <p>Cuenta con varias funcionalidades que se describen a continuación:</p> 
+
+        <h3>Índice</h3>
+        <p>Si abrimos el menú (pulsando sobre el icono  <img id="menu-icon" src="./images/menu.svg">) podremos dirigirnos a la sección de "Índice" donde se encuentran todas las canciones disponibles. Al hacer click en cualquier canción se abrirá su página correspondiente.</p>
+
+        <div id="identar">
+            <h4>Buscador</h4>
+            <p>Dentro del índice aparecerá en la cabecera el icono <img id="menu-icon" src="./images/search.svg">. Al pulsar sobre él aparecerá una barra de búsqueda con la que podremos buscar dentro de las canciones disponibles.</p>
+
+            <h4>Secciones</h4>
+            <p>Además del buscador, al comienzo de la página hay unos botones con los nombres de las secciones del cantoral. Al pulsar sobre ellas aparecerán en la página solo las canciones de dicha sección. Se puede combinar esta funcionalidad con el buscador para buscar canciones dentro de alguna sección específica</p>
+        </div>
+
+        <h3>Canciones</h3>
+        <p>Al abrir cualquier entrada del índice nos dirigiremos a una página de canción.</p>
+        <div id="identar">
+            <h4>Ajuste de tono ,cejilla y velocidad</h4>
+            <p>En la cabecera de la página de canción aparecerá el icono <img id="menu-icon" src="./images/tools.svg">. Al pulsar sobre él aparecerá un menú donde se podrán ajustar los parámetros de tono, cejilla y velocidad tanto con botones (de incremento y decremento) como con un cuadro sobre el que se puede escribir el número exacto. Al cambiar este ajuste se actualizará automáticamente la página con los acordes correspondientes a la configuración dada (siempre que los valores de tono, cejilla y velocidad estén dentro de los rangos permitidos). En este menú aparecerá también la opción "Reestablecer" que devolverá estos valores a los originales de la canción.</p>
+
+            <h4>Autodeslizamiento</h4>
+            <p>En la esquina inferior izquierda de la página de canción aparecerá el icono <img id="play-pause-icon" src="./images/play_2.svg">. Al pulsar sobre él empezara a deslizarse la página con la velocidad establecida (siempre que la letra supere el espacio disponible en la pantalla). Para frenar el deslizamiento se podrá clicar de nuevo sobre el mismo botón o en cualquier otro sitio de la página.</p>
+
+            <h4>Controles multimedia</h4>
+            <p>Si nos encontramos en un dispositivo con teclado podremos ajustar más fácilmente los parámetros de tono, cejilla y velocidad, además del control de pausar y reanudar el deslizamiento. Para ello, según la tecla que se pulse se realizarán las siguientes opciones:</p>
+            <ul>
+                <li><b>[Espacio]: </b>Pausar/Reanudar deslizamiento.</li>
+                <li><b>[+]: </b>Aumentar la velocidad (en 5 unidades).</li>
+                <li><b>[-]: </b>Disminuir la velocidad (en 5 unidades).</li>
+                <li><b>[1]: </b>Disminuir traste de la cejilla.</li>
+                <li><b>[2]: </b>Disminuir traste de la cejilla.</li>
+                <li><b>[3]: </b>Disminuir tono (en 1 semitono).</li>
+                <li><b>[4]: </b>Aumentar tono (en 1 semitono).</li>
+                <li><b>[5]: </b>Reestablecer valores a los originales de la canción.</li>
+            </ul>
+
+            <h4>Previsualización de acordes</h4>
+            <p>Si se desea conocer el diagrama de algún acorde que aparece en la canción bastará con pulsar sobre él. Al hacerlo se abrirá una ventana con el diagrama del acorde (siempre que se encuentre en la base de datos). Para cerrarlo bastará con pulsar en cualquier otro sitio de la página.</p>
+        </div>
+
+        <h3>Sesiones</h3>
+        <p>Si abrimos el menú (pulsando sobre el icono <img id="menu-icon" src="./images/menu.svg">) podremos dirigirnos a la sección de "Sesiones" donde se podrán crear, editar y eliminar sesiones. Una sesión es una lista de canciones ordenada que se guardará en la memoria local del navegador utilizado (esto significa que cada dispositivo tendrá sus propias sesiones y de momento no se pueden compartir). Si una sesión se quiere tener en varios dispositivos tendrá que hacerse de nuevo en el dispositivo deseado. Además, al borrar los datos de navegación de la página se perderán todas las sesiones creadas (esto se solucionará más adelante, pero de momento se busca la utilidad).</p>
+        <div id="identar">
+            <h4>Crear sesión</h4>
+            <p>Al abrir la página de sesiones aparecerá al lado del título el icono <img id="icon" src="./images/add.svg">. Al pulsar sobre él aparecerá un mensaje donde podremos introducir el nombre de la nueva sesión. Al introducirlo (siempre que no sea vacío) se creará una nueva sesión con el nombre especificado.</p>
+
+            <h4>Eliminar sesión</h4>
+            <p>Para eliminar una sesión se tendrá que pulsar sobre el icono <img id="icon" src="./images/bin.svg"> que aparecerá a la derecha de cada entrada de sesión en la página principal de sesiones. Al pulsar sobre dicho icono se eliminará la sesión correspondiente.</p>
+
+            <h4>Abrir sesión</h4>
+            <p>Desde la página principal de sesiones se podrá abrir una sesión al pulsar sobre su entrada en la lista.</p>
+
+            <h4>Editar sesión</h4>
+            <p>Para editar una sesión se podrá hacer desde varios sitios. Desde la página principal de sesiones se podrá pulsar sobre el icono <img id="icon" src="./images/edit.svg"> que aparecerá a la derecha de cada entrada de sesión y nos llevará a la página de edición de la sesión correspondiente. También se podrá acceder a esta página desde la página de cualquier sesión abierta, donde aparecerá al principio de la lista un botón con el texto "Editar" el cual nos llevará a la página de edición de la sesión correspondiente. Para salir del menú de edición se tendrá que pulsar sobre el icono <img id="icon" src="./images/save.svg"> que aparecerá a continuación del título de la sesión o recargar la página. Todos los cambios realizados en este menú se guardarán automáticamente (no será necesario pulsar sobre el icono <img id="icon" src="./images/save.svg">).</p>
+
+            <h4>Añadir canción</h4>
+            <p>Para añadir una canción a una sesión tendremos que ir a la página de edición de la sesión deseada de cualquiera de las formas desarrolladas en el punto anterior. Una vez en el menú de edición podremos añadir una canción pulsando sobre el icono <img id="icon" src="./images/add.svg"> que aparecerá inmediatamente antes del botón establecido para abandonar el menú de edición. Al pulsar sobre este botón se abrirá una página con el mismo funcionamiento que el índice, salvo que al pulsar sobre una canción se añadirá a la sesión en lugar de abrirse su página. Para cancelar la operación se podrá pulsar sobre el icono <img id="icon" src="./images/cancel.svg"> que aparecerá justo a la derecha del buscador.</p>
+
+            <h4>Eliminar canción</h4>
+            <p>Para eliminar una canción de una sesión tendremos que ir al menú de edición de la sesión y pulsar sobre el icono <img id="icon" src="./images/bin.svg"> que aparecerá a la derecha de cada entrada de canción. Al pulsar sobre dicho icono se eliminará la canción de la sesión correspondiente.</p>
+
+            <h4>Cambiar nombre de sesión</h4>
+            <p>Para cambiar el nombre de una sesión será necesario abrir el menú de edición de la sesión y pulsar sobre el icono <img id="icon" src="./images/edit.svg"> que aparecerá justo a la derecha del título. Al pulsar sobre él se abrirá un bloque donde podremos introducir el nuevo nombre de la sesión. Al pulsar sobre el icono <img id="icon" src="./images/accept.svg"> que aparecerá justo a la derecha del bloque de texto se actualizará el nombre de la sesión correspondiente.</p>
+        </div>
     </div>
 
 </body>
