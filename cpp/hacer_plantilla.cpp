@@ -187,9 +187,9 @@ int main(int argc, char** argv){
     <link rel=\"stylesheet\" href=\"" + main_dir + "styles_new/cancion.css\">\n\
 \n\
     <script type=\"module\" src=\"" + main_dir + "javascript/cabecera2_canciones.js\"></script>\n\
-    <script src=\"" + main_dir + "javascript/acordes.js\"></script>\n\
-    <script src=\"" + main_dir + "javascript/scroll.js\"></script>\n\
-    <script src=\"" + main_dir + "javascript/tools.js\"></script>\n\
+    <script type=\"module\" src=\"" + main_dir + "javascript/modules/cancion.mjs\"></script>\n\
+    <script type=\"module\" src=\"" + main_dir + "javascript/modules/scroll.mjs\"></script>\n\
+    <script type=\"module\" src=\"" + main_dir + "javascript/modules/tools.mjs\"></script>\n\
 \n\
     <link rel=\"icon\" href=\"" + main_dir + "images/logo_sf.png\">\n\
 </head>\n\
@@ -254,8 +254,8 @@ int main(int argc, char** argv){
             <div id=\"info\">\n\
                 <div id=\"tone\">\n\
                     <b>Tono: </b> <span id=\"original-tone\">" + tone + "</span><br>\n\
-                    <b>Cejilla: </b>traste <span id=\"capo\">" + to_string(capo) + "</span><br>\n\
-                    <b>Transpuesta:</b> <span id=\"traspose\">" + to_string(traspose) + "</span> semitonos\n\
+                    <b>Cejilla: </b><span id=\"capo\">" + to_string(capo) + "</span><br>\n\
+                    <b>Transpuesta:</b> <span id=\"traspose\">" + to_string(traspose) + "</span>\n\
                 </div>\n\
             </div>\n\
             <div id=\"song-body\" class=\"texto-principal\">" + song + "</div>\n\
