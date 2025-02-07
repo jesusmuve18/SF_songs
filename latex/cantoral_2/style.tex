@@ -1,0 +1,43 @@
+\usepackage{fontspec} % Para cambiar la fuente
+
+\usepackage{multicol} % Para varias columnas
+
+\usepackage{luacode} % Para añadir código
+
+\usepackage{imakeidx} % Para manejar el índice
+\makeindex
+
+\setmainfont{DMSans-Regular}[
+    Path=./tipografia/DM_Sans/static/,
+    BoldFont=DMSans-Bold.ttf,
+    ItalicFont=DMSans-Italic,
+    BoldItalicFont=DMSans-BoldItalic.ttf]
+
+% Definir una nueva familia para la variante Light
+\newfontfamily\lightfont{DMSans-Light.ttf}[
+    Path=./tipografia/DM_Sans/static/]
+  
+% Crear un comando para usar la fuente Light
+\newcommand{\textlight}[1]{{\lightfont #1}}
+
+% Código Lua para leer el índice
+\begin{luacode*}
+    function readIndexFile(filename)
+      local index_entries = {}
+      local file = io.open(filename, "r")
+      if file then
+        for line in file:lines() do
+          local entry = line:match("\\indexentry%{([^}]*)%}")
+          if entry then
+            table.insert(index_entries, entry)
+          end
+        end
+        file:close()
+      end
+      return index_entries
+    end
+    
+    index_entries = readIndexFile("test.idx")  -- Ajusta el nombre según tu archivo
+\end{luacode*}
+    
+
