@@ -31,7 +31,7 @@ function busqueda(w) {
         const title = titleElement ? titleElement.textContent.trim() : 'Título no encontrado';
         const author = authorElement ? authorElement.textContent.trim() : 'Autor no encontrado';
 
-        console.log(`${title}, ${author}`);
+        // console.log(`${title}, ${author}`);
 
         if(title.toLowerCase().includes(w.toLowerCase()) 
             || author.toLowerCase().includes(w.toLowerCase())
@@ -60,26 +60,6 @@ document.addEventListener("keyup", e=>{
             busqueda(e.target.value);
         }   
 
-    } else {
-
-        if(e.key != "Tab" && e.key != "ArrowDown" && e.key != 'ArrowUp'){
-            // Si no se pulsa sobre el input, al escribir aparecerá en el input
-            // Mostraré el input
-            if(!mostrar_buscar){
-                menu_buscar.classList.remove(oculto);
-                mostrar_buscar=true;
-                this.document.querySelector('#buscador').focus();
-            }
-
-            barra_busqueda.focus();
-
-            if (/^[a-zA-Z0-9]$/.test(e.key)){
-                barra_busqueda.value=e.key;
-                escribiendo=true;
-                busqueda(e.key);
-            } else 
-                barra_busqueda.select();
-        }
     }
 })
 

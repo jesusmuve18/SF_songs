@@ -37,11 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("touchmove", (event) => {
         if (!mostrar){
              return
-        } else {
-            // lo muestro
-            PANTALLA.classList.remove(HIDDEN);
-            PANTALLA.classList.add(VISIBLE);
-        };
+        }
 
         const touch = event.touches[0];
 

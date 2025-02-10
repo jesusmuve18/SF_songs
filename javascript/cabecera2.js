@@ -7,6 +7,7 @@ let menu_buscar=document.querySelector('#cabecera #contenedor-buscador');
 let menu_tools=document.querySelector('#contenedor-tools');
 
 let enlaces_menu='#cabecera nav ul li, #cabecera nav ul li *';
+let input_buscar=document.querySelector('#marco-buscador #buscador');
 
 let oculto='hidden';
 let visible_tools='visible-tools';
@@ -40,6 +41,11 @@ document.addEventListener('click', ev=>{
 
             if(!mostrando[i]){
                 mostrar(menus[i]);
+
+                if(menus[i] == menu_buscar) {
+                    input_buscar.focus();
+                }
+
                 mostrando[i] = true;
             } else {
                 mostrando[i] = false;
@@ -86,6 +92,34 @@ document.addEventListener('DOMContentLoaded', ev=>{
             mostrando.splice(i, 1);
             i--;
         }
+    }
+
+    if(menu_buscar) {
+        document.addEventListener("keyup", e=>{
+            if(e.target.matches("#buscador")){
+                
+                // Ocultar el teclado al pulsar enter
+                if(e.key == 'Enter'){
+                    e.target.blur();
+                }
+        
+            } else {
+        
+                if(e.key != "Tab" && e.key != "ArrowDown" && e.key != 'ArrowUp'){
+                    // Si no se pulsa sobre el input, al escribir aparecerá en el input
+                    // Mostraré el input
+                    
+                    mostrar(menu_buscar);
+                    input_buscar.focus();
+        
+                    if (/^[a-zA-Z0-9]$/.test(e.key)){
+                        input_buscar.value=e.key;
+                        // busqueda(e.key);
+                    } else 
+                        input_buscar.select();
+                }
+            }
+        })
     }
 
     // Oculto los menús disponibles
