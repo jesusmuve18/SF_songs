@@ -49,7 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
             
             initValue = cancion.getSpeed();
             initPulse = touch.pageX;
-            console.log(initValue)
             pulsando = true;
         }
         
