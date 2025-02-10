@@ -4,12 +4,13 @@ import { updateScroll } from './scroll.mjs';
 document.addEventListener("DOMContentLoaded", () => {
     if (!("ontouchstart" in window)) return; // Solo en pantallas táctiles
 
-    const TIME = 1000;
+    const TIME = 50;
     const DEFAULT_VALUE = cancion.getSpeed();
     const HIDDEN = "hidden";
     const VISIBLE = "flex";
 
     let mostrar=false;
+    let pulsando=false;
 
     const PANTALLA=document.getElementById("contenedor-ajuste-velocidad-tactil");
     const VALOR = document.getElementById("valor");
@@ -17,12 +18,17 @@ document.addEventListener("DOMContentLoaded", () => {
     VALOR.innerHTML = DEFAULT_VALUE;
 
     let touchTimeout;
+    let initValue;
+    let initPulse;
 
     document.addEventListener("touchstart", (event) => {
         if (event.touches.length !== 1) return; // Se pulsa con un solo dedo
 
         touchTimeout = setTimeout(() => {
             mostrar = true;
+
+            PANTALLA.classList.remove(HIDDEN);
+            PANTALLA.classList.add(VISIBLE);
         }, TIME); // Mantener presionado por 500ms
 
         
@@ -36,19 +42,29 @@ document.addEventListener("DOMContentLoaded", () => {
             PANTALLA.classList.remove(HIDDEN);
             PANTALLA.classList.add(VISIBLE);
         };
-        
+
         const touch = event.touches[0];
 
-        // Ajusto la velocidad
-        cancion.setSpeed(VALOR.innerHTML);
-        updateScroll();
-
+        if(!pulsando){
+            
+            initValue = cancion.getSpeed();
+            initPulse = touch.pageX;
+            console.log(initValue)
+            pulsando = true;
+        }
+        
         // Interpolación
         // 25 -> 0
         // 75 -> 100
-        let newValue = Math.round(((touch.pageX / screen.width)*200)-50) ;
+        // let newValue = Math.round(((((touch.pageX - initPulse) / screen.width))*200)-50);
+
+        let newValue = Math.round((touch.pageX - initPulse)/2 + initValue);
+
         newValue = (Math.max(0, Math.min(100, newValue)));
 
+        // Ajusto la velocidad
+        cancion.setSpeed(newValue);
+        updateScroll();
         
 
         // Ajusto el valor para que sea visible
@@ -59,6 +75,8 @@ document.addEventListener("DOMContentLoaded", () => {
         clearTimeout(touchTimeout);
 
         mostrar = false;
+        pulsando = false;
+
         PANTALLA.classList.remove(VISIBLE);
         PANTALLA.classList.add(HIDDEN);
     });

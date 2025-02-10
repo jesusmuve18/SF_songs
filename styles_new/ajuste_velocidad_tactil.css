@@ -23,7 +23,7 @@ html, body {
 
 #contenedor-ajuste-velocidad-tactil #velocidad {
     color: white;
-    background-color: rgb(66, 124, 151);
+    background-color: #6e729f;
     width: 200px;
     /* height: 200px; */
     text-align: center;
