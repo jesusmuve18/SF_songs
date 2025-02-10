@@ -120,8 +120,8 @@ li#entrada-sesion:hover{
 }
 
 #main ol li#lista-canciones:hover{
-    cursor: auto;
-    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+    background-color: #6e729f2f;
 }
 
 #main ol li:hover{
@@ -238,6 +238,7 @@ li#entrada-sesion:hover{
     align-content: center;
     border: 1px solid #6e729f;
     color:  #6e729f;
+    margin-bottom: 10px;
 }
 
 #editar-sesion-icon:hover {

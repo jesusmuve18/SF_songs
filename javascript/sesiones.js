@@ -175,7 +175,7 @@ function loadSesionView(id){
 
     if(sesiones[id].length>1) {
         for(let i=1; i<sesiones[id].length; i++){
-            res+=`<li id="lista-canciones"><span id="list-number">${i}</span><a id="info-cancion" href="${sesiones[id][i].href}"><span id="song-title">${sesiones[id][i].titulo}</span> <span id="author">${sesiones[id][i].autor}</span></a></li>`
+            res+=`<li id="lista-canciones"><span id="list-number">${i}</span><a id="info-cancion" href="${sesiones[id][i].href}"><span id="song-title">${sesiones[id][i].titulo}</span> <span id="author">${sesiones[id][i].autor}</span></a></li>`           
         }
     } else {
         res+= `<br>No hay canciones aún`;
@@ -211,7 +211,9 @@ function editSesionContr(id) {
 
     document.getElementById("titulo").innerHTML = `<h2 id="titulo-sesion">${titulo_sesion}</h2>
                                                    <button id="editar-titulo-sesion" data-my-id="${id}"><img src="${EDIT}" id="${ID_EDIT_TITLE}" data-my-id="${id}"></button>`;
+
     document.getElementById("main").innerHTML = editSesionView(id);
+    
 
     document.getElementById("boton-volver-pagina-principal").innerHTML = ICONO_VOLVER;
 }
@@ -344,6 +346,18 @@ function removeSongContr(sesion, id) {
 function loadSesionContr(id) {
     document.getElementById("titulo").innerHTML = `<h2>${sesiones[id][0]}</h2>`
     document.getElementById("main").innerHTML = loadSesionView(id);
+
+    let entradas = document.querySelectorAll("#lista-canciones");
+
+    console.log(entradas.length)
+
+    entradas.forEach(entrada => {
+        entrada.addEventListener('click', ev => {
+            let href = entrada.querySelector('a');
+            window.open(href.href, "_self");
+        })
+    })
+
     document.getElementById("boton-volver-pagina-principal").innerHTML = ICONO_VOLVER;
 }
 
