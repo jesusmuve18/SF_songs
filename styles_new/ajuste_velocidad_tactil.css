@@ -1,0 +1,30 @@
+.hidden {
+    display: none;
+}
+
+.flex {
+    display: flex;
+}
+
+html, body {
+    margin: 0;
+}
+
+#contenedor-ajuste-velocidad-tactil {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 0;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+#contenedor-ajuste-velocidad-tactil #velocidad {
+    color: white;
+    background-color: rgb(66, 124, 151);
+    width: 200px;
+    /* height: 200px; */
+    text-align: center;
+}

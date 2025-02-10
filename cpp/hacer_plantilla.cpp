@@ -185,11 +185,13 @@ int main(int argc, char** argv){
     <link rel=\"stylesheet\" href=\"" + main_dir + "styles_new/general.css\">\n\
     <link rel=\"stylesheet\" href=\"" + main_dir + "styles_new/cabecera.css\">\n\
     <link rel=\"stylesheet\" href=\"" + main_dir + "styles_new/cancion.css\">\n\
+    <link rel=\"stylesheet\" href=\"" + main_dir + "styles_new/ajuste_velocidad_tactil.css\">\n\
 \n\
     <script type=\"module\" src=\"" + main_dir + "javascript/cabecera2_canciones.js\"></script>\n\
     <script type=\"module\" src=\"" + main_dir + "javascript/modules/cancion.mjs\"></script>\n\
     <script type=\"module\" src=\"" + main_dir + "javascript/modules/scroll.mjs\"></script>\n\
     <script type=\"module\" src=\"" + main_dir + "javascript/modules/tools.mjs\"></script>\n\
+    <script type=\"module\" src=\"" + main_dir + "javascript/modules/ajuste_velocidad_tactil.mjs\"></script>\n\
 \n\
     <link rel=\"icon\" href=\"" + main_dir + "images/logo_sf.png\">\n\
 </head>\n\
@@ -244,6 +246,12 @@ int main(int argc, char** argv){
             </div>\n\
             <div id=\"contenedor-reestablecer\">\n\
                 <button id=\"reestablecer\">Reestablecer</button>\n\
+            </div>\n\
+        </div>\n\
+\n\
+        <div id=\"contenedor-ajuste-velocidad-tactil\" class=\"hidden\">\n\
+            <div id=\"velocidad\">Velocidad\n\
+                <div id=\"valor\"></div>\n\
             </div>\n\
         </div>\n\
 \n\

@@ -115,3 +115,5 @@ document.addEventListener('keydown', ev=>{
 document.addEventListener('DOMContentLoaded', ev=>{
     showIcon();
 })
+
+export {updateScroll};
