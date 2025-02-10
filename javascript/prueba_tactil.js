@@ -30,11 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     document.addEventListener("touchmove", (event) => {
-        if (!inputRange) return;
+        if (inputRange.classList.contains("hidden")) return;
         
         const touch = event.touches[0];
         let newValue = 50 + ((touch.pageX - inputRange.offsetLeft) / inputRange.offsetWidth) * 100;
         inputRange.value = Math.max(0, Math.min(100, newValue));
+
+        document.getElementById("valor").innerHTML = inputRange.value;
     });
 
     document.addEventListener("touchend", () => {
