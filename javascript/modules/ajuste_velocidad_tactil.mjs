@@ -4,7 +4,7 @@ import { updateScroll } from './scroll.mjs';
 document.addEventListener("DOMContentLoaded", () => {
     if (!("ontouchstart" in window)) return; // Solo en pantallas táctiles
 
-    const TIME = 50;
+    const TIME = 1000;
     const DEFAULT_VALUE = cancion.getSpeed();
     const HIDDEN = "hidden";
     const VISIBLE = "flex";
