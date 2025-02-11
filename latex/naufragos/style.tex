@@ -1,0 +1,211 @@
+% Paquete para crear comandos más personalizados
+\usepackage{xparse}
+
+% Paquete para usar varias columnas
+\usepackage{multicol}
+
+% Paquete para colores personalizados
+\usepackage{xcolor}
+
+% Paquete para la imagen de la portada
+\usepackage{graphicx}
+
+% Paquete para parámetros adicionales
+\usepackage{pgfkeys}
+
+% Paquete para figuras
+\usepackage{tikz}
+
+% Paquete para colocar los acordes encima de las palabras
+\usepackage{stackengine}
+\usepackage{mathtools}
+\stackMath
+
+% Paquete para evitar el salto de página al usar twocolumn
+\usepackage{flushend}
+
+% Paquete para enlaces del índice
+\usepackage{hyperref}
+
+% Paquete para personalizar el interlineado
+\usepackage{setspace}
+
+% Paquete para eliminar líneas vacías cuando hay varias líneas de acordes
+\usepackage{transparent}
+
+% Paquete para hacer comprobaciones de parámetros
+\usepackage{xifthen}
+
+% Paquete para uso de '_'
+\usepackage[strings]{underscore}
+
+% Tipografía
+% \usepackage[defaultfam,tabular,lining]{montserrat} %% Option 'defaultfam'
+% %% only if the base font of the document is to be sans serif
+% \usepackage[T1]{fontenc}
+% \renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
+
+ %para cambiar el tipo de fuente por defecto
+ \renewcommand{\sfdefault}{phv}
+ % helvética en los títulos
+ \renewcommand{\rmfamily}{phv}
+
+% Directorio de imágenes
+\graphicspath{/home/jesusmuve/Documentos/VSCode/LaTeX/documentos/songs/}
+\def\dirimages{/home/jesusmuve/Documentos/VSCode/Web/sanfran/latex/cantoral/images/}
+
+% Ajustar las 2 columnas
+\setlength{\columnsep}{40pt}   % Espacio entre columnas
+\setlength{\columnseprule}{0pt}  % Grosor de la línea divisoria
+
+% Numeración de canciones
+\newcounter{contador_canciones}
+
+% Numeración de secciones
+\newcounter{contador_secciones}
+
+% Cambiar el título del índice
+\renewcommand{\contentsname}{Índice}
+
+% Definir cómo va a aparecer una seccion
+\newcommand{\seccion}[1]{
+    \stepcounter{contador_secciones}%
+    \setcounter{contador_canciones}{0}% El contador de canciones se reinicia en cada sección
+    \addcontentsline{toc}{section}{\arabic{contador_secciones}. #1}%
+    \textbf{\Huge{#1}}\\
+    \vspace*{0.25cm}
+    
+}
+
+% Establecer longitud de la sangría a cero
+\setlength{\parindent}{0pt}
+
+% Distancia entre párrafos
+\newcommand{\jump}{\vspace*{-0.25cm}}
+
+% Interlineado de las canciones
+\def\interlineadocanciones{1.9} %1.75
+
+% Estribillo
+\newenvironment{chorus}{%
+    \bfseries
+}{}
+
+% Color para los acordes
+% \definecolor{chordcolor}{RGB}{255,87,51}
+\definecolor{chordcolor}{RGB}{255,0,0}
+
+% Cambio de columna
+\newcommand{\siguientecolumna}{%
+    \vspace*{\fill}
+    \columnbreak
+
+}
+
+\newcommand{\huecotitulo}{%
+    \phantom{\large \textbf{\arabic{contador_canciones}. \titulo}}\\
+    \phantom{\phantom{\large \textbf{\arabic{contador_canciones}. }}\small \textit{\subtitulo}}
+    \vspace*{-0.5cm}\\
+}
+
+% Formato para los acordes
+\newcommand{\chordstyle}[1]{%
+    \fontsize{8pt}{12pt}\textcolor{chordcolor}{\selectfont\bfseries #1}%
+}
+
+% Definición de acorde
+% \newcommand{\chord}[3]{%
+%     \renewcommand\useanchorwidth{T}%
+%     \stackon{\text{#3\vphantom{(}}}{\text{\chordstyle{\transparent{1}\spaceskip=0.5cm\relax#1#2}\vphantom{(}}}%
+% }
+\newcommand{\chord}[3]{%
+  \setbox0=\hbox{\text{#3\vphantom{(}}}% almacenar el primer argumento en una caja
+  \setbox1=\hbox to \wd0{\text{\chordstyle{\transparent{1}\spaceskip=0.5cm\relax#1#2}\vphantom{(g}}\hss}% Crear caja superior con el mismo ancho y centrado
+  \leavevmode% asegurar que el contenido se renderiza en modo horizontal
+  \rlap{\copy0}% renderizar el contenido base sin mover el punto de referencia
+  \raisebox{2ex}{\copy1}% apilar el contenido sobre el base con ajuste vertical
+}
+
+
+\NewDocumentEnvironment{cancion}{O{} O{}}{%
+    \stepcounter{contador_canciones}%
+    \phantomsection % Crear un ancla para el hipervínculo
+    \def\leftmargin{1cm}
+    \ifthenelse{\isempty{#2}}%
+        {\addcontentsline{toc}{subsection}{\hbox to \leftmargin{\hss\arabic{contador_canciones}.}{ #1}\ }} % Si no tiene autor especificado
+        {\addcontentsline{toc}{subsection}{\hbox to \leftmargin{\hss\arabic{contador_canciones}.} #1\ (\textit{#2})}} % Si tiene autor especificado
+        \large \textbf{\arabic{contador_canciones}. \parbox[t]{0.8\linewidth}{#1}} \\
+        \def\titulo{#1}%
+        \def\subtitulo{#2}%
+        \phantom{\large \textbf{\arabic{contador_canciones}. }}\small \textit{#2}%
+    % \vspace{0.5cm}
+    \begin{spacing}{\interlineadocanciones}%
+        \obeyspaces\spaceskip=0.17cm\relax% Personaliza el ancho de los espacios en blanco
+        
+}%
+{%
+    \end{spacing}%
+}
+
+\NewDocumentCommand{\doscolumnas}{m O{10cm}}{%
+    \vbox to #2{%
+        \begin{multicols}{2}%
+            #1
+        \end{multicols}
+        \vfil%
+    }
+}
+
+% Parámetros por defecto para portada
+\pgfkeys{
+    /portada/.is family, /portada,
+    titulo/.initial=,
+    textcolor/.initial=black,
+    subtitulo/.initial=,
+    image/.initial=portada.png,
+    logo/.initial=logo.png,
+}
+
+% Portada
+\newcommand{\portada}[1][]{ % Argumento opcional
+    \pgfkeys{/portada, #1}
+    \thispagestyle{empty}
+    \def\titulo{\pgfkeysvalueof{/portada/titulo}}
+    \def\subtitulo{\pgfkeysvalueof{/portada/subtitulo}}
+    \def\fontcolor{\pgfkeysvalueof{/portada/textcolor}}
+    \def\imagen{\dirimages\pgfkeysvalueof{/portada/image}}
+    \def\logo{\dirimages\pgfkeysvalueof{/portada/logo}}
+
+    \thispagestyle{empty}
+    \vspace*{0.5cm}
+
+    \begin{center}
+        \begin{tikzpicture}
+            % Título
+            \node[text width=15cm, inner sep=15pt, align=center] at (0,0) {
+                \centering \fontsize{60}{14}\selectfont \bfseries \textcolor{\fontcolor}{\titulo}
+            };
+
+            % Subtítulo usando parbox para mejorar espaciado
+            \node[text width=15cm, align=center, inner sep=30pt] at (0,-3) {
+                \parbox{15cm}{
+                    \centering
+                    \fontsize{35}{14}\selectfont
+                    {\subtitulo}
+                }
+            };
+
+            % Imagen
+            \node at (0,-12) {\includegraphics[width=16cm]{\imagen}};
+
+            % Logo
+            \node at (0,-20) {\includegraphics[width=2cm]{\logo}};
+        \end{tikzpicture}
+    \end{center}
+    
+    \newpage
+}
+
+
+% Intro
+\newcommand{\intro}[1]{\textbf{Intro:} \chordstyle{#1}}
