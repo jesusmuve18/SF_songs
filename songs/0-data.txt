@@ -61,7 +61,7 @@
 <li class="visible-list-item"><span id="list-number">50</span><a href="./songs/Danos_un_corazón.html"><span id="song-title">Danos un corazón</span> <span id="author"></span></a></li>
 <li class="visible-list-item"><span id="list-number">51</span><a href="./songs/Darnos_del_todo-Ixcís.html"><span id="song-title">Darnos del todo</span> <span id="author">Ixcís</span></a></li>
 <li class="visible-list-item"><span id="list-number">52</span><a href="./songs/Déjame_oir_tu_voz-Beatriz_Querol.html"><span id="song-title">Déjame oir tu voz</span> <span id="author">Beatriz Querol</span></a></li>
-<li class="visible-list-item"><span id="list-number">53</span><a href="./songs/Desaprender_la_guerra-Luis_guitarra.html"><span id="song-title">Desaprender la guerra</span> <span id="author">Luis guitarra</span></a></li>
+<li class="visible-list-item"><span id="list-number">53</span><a href="./songs/Desaprender_la_guerra-Luis_Guitarra.html"><span id="song-title">Desaprender la guerra</span> <span id="author">Luis Guitarra</span></a></li>
 <li class="visible-list-item"><span id="list-number">54</span><a href="./songs/Desde_la_eternidad-Jerez.html"><span id="song-title">Desde la eternidad</span> <span id="author">Jerez</span></a></li>
 <li class="visible-list-item"><span id="list-number">55</span><a href="./songs/Dime_niño,_de_quién_eres.html"><span id="song-title">Dime niño, de quién eres</span> <span id="author"></span></a></li>
 <li class="visible-list-item"><span id="list-number">56</span><a href="./songs/Dios_está_aquí.html"><span id="song-title">Dios está aquí</span> <span id="author"></span></a></li>
