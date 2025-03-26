@@ -52,7 +52,7 @@
 <li class="visible-list-item"><span id="list-number">41</span><a href="./songs/Creatura_habitada-Ain_Karem.html"><span id="song-title">Creatura habitada</span> <span id="author">Ain Karem</span></a></li>
 <li class="visible-list-item"><span id="list-number">42</span><a href="./songs/Cristo_nace_cada_día-Brotes_de_Olivo.html"><span id="song-title">Cristo nace cada día</span> <span id="author">Brotes de Olivo</span></a></li>
 <li class="visible-list-item"><span id="list-number">43</span><a href="./songs/Cristo_vive-Nico_Montero.html"><span id="song-title">Cristo vive</span> <span id="author">Nico Montero</span></a></li>
-<li class="visible-list-item"><span id="list-number">44</span><a href="./songs/Cuidemos_la_creación.html"><span id="song-title">Cuidemos la creación</span> <span id="author"></span></a></li>
+<li class="visible-list-item"><span id="list-number">44</span><a href="./songs/Cuidemos_la_creación-Luis_Pérez.html"><span id="song-title">Cuidemos la creación</span> <span id="author">Luis Pérez</span></a></li>
 <li class="visible-list-item"><span id="list-number">45</span><a href="./songs/Culpable-Ixcís.html"><span id="song-title">Culpable</span> <span id="author">Ixcís</span></a></li>
 <li class="visible-list-item"><span id="list-number">46</span><a href="./songs/Dame_agua_viva.html"><span id="song-title">Dame agua viva</span> <span id="author"></span></a></li>
 <li class="visible-list-item"><span id="list-number">47</span><a href="./songs/Dame_de_beber-Ixcís.html"><span id="song-title">Dame de beber</span> <span id="author">Ixcís</span></a></li>
