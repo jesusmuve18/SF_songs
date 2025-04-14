@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Y te caes</title>
+    <link rel="stylesheet" href="../styles_new/general.css">
+    <link rel="stylesheet" href="../styles_new/cabecera.css">
+    <link rel="stylesheet" href="../styles_new/cancion.css">
+    <link rel="stylesheet" href="../styles_new/ajuste_velocidad_tactil.css">
+
+    <script type="module" src="../javascript/cabecera2_canciones.js"></script>
+    <script type="module" src="../javascript/modules/cancion.mjs"></script>
+    <script type="module" src="../javascript/modules/scroll.mjs"></script>
+    <script type="module" src="../javascript/modules/tools.mjs"></script>
+    <script type="module" src="../javascript/modules/ajuste_velocidad_tactil.mjs"></script>
+
+    <link rel="icon" href="../images/logo_sf.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/logo_sf.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco</div>
+                <button id="icono-buscar" class="hidden"><img src="../images/search.svg"></button>
+                <button id="icono-tools"><img src="../images/tools.svg"></button>
+                <button id="icono-menu"><img src="../images/menu.svg"></button>
+            </header>
+
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Inicio</a><img src="../images/right-arrow.svg"></li>
+                    <li><a href="../indice.html">Indice</a><img src="../images/right-arrow.svg"></li>
+                    <li><a href="../acordes.html">Acordes</a><img src="../images/right-arrow.svg"></li>
+                    <li><a href="../about.html">Acerca de</a><img src="../images/right-arrow.svg"></li>
+                </ul>
+            </nav>
+
+            <div id="contenedor-buscador">
+                <div id="marco-buscador">
+                    <input type="text" name="buscador" id="buscador" placeholder="Buscar...">
+                </div>
+            </div>
+        </div>
+
+        <div id="contenedor-tools">
+            <h2>Herramientas</h2>
+            <div id="herramientas">
+                <div id="ajuste-cejilla">
+                    <b>Cejilla: </b>
+                    <button id="dim-capo">-</button>
+                    <input id="input-ajuste-cejilla" type="number">
+                    <button id="inc-capo">+</button>
+                </div>
+                <div id="ajuste-tono">
+                    <b>Tono: </b>
+                    <button id="dim-tone">-</button>
+                    <input id="input-ajuste-tono" type="number">
+                    <button id="inc-tone">+</button>
+                </div>
+                <div id="ajuste-velocidad">
+                    <b>Velocidad: </b>
+                    <button id="dim-velocidad">-</button>
+                    <input id="input-ajuste-velocidad" type="number">
+                    <button id="inc-velocidad">+</button>
+                </div>
+            </div>
+            <div id="contenedor-reestablecer">
+                <button id="reestablecer">Reestablecer</button>
+            </div>
+        </div>
+
+        <div id="contenedor-ajuste-velocidad-tactil" class="hidden">
+            <div id="velocidad">Velocidad
+                <div id="valor"></div>
+            </div>
+        </div>
+
+        <div id="cuerpo">
+            <div id="notation">europe sharp</div>
+            <div id="title">Y te caes</div>
+            <div id="artist">Hakuna</div>
+            <div id="info">
+                <div id="tone">
+                    <b>Tono: </b> <span id="original-tone">si m</span><br>
+                    <b>Cejilla: </b><span id="capo">0</span><br>
+                    <b>Transpuesta:</b> <span id="traspose">0</span>
+                </div>
+            </div>
+            <div id="song-body" class="texto-principal">sim / Bm:          x 2 4 4 3 0 
+sim7/La / Bm7/A:   x 0 4 4 3 2
+Sol / G:           3 0 4 4 3 0
+La / A:            x 0 4 4 2 0
+
+<span id="reserved">Intro:</span> <b>si m</b> <b>si m7/</b><b>La</b> <b>Sol</b> <b>La</b>
+
+              <b>si m</b>
+Me vuelvo a caer,
+     <b>La</b>
+me invade el fracaso,
+       <b>Sol</b>            <b>La</b>         <b>si m</b>
+y no encuentro una razón para seguir.
+
+                <b>si m</b>
+Pero eres tan cercano 
+          <b>La</b>
+que vienes a mi encuentro
+       <b>Sol</b>          <b>La</b>         <b>si m</b>
+porque sabes que yo solo no podré.
+<strong>
+     <b>Sol</b> <b>La</b>         <b>si m</b>
+Y te caes para levantarme,
+   <b>Sol</b>          <b>La</b>
+y limpias mis heridas con tu
+ <b>si m</b> <b>si m7/</b><b>La</b> <b>Sol</b> <b>La</b> (<span id="reserved">**</span>)
+sangre.
+</strong>
+              <b>si m</b>
+Vuelvo a tropezar 
+    <b>La</b>
+con la misma piedra,
+     <b>Sol</b>          <b>La</b>         <b>si m</b>
+y me cuesta hasta pedirte perdón.
+
+             <b>si m</b>
+Me dices al oído 
+       <b>La</b>
+que tú no me desprecias,
+        <b>Sol</b>
+que tu amor no sabe 
+<b>La</b>              <b>si m</b>
+lo que es el rencor.
+<strong>
+     <b>Sol</b> <b>La</b>         <b>si m</b>
+Y te caes para levantarme,
+   <b>Sol</b>          <b>La</b>
+y limpias mis heridas con tu
+ <b>si m</b> <b>si m7/</b><b>La</b> <b>Sol</b> <b>La</b> (<span id="reserved">**</span>)
+sangre.
+
+     <b>Sol</b> <b>La</b>         <b>si m</b>
+Y me miras para alentarme,
+      <b>Sol</b>             <b>La</b>
+sin palabras me das fuerzas para
+     <b>si m</b> <b>si m7/</b><b>La</b> <b>Sol</b> <b>La</b> (<span id="reserved">**</span>)
+continuar.
+</strong>
+      <b>Re sus2</b>                 <b>La</b>
+Yo solía pensar que eras un Dios
+                  <b>Sol</b>
+indiferente, pero no,
+                        <b>La</b>
+hoy me doy cuenta de mi error.
+
+    <b>Re sus2</b>
+Solía pensar que para Ti yo era un
+    <b>La</b>           <b>Sol</b>
+extraño, y ahora sé,
+                           <b>La</b>
+siempre has estado junto a mí.
+
+            <b>si m</b>                <b>La</b>
+Yo solo no puedo, yo solo no puedo,
+            <b>Sol</b>        <b>La</b>
+yo solo no puedo, ven Señor a
+      <b>si m</b>
+rescatarme.
+
+            <b>si m</b>                <b>La</b>
+Yo solo no puedo, yo solo no puedo,
+            <b>Sol</b>        <b>La</b>
+yo solo no puedo, ven Señor a
+      <b>si m</b>
+rescatarme.
+<strong>
+     <b>Sol</b> <b>La</b>         <b>si m</b>
+Y te caes para levantarme,
+   <b>Sol</b>          <b>La</b>
+y limpias mis heridas con tu
+ <b>si m</b> <b>si m7/</b><b>La</b> <b>Sol</b> <b>La</b> (<span id="reserved">**</span>)
+sangre.
+
+     <b>Sol</b> <b>La</b>         <b>si m</b>
+Y me miras para alentarme,
+       <b>Sol</b>             <b>La</b>
+¡sin palabras me das fuerzas para
+     <b>si m</b> <b>si m7/</b><b>La</b> <b>Sol</b> <b>La</b> (<span id="reserved">**</span>)
+continuar!
+</strong>
+<span id=cejilla-original>2</span>
+</div>
+             </div>
+        </div>
+
+
+        <div id="controls">
+            <div id="pauseButton-frame"><img id="pauseButton" src="../images/play_2.svg" alt="play"></div>
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
