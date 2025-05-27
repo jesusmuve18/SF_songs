@@ -128,8 +128,6 @@ export function comprobarVacio() {
 
     })
 
-    console.log(m);
-
     if(m==0){
         // Todo el índice está vacío
         indice_vacio.innerHTML = mensaje_vacio;

@@ -21,14 +21,14 @@ window.addEventListener('load', async function(){
 
     enlaces.forEach(enlace=>{
 
-        console.log("Accediendo a enlaces");
+        // console.log("Accediendo a enlaces");
 
         // Al principio se selecciona 'Todas'
         if(enlace.innerHTML=='Todas'){
             enlace.classList.add(selected_style);
             selected=enlace;
         } else {
-            console.log(enlace.innerHTML);
+            // console.log(enlace.innerHTML);
             enlace.classList.add(not_selected_style);
         }
         
