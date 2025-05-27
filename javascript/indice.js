@@ -106,3 +106,5 @@ async function loadIndex(filename) {
         document.getElementById('indice').innerHtml = 'Error al cargar el archivo: ' + error.message;
     }
 }
+
+export {selected}

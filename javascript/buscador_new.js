@@ -1,3 +1,5 @@
+import {selected} from './indice.js'
+
 let escribiendo=false;
 let barra_busqueda;
 let visible='visible-list-item';
@@ -68,9 +70,12 @@ export function busqueda(w) {
                 || (`${title.toLowerCase()} ${author.toLowerCase()}`).includes(w.toLowerCase())) {
 
                 // Si se encuentra
-                
-                if(sec.classList.contains(oculto)){
-                    sec.classList.remove(oculto);
+
+                // Compruebo si está oculta
+                if(sec.classList.contains(oculto)) { 
+                    if(selected.innerHTML==sec.id) {
+                       sec.classList.remove(oculto); 
+                    }
                 }
 
                 li.classList.remove(oculto);
