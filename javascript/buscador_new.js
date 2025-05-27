@@ -73,7 +73,7 @@ export function busqueda(w) {
 
                 // Compruebo si está oculta
                 if(sec.classList.contains(oculto)) { 
-                    if(selected.innerHTML==sec.id) {
+                    if(selected.innerHTML==sec.id || selected.innerHTML == 'Todas') {
                        sec.classList.remove(oculto); 
                     }
                 }
