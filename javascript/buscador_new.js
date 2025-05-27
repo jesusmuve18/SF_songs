@@ -68,6 +68,11 @@ export function busqueda(w) {
                 || (`${title.toLowerCase()} ${author.toLowerCase()}`).includes(w.toLowerCase())) {
 
                 // Si se encuentra
+                
+                if(sec.classList.contains(oculto)){
+                    sec.classList.remove(oculto);
+                }
+
                 li.classList.remove(oculto);
                 li.classList.add(visible);
             } else {
