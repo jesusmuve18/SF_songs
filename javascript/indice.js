@@ -1,3 +1,5 @@
+import {busqueda, comprobarVacio} from './buscador_new.js';
+
 let enlaces;
 let entradas_indice;
 let selected_style='selected';
@@ -49,19 +51,29 @@ window.addEventListener('load', async function(){
                 if(enlace.innerHTML=="Todas"){
                     // Muestro todas las secciones
                     secciones_indice.forEach(seccion=>{
+                        // Muestro todas
                         seccion.classList.remove(oculto);
+
+                        // Oculto las que no se correspondan con el criterio de búsqueda
+                        if(this.document.getElementById('buscador').value != '') {
+                            busqueda(this.document.getElementById('buscador').value);
+                        }
                     })
                 } else {
                     // Oculto todas las secciones que no sean esta
                     secciones_indice.forEach(seccion=>{
+
+                        // Muestro solo la seccion correspondiente
                         if(seccion.id!=enlace.innerHTML){
-                            console.log(`ocultando ${seccion.id}`);
+                            // console.log(`ocultando ${seccion.id}`);
                             seccion.classList.add(oculto);
                         } else {
-                            console.log(`mostrando ${seccion.id}`);
+                            // console.log(`mostrando ${seccion.id}`);
                             seccion.classList.remove(oculto);
                         }
                     })
+
+                    comprobarVacio();
                 }
 
                 
