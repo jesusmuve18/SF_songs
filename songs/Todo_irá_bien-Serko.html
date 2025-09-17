@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo irá bien</title>
+    <link rel="stylesheet" href="../styles_new/general.css">
+    <link rel="stylesheet" href="../styles_new/cabecera.css">
+    <link rel="stylesheet" href="../styles_new/cancion.css">
+    <link rel="stylesheet" href="../styles_new/ajuste_velocidad_tactil.css">
+
+    <script type="module" src="../javascript/cabecera2_canciones.js"></script>
+    <script type="module" src="../javascript/modules/cancion.mjs"></script>
+    <script type="module" src="../javascript/modules/scroll.mjs"></script>
+    <script type="module" src="../javascript/modules/tools.mjs"></script>
+    <script type="module" src="../javascript/modules/ajuste_velocidad_tactil.mjs"></script>
+
+    <link rel="icon" href="../images/logo_sf.png">
+</head>
+<body>
+    <div id="pagina">
+        <div id="cabecera">
+            <header>
+                <img id="logo" src="../images/logo_sf.png" alt="Logo Sf">
+                <div id="grupo-sf">Grupo San Francisco</div>
+                <button id="icono-buscar" class="hidden"><img src="../images/search.svg"></button>
+                <button id="icono-tools"><img src="../images/tools.svg"></button>
+                <button id="icono-menu"><img src="../images/menu.svg"></button>
+            </header>
+
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Inicio</a><img src="../images/right-arrow.svg"></li>
+                    <li><a href="../indice.html">Indice</a><img src="../images/right-arrow.svg"></li>
+                    <li><a href="../acordes.html">Acordes</a><img src="../images/right-arrow.svg"></li>
+                    <li><a href="../about.html">Acerca de</a><img src="../images/right-arrow.svg"></li>
+                </ul>
+            </nav>
+
+            <div id="contenedor-buscador">
+                <div id="marco-buscador">
+                    <input type="text" name="buscador" id="buscador" placeholder="Buscar...">
+                </div>
+            </div>
+        </div>
+
+        <div id="contenedor-tools">
+            <h2>Herramientas</h2>
+            <div id="herramientas">
+                <div id="ajuste-cejilla">
+                    <b>Cejilla: </b>
+                    <button id="dim-capo">-</button>
+                    <input id="input-ajuste-cejilla" type="number">
+                    <button id="inc-capo">+</button>
+                </div>
+                <div id="ajuste-tono">
+                    <b>Tono: </b>
+                    <button id="dim-tone">-</button>
+                    <input id="input-ajuste-tono" type="number">
+                    <button id="inc-tone">+</button>
+                </div>
+                <div id="ajuste-velocidad">
+                    <b>Velocidad: </b>
+                    <button id="dim-velocidad">-</button>
+                    <input id="input-ajuste-velocidad" type="number">
+                    <button id="inc-velocidad">+</button>
+                </div>
+            </div>
+            <div id="contenedor-reestablecer">
+                <button id="reestablecer">Reestablecer</button>
+            </div>
+        </div>
+
+        <div id="contenedor-ajuste-velocidad-tactil" class="hidden">
+            <div id="velocidad">Velocidad
+                <div id="valor"></div>
+            </div>
+        </div>
+
+        <div id="cuerpo">
+            <div id="notation">europe sharp</div>
+            <div id="title">Todo irá bien</div>
+            <div id="artist">Serko</div>
+            <div id="info">
+                <div id="tone">
+                    <b>Tono: </b> <span id="original-tone">Do </span><br>
+                    <b>Cejilla: </b><span id="capo">0</span><br>
+                    <b>Transpuesta:</b> <span id="traspose">0</span>
+                </div>
+            </div>
+            <div id="song-body" class="texto-principal"><span id="reserved">Intro:</span> <b>Do</b> <b>mi m</b> <b>la m</b> <b>Sol</b> <span id="reserved">-</span> <b>Fa</b>
+
+     <b>Do</b>
+Lo intento
+                  <b>mi m</b>
+No te mereces tan poco
+                    <b>la m</b>
+¿Será que el viento no deja 
+
+que el mar llegue a la orilla
+       <b>Sol</b>        <b>Fa</b>
+Cuando quiere escapar?
+
+   <b>Do</b>
+Lo siento
+                    <b>mi m</b>
+Ya no te quiero engañar
+                <b>la m</b>
+Prometiendo mil besos
+
+Y una eternidad que sabía que 
+   <b>Sol</b>          <b>Fa</b>
+nunca iba a empezar
+
+    <b>Do</b>
+Yo, que para ti era tu casa
+
+Yo miraba por la ventana
+    <b>mi m</b>
+Viendo lo que dejé allá afuera
+
+Y los colores que me perdía
+      <b>la m</b>
+Yo un día le pregunté a la luna
+
+Si era amor lo que yo sentía
+   <b>Sol</b>
+Pero nunca me dijo nada
+
+Y aun así yo a ti te decía
+<strong>
+             <b>Fa</b>                   <b>Sol</b>
+Que todo irá bien, que siempre estaré
+            <b>la m</b>                 <b>mi m</b>
+Pa' verme volando debajo de tus pies
+             <b>Fa</b>              <b>Sol</b>
+Que todo irá bien, nunca dudaré
+               <b>la m</b>                 <b>mi m</b>
+Que tú eres la vida que siempre busqué
+
+             <b>Fa</b>
+Pero no era amor
+           <b>Sol</b>
+Ese no era yo
+              <b>Do</b> <b>Sol</b> <b>Fa</b>
+Pero todo irá bien
+              <b>la m</b> <b>Sol</b> <b>Fa</b>
+Pero todo irá bien
+</strong>
+   <b>Do</b>
+Te quiero
+                <b>mi m</b>
+Pero nunca supe cuánto
+             <b>la m</b>
+No te sabía amar
+                      <b>Sol</b>       <b>Fa</b>
+Porque a quien amé nunca me enseñó
+
+              <b>Sol</b>
+En ti, me refugié
+   <b>Mi</b>                  <b>la m</b>
+Se me da bien ser el cobarde
+              <b>Sol</b>
+Si esto es el cielo
+     <b>Mi</b>                  <b>la m</b>
+¿Por qué me lo tapan las nubes?
+<strong>
+           <b>Fa</b>                    <b>Sol</b>
+Si todo va bien, que siempre estaré
+            <b>la m</b>                 <b>mi m</b>
+Pa' verme volando debajo de tus pies
+             <b>Fa</b>              <b>Sol</b>
+Que todo irá bien, nunca dudaré
+               <b>la m</b>                 <b>Sol</b>
+Que tú eres la vida que siempre busqué
+
+            <b>Fa</b>
+Pero no era amor
+           <b>Sol</b>
+Ese no era yo
+              <b>Do</b> <b>Sol</b> <b>Fa</b>
+Pero todo irá bien
+              <b>la m</b> <b>Sol</b> <b>Fa</b>
+Pero todo irá bien
+              <b>Do</b> <b>Sol</b> <b>Fa</b>
+Pero todo irá bien
+              <b>Do</b> <b>Sol</b> <b>Fa</b>
+Pero todo irá bien
+</strong>
+<span id=cejilla-original>2</span>
+</div>
+             </div>
+        </div>
+
+
+        <div id="controls">
+            <div id="pauseButton-frame"><img id="pauseButton" src="../images/play_2.svg" alt="play"></div>
+             <div id="speed-bar">
+                <input type="range" class="scroll-speed-bar" id="scroll-speed-bar" min="1" max="100" value="60" steps="1" oninput="ajustarVelocidad()">
+                <span class="scroll-speed-value" id="scroll-speed-value">60</span></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
