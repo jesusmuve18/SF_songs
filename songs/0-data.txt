@@ -534,22 +534,23 @@
 <li class="visible-list-item"><span id="list-number">24</span><a href="./songs/Nana_Castores.html"><span id="song-title">Nana Castores</span> <span id="author"></span></a></li>
 <li class="visible-list-item"><span id="list-number">25</span><a href="./songs/Náufragos-Náufragos.html"><span id="song-title">Náufragos</span> <span id="author">Náufragos</span></a></li>
 <li class="visible-list-item"><span id="list-number">26</span><a href="./songs/Oración-Álvaro_Fraile.html"><span id="song-title">Oración</span> <span id="author">Álvaro Fraile</span></a></li>
-<li class="visible-list-item"><span id="list-number">27</span><a href="./songs/Pregón_Pascual-Kiko_Arguello.html"><span id="song-title">Pregón Pascual</span> <span id="author">Kiko Arguello</span></a></li>
-<li class="visible-list-item"><span id="list-number">28</span><a href="./songs/Primera_Sonrisa-Christian_I.html"><span id="song-title">Primera Sonrisa</span> <span id="author">Christian I</span></a></li>
-<li class="visible-list-item"><span id="list-number">29</span><a href="./songs/Qué_Bien-Izal.html"><span id="song-title">Qué Bien</span> <span id="author">Izal</span></a></li>
-<li class="visible-list-item"><span id="list-number">30</span><a href="./songs/Quiero_verte-Ixcís.html"><span id="song-title">Quiero verte</span> <span id="author">Ixcís</span></a></li>
-<li class="visible-list-item"><span id="list-number">31</span><a href="./songs/Resucitados.html"><span id="song-title">Resucitados</span> <span id="author"></span></a></li>
-<li class="visible-list-item"><span id="list-number">32</span><a href="./songs/Salmo_15-Brotes_de_Olivo.html"><span id="song-title">Salmo 15</span> <span id="author">Brotes de Olivo</span></a></li>
-<li class="visible-list-item"><span id="list-number">33</span><a href="./songs/Sin_aire-Christian_I.html"><span id="song-title">Sin aire</span> <span id="author">Christian I</span></a></li>
-<li class="visible-list-item"><span id="list-number">34</span><a href="./songs/Sirenas-Taburete.html"><span id="song-title">Sirenas</span> <span id="author">Taburete</span></a></li>
-<li class="visible-list-item"><span id="list-number">35</span><a href="./songs/Sixtinain-Guitarricadelafuente.html"><span id="song-title">Sixtinain</span> <span id="author">Guitarricadelafuente</span></a></li>
-<li class="visible-list-item"><span id="list-number">36</span><a href="./songs/Solo-Myles_Smith.html"><span id="song-title">Solo</span> <span id="author">Myles Smith</span></a></li>
-<li class="visible-list-item"><span id="list-number">37</span><a href="./songs/Te_Regalo-Rels_B.html"><span id="song-title">Te Regalo</span> <span id="author">Rels B</span></a></li>
-<li class="visible-list-item"><span id="list-number">38</span><a href="./songs/Todo_es_de_mi_Cristo.html"><span id="song-title">Todo es de mi Cristo</span> <span id="author"></span></a></li>
-<li class="visible-list-item"><span id="list-number">39</span><a href="./songs/Todo_irá_bien-Serko.html"><span id="song-title">Todo irá bien</span> <span id="author">Serko</span></a></li>
-<li class="visible-list-item"><span id="list-number">40</span><a href="./songs/Un_violinista_en_tu_tejado-Melendi.html"><span id="song-title">Un violinista en tu tejado</span> <span id="author">Melendi</span></a></li>
-<li class="visible-list-item"><span id="list-number">41</span><a href="./songs/Vieni_Spirito.html"><span id="song-title">Vieni Spirito</span> <span id="author"></span></a></li>
-<li class="visible-list-item"><span id="list-number">42</span><a href="./songs/Volver_a_empezar-Serko.html"><span id="song-title">Volver a empezar</span> <span id="author">Serko</span></a></li>
-<li class="visible-list-item"><span id="list-number">43</span><a href="./songs/Yo_no_estoy_loco-Estopa.html"><span id="song-title">Yo no estoy loco</span> <span id="author">Estopa</span></a></li>
-<li class="visible-list-item"><span id="list-number">44</span><a href="./songs/Zombie-The_Cranberries.html"><span id="song-title">Zombie</span> <span id="author">The Cranberries</span></a></li>
+<li class="visible-list-item"><span id="list-number">27</span><a href="./songs/Photograph-Ed_Sheeran.html"><span id="song-title">Photograph</span> <span id="author">Ed Sheeran</span></a></li>
+<li class="visible-list-item"><span id="list-number">28</span><a href="./songs/Pregón_Pascual-Kiko_Arguello.html"><span id="song-title">Pregón Pascual</span> <span id="author">Kiko Arguello</span></a></li>
+<li class="visible-list-item"><span id="list-number">29</span><a href="./songs/Primera_Sonrisa-Christian_I.html"><span id="song-title">Primera Sonrisa</span> <span id="author">Christian I</span></a></li>
+<li class="visible-list-item"><span id="list-number">30</span><a href="./songs/Qué_Bien-Izal.html"><span id="song-title">Qué Bien</span> <span id="author">Izal</span></a></li>
+<li class="visible-list-item"><span id="list-number">31</span><a href="./songs/Quiero_verte-Ixcís.html"><span id="song-title">Quiero verte</span> <span id="author">Ixcís</span></a></li>
+<li class="visible-list-item"><span id="list-number">32</span><a href="./songs/Resucitados.html"><span id="song-title">Resucitados</span> <span id="author"></span></a></li>
+<li class="visible-list-item"><span id="list-number">33</span><a href="./songs/Salmo_15-Brotes_de_Olivo.html"><span id="song-title">Salmo 15</span> <span id="author">Brotes de Olivo</span></a></li>
+<li class="visible-list-item"><span id="list-number">34</span><a href="./songs/Sin_aire-Christian_I.html"><span id="song-title">Sin aire</span> <span id="author">Christian I</span></a></li>
+<li class="visible-list-item"><span id="list-number">35</span><a href="./songs/Sirenas-Taburete.html"><span id="song-title">Sirenas</span> <span id="author">Taburete</span></a></li>
+<li class="visible-list-item"><span id="list-number">36</span><a href="./songs/Sixtinain-Guitarricadelafuente.html"><span id="song-title">Sixtinain</span> <span id="author">Guitarricadelafuente</span></a></li>
+<li class="visible-list-item"><span id="list-number">37</span><a href="./songs/Solo-Myles_Smith.html"><span id="song-title">Solo</span> <span id="author">Myles Smith</span></a></li>
+<li class="visible-list-item"><span id="list-number">38</span><a href="./songs/Te_Regalo-Rels_B.html"><span id="song-title">Te Regalo</span> <span id="author">Rels B</span></a></li>
+<li class="visible-list-item"><span id="list-number">39</span><a href="./songs/Todo_es_de_mi_Cristo.html"><span id="song-title">Todo es de mi Cristo</span> <span id="author"></span></a></li>
+<li class="visible-list-item"><span id="list-number">40</span><a href="./songs/Todo_irá_bien-Serko.html"><span id="song-title">Todo irá bien</span> <span id="author">Serko</span></a></li>
+<li class="visible-list-item"><span id="list-number">41</span><a href="./songs/Un_violinista_en_tu_tejado-Melendi.html"><span id="song-title">Un violinista en tu tejado</span> <span id="author">Melendi</span></a></li>
+<li class="visible-list-item"><span id="list-number">42</span><a href="./songs/Vieni_Spirito.html"><span id="song-title">Vieni Spirito</span> <span id="author"></span></a></li>
+<li class="visible-list-item"><span id="list-number">43</span><a href="./songs/Volver_a_empezar-Serko.html"><span id="song-title">Volver a empezar</span> <span id="author">Serko</span></a></li>
+<li class="visible-list-item"><span id="list-number">44</span><a href="./songs/Yo_no_estoy_loco-Estopa.html"><span id="song-title">Yo no estoy loco</span> <span id="author">Estopa</span></a></li>
+<li class="visible-list-item"><span id="list-number">45</span><a href="./songs/Zombie-The_Cranberries.html"><span id="song-title">Zombie</span> <span id="author">The Cranberries</span></a></li>
 </ol></div>
