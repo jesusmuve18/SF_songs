@@ -225,64 +225,65 @@
 <li class="visible-list-item"><span id="list-number">213</span><a href="./songs/Sal_y_Luz-Brotes_de_Olivo.html"><span id="song-title">Sal y Luz</span> <span id="author">Brotes de Olivo</span></a></li>
 <li class="visible-list-item"><span id="list-number">214</span><a href="./songs/Santa_María_del_Camino-Popular.html"><span id="song-title">Santa María del Camino</span> <span id="author">Popular</span></a></li>
 <li class="visible-list-item"><span id="list-number">215</span><a href="./songs/Santo,_Bendito_el_que_viene-Nico.html"><span id="song-title">Santo, Bendito el que viene</span> <span id="author">Nico</span></a></li>
-<li class="visible-list-item"><span id="list-number">216</span><a href="./songs/Santo-Carismático.html"><span id="song-title">Santo</span> <span id="author">Carismático</span></a></li>
-<li class="visible-list-item"><span id="list-number">217</span><a href="./songs/Santo-Estepa.html"><span id="song-title">Santo</span> <span id="author">Estepa</span></a></li>
-<li class="visible-list-item"><span id="list-number">218</span><a href="./songs/Santo-Mocedades.html"><span id="song-title">Santo</span> <span id="author">Mocedades</span></a></li>
-<li class="visible-list-item"><span id="list-number">219</span><a href="./songs/Santo-Peruano.html"><span id="song-title">Santo</span> <span id="author">Peruano</span></a></li>
-<li class="visible-list-item"><span id="list-number">220</span><a href="./songs/Santo-The_Beetles.html"><span id="song-title">Santo</span> <span id="author">The Beetles</span></a></li>
-<li class="visible-list-item"><span id="list-number">221</span><a href="./songs/Santo-Zaireño.html"><span id="song-title">Santo</span> <span id="author">Zaireño</span></a></li>
-<li class="visible-list-item"><span id="list-number">222</span><a href="./songs/Saulo-Nico.html"><span id="song-title">Saulo</span> <span id="author">Nico</span></a></li>
-<li class="visible-list-item"><span id="list-number">223</span><a href="./songs/Sé_fiel_a_la_verdad-Brotes_de_Olivo.html"><span id="song-title">Sé fiel a la verdad</span> <span id="author">Brotes de Olivo</span></a></li>
-<li class="visible-list-item"><span id="list-number">224</span><a href="./songs/Sé_que_voy_contigo-Brotes_de_Olivo.html"><span id="song-title">Sé que voy contigo</span> <span id="author">Brotes de Olivo</span></a></li>
-<li class="visible-list-item"><span id="list-number">225</span><a href="./songs/Sea_nuestra_vida_una_canción-Brotes_de_Olivo.html"><span id="song-title">Sea nuestra vida una canción</span> <span id="author">Brotes de Olivo</span></a></li>
-<li class="visible-list-item"><span id="list-number">226</span><a href="./songs/Sea-Brotes_de_Olivo.html"><span id="song-title">Sea</span> <span id="author">Brotes de Olivo</span></a></li>
-<li class="visible-list-item"><span id="list-number">227</span><a href="./songs/Semillas_de_Comunidad-Alberto_y_Emilia.html"><span id="song-title">Semillas de Comunidad</span> <span id="author">Alberto y Emilia</span></a></li>
-<li class="visible-list-item"><span id="list-number">228</span><a href="./songs/Señor_Dios_Nuestro-Popular,_Salmo_8.html"><span id="song-title">Señor Dios Nuestro</span> <span id="author">Popular, Salmo 8</span></a></li>
-<li class="visible-list-item"><span id="list-number">229</span><a href="./songs/Señor,_envíanos_tu_Espíritu-Brotes_de_Olivo.html"><span id="song-title">Señor, envíanos tu Espíritu</span> <span id="author">Brotes de Olivo</span></a></li>
-<li class="visible-list-item"><span id="list-number">230</span><a href="./songs/Señor,_hazme_instrumento_de_tu_paz-Franciscano.html"><span id="song-title">Señor, hazme instrumento de tu paz</span> <span id="author">Franciscano</span></a></li>
-<li class="visible-list-item"><span id="list-number">231</span><a href="./songs/Señor_ten_piedad-Jerez.html"><span id="song-title">Señor ten piedad</span> <span id="author">Jerez</span></a></li>
-<li class="visible-list-item"><span id="list-number">232</span><a href="./songs/Ser_con_la_vida-Brotes_de_Olivo.html"><span id="song-title">Ser con la vida</span> <span id="author">Brotes de Olivo</span></a></li>
-<li class="visible-list-item"><span id="list-number">233</span><a href="./songs/Sí,_estás_aquí-Emaús.html"><span id="song-title">Sí, estás aquí</span> <span id="author">Emaús</span></a></li>
-<li class="visible-list-item"><span id="list-number">234</span><a href="./songs/Si_no_muero_por_Ti-Almudena.html"><span id="song-title">Si no muero por Ti</span> <span id="author">Almudena</span></a></li>
-<li class="visible-list-item"><span id="list-number">235</span><a href="./songs/Siempre_es_Navidad-Popular.html"><span id="song-title">Siempre es Navidad</span> <span id="author">Popular</span></a></li>
-<li class="visible-list-item"><span id="list-number">236</span><a href="./songs/Solo_nacerá-Almudena.html"><span id="song-title">Solo nacerá</span> <span id="author">Almudena</span></a></li>
-<li class="visible-list-item"><span id="list-number">237</span><a href="./songs/Solo_quiero_decir_que_te_quiero-La_voz_del_desierto.html"><span id="song-title">Solo quiero decir que te quiero</span> <span id="author">La voz del desierto</span></a></li>
-<li class="visible-list-item"><span id="list-number">238</span><a href="./songs/Solo_te_pido.html"><span id="song-title">Solo te pido</span> <span id="author"></span></a></li>
-<li class="visible-list-item"><span id="list-number">239</span><a href="./songs/Solo_tu_Espíritu-Ixcís.html"><span id="song-title">Solo tu Espíritu</span> <span id="author">Ixcís</span></a></li>
-<li class="visible-list-item"><span id="list-number">240</span><a href="./songs/Somos_pueblo_de_Dios-Ixcís.html"><span id="song-title">Somos pueblo de Dios</span> <span id="author">Ixcís</span></a></li>
-<li class="visible-list-item"><span id="list-number">241</span><a href="./songs/Somos_un_pueblo_que_camina.html"><span id="song-title">Somos un pueblo que camina</span> <span id="author"></span></a></li>
-<li class="visible-list-item"><span id="list-number">242</span><a href="./songs/Soy_yo-Almudena.html"><span id="song-title">Soy yo</span> <span id="author">Almudena</span></a></li>
-<li class="visible-list-item"><span id="list-number">243</span><a href="./songs/Suenan_voces_de_paz.html"><span id="song-title">Suenan voces de paz</span> <span id="author"></span></a></li>
-<li class="visible-list-item"><span id="list-number">244</span><a href="./songs/Sueño_una_Iglesia-Ixcís.html"><span id="song-title">Sueño una Iglesia</span> <span id="author">Ixcís</span></a></li>
-<li class="visible-list-item"><span id="list-number">245</span><a href="./songs/Sueños_de_la_tierra-Brotes_de_Olivo.html"><span id="song-title">Sueños de la tierra</span> <span id="author">Brotes de Olivo</span></a></li>
-<li class="visible-list-item"><span id="list-number">246</span><a href="./songs/Tan_cerca_de_mí.html"><span id="song-title">Tan cerca de mí</span> <span id="author"></span></a></li>
-<li class="visible-list-item"><span id="list-number">247</span><a href="./songs/Tan_lejos_y_tan_cerca-Óscar_Gallardo_y_Nico_Hernández.html"><span id="song-title">Tan lejos y tan cerca</span> <span id="author">Óscar Gallardo y Nico Hernández</span></a></li>
-<li class="visible-list-item"><span id="list-number">248</span><a href="./songs/Te_ofreceré_y_alabaré-Jerez.html"><span id="song-title">Te ofreceré y alabaré</span> <span id="author">Jerez</span></a></li>
-<li class="visible-list-item"><span id="list-number">249</span><a href="./songs/Te_presentamos_el_vino_y_el_pan.html"><span id="song-title">Te presentamos el vino y el pan</span> <span id="author"></span></a></li>
-<li class="visible-list-item"><span id="list-number">250</span><a href="./songs/Tentaciones-Brotes_de_Olivo.html"><span id="song-title">Tentaciones</span> <span id="author">Brotes de Olivo</span></a></li>
-<li class="visible-list-item"><span id="list-number">251</span><a href="./songs/Tiempo-Ciento_Ochenta_Grados.html"><span id="song-title">Tiempo</span> <span id="author">Ciento Ochenta Grados</span></a></li>
-<li class="visible-list-item"><span id="list-number">252</span><a href="./songs/Todo_lo_esperamos_de_Ti-Brotes_de_Olivo.html"><span id="song-title">Todo lo esperamos de Ti</span> <span id="author">Brotes de Olivo</span></a></li>
-<li class="visible-list-item"><span id="list-number">253</span><a href="./songs/Todo_va_a_ir_bien-Luis_Guitarra.html"><span id="song-title">Todo va a ir bien</span> <span id="author">Luis Guitarra</span></a></li>
-<li class="visible-list-item"><span id="list-number">254</span><a href="./songs/Todos_juntos-Brotes_de_Olivo.html"><span id="song-title">Todos juntos</span> <span id="author">Brotes de Olivo</span></a></li>
-<li class="visible-list-item"><span id="list-number">255</span><a href="./songs/Todos_somos_un_cachito_de_Dios-Brotes_de_Olivo.html"><span id="song-title">Todos somos un cachito de Dios</span> <span id="author">Brotes de Olivo</span></a></li>
-<li class="visible-list-item"><span id="list-number">256</span><a href="./songs/Tú,_mi_raíz-Ixcís.html"><span id="song-title">Tú, mi raíz</span> <span id="author">Ixcís</span></a></li>
-<li class="visible-list-item"><span id="list-number">257</span><a href="./songs/Un_nuevo_sitio_disponed.html"><span id="song-title">Un nuevo sitio disponed</span> <span id="author"></span></a></li>
-<li class="visible-list-item"><span id="list-number">258</span><a href="./songs/Un_poco_de_fe-Ixcís.html"><span id="song-title">Un poco de fe</span> <span id="author">Ixcís</span></a></li>
-<li class="visible-list-item"><span id="list-number">259</span><a href="./songs/Un_pueblo_que_camina.html"><span id="song-title">Un pueblo que camina</span> <span id="author"></span></a></li>
-<li class="visible-list-item"><span id="list-number">260</span><a href="./songs/Una_espiga.html"><span id="song-title">Una espiga</span> <span id="author"></span></a></li>
-<li class="visible-list-item"><span id="list-number">261</span><a href="./songs/Una_lámpara_encendida-Alberto_y_Emilia.html"><span id="song-title">Una lámpara encendida</span> <span id="author">Alberto y Emilia</span></a></li>
-<li class="visible-list-item"><span id="list-number">262</span><a href="./songs/Va_a_morir_un_hombre-Brotes_de_Olivo.html"><span id="song-title">Va a morir un hombre</span> <span id="author">Brotes de Olivo</span></a></li>
-<li class="visible-list-item"><span id="list-number">263</span><a href="./songs/Vale_la_pena_seguir-Brotes_de_Olivo.html"><span id="song-title">Vale la pena seguir</span> <span id="author">Brotes de Olivo</span></a></li>
-<li class="visible-list-item"><span id="list-number">264</span><a href="./songs/Ven,_Padre-Brotes_de_Olivo.html"><span id="song-title">Ven, Padre</span> <span id="author">Brotes de Olivo</span></a></li>
-<li class="visible-list-item"><span id="list-number">265</span><a href="./songs/Ven,_Señor.html"><span id="song-title">Ven, Señor</span> <span id="author"></span></a></li>
-<li class="visible-list-item"><span id="list-number">266</span><a href="./songs/Vienen_con_alegría.html"><span id="song-title">Vienen con alegría</span> <span id="author"></span></a></li>
-<li class="visible-list-item"><span id="list-number">267</span><a href="./songs/Virgen_de_la_Navidad.html"><span id="song-title">Virgen de la Navidad</span> <span id="author"></span></a></li>
-<li class="visible-list-item"><span id="list-number">268</span><a href="./songs/Vive_lo_que_cantas-Ixcís.html"><span id="song-title">Vive lo que cantas</span> <span id="author">Ixcís</span></a></li>
-<li class="visible-list-item"><span id="list-number">269</span><a href="./songs/Volar_con_alas_blancas-Alberto_y_Emilia.html"><span id="song-title">Volar con alas blancas</span> <span id="author">Alberto y Emilia</span></a></li>
-<li class="visible-list-item"><span id="list-number">270</span><a href="./songs/Volverá-Alberto_y_Emilia.html"><span id="song-title">Volverá</span> <span id="author">Alberto y Emilia</span></a></li>
-<li class="visible-list-item"><span id="list-number">271</span><a href="./songs/Vosotros_seréis_mi_Pueblo-Brotes_de_Olivo.html"><span id="song-title">Vosotros seréis mi Pueblo</span> <span id="author">Brotes de Olivo</span></a></li>
-<li class="visible-list-item"><span id="list-number">272</span><a href="./songs/Y_yo_que_tengo_voz-Bata.html"><span id="song-title">Y yo que tengo voz</span> <span id="author">Bata</span></a></li>
-<li class="visible-list-item"><span id="list-number">273</span><a href="./songs/Yo_celebraré.html"><span id="song-title">Yo celebraré</span> <span id="author"></span></a></li>
+<li class="visible-list-item"><span id="list-number">216</span><a href="./songs/Santo_-Manchego.html"><span id="song-title">Santo </span> <span id="author">Manchego</span></a></li>
+<li class="visible-list-item"><span id="list-number">217</span><a href="./songs/Santo-Carismático.html"><span id="song-title">Santo</span> <span id="author">Carismático</span></a></li>
+<li class="visible-list-item"><span id="list-number">218</span><a href="./songs/Santo-Estepa.html"><span id="song-title">Santo</span> <span id="author">Estepa</span></a></li>
+<li class="visible-list-item"><span id="list-number">219</span><a href="./songs/Santo-Mocedades.html"><span id="song-title">Santo</span> <span id="author">Mocedades</span></a></li>
+<li class="visible-list-item"><span id="list-number">220</span><a href="./songs/Santo-Peruano.html"><span id="song-title">Santo</span> <span id="author">Peruano</span></a></li>
+<li class="visible-list-item"><span id="list-number">221</span><a href="./songs/Santo-The_Beetles.html"><span id="song-title">Santo</span> <span id="author">The Beetles</span></a></li>
+<li class="visible-list-item"><span id="list-number">222</span><a href="./songs/Santo-Zaireño.html"><span id="song-title">Santo</span> <span id="author">Zaireño</span></a></li>
+<li class="visible-list-item"><span id="list-number">223</span><a href="./songs/Saulo-Nico.html"><span id="song-title">Saulo</span> <span id="author">Nico</span></a></li>
+<li class="visible-list-item"><span id="list-number">224</span><a href="./songs/Sé_fiel_a_la_verdad-Brotes_de_Olivo.html"><span id="song-title">Sé fiel a la verdad</span> <span id="author">Brotes de Olivo</span></a></li>
+<li class="visible-list-item"><span id="list-number">225</span><a href="./songs/Sé_que_voy_contigo-Brotes_de_Olivo.html"><span id="song-title">Sé que voy contigo</span> <span id="author">Brotes de Olivo</span></a></li>
+<li class="visible-list-item"><span id="list-number">226</span><a href="./songs/Sea_nuestra_vida_una_canción-Brotes_de_Olivo.html"><span id="song-title">Sea nuestra vida una canción</span> <span id="author">Brotes de Olivo</span></a></li>
+<li class="visible-list-item"><span id="list-number">227</span><a href="./songs/Sea-Brotes_de_Olivo.html"><span id="song-title">Sea</span> <span id="author">Brotes de Olivo</span></a></li>
+<li class="visible-list-item"><span id="list-number">228</span><a href="./songs/Semillas_de_Comunidad-Alberto_y_Emilia.html"><span id="song-title">Semillas de Comunidad</span> <span id="author">Alberto y Emilia</span></a></li>
+<li class="visible-list-item"><span id="list-number">229</span><a href="./songs/Señor_Dios_Nuestro-Popular,_Salmo_8.html"><span id="song-title">Señor Dios Nuestro</span> <span id="author">Popular, Salmo 8</span></a></li>
+<li class="visible-list-item"><span id="list-number">230</span><a href="./songs/Señor,_envíanos_tu_Espíritu-Brotes_de_Olivo.html"><span id="song-title">Señor, envíanos tu Espíritu</span> <span id="author">Brotes de Olivo</span></a></li>
+<li class="visible-list-item"><span id="list-number">231</span><a href="./songs/Señor,_hazme_instrumento_de_tu_paz-Franciscano.html"><span id="song-title">Señor, hazme instrumento de tu paz</span> <span id="author">Franciscano</span></a></li>
+<li class="visible-list-item"><span id="list-number">232</span><a href="./songs/Señor_ten_piedad-Jerez.html"><span id="song-title">Señor ten piedad</span> <span id="author">Jerez</span></a></li>
+<li class="visible-list-item"><span id="list-number">233</span><a href="./songs/Ser_con_la_vida-Brotes_de_Olivo.html"><span id="song-title">Ser con la vida</span> <span id="author">Brotes de Olivo</span></a></li>
+<li class="visible-list-item"><span id="list-number">234</span><a href="./songs/Sí,_estás_aquí-Emaús.html"><span id="song-title">Sí, estás aquí</span> <span id="author">Emaús</span></a></li>
+<li class="visible-list-item"><span id="list-number">235</span><a href="./songs/Si_no_muero_por_Ti-Almudena.html"><span id="song-title">Si no muero por Ti</span> <span id="author">Almudena</span></a></li>
+<li class="visible-list-item"><span id="list-number">236</span><a href="./songs/Siempre_es_Navidad-Popular.html"><span id="song-title">Siempre es Navidad</span> <span id="author">Popular</span></a></li>
+<li class="visible-list-item"><span id="list-number">237</span><a href="./songs/Solo_nacerá-Almudena.html"><span id="song-title">Solo nacerá</span> <span id="author">Almudena</span></a></li>
+<li class="visible-list-item"><span id="list-number">238</span><a href="./songs/Solo_quiero_decir_que_te_quiero-La_voz_del_desierto.html"><span id="song-title">Solo quiero decir que te quiero</span> <span id="author">La voz del desierto</span></a></li>
+<li class="visible-list-item"><span id="list-number">239</span><a href="./songs/Solo_te_pido.html"><span id="song-title">Solo te pido</span> <span id="author"></span></a></li>
+<li class="visible-list-item"><span id="list-number">240</span><a href="./songs/Solo_tu_Espíritu-Ixcís.html"><span id="song-title">Solo tu Espíritu</span> <span id="author">Ixcís</span></a></li>
+<li class="visible-list-item"><span id="list-number">241</span><a href="./songs/Somos_pueblo_de_Dios-Ixcís.html"><span id="song-title">Somos pueblo de Dios</span> <span id="author">Ixcís</span></a></li>
+<li class="visible-list-item"><span id="list-number">242</span><a href="./songs/Somos_un_pueblo_que_camina.html"><span id="song-title">Somos un pueblo que camina</span> <span id="author"></span></a></li>
+<li class="visible-list-item"><span id="list-number">243</span><a href="./songs/Soy_yo-Almudena.html"><span id="song-title">Soy yo</span> <span id="author">Almudena</span></a></li>
+<li class="visible-list-item"><span id="list-number">244</span><a href="./songs/Suenan_voces_de_paz.html"><span id="song-title">Suenan voces de paz</span> <span id="author"></span></a></li>
+<li class="visible-list-item"><span id="list-number">245</span><a href="./songs/Sueño_una_Iglesia-Ixcís.html"><span id="song-title">Sueño una Iglesia</span> <span id="author">Ixcís</span></a></li>
+<li class="visible-list-item"><span id="list-number">246</span><a href="./songs/Sueños_de_la_tierra-Brotes_de_Olivo.html"><span id="song-title">Sueños de la tierra</span> <span id="author">Brotes de Olivo</span></a></li>
+<li class="visible-list-item"><span id="list-number">247</span><a href="./songs/Tan_cerca_de_mí.html"><span id="song-title">Tan cerca de mí</span> <span id="author"></span></a></li>
+<li class="visible-list-item"><span id="list-number">248</span><a href="./songs/Tan_lejos_y_tan_cerca-Óscar_Gallardo_y_Nico_Hernández.html"><span id="song-title">Tan lejos y tan cerca</span> <span id="author">Óscar Gallardo y Nico Hernández</span></a></li>
+<li class="visible-list-item"><span id="list-number">249</span><a href="./songs/Te_ofreceré_y_alabaré-Jerez.html"><span id="song-title">Te ofreceré y alabaré</span> <span id="author">Jerez</span></a></li>
+<li class="visible-list-item"><span id="list-number">250</span><a href="./songs/Te_presentamos_el_vino_y_el_pan.html"><span id="song-title">Te presentamos el vino y el pan</span> <span id="author"></span></a></li>
+<li class="visible-list-item"><span id="list-number">251</span><a href="./songs/Tentaciones-Brotes_de_Olivo.html"><span id="song-title">Tentaciones</span> <span id="author">Brotes de Olivo</span></a></li>
+<li class="visible-list-item"><span id="list-number">252</span><a href="./songs/Tiempo-Ciento_Ochenta_Grados.html"><span id="song-title">Tiempo</span> <span id="author">Ciento Ochenta Grados</span></a></li>
+<li class="visible-list-item"><span id="list-number">253</span><a href="./songs/Todo_lo_esperamos_de_Ti-Brotes_de_Olivo.html"><span id="song-title">Todo lo esperamos de Ti</span> <span id="author">Brotes de Olivo</span></a></li>
+<li class="visible-list-item"><span id="list-number">254</span><a href="./songs/Todo_va_a_ir_bien-Luis_Guitarra.html"><span id="song-title">Todo va a ir bien</span> <span id="author">Luis Guitarra</span></a></li>
+<li class="visible-list-item"><span id="list-number">255</span><a href="./songs/Todos_juntos-Brotes_de_Olivo.html"><span id="song-title">Todos juntos</span> <span id="author">Brotes de Olivo</span></a></li>
+<li class="visible-list-item"><span id="list-number">256</span><a href="./songs/Todos_somos_un_cachito_de_Dios-Brotes_de_Olivo.html"><span id="song-title">Todos somos un cachito de Dios</span> <span id="author">Brotes de Olivo</span></a></li>
+<li class="visible-list-item"><span id="list-number">257</span><a href="./songs/Tú,_mi_raíz-Ixcís.html"><span id="song-title">Tú, mi raíz</span> <span id="author">Ixcís</span></a></li>
+<li class="visible-list-item"><span id="list-number">258</span><a href="./songs/Un_nuevo_sitio_disponed.html"><span id="song-title">Un nuevo sitio disponed</span> <span id="author"></span></a></li>
+<li class="visible-list-item"><span id="list-number">259</span><a href="./songs/Un_poco_de_fe-Ixcís.html"><span id="song-title">Un poco de fe</span> <span id="author">Ixcís</span></a></li>
+<li class="visible-list-item"><span id="list-number">260</span><a href="./songs/Un_pueblo_que_camina.html"><span id="song-title">Un pueblo que camina</span> <span id="author"></span></a></li>
+<li class="visible-list-item"><span id="list-number">261</span><a href="./songs/Una_espiga.html"><span id="song-title">Una espiga</span> <span id="author"></span></a></li>
+<li class="visible-list-item"><span id="list-number">262</span><a href="./songs/Una_lámpara_encendida-Alberto_y_Emilia.html"><span id="song-title">Una lámpara encendida</span> <span id="author">Alberto y Emilia</span></a></li>
+<li class="visible-list-item"><span id="list-number">263</span><a href="./songs/Va_a_morir_un_hombre-Brotes_de_Olivo.html"><span id="song-title">Va a morir un hombre</span> <span id="author">Brotes de Olivo</span></a></li>
+<li class="visible-list-item"><span id="list-number">264</span><a href="./songs/Vale_la_pena_seguir-Brotes_de_Olivo.html"><span id="song-title">Vale la pena seguir</span> <span id="author">Brotes de Olivo</span></a></li>
+<li class="visible-list-item"><span id="list-number">265</span><a href="./songs/Ven,_Padre-Brotes_de_Olivo.html"><span id="song-title">Ven, Padre</span> <span id="author">Brotes de Olivo</span></a></li>
+<li class="visible-list-item"><span id="list-number">266</span><a href="./songs/Ven,_Señor.html"><span id="song-title">Ven, Señor</span> <span id="author"></span></a></li>
+<li class="visible-list-item"><span id="list-number">267</span><a href="./songs/Vienen_con_alegría.html"><span id="song-title">Vienen con alegría</span> <span id="author"></span></a></li>
+<li class="visible-list-item"><span id="list-number">268</span><a href="./songs/Virgen_de_la_Navidad.html"><span id="song-title">Virgen de la Navidad</span> <span id="author"></span></a></li>
+<li class="visible-list-item"><span id="list-number">269</span><a href="./songs/Vive_lo_que_cantas-Ixcís.html"><span id="song-title">Vive lo que cantas</span> <span id="author">Ixcís</span></a></li>
+<li class="visible-list-item"><span id="list-number">270</span><a href="./songs/Volar_con_alas_blancas-Alberto_y_Emilia.html"><span id="song-title">Volar con alas blancas</span> <span id="author">Alberto y Emilia</span></a></li>
+<li class="visible-list-item"><span id="list-number">271</span><a href="./songs/Volverá-Alberto_y_Emilia.html"><span id="song-title">Volverá</span> <span id="author">Alberto y Emilia</span></a></li>
+<li class="visible-list-item"><span id="list-number">272</span><a href="./songs/Vosotros_seréis_mi_Pueblo-Brotes_de_Olivo.html"><span id="song-title">Vosotros seréis mi Pueblo</span> <span id="author">Brotes de Olivo</span></a></li>
+<li class="visible-list-item"><span id="list-number">273</span><a href="./songs/Y_yo_que_tengo_voz-Bata.html"><span id="song-title">Y yo que tengo voz</span> <span id="author">Bata</span></a></li>
+<li class="visible-list-item"><span id="list-number">274</span><a href="./songs/Yo_celebraré.html"><span id="song-title">Yo celebraré</span> <span id="author"></span></a></li>
 </ol></div>
 <div id="Oración" class="seccion-indice">
 <h2 id="Oración">Oración</h2>
